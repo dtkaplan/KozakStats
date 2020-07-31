@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Statistics Using Technology</title>
+  <meta name="description" content="An introductory statistics textbook." />
+  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Statistics Using Technology" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="An introductory statistics textbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Statistics Using Technology" />
+  
+  <meta name="twitter:description" content="An introductory statistics textbook." />
+  
+
+<meta name="author" content="Kathryn Kozak" />
+
+
+<meta name="date" content="2020-07-30" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="statistical-basics.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Statistics Using Technology</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i><b>0.1</b> Acknowledgments:</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#new-to-the-third-edition"><i class="fa fa-check"></i><b>0.2</b> New to the Third Edition:</a></li>
+<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#packages-needed-for-r-studio"><i class="fa fa-check"></i><b>0.3</b> Packages needed for R Studio:</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="statistical-basics.html"><a href="statistical-basics.html"><i class="fa fa-check"></i><b>1</b> Statistical Basics</a><ul>
+<li class="chapter" data-level="1.1" data-path="statistical-basics.html"><a href="statistical-basics.html#what-is-statistics"><i class="fa fa-check"></i><b>1.1</b> What is Statistics?</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="statistical-basics.html"><a href="statistical-basics.html#example-stating-definitions-for-qualitative-variable"><i class="fa fa-check"></i><b>1.1.1</b> Example: Stating Definitions for Qualitative Variable**</a></li>
+<li class="chapter" data-level="1.1.2" data-path="statistical-basics.html"><a href="statistical-basics.html#example-stating-definitions-for-qualitative-variable-1"><i class="fa fa-check"></i><b>1.1.2</b> Example: Stating Definitions for Qualitative Variable</a></li>
+<li class="chapter" data-level="1.1.3" data-path="statistical-basics.html"><a href="statistical-basics.html#example-stating-definitions-for-quantitative-variable"><i class="fa fa-check"></i><b>1.1.3</b> Example: Stating Definitions for Quantitative Variable</a></li>
+<li class="chapter" data-level="1.1.4" data-path="statistical-basics.html"><a href="statistical-basics.html#example-stating-definitions-for-quantitative-variable-1"><i class="fa fa-check"></i><b>1.1.4</b> Example: Stating Definitions for Quantitative Variable</a></li>
+<li class="chapter" data-level="1.1.5" data-path="statistical-basics.html"><a href="statistical-basics.html#example-discrete-or-continuous"><i class="fa fa-check"></i><b>1.1.5</b> Example: Discrete or Continuous</a></li>
+<li class="chapter" data-level="1.1.6" data-path="statistical-basics.html"><a href="statistical-basics.html#example-measurement-scale"><i class="fa fa-check"></i><b>1.1.6</b> Example: Measurement Scale</a></li>
+<li class="chapter" data-level="1.1.7" data-path="statistical-basics.html"><a href="statistical-basics.html#homework-section-1.1"><i class="fa fa-check"></i><b>1.1.7</b> Homework Section 1.1</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="statistical-basics.html"><a href="statistical-basics.html#sampling-methods"><i class="fa fa-check"></i><b>1.2</b> Sampling Methods</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="statistical-basics.html"><a href="statistical-basics.html#example-choosing-a-simple-random-sample"><i class="fa fa-check"></i><b>1.2.1</b> Example: Choosing a Simple Random Sample</a></li>
+<li class="chapter" data-level="1.2.2" data-path="statistical-basics.html"><a href="statistical-basics.html#example-how-not-to-choose-a-simple-random-sample"><i class="fa fa-check"></i><b>1.2.2</b> Example: How Not to Choose a Simple Random Sample</a></li>
+<li class="chapter" data-level="1.2.3" data-path="statistical-basics.html"><a href="statistical-basics.html#example-how-to-choose-a-simple-random-sample-using-r"><i class="fa fa-check"></i><b>1.2.3</b> Example: How to Choose a Simple Random Sample using R</a></li>
+<li class="chapter" data-level="1.2.4" data-path="statistical-basics.html"><a href="statistical-basics.html#example-sampling-type"><i class="fa fa-check"></i><b>1.2.4</b> Example: Sampling type</a></li>
+<li class="chapter" data-level="1.2.5" data-path="statistical-basics.html"><a href="statistical-basics.html#homework-section-1.2"><i class="fa fa-check"></i><b>1.2.5</b> Homework Section 1.2</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="statistical-basics.html"><a href="statistical-basics.html#experimental-design"><i class="fa fa-check"></i><b>1.3</b> Experimental Design</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="statistical-basics.html"><a href="statistical-basics.html#example-observational-study-or-experiment"><i class="fa fa-check"></i><b>1.3.1</b> Example: Observational Study or Experiment</a></li>
+<li class="chapter" data-level="1.3.2" data-path="statistical-basics.html"><a href="statistical-basics.html#homework-section-1.3"><i class="fa fa-check"></i><b>1.3.2</b> Homework Section 1.3</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="statistical-basics.html"><a href="statistical-basics.html#how-not-to-do-statistics"><i class="fa fa-check"></i><b>1.4</b> How Not to Do Statistics</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="statistical-basics.html"><a href="statistical-basics.html#example-bias-in-a-study"><i class="fa fa-check"></i><b>1.4.1</b> Example: Bias in a Study**</a></li>
+<li class="chapter" data-level="1.4.2" data-path="statistical-basics.html"><a href="statistical-basics.html#example-cause-and-effect"><i class="fa fa-check"></i><b>1.4.2</b> Example: Cause and Effect</a></li>
+<li class="chapter" data-level="1.4.3" data-path="statistical-basics.html"><a href="statistical-basics.html#example-generalizations"><i class="fa fa-check"></i><b>1.4.3</b> Example: Generalizations</a></li>
+<li class="chapter" data-level="1.4.4" data-path="statistical-basics.html"><a href="statistical-basics.html#homework-section-1.4"><i class="fa fa-check"></i><b>1.4.4</b> Homework Section 1.4</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html"><i class="fa fa-check"></i><b>2</b> Graphical Descriptions of Data</a><ul>
+<li class="chapter" data-level="2.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#qualitative-data"><i class="fa fa-check"></i><b>2.1</b> Qualitative Data</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-drawing-a-bar-chart"><i class="fa fa-check"></i><b>2.1.1</b> Example: Drawing a Bar Chart**</a></li>
+<li class="chapter" data-level="2.1.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework"><i class="fa fa-check"></i><b>2.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#quantitative-data"><i class="fa fa-check"></i><b>2.2</b> Quantitative Data</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-drawing-a-histogram-and-density-plot"><i class="fa fa-check"></i><b>2.2.1</b> Example: Drawing a Histogram and Density plot</a></li>
+<li class="chapter" data-level="2.2.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-drawing-a-histogram-and-density-plot-1"><i class="fa fa-check"></i><b>2.2.2</b> Example: Drawing a Histogram and Density plot</a></li>
+<li class="chapter" data-level="2.2.3" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework-1"><i class="fa fa-check"></i><b>2.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#other-graphical-representations-of-data"><i class="fa fa-check"></i><b>2.3</b> Other Graphical Representations of Data</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-scatter-plot"><i class="fa fa-check"></i><b>2.3.1</b> Example: Scatter Plot**</a></li>
+<li class="chapter" data-level="2.3.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-time-series-plot"><i class="fa fa-check"></i><b>2.3.2</b> Example: Time-Series Plot**</a></li>
+<li class="chapter" data-level="2.3.3" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework-2"><i class="fa fa-check"></i><b>2.3.3</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html"><i class="fa fa-check"></i><b>3</b> Numerical Descriptions of Data</a><ul>
+<li class="chapter" data-level="3.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#measures-of-center"><i class="fa fa-check"></i><b>3.1</b> Measures of Center</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-finding-the-mean-and-median-using-r"><i class="fa fa-check"></i><b>3.1.1</b> Example: Finding the Mean and Median using R</a></li>
+<li class="chapter" data-level="3.1.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-finding-mean-and-median-with-filtering"><i class="fa fa-check"></i><b>3.1.2</b> Example: Finding Mean and Median with filtering</a></li>
+<li class="chapter" data-level="3.1.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-affect-of-extreme-values-on-mean-and-median"><i class="fa fa-check"></i><b>3.1.3</b> Example: Affect of Extreme Values on Mean and Median**</a></li>
+<li class="chapter" data-level="3.1.4" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-weighted-average"><i class="fa fa-check"></i><b>3.1.4</b> Example: Weighted Average</a></li>
+<li class="chapter" data-level="3.1.5" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-weighted-average-1"><i class="fa fa-check"></i><b>3.1.5</b> Example: Weighted Average</a></li>
+<li class="chapter" data-level="3.1.6" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-3"><i class="fa fa-check"></i><b>3.1.6</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#measures-of-spread"><i class="fa fa-check"></i><b>3.2</b> Measures of Spread</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-range"><i class="fa fa-check"></i><b>3.2.1</b> Example: Range</a></li>
+<li class="chapter" data-level="3.2.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-finding-the-standard-deviation"><i class="fa fa-check"></i><b>3.2.2</b> Example: Finding the Standard Deviation</a></li>
+<li class="chapter" data-level="3.2.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-the-gneral-rule"><i class="fa fa-check"></i><b>3.2.3</b> Example: the gneral rule</a></li>
+<li class="chapter" data-level="3.2.4" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-determining-if-a-value-is-unusual"><i class="fa fa-check"></i><b>3.2.4</b> Example: Determining If a Value Is Unusual</a></li>
+<li class="chapter" data-level="3.2.5" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-4"><i class="fa fa-check"></i><b>3.2.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#ranking"><i class="fa fa-check"></i><b>3.3</b> Ranking</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-interpreting-percentile"><i class="fa fa-check"></i><b>3.3.1</b> Example: Interpreting Percentile</a></li>
+<li class="chapter" data-level="3.3.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-percentile-versus-score"><i class="fa fa-check"></i><b>3.3.2</b> Example: Percentile Versus Score</a></li>
+<li class="chapter" data-level="3.3.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-five-number-summary-and-boxplot"><i class="fa fa-check"></i><b>3.3.3</b> Example: Five-number Summary and Boxplot</a></li>
+<li class="chapter" data-level="3.3.4" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-separating-based-on-a-factor"><i class="fa fa-check"></i><b>3.3.4</b> Example: Separating based on a factor</a></li>
+<li class="chapter" data-level="3.3.5" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-putting-it-all-together"><i class="fa fa-check"></i><b>3.3.5</b> Example: Putting it all together</a></li>
+<li class="chapter" data-level="3.3.6" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-5"><i class="fa fa-check"></i><b>3.3.6</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>4</b> Probability</a><ul>
+<li class="chapter" data-level="4.1" data-path="probability.html"><a href="probability.html#empirical-probability"><i class="fa fa-check"></i><b>4.1</b> Empirical Probability</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="probability.html"><a href="probability.html#example-statistics-class-survey"><i class="fa fa-check"></i><b>4.1.1</b> Example: Statistics class survey</a></li>
+<li class="chapter" data-level="4.1.2" data-path="probability.html"><a href="probability.html#homework-6"><i class="fa fa-check"></i><b>4.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="probability.html"><a href="probability.html#theoretical-probability"><i class="fa fa-check"></i><b>4.2</b> Theoretical Probability</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="probability.html"><a href="probability.html#example-equally-likely-outcomes"><i class="fa fa-check"></i><b>4.2.1</b> Example: Equally Likely Outcomes</a></li>
+<li class="chapter" data-level="4.2.2" data-path="probability.html"><a href="probability.html#example-calculating-theoretical-probabilities"><i class="fa fa-check"></i><b>4.2.2</b> Example: Calculating Theoretical Probabilities</a></li>
+<li class="chapter" data-level="4.2.3" data-path="probability.html"><a href="probability.html#example-calculating-theoretical-probabilities-1"><i class="fa fa-check"></i><b>4.2.3</b> Example: Calculating Theoretical Probabilities</a></li>
+<li class="chapter" data-level="4.2.4" data-path="probability.html"><a href="probability.html#example-calculating-theoretical-probabilities-2"><i class="fa fa-check"></i><b>4.2.4</b> Example: Calculating Theoretical Probabilities</a></li>
+<li class="chapter" data-level="4.2.5" data-path="probability.html"><a href="probability.html#example-complementary-events"><i class="fa fa-check"></i><b>4.2.5</b> Example: Complementary Events</a></li>
+<li class="chapter" data-level="4.2.6" data-path="probability.html"><a href="probability.html#example-using-the-complement-to-find-probabilities"><i class="fa fa-check"></i><b>4.2.6</b> Example: Using the Complement to Find Probabilities</a></li>
+<li class="chapter" data-level="4.2.7" data-path="probability.html"><a href="probability.html#example-using-addition-rules"><i class="fa fa-check"></i><b>4.2.7</b> Example: Using Addition Rules</a></li>
+<li class="chapter" data-level="4.2.8" data-path="probability.html"><a href="probability.html#example-odds-against-and-payoff-odds"><i class="fa fa-check"></i><b>4.2.8</b> Example: Odds Against and Payoff Odds</a></li>
+<li class="chapter" data-level="4.2.9" data-path="probability.html"><a href="probability.html#homework-7"><i class="fa fa-check"></i><b>4.2.9</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="probability.html"><a href="probability.html#conditional-probability"><i class="fa fa-check"></i><b>4.3</b> Conditional Probability</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="probability.html"><a href="probability.html#example-conditional-probabilities"><i class="fa fa-check"></i><b>4.3.1</b> Example: Conditional Probabilities</a></li>
+<li class="chapter" data-level="4.3.2" data-path="probability.html"><a href="probability.html#example-independent-events"><i class="fa fa-check"></i><b>4.3.2</b> Example: Independent Events</a></li>
+<li class="chapter" data-level="4.3.3" data-path="probability.html"><a href="probability.html#example-multiplication-rule"><i class="fa fa-check"></i><b>4.3.3</b> Example: Multiplication Rule</a></li>
+<li class="chapter" data-level="4.3.4" data-path="probability.html"><a href="probability.html#example-application-problem"><i class="fa fa-check"></i><b>4.3.4</b> Example: Application Problem</a></li>
+<li class="chapter" data-level="4.3.5" data-path="probability.html"><a href="probability.html#homework-8"><i class="fa fa-check"></i><b>4.3.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="probability.html"><a href="probability.html#counting-techniques"><i class="fa fa-check"></i><b>4.4</b> Counting Techniques</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="probability.html"><a href="probability.html#example-multiplication-rule-in-counting"><i class="fa fa-check"></i><b>4.4.1</b> Example: Multiplication Rule in Counting</a></li>
+<li class="chapter" data-level="4.4.2" data-path="probability.html"><a href="probability.html#example-multiplication-rule-in-counting-1"><i class="fa fa-check"></i><b>4.4.2</b> Example: Multiplication Rule in Counting</a></li>
+<li class="chapter" data-level="4.4.3" data-path="probability.html"><a href="probability.html#homework-9"><i class="fa fa-check"></i><b>4.4.3</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html"><i class="fa fa-check"></i><b>5</b> Discrete Probability Distributions</a><ul>
+<li class="chapter" data-level="5.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#basics-of-probability-distributions"><i class="fa fa-check"></i><b>5.1</b> Basics of Probability Distributions</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-probability-distribution"><i class="fa fa-check"></i><b>5.1.1</b> Example: Probability Distribution</a></li>
+<li class="chapter" data-level="5.1.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-calculating-the-expected-value"><i class="fa fa-check"></i><b>5.1.2</b> Example: Calculating the Expected Value</a></li>
+<li class="chapter" data-level="5.1.3" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-is-the-event-unusual"><i class="fa fa-check"></i><b>5.1.3</b> Example: Is the Event Unusual</a></li>
+<li class="chapter" data-level="5.1.4" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-10"><i class="fa fa-check"></i><b>5.1.4</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#binomial-probability-distribution"><i class="fa fa-check"></i><b>5.2</b> Binomial Probability Distribution</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-calculating-binomial-probabilities"><i class="fa fa-check"></i><b>5.2.1</b> Example: Calculating Binomial Probabilities</a></li>
+<li class="chapter" data-level="5.2.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-calculating-binomial-probabilities-1"><i class="fa fa-check"></i><b>5.2.2</b> Example: Calculating Binomial Probabilities</a></li>
+<li class="chapter" data-level="5.2.3" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-11"><i class="fa fa-check"></i><b>5.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#mean-and-standard-deviation-of-binomial-distribution"><i class="fa fa-check"></i><b>5.3</b> Mean and Standard Deviation of Binomial Distribution</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-finding-the-probability-distribution-mean-variance-and-standard-deviation-of-a-binomial-distribution"><i class="fa fa-check"></i><b>5.3.1</b> Example: Finding the Probability Distribution, Mean, Variance and Standard Deviation of a Binomial Distribution</a></li>
+<li class="chapter" data-level="5.3.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-12"><i class="fa fa-check"></i><b>5.3.2</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html"><i class="fa fa-check"></i><b>6</b> Continuous Probability Distributions</a><ul>
+<li class="chapter" data-level="6.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#finding-probabilities-for-the-normal-distribution"><i class="fa fa-check"></i><b>6.1</b> Finding Probabilities for the Normal Distribution</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-general-normal-distribution"><i class="fa fa-check"></i><b>6.1.1</b> Example: General Normal Distribution</a></li>
+<li class="chapter" data-level="6.1.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-general-normal-distribution-1"><i class="fa fa-check"></i><b>6.1.2</b> Example: General Normal Distribution</a></li>
+<li class="chapter" data-level="6.1.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-13"><i class="fa fa-check"></i><b>6.1.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#assessing-normality"><i class="fa fa-check"></i><b>6.2</b> Assessing Normality</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-is-it-normal"><i class="fa fa-check"></i><b>6.2.1</b> Example: Is It Normal?</a></li>
+<li class="chapter" data-level="6.2.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-is-it-normal-1"><i class="fa fa-check"></i><b>6.2.2</b> Example: Is It Normal?</a></li>
+<li class="chapter" data-level="6.2.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-14"><i class="fa fa-check"></i><b>6.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#sampling-distribution-and-the-central-limit-theorem"><i class="fa fa-check"></i><b>6.3</b> Sampling Distribution and the Central Limit Theorem</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-sampling-distribution"><i class="fa fa-check"></i><b>6.3.1</b> Example: Sampling Distribution</a></li>
+<li class="chapter" data-level="6.3.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-finding-probabilities-for-sample-means"><i class="fa fa-check"></i><b>6.3.2</b> Example: Finding Probabilities for Sample Means</a></li>
+<li class="chapter" data-level="6.3.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-finding-probabilities-for-sample-means-1"><i class="fa fa-check"></i><b>6.3.3</b> Example: Finding Probabilities for Sample Means</a></li>
+<li class="chapter" data-level="6.3.4" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-15"><i class="fa fa-check"></i><b>6.3.4</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="one-sample-inference.html"><a href="one-sample-inference.html"><i class="fa fa-check"></i><b>7</b> One-Sample Inference</a><ul>
+<li class="chapter" data-level="7.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#basics-of-hypothesis-testing"><i class="fa fa-check"></i><b>7.1</b> Basics of Hypothesis Testing</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-basics-of-hypothesis-testing"><i class="fa fa-check"></i><b>7.1.1</b> Example: Basics of Hypothesis Testing</a></li>
+<li class="chapter" data-level="7.1.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-battery-example-revisited."><i class="fa fa-check"></i><b>7.1.2</b> Example: Battery Example Revisited.</a></li>
+<li class="chapter" data-level="7.1.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-conclusions-in-hypothesis-tests"><i class="fa fa-check"></i><b>7.1.3</b> Example: Conclusions in Hypothesis Tests</a></li>
+<li class="chapter" data-level="7.1.4" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-stating-hypotheses"><i class="fa fa-check"></i><b>7.1.4</b> Example: Stating Hypotheses</a></li>
+<li class="chapter" data-level="7.1.5" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-stating-type-i-and-ii-errors-and-picking-level-of-significance"><i class="fa fa-check"></i><b>7.1.5</b> Example: Stating Type I and II Errors and Picking Level of Significance</a></li>
+<li class="chapter" data-level="7.1.6" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-16"><i class="fa fa-check"></i><b>7.1.6</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#one-sample-proportion-test"><i class="fa fa-check"></i><b>7.2</b> One-Sample Proportion Test</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-hypothesis-test-for-one-proportion"><i class="fa fa-check"></i><b>7.2.1</b> Example: Hypothesis Test for One Proportion</a></li>
+<li class="chapter" data-level="7.2.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-hypothesis-test-for-one-proportion-1"><i class="fa fa-check"></i><b>7.2.2</b> Example: Hypothesis Test for One Proportion</a></li>
+<li class="chapter" data-level="7.2.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-17"><i class="fa fa-check"></i><b>7.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#one-sample-test-for-the-mean"><i class="fa fa-check"></i><b>7.3</b> One-Sample Test for the Mean</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-resampling"><i class="fa fa-check"></i><b>7.3.1</b> Example: Resampling</a></li>
+<li class="chapter" data-level="7.3.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-test-of-the-mean-using-one-sample-t-test"><i class="fa fa-check"></i><b>7.3.2</b> Example: Test of the Mean Using One Sample T-test</a></li>
+<li class="chapter" data-level="7.3.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-test-of-the-mean-using-one-sample-t-test-1"><i class="fa fa-check"></i><b>7.3.3</b> Example: Test of the Mean Using One Sample T-test</a></li>
+<li class="chapter" data-level="7.3.4" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-18"><i class="fa fa-check"></i><b>7.3.4</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="estimation.html"><a href="estimation.html"><i class="fa fa-check"></i><b>8</b> Estimation</a><ul>
+<li class="chapter" data-level="8.1" data-path="estimation.html"><a href="estimation.html#basics-of-confidence-intervals"><i class="fa fa-check"></i><b>8.1</b> Basics of Confidence Intervals</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="estimation.html"><a href="estimation.html#example-stating-the-statistical-and-real-world-interpretations-for-a-confidence-interval"><i class="fa fa-check"></i><b>8.1.1</b> Example: Stating the Statistical and Real World Interpretations for a Confidence Interval</a></li>
+<li class="chapter" data-level="8.1.2" data-path="estimation.html"><a href="estimation.html#homework-19"><i class="fa fa-check"></i><b>8.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="estimation.html"><a href="estimation.html#one-sample-interval-for-the-proportion"><i class="fa fa-check"></i><b>8.2</b> One-Sample Interval for the Proportion</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="estimation.html"><a href="estimation.html#example-confidence-interval-for-the-population-proportion"><i class="fa fa-check"></i><b>8.2.1</b> Example: Confidence Interval for the Population Proportion</a></li>
+<li class="chapter" data-level="8.2.2" data-path="estimation.html"><a href="estimation.html#example-confidence-interval-for-the-population-proportion-1"><i class="fa fa-check"></i><b>8.2.2</b> Example: Confidence Interval for the Population Proportion</a></li>
+<li class="chapter" data-level="8.2.3" data-path="estimation.html"><a href="estimation.html#homework-20"><i class="fa fa-check"></i><b>8.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="estimation.html"><a href="estimation.html#one-sample-interval-for-the-mean"><i class="fa fa-check"></i><b>8.3</b> One-Sample Interval for the Mean</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="estimation.html"><a href="estimation.html#example-confidence-interval-for-the-population-mean"><i class="fa fa-check"></i><b>8.3.1</b> Example: Confidence Interval for the Population Mean</a></li>
+<li class="chapter" data-level="8.3.2" data-path="estimation.html"><a href="estimation.html#example-confidence-interval-for-the-population-mean-1"><i class="fa fa-check"></i><b>8.3.2</b> Example: Confidence Interval for the Population Mean</a></li>
+<li class="chapter" data-level="8.3.3" data-path="estimation.html"><a href="estimation.html#homework-21"><i class="fa fa-check"></i><b>8.3.3</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="two-sample-inference.html"><a href="two-sample-inference.html"><i class="fa fa-check"></i><b>9</b> Two-Sample Inference</a><ul>
+<li class="chapter" data-level="9.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#two-proportions"><i class="fa fa-check"></i><b>9.1</b> Two Proportions</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-two-population-proportions"><i class="fa fa-check"></i><b>9.1.1</b> Example: Hypothesis Test for Two Population Proportions</a></li>
+<li class="chapter" data-level="9.1.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-confidence-interval-for-two-population-proportions"><i class="fa fa-check"></i><b>9.1.2</b> Example: Confidence Interval for Two Population Proportions</a></li>
+<li class="chapter" data-level="9.1.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-22"><i class="fa fa-check"></i><b>9.1.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#paired-samples-for-two-means"><i class="fa fa-check"></i><b>9.2</b> Paired Samples for Two Means</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-independent-or-dependent-samples"><i class="fa fa-check"></i><b>9.2.1</b> Example: Independent or Dependent Samples</a></li>
+<li class="chapter" data-level="9.2.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-paired-samples"><i class="fa fa-check"></i><b>9.2.2</b> Example: Hypothesis Test for Paired Samples</a></li>
+<li class="chapter" data-level="9.2.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-paired-samples-1"><i class="fa fa-check"></i><b>9.2.3</b> Example: Hypothesis Test for Paired Samples</a></li>
+<li class="chapter" data-level="9.2.4" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-confidence-interval-for-paired-samples"><i class="fa fa-check"></i><b>9.2.4</b> Example: Confidence Interval for Paired Samples</a></li>
+<li class="chapter" data-level="9.2.5" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-23"><i class="fa fa-check"></i><b>9.2.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#independent-samples-for-two-means"><i class="fa fa-check"></i><b>9.3</b> Independent Samples for Two Means</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-two-means"><i class="fa fa-check"></i><b>9.3.1</b> Example: Hypothesis Test for Two Means</a></li>
+<li class="chapter" data-level="9.3.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-confidence-interval-in-two-samples"><i class="fa fa-check"></i><b>9.3.2</b> Example: Confidence Interval in Two Samples</a></li>
+<li class="chapter" data-level="9.3.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-two-means-1"><i class="fa fa-check"></i><b>9.3.3</b> Example: Hypothesis Test for Two Means</a></li>
+<li class="chapter" data-level="9.3.4" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-confidence-interval-for-two-independent-samples"><i class="fa fa-check"></i><b>9.3.4</b> Example: Confidence Interval for Two Independent Samples</a></li>
+<li class="chapter" data-level="9.3.5" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-24"><i class="fa fa-check"></i><b>9.3.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="two-sample-inference.html"><a href="two-sample-inference.html#which-analysis-should-you-conduct"><i class="fa fa-check"></i><b>9.4</b> Which Analysis Should You Conduct?</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html"><i class="fa fa-check"></i><b>10</b> Regression and Correlation</a><ul>
+<li class="chapter" data-level="10.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#regression"><i class="fa fa-check"></i><b>10.1</b> Regression</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-determining-if-there-is-a-relationship"><i class="fa fa-check"></i><b>10.1.1</b> Example: Determining If There Is a Relationship</a></li>
+<li class="chapter" data-level="10.1.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-25"><i class="fa fa-check"></i><b>10.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#correlation"><i class="fa fa-check"></i><b>10.2</b> Correlation</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-find-the-coefficient-of-determinatin-r2"><i class="fa fa-check"></i><b>10.2.1</b> Example: Find the coefficient of determinatin <span class="math inline">\(R^2\)</span></a></li>
+<li class="chapter" data-level="10.2.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-calculating-the-linear-correlation-coefficient-r"><i class="fa fa-check"></i><b>10.2.2</b> Example: Calculating the Linear Correlation Coefficient, <em>r</em></a></li>
+<li class="chapter" data-level="10.2.3" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-correlation-versus-causation"><i class="fa fa-check"></i><b>10.2.3</b> Example: Correlation Versus Causation</a></li>
+<li class="chapter" data-level="10.2.4" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-26"><i class="fa fa-check"></i><b>10.2.4</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#inference-for-regression-and-correlation"><i class="fa fa-check"></i><b>10.3</b> Inference for Regression and Correlation</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-finding-the-standard-error-of-the-estimate"><i class="fa fa-check"></i><b>10.3.1</b> Example: Finding the Standard Error of the Estimate</a></li>
+<li class="chapter" data-level="10.3.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-testing-the-claim-of-a-linear-correlation"><i class="fa fa-check"></i><b>10.3.2</b> Example: Testing the Claim of a Linear Correlation</a></li>
+<li class="chapter" data-level="10.3.3" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-27"><i class="fa fa-check"></i><b>10.3.3</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html"><i class="fa fa-check"></i><b>11</b> Chi-Square and ANOVA Tests</a><ul>
+<li class="chapter" data-level="11.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#chi-square-test-for-independence"><i class="fa fa-check"></i><b>11.1</b> Chi-Square Test for Independence</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#example-hypothesis-test-with-chi-square-test"><i class="fa fa-check"></i><b>11.1.1</b> Example: Hypothesis Test with Chi-Square Test</a></li>
+<li class="chapter" data-level="11.1.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-28"><i class="fa fa-check"></i><b>11.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#chi-square-goodness-of-fit"><i class="fa fa-check"></i><b>11.2</b> Chi-Square Goodness of Fit</a><ul>
+<li class="chapter" data-level="11.2.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#example-goodness-of-fit-test"><i class="fa fa-check"></i><b>11.2.1</b> Example: Goodness of Fit Test</a></li>
+<li class="chapter" data-level="11.2.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-29"><i class="fa fa-check"></i><b>11.2.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#analysis-of-variance-anova"><i class="fa fa-check"></i><b>11.3</b> Analysis of Variance (ANOVA)</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#example-hypothesis-test-involving-several-means"><i class="fa fa-check"></i><b>11.3.1</b> Example: Hypothesis Test Involving Several Means</a></li>
+<li class="chapter" data-level="11.3.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-30"><i class="fa fa-check"></i><b>11.3.2</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/StatPREP/Stat_using_technology" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistics Using Technology</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Statistics Using Technology</h1>
+<h2 class="subtitle"><em>Third Edition</em></h2>
+<p class="author"><em>Kathryn Kozak</em></p>
+<p class="date"><em>2020-07-30</em></p>
+</div>
+<div id="preface" class="section level1 unnumbered">
+<h1>Preface</h1>
+<p>I hope you find this book useful in teaching statistics. When writing this book, I tried to follow the GAISE Standards (GAISE recommendations. (2014, January 05). Retrieved from <a href="http://www.amstat.org/education/gaise/GAISECollege_Recommendations.pdf" class="uri">http://www.amstat.org/education/gaise/GAISECollege_Recommendations.pdf</a></p>
+<ul>
+<li>Teach statistical thinking.</li>
+<li>Focus on conceptual understanding.</li>
+<li>Integrate real data with a context and a purpose.</li>
+<li>Foster active learning.</li>
+<li>Use technology to explore concepts and analyze data.</li>
+<li>Use assessments to improve and evaluate student learning</li>
+</ul>
+<p>To this end, I ask students to interpret the results of their calculations. I incorporated the use of technology (R Studio) for most calculations. Because of that you will not find me using any of the computational formulas for standard deviations or correlation and regression since I prefer students understand the concept of these quantities. Also, because I utilize technology you will not find the standard normal table, Student’s t-table, binomial table, chi-square distribution table, and F-distribution table in the book. Another difference between this book and other statistics books is the order of hypothesis testing and confidence intervals. Most books present confidence intervals first and then hypothesis tests. I find that presenting hypothesis testing first and then confidence intervals is more understandable for students. Lastly, I have de-emphasized the use of the z-test. In fact, I only use it to introduce hypothesis testing, and never utilize it again. Two samples should be emphasised over one sample test. Lastly, to aid student understanding and interest, most of the homework and examples utilize real data with multiple variables. The beauty of multiple variables, is that you can ask the students to investigate different analysis with different variables. This way students can work with data and come up with connections of asking questions and using data to answer the questions. Again, I hope you find this book useful for your introductory statistics class.</p>
+<p>I want to make a comment about the mathematical knowledge that I assumed the students possess. The course for which I wrote this book has a higher prerequisite than most introductory statistics books. However, I do feel that students can read and understand this book as long as they can read critically. I do not show how to create most of the graphs, but all graphs are created with R Studio. So I hope the mathematical level is appropriate for your course.</p>
+<p>The technology that I utilized for creating the graphs and statistical analysis is R Studio. This is a statistical software that are used by statisticians and so using it gives students skills they may need in the future. Please feel free to use any other technology that is more appropriate for your students. Do make sure that you use some technology.</p>
+<div id="acknowledgments" class="section level2">
+<h2><span class="header-section-number">0.1</span> Acknowledgments:</h2>
+<p>I would like to thank the following people for taking their valuable time to review the book. Their comments and insights improved this book immensely.</p>
+<ul>
+<li>Daniel Kaplan, Macalester College</li>
+<li>Jane Tanner, Onondaga Community College</li>
+<li>Rob Farinelli, College of Southern Maryland</li>
+<li>Carrie Kinnison, retired engineer</li>
+<li>Sean Simpson, Westchester Community College</li>
+<li>Kim Sonier, Coconino Community College</li>
+<li>Jim Ham, Delta College</li>
+<li>David Straayer, Tacoma Community College</li>
+<li>Kendra Feinstein, Tacoma Community College</li>
+<li>Students of Coconino Community College</li>
+<li>Students of Tacoma Community College</li>
+</ul>
+<p>I also want to thank Coconino Community College for granting me a sabbatical so that I would have the time to write the book. On a personal note, I wanted to thank my brother, John Matic, his wife Jenelle, and their children Hannah and Eli for their hospitality when writing the first edition. In addition to allowing my family access to their home, John provided numerous examples and data sets for business applications in this book. I inadvertently left this thank you out of the first edition of the book, and for that I apologize. His help and his family’s hospitality were invaluable to me.
+Lastly, I want to thank my husband Rich and my son Dylan for supporting me in this project. Without their love and support, I would not have been able to complete the book.</p>
+</div>
+<div id="new-to-the-third-edition" class="section level2">
+<h2><span class="header-section-number">0.2</span> New to the Third Edition:</h2>
+<p>The additions to this edition mostly involve adding the commands to create graphs, compute descriptive statistics, finding probabilities, and computing inferential analysis using the open source software R Studio, and the removal of all other technologies. Data Frames with multiple variables and multiple units of measurements were expanded to most of the data. This is to make the course more data-centric. Lastly, minor explanations were made and corrections were made where necessary.</p>
+</div>
+<div id="packages-needed-for-r-studio" class="section level2">
+<h2><span class="header-section-number">0.3</span> Packages needed for R Studio:</h2>
+<p>You will need the following packages installed and loaded in R Studio: arm, mosaic, MASS, Weighted.Desc.Stat.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="statistical-basics.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["Statistics_using_technology.pdf", "Statistics_using_technology.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

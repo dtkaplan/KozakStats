@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 9 Two-Sample Inference | Statistics Using Technology</title>
+  <meta name="description" content="An introductory statistics textbook." />
+  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 9 Two-Sample Inference | Statistics Using Technology" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="An introductory statistics textbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 9 Two-Sample Inference | Statistics Using Technology" />
+  
+  <meta name="twitter:description" content="An introductory statistics textbook." />
+  
+
+<meta name="author" content="Kathryn Kozak" />
+
+
+<meta name="date" content="2020-07-30" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="estimation.html"/>
+<link rel="next" href="regression-and-correlation.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Statistics Using Technology</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i><b>0.1</b> Acknowledgments:</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#new-to-the-third-edition"><i class="fa fa-check"></i><b>0.2</b> New to the Third Edition:</a></li>
+<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#packages-needed-for-r-studio"><i class="fa fa-check"></i><b>0.3</b> Packages needed for R Studio:</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="statistical-basics.html"><a href="statistical-basics.html"><i class="fa fa-check"></i><b>1</b> Statistical Basics</a><ul>
+<li class="chapter" data-level="1.1" data-path="statistical-basics.html"><a href="statistical-basics.html#what-is-statistics"><i class="fa fa-check"></i><b>1.1</b> What is Statistics?</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="statistical-basics.html"><a href="statistical-basics.html#example-stating-definitions-for-qualitative-variable"><i class="fa fa-check"></i><b>1.1.1</b> Example: Stating Definitions for Qualitative Variable**</a></li>
+<li class="chapter" data-level="1.1.2" data-path="statistical-basics.html"><a href="statistical-basics.html#example-stating-definitions-for-qualitative-variable-1"><i class="fa fa-check"></i><b>1.1.2</b> Example: Stating Definitions for Qualitative Variable</a></li>
+<li class="chapter" data-level="1.1.3" data-path="statistical-basics.html"><a href="statistical-basics.html#example-stating-definitions-for-quantitative-variable"><i class="fa fa-check"></i><b>1.1.3</b> Example: Stating Definitions for Quantitative Variable</a></li>
+<li class="chapter" data-level="1.1.4" data-path="statistical-basics.html"><a href="statistical-basics.html#example-stating-definitions-for-quantitative-variable-1"><i class="fa fa-check"></i><b>1.1.4</b> Example: Stating Definitions for Quantitative Variable</a></li>
+<li class="chapter" data-level="1.1.5" data-path="statistical-basics.html"><a href="statistical-basics.html#example-discrete-or-continuous"><i class="fa fa-check"></i><b>1.1.5</b> Example: Discrete or Continuous</a></li>
+<li class="chapter" data-level="1.1.6" data-path="statistical-basics.html"><a href="statistical-basics.html#example-measurement-scale"><i class="fa fa-check"></i><b>1.1.6</b> Example: Measurement Scale</a></li>
+<li class="chapter" data-level="1.1.7" data-path="statistical-basics.html"><a href="statistical-basics.html#homework-section-1.1"><i class="fa fa-check"></i><b>1.1.7</b> Homework Section 1.1</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="statistical-basics.html"><a href="statistical-basics.html#sampling-methods"><i class="fa fa-check"></i><b>1.2</b> Sampling Methods</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="statistical-basics.html"><a href="statistical-basics.html#example-choosing-a-simple-random-sample"><i class="fa fa-check"></i><b>1.2.1</b> Example: Choosing a Simple Random Sample</a></li>
+<li class="chapter" data-level="1.2.2" data-path="statistical-basics.html"><a href="statistical-basics.html#example-how-not-to-choose-a-simple-random-sample"><i class="fa fa-check"></i><b>1.2.2</b> Example: How Not to Choose a Simple Random Sample</a></li>
+<li class="chapter" data-level="1.2.3" data-path="statistical-basics.html"><a href="statistical-basics.html#example-how-to-choose-a-simple-random-sample-using-r"><i class="fa fa-check"></i><b>1.2.3</b> Example: How to Choose a Simple Random Sample using R</a></li>
+<li class="chapter" data-level="1.2.4" data-path="statistical-basics.html"><a href="statistical-basics.html#example-sampling-type"><i class="fa fa-check"></i><b>1.2.4</b> Example: Sampling type</a></li>
+<li class="chapter" data-level="1.2.5" data-path="statistical-basics.html"><a href="statistical-basics.html#homework-section-1.2"><i class="fa fa-check"></i><b>1.2.5</b> Homework Section 1.2</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="statistical-basics.html"><a href="statistical-basics.html#experimental-design"><i class="fa fa-check"></i><b>1.3</b> Experimental Design</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="statistical-basics.html"><a href="statistical-basics.html#example-observational-study-or-experiment"><i class="fa fa-check"></i><b>1.3.1</b> Example: Observational Study or Experiment</a></li>
+<li class="chapter" data-level="1.3.2" data-path="statistical-basics.html"><a href="statistical-basics.html#homework-section-1.3"><i class="fa fa-check"></i><b>1.3.2</b> Homework Section 1.3</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="statistical-basics.html"><a href="statistical-basics.html#how-not-to-do-statistics"><i class="fa fa-check"></i><b>1.4</b> How Not to Do Statistics</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="statistical-basics.html"><a href="statistical-basics.html#example-bias-in-a-study"><i class="fa fa-check"></i><b>1.4.1</b> Example: Bias in a Study**</a></li>
+<li class="chapter" data-level="1.4.2" data-path="statistical-basics.html"><a href="statistical-basics.html#example-cause-and-effect"><i class="fa fa-check"></i><b>1.4.2</b> Example: Cause and Effect</a></li>
+<li class="chapter" data-level="1.4.3" data-path="statistical-basics.html"><a href="statistical-basics.html#example-generalizations"><i class="fa fa-check"></i><b>1.4.3</b> Example: Generalizations</a></li>
+<li class="chapter" data-level="1.4.4" data-path="statistical-basics.html"><a href="statistical-basics.html#homework-section-1.4"><i class="fa fa-check"></i><b>1.4.4</b> Homework Section 1.4</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html"><i class="fa fa-check"></i><b>2</b> Graphical Descriptions of Data</a><ul>
+<li class="chapter" data-level="2.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#qualitative-data"><i class="fa fa-check"></i><b>2.1</b> Qualitative Data</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-drawing-a-bar-chart"><i class="fa fa-check"></i><b>2.1.1</b> Example: Drawing a Bar Chart**</a></li>
+<li class="chapter" data-level="2.1.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework"><i class="fa fa-check"></i><b>2.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#quantitative-data"><i class="fa fa-check"></i><b>2.2</b> Quantitative Data</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-drawing-a-histogram-and-density-plot"><i class="fa fa-check"></i><b>2.2.1</b> Example: Drawing a Histogram and Density plot</a></li>
+<li class="chapter" data-level="2.2.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-drawing-a-histogram-and-density-plot-1"><i class="fa fa-check"></i><b>2.2.2</b> Example: Drawing a Histogram and Density plot</a></li>
+<li class="chapter" data-level="2.2.3" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework-1"><i class="fa fa-check"></i><b>2.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#other-graphical-representations-of-data"><i class="fa fa-check"></i><b>2.3</b> Other Graphical Representations of Data</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-scatter-plot"><i class="fa fa-check"></i><b>2.3.1</b> Example: Scatter Plot**</a></li>
+<li class="chapter" data-level="2.3.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-time-series-plot"><i class="fa fa-check"></i><b>2.3.2</b> Example: Time-Series Plot**</a></li>
+<li class="chapter" data-level="2.3.3" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework-2"><i class="fa fa-check"></i><b>2.3.3</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html"><i class="fa fa-check"></i><b>3</b> Numerical Descriptions of Data</a><ul>
+<li class="chapter" data-level="3.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#measures-of-center"><i class="fa fa-check"></i><b>3.1</b> Measures of Center</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-finding-the-mean-and-median-using-r"><i class="fa fa-check"></i><b>3.1.1</b> Example: Finding the Mean and Median using R</a></li>
+<li class="chapter" data-level="3.1.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-finding-mean-and-median-with-filtering"><i class="fa fa-check"></i><b>3.1.2</b> Example: Finding Mean and Median with filtering</a></li>
+<li class="chapter" data-level="3.1.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-affect-of-extreme-values-on-mean-and-median"><i class="fa fa-check"></i><b>3.1.3</b> Example: Affect of Extreme Values on Mean and Median**</a></li>
+<li class="chapter" data-level="3.1.4" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-weighted-average"><i class="fa fa-check"></i><b>3.1.4</b> Example: Weighted Average</a></li>
+<li class="chapter" data-level="3.1.5" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-weighted-average-1"><i class="fa fa-check"></i><b>3.1.5</b> Example: Weighted Average</a></li>
+<li class="chapter" data-level="3.1.6" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-3"><i class="fa fa-check"></i><b>3.1.6</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#measures-of-spread"><i class="fa fa-check"></i><b>3.2</b> Measures of Spread</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-range"><i class="fa fa-check"></i><b>3.2.1</b> Example: Range</a></li>
+<li class="chapter" data-level="3.2.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-finding-the-standard-deviation"><i class="fa fa-check"></i><b>3.2.2</b> Example: Finding the Standard Deviation</a></li>
+<li class="chapter" data-level="3.2.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-the-gneral-rule"><i class="fa fa-check"></i><b>3.2.3</b> Example: the gneral rule</a></li>
+<li class="chapter" data-level="3.2.4" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-determining-if-a-value-is-unusual"><i class="fa fa-check"></i><b>3.2.4</b> Example: Determining If a Value Is Unusual</a></li>
+<li class="chapter" data-level="3.2.5" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-4"><i class="fa fa-check"></i><b>3.2.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#ranking"><i class="fa fa-check"></i><b>3.3</b> Ranking</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-interpreting-percentile"><i class="fa fa-check"></i><b>3.3.1</b> Example: Interpreting Percentile</a></li>
+<li class="chapter" data-level="3.3.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-percentile-versus-score"><i class="fa fa-check"></i><b>3.3.2</b> Example: Percentile Versus Score</a></li>
+<li class="chapter" data-level="3.3.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-five-number-summary-and-boxplot"><i class="fa fa-check"></i><b>3.3.3</b> Example: Five-number Summary and Boxplot</a></li>
+<li class="chapter" data-level="3.3.4" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-separating-based-on-a-factor"><i class="fa fa-check"></i><b>3.3.4</b> Example: Separating based on a factor</a></li>
+<li class="chapter" data-level="3.3.5" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-putting-it-all-together"><i class="fa fa-check"></i><b>3.3.5</b> Example: Putting it all together</a></li>
+<li class="chapter" data-level="3.3.6" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-5"><i class="fa fa-check"></i><b>3.3.6</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>4</b> Probability</a><ul>
+<li class="chapter" data-level="4.1" data-path="probability.html"><a href="probability.html#empirical-probability"><i class="fa fa-check"></i><b>4.1</b> Empirical Probability</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="probability.html"><a href="probability.html#example-statistics-class-survey"><i class="fa fa-check"></i><b>4.1.1</b> Example: Statistics class survey</a></li>
+<li class="chapter" data-level="4.1.2" data-path="probability.html"><a href="probability.html#homework-6"><i class="fa fa-check"></i><b>4.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="probability.html"><a href="probability.html#theoretical-probability"><i class="fa fa-check"></i><b>4.2</b> Theoretical Probability</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="probability.html"><a href="probability.html#example-equally-likely-outcomes"><i class="fa fa-check"></i><b>4.2.1</b> Example: Equally Likely Outcomes</a></li>
+<li class="chapter" data-level="4.2.2" data-path="probability.html"><a href="probability.html#example-calculating-theoretical-probabilities"><i class="fa fa-check"></i><b>4.2.2</b> Example: Calculating Theoretical Probabilities</a></li>
+<li class="chapter" data-level="4.2.3" data-path="probability.html"><a href="probability.html#example-calculating-theoretical-probabilities-1"><i class="fa fa-check"></i><b>4.2.3</b> Example: Calculating Theoretical Probabilities</a></li>
+<li class="chapter" data-level="4.2.4" data-path="probability.html"><a href="probability.html#example-calculating-theoretical-probabilities-2"><i class="fa fa-check"></i><b>4.2.4</b> Example: Calculating Theoretical Probabilities</a></li>
+<li class="chapter" data-level="4.2.5" data-path="probability.html"><a href="probability.html#example-complementary-events"><i class="fa fa-check"></i><b>4.2.5</b> Example: Complementary Events</a></li>
+<li class="chapter" data-level="4.2.6" data-path="probability.html"><a href="probability.html#example-using-the-complement-to-find-probabilities"><i class="fa fa-check"></i><b>4.2.6</b> Example: Using the Complement to Find Probabilities</a></li>
+<li class="chapter" data-level="4.2.7" data-path="probability.html"><a href="probability.html#example-using-addition-rules"><i class="fa fa-check"></i><b>4.2.7</b> Example: Using Addition Rules</a></li>
+<li class="chapter" data-level="4.2.8" data-path="probability.html"><a href="probability.html#example-odds-against-and-payoff-odds"><i class="fa fa-check"></i><b>4.2.8</b> Example: Odds Against and Payoff Odds</a></li>
+<li class="chapter" data-level="4.2.9" data-path="probability.html"><a href="probability.html#homework-7"><i class="fa fa-check"></i><b>4.2.9</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="probability.html"><a href="probability.html#conditional-probability"><i class="fa fa-check"></i><b>4.3</b> Conditional Probability</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="probability.html"><a href="probability.html#example-conditional-probabilities"><i class="fa fa-check"></i><b>4.3.1</b> Example: Conditional Probabilities</a></li>
+<li class="chapter" data-level="4.3.2" data-path="probability.html"><a href="probability.html#example-independent-events"><i class="fa fa-check"></i><b>4.3.2</b> Example: Independent Events</a></li>
+<li class="chapter" data-level="4.3.3" data-path="probability.html"><a href="probability.html#example-multiplication-rule"><i class="fa fa-check"></i><b>4.3.3</b> Example: Multiplication Rule</a></li>
+<li class="chapter" data-level="4.3.4" data-path="probability.html"><a href="probability.html#example-application-problem"><i class="fa fa-check"></i><b>4.3.4</b> Example: Application Problem</a></li>
+<li class="chapter" data-level="4.3.5" data-path="probability.html"><a href="probability.html#homework-8"><i class="fa fa-check"></i><b>4.3.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="probability.html"><a href="probability.html#counting-techniques"><i class="fa fa-check"></i><b>4.4</b> Counting Techniques</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="probability.html"><a href="probability.html#example-multiplication-rule-in-counting"><i class="fa fa-check"></i><b>4.4.1</b> Example: Multiplication Rule in Counting</a></li>
+<li class="chapter" data-level="4.4.2" data-path="probability.html"><a href="probability.html#example-multiplication-rule-in-counting-1"><i class="fa fa-check"></i><b>4.4.2</b> Example: Multiplication Rule in Counting</a></li>
+<li class="chapter" data-level="4.4.3" data-path="probability.html"><a href="probability.html#homework-9"><i class="fa fa-check"></i><b>4.4.3</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html"><i class="fa fa-check"></i><b>5</b> Discrete Probability Distributions</a><ul>
+<li class="chapter" data-level="5.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#basics-of-probability-distributions"><i class="fa fa-check"></i><b>5.1</b> Basics of Probability Distributions</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-probability-distribution"><i class="fa fa-check"></i><b>5.1.1</b> Example: Probability Distribution</a></li>
+<li class="chapter" data-level="5.1.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-calculating-the-expected-value"><i class="fa fa-check"></i><b>5.1.2</b> Example: Calculating the Expected Value</a></li>
+<li class="chapter" data-level="5.1.3" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-is-the-event-unusual"><i class="fa fa-check"></i><b>5.1.3</b> Example: Is the Event Unusual</a></li>
+<li class="chapter" data-level="5.1.4" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-10"><i class="fa fa-check"></i><b>5.1.4</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#binomial-probability-distribution"><i class="fa fa-check"></i><b>5.2</b> Binomial Probability Distribution</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-calculating-binomial-probabilities"><i class="fa fa-check"></i><b>5.2.1</b> Example: Calculating Binomial Probabilities</a></li>
+<li class="chapter" data-level="5.2.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-calculating-binomial-probabilities-1"><i class="fa fa-check"></i><b>5.2.2</b> Example: Calculating Binomial Probabilities</a></li>
+<li class="chapter" data-level="5.2.3" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-11"><i class="fa fa-check"></i><b>5.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#mean-and-standard-deviation-of-binomial-distribution"><i class="fa fa-check"></i><b>5.3</b> Mean and Standard Deviation of Binomial Distribution</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-finding-the-probability-distribution-mean-variance-and-standard-deviation-of-a-binomial-distribution"><i class="fa fa-check"></i><b>5.3.1</b> Example: Finding the Probability Distribution, Mean, Variance and Standard Deviation of a Binomial Distribution</a></li>
+<li class="chapter" data-level="5.3.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-12"><i class="fa fa-check"></i><b>5.3.2</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html"><i class="fa fa-check"></i><b>6</b> Continuous Probability Distributions</a><ul>
+<li class="chapter" data-level="6.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#finding-probabilities-for-the-normal-distribution"><i class="fa fa-check"></i><b>6.1</b> Finding Probabilities for the Normal Distribution</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-general-normal-distribution"><i class="fa fa-check"></i><b>6.1.1</b> Example: General Normal Distribution</a></li>
+<li class="chapter" data-level="6.1.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-general-normal-distribution-1"><i class="fa fa-check"></i><b>6.1.2</b> Example: General Normal Distribution</a></li>
+<li class="chapter" data-level="6.1.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-13"><i class="fa fa-check"></i><b>6.1.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#assessing-normality"><i class="fa fa-check"></i><b>6.2</b> Assessing Normality</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-is-it-normal"><i class="fa fa-check"></i><b>6.2.1</b> Example: Is It Normal?</a></li>
+<li class="chapter" data-level="6.2.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-is-it-normal-1"><i class="fa fa-check"></i><b>6.2.2</b> Example: Is It Normal?</a></li>
+<li class="chapter" data-level="6.2.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-14"><i class="fa fa-check"></i><b>6.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#sampling-distribution-and-the-central-limit-theorem"><i class="fa fa-check"></i><b>6.3</b> Sampling Distribution and the Central Limit Theorem</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-sampling-distribution"><i class="fa fa-check"></i><b>6.3.1</b> Example: Sampling Distribution</a></li>
+<li class="chapter" data-level="6.3.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-finding-probabilities-for-sample-means"><i class="fa fa-check"></i><b>6.3.2</b> Example: Finding Probabilities for Sample Means</a></li>
+<li class="chapter" data-level="6.3.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-finding-probabilities-for-sample-means-1"><i class="fa fa-check"></i><b>6.3.3</b> Example: Finding Probabilities for Sample Means</a></li>
+<li class="chapter" data-level="6.3.4" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-15"><i class="fa fa-check"></i><b>6.3.4</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="one-sample-inference.html"><a href="one-sample-inference.html"><i class="fa fa-check"></i><b>7</b> One-Sample Inference</a><ul>
+<li class="chapter" data-level="7.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#basics-of-hypothesis-testing"><i class="fa fa-check"></i><b>7.1</b> Basics of Hypothesis Testing</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-basics-of-hypothesis-testing"><i class="fa fa-check"></i><b>7.1.1</b> Example: Basics of Hypothesis Testing</a></li>
+<li class="chapter" data-level="7.1.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-battery-example-revisited."><i class="fa fa-check"></i><b>7.1.2</b> Example: Battery Example Revisited.</a></li>
+<li class="chapter" data-level="7.1.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-conclusions-in-hypothesis-tests"><i class="fa fa-check"></i><b>7.1.3</b> Example: Conclusions in Hypothesis Tests</a></li>
+<li class="chapter" data-level="7.1.4" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-stating-hypotheses"><i class="fa fa-check"></i><b>7.1.4</b> Example: Stating Hypotheses</a></li>
+<li class="chapter" data-level="7.1.5" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-stating-type-i-and-ii-errors-and-picking-level-of-significance"><i class="fa fa-check"></i><b>7.1.5</b> Example: Stating Type I and II Errors and Picking Level of Significance</a></li>
+<li class="chapter" data-level="7.1.6" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-16"><i class="fa fa-check"></i><b>7.1.6</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#one-sample-proportion-test"><i class="fa fa-check"></i><b>7.2</b> One-Sample Proportion Test</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-hypothesis-test-for-one-proportion"><i class="fa fa-check"></i><b>7.2.1</b> Example: Hypothesis Test for One Proportion</a></li>
+<li class="chapter" data-level="7.2.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-hypothesis-test-for-one-proportion-1"><i class="fa fa-check"></i><b>7.2.2</b> Example: Hypothesis Test for One Proportion</a></li>
+<li class="chapter" data-level="7.2.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-17"><i class="fa fa-check"></i><b>7.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#one-sample-test-for-the-mean"><i class="fa fa-check"></i><b>7.3</b> One-Sample Test for the Mean</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-resampling"><i class="fa fa-check"></i><b>7.3.1</b> Example: Resampling</a></li>
+<li class="chapter" data-level="7.3.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-test-of-the-mean-using-one-sample-t-test"><i class="fa fa-check"></i><b>7.3.2</b> Example: Test of the Mean Using One Sample T-test</a></li>
+<li class="chapter" data-level="7.3.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-test-of-the-mean-using-one-sample-t-test-1"><i class="fa fa-check"></i><b>7.3.3</b> Example: Test of the Mean Using One Sample T-test</a></li>
+<li class="chapter" data-level="7.3.4" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-18"><i class="fa fa-check"></i><b>7.3.4</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="estimation.html"><a href="estimation.html"><i class="fa fa-check"></i><b>8</b> Estimation</a><ul>
+<li class="chapter" data-level="8.1" data-path="estimation.html"><a href="estimation.html#basics-of-confidence-intervals"><i class="fa fa-check"></i><b>8.1</b> Basics of Confidence Intervals</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="estimation.html"><a href="estimation.html#example-stating-the-statistical-and-real-world-interpretations-for-a-confidence-interval"><i class="fa fa-check"></i><b>8.1.1</b> Example: Stating the Statistical and Real World Interpretations for a Confidence Interval</a></li>
+<li class="chapter" data-level="8.1.2" data-path="estimation.html"><a href="estimation.html#homework-19"><i class="fa fa-check"></i><b>8.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="estimation.html"><a href="estimation.html#one-sample-interval-for-the-proportion"><i class="fa fa-check"></i><b>8.2</b> One-Sample Interval for the Proportion</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="estimation.html"><a href="estimation.html#example-confidence-interval-for-the-population-proportion"><i class="fa fa-check"></i><b>8.2.1</b> Example: Confidence Interval for the Population Proportion</a></li>
+<li class="chapter" data-level="8.2.2" data-path="estimation.html"><a href="estimation.html#example-confidence-interval-for-the-population-proportion-1"><i class="fa fa-check"></i><b>8.2.2</b> Example: Confidence Interval for the Population Proportion</a></li>
+<li class="chapter" data-level="8.2.3" data-path="estimation.html"><a href="estimation.html#homework-20"><i class="fa fa-check"></i><b>8.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="estimation.html"><a href="estimation.html#one-sample-interval-for-the-mean"><i class="fa fa-check"></i><b>8.3</b> One-Sample Interval for the Mean</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="estimation.html"><a href="estimation.html#example-confidence-interval-for-the-population-mean"><i class="fa fa-check"></i><b>8.3.1</b> Example: Confidence Interval for the Population Mean</a></li>
+<li class="chapter" data-level="8.3.2" data-path="estimation.html"><a href="estimation.html#example-confidence-interval-for-the-population-mean-1"><i class="fa fa-check"></i><b>8.3.2</b> Example: Confidence Interval for the Population Mean</a></li>
+<li class="chapter" data-level="8.3.3" data-path="estimation.html"><a href="estimation.html#homework-21"><i class="fa fa-check"></i><b>8.3.3</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="two-sample-inference.html"><a href="two-sample-inference.html"><i class="fa fa-check"></i><b>9</b> Two-Sample Inference</a><ul>
+<li class="chapter" data-level="9.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#two-proportions"><i class="fa fa-check"></i><b>9.1</b> Two Proportions</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-two-population-proportions"><i class="fa fa-check"></i><b>9.1.1</b> Example: Hypothesis Test for Two Population Proportions</a></li>
+<li class="chapter" data-level="9.1.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-confidence-interval-for-two-population-proportions"><i class="fa fa-check"></i><b>9.1.2</b> Example: Confidence Interval for Two Population Proportions</a></li>
+<li class="chapter" data-level="9.1.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-22"><i class="fa fa-check"></i><b>9.1.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#paired-samples-for-two-means"><i class="fa fa-check"></i><b>9.2</b> Paired Samples for Two Means</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-independent-or-dependent-samples"><i class="fa fa-check"></i><b>9.2.1</b> Example: Independent or Dependent Samples</a></li>
+<li class="chapter" data-level="9.2.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-paired-samples"><i class="fa fa-check"></i><b>9.2.2</b> Example: Hypothesis Test for Paired Samples</a></li>
+<li class="chapter" data-level="9.2.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-paired-samples-1"><i class="fa fa-check"></i><b>9.2.3</b> Example: Hypothesis Test for Paired Samples</a></li>
+<li class="chapter" data-level="9.2.4" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-confidence-interval-for-paired-samples"><i class="fa fa-check"></i><b>9.2.4</b> Example: Confidence Interval for Paired Samples</a></li>
+<li class="chapter" data-level="9.2.5" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-23"><i class="fa fa-check"></i><b>9.2.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#independent-samples-for-two-means"><i class="fa fa-check"></i><b>9.3</b> Independent Samples for Two Means</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-two-means"><i class="fa fa-check"></i><b>9.3.1</b> Example: Hypothesis Test for Two Means</a></li>
+<li class="chapter" data-level="9.3.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-confidence-interval-in-two-samples"><i class="fa fa-check"></i><b>9.3.2</b> Example: Confidence Interval in Two Samples</a></li>
+<li class="chapter" data-level="9.3.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-two-means-1"><i class="fa fa-check"></i><b>9.3.3</b> Example: Hypothesis Test for Two Means</a></li>
+<li class="chapter" data-level="9.3.4" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-confidence-interval-for-two-independent-samples"><i class="fa fa-check"></i><b>9.3.4</b> Example: Confidence Interval for Two Independent Samples</a></li>
+<li class="chapter" data-level="9.3.5" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-24"><i class="fa fa-check"></i><b>9.3.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="two-sample-inference.html"><a href="two-sample-inference.html#which-analysis-should-you-conduct"><i class="fa fa-check"></i><b>9.4</b> Which Analysis Should You Conduct?</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html"><i class="fa fa-check"></i><b>10</b> Regression and Correlation</a><ul>
+<li class="chapter" data-level="10.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#regression"><i class="fa fa-check"></i><b>10.1</b> Regression</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-determining-if-there-is-a-relationship"><i class="fa fa-check"></i><b>10.1.1</b> Example: Determining If There Is a Relationship</a></li>
+<li class="chapter" data-level="10.1.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-25"><i class="fa fa-check"></i><b>10.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#correlation"><i class="fa fa-check"></i><b>10.2</b> Correlation</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-find-the-coefficient-of-determinatin-r2"><i class="fa fa-check"></i><b>10.2.1</b> Example: Find the coefficient of determinatin <span class="math inline">\(R^2\)</span></a></li>
+<li class="chapter" data-level="10.2.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-calculating-the-linear-correlation-coefficient-r"><i class="fa fa-check"></i><b>10.2.2</b> Example: Calculating the Linear Correlation Coefficient, <em>r</em></a></li>
+<li class="chapter" data-level="10.2.3" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-correlation-versus-causation"><i class="fa fa-check"></i><b>10.2.3</b> Example: Correlation Versus Causation</a></li>
+<li class="chapter" data-level="10.2.4" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-26"><i class="fa fa-check"></i><b>10.2.4</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#inference-for-regression-and-correlation"><i class="fa fa-check"></i><b>10.3</b> Inference for Regression and Correlation</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-finding-the-standard-error-of-the-estimate"><i class="fa fa-check"></i><b>10.3.1</b> Example: Finding the Standard Error of the Estimate</a></li>
+<li class="chapter" data-level="10.3.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-testing-the-claim-of-a-linear-correlation"><i class="fa fa-check"></i><b>10.3.2</b> Example: Testing the Claim of a Linear Correlation</a></li>
+<li class="chapter" data-level="10.3.3" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-27"><i class="fa fa-check"></i><b>10.3.3</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html"><i class="fa fa-check"></i><b>11</b> Chi-Square and ANOVA Tests</a><ul>
+<li class="chapter" data-level="11.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#chi-square-test-for-independence"><i class="fa fa-check"></i><b>11.1</b> Chi-Square Test for Independence</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#example-hypothesis-test-with-chi-square-test"><i class="fa fa-check"></i><b>11.1.1</b> Example: Hypothesis Test with Chi-Square Test</a></li>
+<li class="chapter" data-level="11.1.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-28"><i class="fa fa-check"></i><b>11.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#chi-square-goodness-of-fit"><i class="fa fa-check"></i><b>11.2</b> Chi-Square Goodness of Fit</a><ul>
+<li class="chapter" data-level="11.2.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#example-goodness-of-fit-test"><i class="fa fa-check"></i><b>11.2.1</b> Example: Goodness of Fit Test</a></li>
+<li class="chapter" data-level="11.2.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-29"><i class="fa fa-check"></i><b>11.2.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#analysis-of-variance-anova"><i class="fa fa-check"></i><b>11.3</b> Analysis of Variance (ANOVA)</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#example-hypothesis-test-involving-several-means"><i class="fa fa-check"></i><b>11.3.1</b> Example: Hypothesis Test Involving Several Means</a></li>
+<li class="chapter" data-level="11.3.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-30"><i class="fa fa-check"></i><b>11.3.2</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/StatPREP/Stat_using_technology" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistics Using Technology</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="two-sample-inference" class="section level1">
+<h1><span class="header-section-number">Chapter 9</span> Two-Sample Inference</h1>
+<p>Chapter 7 discussed methods of hypothesis testing about one-population parameters. Chapter 8 discussed methods of estimating population parameters from one sample using confidence intervals. This chapter will look at methods of confidence intervals and hypothesis testing for two populations. Since there are two populations, there are two random variables, two means or proportions, and two samples (though with paired samples you usually consider there to be one sample with pairs collected). Examples of where you would do this are:</p>
+<p>Testing and estimating the difference in testosterone levels of men before and after they had children (Gettler, McDade, Feranil &amp; Kuzawa, 2011).</p>
+<p>Testing the claim that a diet works by looking at the weight before and after subjects are on the diet.</p>
+<p>Estimating the difference in proportion of those who approve of President Obama in the age group 18 to 26 year old and the 55 and over age group.</p>
+<p>All of these are examples of hypothesis tests or confidence intervals for two populations. The methods to conduct these hypothesis tests and confidence intervals will be explored in this chapter. As a reminder, all hypothesis tests are the same process. The only thing that changes is the formula that you use and the assumptions. Confidence intervals are also the same process, except that the formula is different.</p>
+<div id="two-proportions" class="section level2">
+<h2><span class="header-section-number">9.1</span> Two Proportions</h2>
+<p>There are times you want to test a claim about two population proportions or construct a confidence interval estimate of the difference between two population proportions. As with all other hypothesis tests and confidence intervals, the process is the same though the formulas and assumptions are different.</p>
+<p><strong>Hypothesis Test for Two Population Proportion (2-Prop Test)</strong></p>
+<ol style="list-style-type: decimal">
+<li>State the random variables and the parameters in words.</li>
+</ol>
+<p>= number of successes from group 1</p>
+<p>= number of successes from group 2</p>
+<p>= proportion of successes in group 1</p>
+<p>= proportion of successes in group 2</p>
+<ol start="2" style="list-style-type: decimal">
+<li>State the null and alternative hypotheses and the level of significance</li>
+</ol>
+<p><span class="math inline">\(H_o:p_1=p_2\)</span></p>
+<p><span class="math inline">\(H_a: p_1\ne p_2\)</span>. the <span class="math inline">\(\ne\)</span> can be replaced with <span class="math inline">\(&lt;\)</span> or <span class="math inline">\(&gt;\)</span> depending on the question.</p>
+<p>Also, state your <span class="math inline">\(\alpha\)</span> level here.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>State and check the assumptions for a hypothesis test</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><p>A simple random sample of size <span class="math inline">\(n_1\)</span> is taken from population 1, and a simple random sample of size <span class="math inline">\(n_2\)</span> is taken from population 2.</p></li>
+<li><p>The samples are independent.</p></li>
+<li><p>The assumptions for the binomial distribution are satisfied for both populations.</p></li>
+<li><p>The sampling distribution of <span class="math inline">\(\hat{p_1}\)</span> can be approximated as a normal distribution. To determine the sampling distribution of <span class="math inline">\(\hat{p_1}\)</span>, you need to show that <span class="math inline">\(p_1*n_1\ge5\)</span> and <span class="math inline">\(q_1*n_1\ge5\)</span> where <span class="math inline">\(q_1=1-p_1\)</span>. If this requirement is true, then the sampling distribution of <span class="math inline">\(\hat{p_1}\)</span> is well approximated by a normal curve. The sampling distribution of <span class="math inline">\(\hat{p_2}\)</span> can be approximated as a normal distribution. To determine the sampling distribution of <span class="math inline">\(\hat{p_2}\)</span>, you need to show that <span class="math inline">\(p_2*n_2\ge 5\)</span> and <span class="math inline">\(q_2*n_2\ge 5\)</span> where <span class="math inline">\(q_2=1-p_2\)</span>. If this requirement is true, then the sampling distribution of <span class="math inline">\(\hat{p_2}\)</span> is well approximated by a normal curve. However, if you do not know <span class="math inline">\(p_1\)</span> and <span class="math inline">\(p_2\)</span>, you will need to use <span class="math inline">\(\hat{p_1}\)</span> and <span class="math inline">\(\hat{p_2}\)</span> instead. This is not perfect, but it is the best you can do.</p></li>
+</ol>
+<ol start="4" style="list-style-type: decimal">
+<li>Find the sample statistics, test statistic, and p-value</li>
+</ol>
+<p>On R Studio, use the command</p>
+<div class="sourceCode" id="cb392"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb392-1"><a href="two-sample-inference.html#cb392-1"></a><span class="kw">prop.test</span>(<span class="kw">c</span>(x1,x2), <span class="kw">c</span>(n1, n2))</span></code></pre></div>
+<ol start="5" style="list-style-type: decimal">
+<li>Conclusion</li>
+</ol>
+<p>This is where you write reject or fail to reject<span class="math inline">\(H_o\)</span>. The rule is: if the p-value <span class="math inline">\(&lt;\alpha\)</span>, then reject <span class="math inline">\(H_o\)</span>. If the p-value <span class="math inline">\(\ge \alpha\)</span>, then fail to reject <span class="math inline">\(H_o\)</span>.</p>
+<ol start="6" style="list-style-type: decimal">
+<li>Interpretation</li>
+</ol>
+<p>This is where you interpret in real world terms the conclusion to the test. The conclusion for a hypothesis test is that you either have enough evidence to support <span class="math inline">\(H_a\)</span>, or you do not have enough evidence to support <span class="math inline">\(H_a\)</span>.</p>
+<p><strong>Confidence Interval for the Difference Between Two Population Proportion (2-Prop Interval)</strong></p>
+<p>The confidence interval for the difference in proportions has the same random variables and proportions and the same assumptions as the hypothesis test for two proportions. If you have already completed the hypothesis test, then you do not need to state them again. If you haven’t completed the hypothesis test, then state the random variables and proportions and state and check the assumptions before completing the confidence interval step.</p>
+<ol style="list-style-type: decimal">
+<li>Find the sample statistics and the confidence interval</li>
+</ol>
+<p>The confidence interval estimate of the difference is found using the following command in R Studio:</p>
+<div class="sourceCode" id="cb393"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb393-1"><a href="two-sample-inference.html#cb393-1"></a><span class="kw">prop.test</span>(<span class="kw">c</span>(x1,x2), <span class="kw">c</span>(n1, n2), <span class="dt">conf.level=</span>C as a decimal)</span></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Statistical Interpretation: In general this looks like, “You are C% confident that the confidence interval contains the true difference in proportions.”</p></li>
+<li><p>Real World Interpretation: This is where you state how much more (or less) the first proportion is from the second proportion.</p></li>
+</ol>
+<div id="example-hypothesis-test-for-two-population-proportions" class="section level3">
+<h3><span class="header-section-number">9.1.1</span> Example: Hypothesis Test for Two Population Proportions</h3>
+<p>Do husbands cheat on their wives in a different proportion from the proportion of wives cheat on their husbands ("Statistics brain," 2013)? Suppose you take a group of 1000 randomly selected husbands and find that 231 had cheated on their wives. Suppose in a group of 1200 randomly selected wives, 176 cheated on their husbands. Do the data show that the proportion of husbands who cheat on their wives is different from the proportion of wives who cheat on their husbands. Test at the 5% level.</p>
+<p><strong>Solution:</strong></p>
+<ol style="list-style-type: decimal">
+<li>State the random variables and the parameters in words.</li>
+</ol>
+<p><span class="math inline">\(x_1\)</span> = number of husbands who cheat on his wife</p>
+<p><span class="math inline">\(x_2\)</span> = number of wives who cheat on her husband</p>
+<p><span class="math inline">\(p_1\)</span> = proportion of husbands who cheat on his wife</p>
+<p><span class="math inline">\(p_2\)</span> = proportion of wives who cheat on her husband</p>
+<ol start="2" style="list-style-type: decimal">
+<li>State the null and alternative hypotheses and the level of significance</li>
+</ol>
+<p><span class="math inline">\(H_o: p_1=p_2\)</span></p>
+<p><span class="math inline">\(H_a: p_1\ne p_2\)</span></p>
+<p>level of significance is <span class="math inline">\(\alpha=0.05\)</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li>State and check the assumptions for a hypothesis test</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><p>A simple random sample of 1000 responses about cheating from husbands is taken. This was stated in the problem. A simple random sample of 1200 responses about cheating from wives is taken. Check: This was stated in the problem.</p></li>
+<li><p>The samples are independent. Check: The samples are independent. This is true since the samples involved different genders.</p></li>
+<li><p>The properties of the binomial distribution are satisfied in both populations. Check: This is true since there are only two responses, there are a fixed number of trials, the probability of a success is the same, and the trials are independent.</p></li>
+<li><p>The sampling distributions of <span class="math inline">\(\hat{p_1}\)</span> and <span class="math inline">\(\hat{p_2}\)</span> can be approximated with a normal distribution. Check: <span class="math inline">\(n_1*p_1\)</span>, <span class="math inline">\(n_2*p_2\)</span>, <span class="math inline">\(n_1*q_1\)</span>, and <span class="math inline">\(n_2*q_2\)</span> are all greater than or equal to 5. So both sampling distributions of <span class="math inline">\(\hat{p_1}\)</span> and <span class="math inline">\(\hat{p_2}\)</span> can be approximated with a normal distribution.</p></li>
+</ol>
+<ol start="4" style="list-style-type: decimal">
+<li>Find the sample statistics, test statistic, and p-value</li>
+</ol>
+<p>On R use the command:</p>
+<div class="sourceCode" id="cb394"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb394-1"><a href="two-sample-inference.html#cb394-1"></a><span class="kw">prop.test</span>(<span class="kw">c</span>(<span class="dv">231</span>,<span class="dv">176</span>), <span class="kw">c</span>(<span class="dv">1000</span>, <span class="dv">1200</span>))</span></code></pre></div>
+<pre><code>## 
+##  2-sample test for equality of proportions with continuity correction
+## 
+## data:  c out of c231 out of 1000176 out of 1200
+## X-squared = 25.173, df = 1, p-value = 5.241e-07
+## alternative hypothesis: two.sided
+## 95 percent confidence interval:
+##  0.05050705 0.11815962
+## sample estimates:
+##    prop 1    prop 2 
+## 0.2310000 0.1466667</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>Conclusion</li>
+</ol>
+<p>Reject <span class="math inline">\(H_o\)</span>, since the p-value is less than 5%.</p>
+<ol start="6" style="list-style-type: decimal">
+<li>Interpretation</li>
+</ol>
+<p>This is enough evidence to support that the proportion of husbands having affairs is different from the proportion of wives having affairs.</p>
+</div>
+<div id="example-confidence-interval-for-two-population-proportions" class="section level3">
+<h3><span class="header-section-number">9.1.2</span> Example: Confidence Interval for Two Population Proportions</h3>
+<p>What is the difference in proportion that husbands cheat on their wives than wives cheat on the husbands ("Statistics brain," 2013)? Suppose you take a group of 1000 randomly selected husbands and find that 231 had cheated on their wives. Suppose in a group of 1200 randomly selected wives, 176 cheated on their husbands. Estimate the difference in the proportion of husbands and wives who cheat on their spouses using a 95% confidence level.</p>
+<p><strong>Solution:</strong></p>
+<ol style="list-style-type: decimal">
+<li>State the random variables and the parameters in words.</li>
+</ol>
+<p>These were stated in example #9.1.1.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>State and check the assumptions for the confidence interval</li>
+</ol>
+<p>The assumptions were stated and checked in example #9.1.1.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Find the sample statistics and the confidence interval</li>
+</ol>
+<p>On R use the command:</p>
+<div class="sourceCode" id="cb396"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb396-1"><a href="two-sample-inference.html#cb396-1"></a><span class="kw">prop.test</span>(<span class="kw">c</span>(<span class="dv">231</span>,<span class="dv">176</span>), <span class="kw">c</span>(<span class="dv">1000</span>, <span class="dv">1200</span>), <span class="dt">conf.level =</span> <span class="fl">.95</span>)</span></code></pre></div>
+<pre><code>## 
+##  2-sample test for equality of proportions with continuity correction
+## 
+## data:  c out of c231 out of 1000176 out of 1200
+## X-squared = 25.173, df = 1, p-value = 5.241e-07
+## alternative hypothesis: two.sided
+## 95 percent confidence interval:
+##  0.05050705 0.11815962
+## sample estimates:
+##    prop 1    prop 2 
+## 0.2310000 0.1466667</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Statistical Interpretation: You are 95% confident that <span class="math inline">\(0.05050705&lt;p_1-p_2&lt;0.11815962\)</span> contains the true difference in proportions.</p></li>
+<li><p>Real World Interpretation: The proportion of husbands who cheat on their wives is anywhere from 5.05% to 11.82% higher than the proportion of wives who cheat on their husband.</p></li>
+</ol>
+</div>
+<div id="homework-22" class="section level3">
+<h3><span class="header-section-number">9.1.3</span> Homework</h3>
+<p><strong>In each problem show all steps of the hypothesis test or confidence interval. If some of the assumptions are not met, note that the results of the test or interval may not be correct and then continue the process of the hypothesis test or confidence interval.</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Many high school students take the AP tests in different subject areas. In 2007, of the 144,796 students who took the biology exam 84,199 of them were female. In that same year, of the 211,693 students who took the calculus AB exam 102,598 of them were female ("AP exam scores," 2013). Is there enough evidence to show that the proportion of female students taking the biology exam is different than the proportion of female students taking the calculus AB exam? Test at the 5% level.</p></li>
+<li><p>Many high school students take the AP tests in different subject areas. In 2007, of the 144,796 students who took the biology exam 84,199 of them were female. In that same year, of the 211,693 students who took the calculus AB exam 102,598 of them were female ("AP exam scores," 2013). Estimate the difference in the proportion of female students taking the biology exam and female students taking the calculus AB exam using a 90% confidence level.</p></li>
+<li><p>Many high school students take the AP tests in different subject areas. In 2007, of the 211,693 students who took the calculus AB exam 102,598 of them were female and 109,095 of them were male ("AP exam scores," 2013). Is there enough evidence to show that the proportion of female students taking the calculus AB exam is different from the proportion of male students taking the calculus AB exam? Test at the 5% level.</p></li>
+<li><p>Many high school students take the AP tests in different subject areas. In 2007, of the 211,693 students who took the calculus AB exam 102,598 of them were female and 109,095 of them were male ("AP exam scores," 2013). Estimate using a 90% level the difference in proportion of female students taking the calculus AB exam versus male students taking the calculus AB exam.</p></li>
+<li><p>Are there more children diagnosed with Autism Spectrum Disorder (ASD) in states that have larger urban areas over states that are mostly rural? In the state of Pennsylvania, a fairly urban state, there are 245 eight year old diagnosed with ASD out of 18,440 eight year old evaluated. In the state of Utah, a fairly rural state, there are 45 eight year old diagnosed with ASD out of 2,123 eight year old evaluated ("Autism and developmental," 2008). Is there enough evidence to show that the proportion of children diagnosed with ASD in Pennsylvania is different than the proportion in Utah? Test at the 1% level.</p></li>
+<li><p>Are there more children diagnosed with Autism Spectrum Disorder (ASD) in states that have larger urban areas over states that are mostly rural? In the state of Pennsylvania, a fairly urban state, there are 245 eight year old diagnosed with ASD out of 18,440 eight year old evaluated. In the state of Utah, a fairly rural state, there are 45 eight year old diagnosed with ASD out of 2,123 eight year old evaluated ("Autism and developmental," 2008). Estimate the difference in proportion of children diagnosed with ASD between Pennsylvania and Utah. Use a 98% confidence level.</p></li>
+<li><p>A child dying from an accidental poisoning is a terrible incident. Is it more likely that a male child will get into poison than a female child? To find this out, data was collected that showed that out of 1830 children between the ages one and four who pass away from poisoning, 1031 were males and 799 were females (Flanagan, Rooney &amp; Griffiths, 2005). Do the data show that there is different proportion of male children dying of poisoning than female children? Test at the 1% level.</p></li>
+<li><p>A child dying from an accidental poisoning is a terrible incident. Is it more likely that a male child will get into poison than a female child? To find this out, data was collected that showed that out of 1830 children between the ages one and four who pass away from poisoning, 1031 were males and 799 were females (Flanagan, Rooney &amp; Griffiths, 2005). Compute a 99% confidence interval for the difference in proportions of poisoning deaths of male and female children ages one to four.</p></li>
+</ol>
+<p><strong><br />
+</strong></p>
+</div>
+</div>
+<div id="paired-samples-for-two-means" class="section level2">
+<h2><span class="header-section-number">9.2</span> Paired Samples for Two Means</h2>
+<p>Are two populations the same? Is the average height of men taller than the average height of women? Is the mean weight less after a diet than before?</p>
+<p>You can compare populations by comparing their means. You take a sample from each population and compare the statistics.</p>
+<p>Anytime you compare two populations you need to know if the samples are independent or dependent. The formulas you use are different for different types of samples.</p>
+<p>If how you choose one sample has no effect on the way you choose the other sample, the two samples are <strong>independent.</strong> The way to think about it is that in independent samples, the individuals from one sample are overall different from the units of observations from the other sample. This will mean that sample one has no affect on sample two. The sample values from one sample are not related or paired with values from the other sample.</p>
+<p>If you choose the samples so that a measurement in one sample is paired with a measurement from the other sample, the samples are <strong>dependent</strong> or <strong>matched</strong> or <strong>paired</strong>. (Often a before and after situation.) You want to make sure the there is a meaning for pairing data values from one sample with a specific data value from the other sample. One way to think about it is that in dependent samples, the units of observations from one sample are the same units of observations from the other sample, though there can be other reasons to pair values. This makes the sample values from each sample paired.</p>
+<p>In tidy data, remember each row is a unit of measurement, and each column is a variable. In paired samples, you would have two variables that you are working with. In independent samples, you would have a variable that distinguishes a unit of observation from another unit of observation. As an example, in the Pulse data frame, consider the variables pulse_before and pulse_after. Since they are measured off the same unit of observation, then comparing the two variables would be a paired samples analysis. However, consider the pulse_after and whether a person smokes would be comparing the variable pulse_after against the variable smokes to see if smoking effects a person’s pulse rate after exercise. In this case, the units of observations would be different based on smoking yes or smoking no. Consider the variable smoking to be the factor that one is interested in seeing how it effects pulse rate.</p>
+<p><strong>Table #9.2.1: Data frame Pulse</strong></p>
+<div class="sourceCode" id="cb398"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb398-1"><a href="two-sample-inference.html#cb398-1"></a>Pulse&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/pulse.csv&quot;</span>)</span>
+<span id="cb398-2"><a href="two-sample-inference.html#cb398-2"></a><span class="kw">head</span>(Pulse)</span></code></pre></div>
+<pre><code>##   height weight age gender smokes alcohol exercise ran pulse_before pulse_after
+## 1    170     68  22   male    yes     yes moderate sat           70          71
+## 2    182     75  26   male    yes     yes moderate sat           80          76
+## 3    180     85  19   male    yes     yes moderate ran           68         125
+## 4    182     85  20   male    yes     yes      low sat           70          68
+## 5    167     70  22   male    yes     yes      low sat           92          84
+## 6    178     86  21   male    yes     yes      low sat           76          80
+##   year
+## 1   93
+## 2   93
+## 3   95
+## 4   95
+## 5   96
+## 6   98</code></pre>
+<div id="example-independent-or-dependent-samples" class="section level3">
+<h3><span class="header-section-number">9.2.1</span> Example: Independent or Dependent Samples</h3>
+<p>Determine if the following are dependent or independent samples.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Randomly choose 5 men and 6 women and compare their heights</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Independent, since there is no reason that one value belongs to another. The units of observations are not the same for both samples. The units of observations are definitely different. A way to think about this is that the knowledge that a man is chosen in one sample does not give any information about any of the woman chosen in the other sample.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Choose 10 men and weigh them. Give them a new diet drug and later weigh them again.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Dependent, since each person’s before weight can be matched with their after weight. The units of observations are the same for both samples. A way to think about this is that the knowledge that a person weighs 400 pounds at the beginning will tell you something about their weight after the diet drug.</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Take 10 people and measure the strength of their dominant arm and their non-dominant arm.</li>
+</ol>
+<p><strong>Solution:</strong>
+Dependent, since you can match the two arm strengths. The units of observations are the same for both samples. So the knowledge of one person’s dominant arm strength will tell you something about the strength of their non-dominant arm.</p>
+<p>To analyze data when there are matched or paired samples, called dependent samples, you conduct a paired t-test. Since the samples are matched, you can find the difference between the values of the two random variables.</p>
+<p><strong>Hypothesis Test for Two Sample Paired t-Test</strong></p>
+<ol style="list-style-type: decimal">
+<li>State the random variables and the parameters in words.</li>
+</ol>
+<p><span class="math inline">\(x_1\)</span> = random variable 1</p>
+<p><span class="math inline">\(x_2\)</span> = random variable 2</p>
+<p><span class="math inline">\(\mu_1\)</span> = mean of random variable 1</p>
+<p><span class="math inline">\(\mu_2\)</span> = mean of random variable 2</p>
+<ol start="2" style="list-style-type: decimal">
+<li>State the null and alternative hypotheses and the level of significance</li>
+</ol>
+<p>The hypotheses would be</p>
+<p><span class="math inline">\(H_o:\mu_1=\mu_2\)</span> or<span class="math inline">\(H_o:\mu_1-\mu_2=0\)</span></p>
+<p><span class="math inline">\(H_a:\mu_1\ne \mu_2\)</span> or <span class="math inline">\(H_a:\mu_1-\mu_2\ne0\)</span></p>
+<p>However, since you are finding the differences, then you can actually think of <span class="math inline">\(\mu_1-\mu_2=\mu_d\)</span>.</p>
+<p>So the hypotheses could become</p>
+<p><span class="math inline">\(H_o:\mu_d=0\)</span></p>
+<p><span class="math inline">\(H_a:\mu_d\ne 0\)</span> Remember, you can replace <span class="math inline">\(\ne\)</span> with <span class="math inline">\(&lt;\)</span> or <span class="math inline">\(&gt;\)</span>.</p>
+<p>Also, state your <span class="math inline">\(\alpha\)</span> level here.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>State and check the assumptions for the hypothesis test</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><p>A random sample of <em>n</em> pairs is taken.</p></li>
+<li><p>The population of the difference between random variables is normally distributed. In this case the population you are interested in has to do with the differences that you find. It does not matter if each random variable is normally distributed. It is only important if the differences you find are normally distributed. Just as before, the t-test is fairly robust to the assumption if the sample size is large. This means that if this assumption isn’t met, but your sample size is quite large, then the results of the t-test are valid.</p></li>
+</ol>
+<ol start="4" style="list-style-type: decimal">
+<li>Find the sample statistic, test statistic, and p-value</li>
+</ol>
+<p>Realize that a paired test is a one sample t-test on the difference between two variables. So you are running a one-sample t-test on a new variable known as the difference variable. You need to create this difference variable by creating a new data frame. This is done on R Studio by doing the following command (The following shows how to create the variable difference for pulse_after-pulse_before on the data frame Pulse. Change the variables used and data frame used to your data frame and variables):</p>
+<p><strong>Table #9.2.2: Data frame Pulse with Difference</strong></p>
+<div class="sourceCode" id="cb400"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb400-1"><a href="two-sample-inference.html#cb400-1"></a>Pulse&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/pulse.csv&quot;</span>)</span>
+<span id="cb400-2"><a href="two-sample-inference.html#cb400-2"></a>Pulse_new&lt;-Pulse<span class="op">%&gt;%</span></span>
+<span id="cb400-3"><a href="two-sample-inference.html#cb400-3"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">difference=</span>pulse_after<span class="op">-</span>pulse_before)</span>
+<span id="cb400-4"><a href="two-sample-inference.html#cb400-4"></a><span class="kw">head</span>(Pulse_new)</span></code></pre></div>
+<pre><code>##   height weight age gender smokes alcohol exercise ran pulse_before pulse_after
+## 1    170     68  22   male    yes     yes moderate sat           70          71
+## 2    182     75  26   male    yes     yes moderate sat           80          76
+## 3    180     85  19   male    yes     yes moderate ran           68         125
+## 4    182     85  20   male    yes     yes      low sat           70          68
+## 5    167     70  22   male    yes     yes      low sat           92          84
+## 6    178     86  21   male    yes     yes      low sat           76          80
+##   year difference
+## 1   93          1
+## 2   93         -4
+## 3   95         57
+## 4   95         -2
+## 5   96         -8
+## 6   98          4</code></pre>
+<p>Notice R Studio created a new data frame called Pulse_new and that data frame has the variable difference.
+Now to conduct a paired t-test use the R Studio command</p>
+<div class="sourceCode" id="cb402"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb402-1"><a href="two-sample-inference.html#cb402-1"></a><span class="kw">t.test</span>(<span class="op">~</span>difference variable, <span class="dt">data=</span>New Data Frame)</span></code></pre></div>
+<p>Note: if the <span class="math inline">\(H_a\)</span> is &lt;, then the command becomes</p>
+<div class="sourceCode" id="cb403"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb403-1"><a href="two-sample-inference.html#cb403-1"></a><span class="kw">t.test</span>(<span class="op">~</span>difference variable, <span class="dt">data=</span>New Data Frame, <span class="dt">alternative=</span><span class="st">&quot;less&quot;</span>)</span></code></pre></div>
+<p>Similarly for &gt; put alternative=“greater”</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Conclusion</li>
+</ol>
+<p>This is where you write reject <span class="math inline">\(H_o\)</span> or fail to reject <span class="math inline">\(H_o\)</span>. The rule is: if the p-value <span class="math inline">\(&lt;\alpha\)</span>, then reject <span class="math inline">\(H_o\)</span>. If the p-value <span class="math inline">\(\ge\alpha\)</span>, then fail to reject <span class="math inline">\(H_o\)</span>.</p>
+<ol start="6" style="list-style-type: decimal">
+<li>Interpretation</li>
+</ol>
+<p>This is where you interpret in real world terms the conclusion to the test. The conclusion for a hypothesis test is that you either have enough evidence to support <span class="math inline">\(H_a\)</span>, or you do not have enough evidence to support <span class="math inline">\(H_a\)</span>.</p>
+<p><strong>Confidence Interval for Difference in Means from Paired Samples (t-Interval)</strong></p>
+<p>The confidence interval for the difference in means has the same random variables and means and the same assumptions as the hypothesis test for two paired samples. If you have already completed the hypothesis test, then you do not need to state them again. If you haven’t completed the hypothesis test, then state the random variables and means, and state and check the assumptions before completing the confidence interval step.</p>
+<ol style="list-style-type: decimal">
+<li>Find the sample statistic and confidence interval
+Again, you will need to create a new data frame with a difference variable. Then on R Studio the command is</li>
+</ol>
+<div class="sourceCode" id="cb404"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb404-1"><a href="two-sample-inference.html#cb404-1"></a><span class="kw">t.test</span>(<span class="op">~</span>difference variable, <span class="dt">data=</span>Data Frame, <span class="dt">conf.level=</span>C as a decimal)</span></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Statistical Interpretation: In general this looks like, “You are C% confident that the statement contains the true mean difference.”</p></li>
+<li><p>Real World Interpretation: This is where you state what interval contains the true mean difference.</p></li>
+</ol>
+<p><strong>How to check the assumptions of t-test and confidence interval:</strong></p>
+<p>In order for the t-test or confidence interval to be valid, the assumptions of the test must be met. So whenever you run a t-test or confidence interval, you must make sure the assumptions are met. So you need to check them. Here is how you do this:</p>
+<ol style="list-style-type: decimal">
+<li><p>For the assumption that the sample is a random sample, describe how you took the samples. Make sure your sampling technique is random and that the samples were dependent.</p></li>
+<li><p>For the assumption that the population of the differences is normal, remember the process of assessing normality from chapter 6. Make sure you use the difference variable that was created in the new data frame.</p></li>
+</ol>
+</div>
+<div id="example-hypothesis-test-for-paired-samples" class="section level3">
+<h3><span class="header-section-number">9.2.2</span> Example: Hypothesis Test for Paired Samples</h3>
+<p>Is the pulse rate after exercise different from the pulse rate before exercise for a woman who drinks alcohol? Use the data frame Pulse (table #9.2.3). Test at the 5% level.</p>
+<p><strong>Table #9.2.3: Data frame Pulse</strong></p>
+<div class="sourceCode" id="cb405"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb405-1"><a href="two-sample-inference.html#cb405-1"></a>Pulse&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/pulse.csv&quot;</span>)</span>
+<span id="cb405-2"><a href="two-sample-inference.html#cb405-2"></a><span class="kw">head</span>(Pulse)</span></code></pre></div>
+<pre><code>##   height weight age gender smokes alcohol exercise ran pulse_before pulse_after
+## 1    170     68  22   male    yes     yes moderate sat           70          71
+## 2    182     75  26   male    yes     yes moderate sat           80          76
+## 3    180     85  19   male    yes     yes moderate ran           68         125
+## 4    182     85  20   male    yes     yes      low sat           70          68
+## 5    167     70  22   male    yes     yes      low sat           92          84
+## 6    178     86  21   male    yes     yes      low sat           76          80
+##   year
+## 1   93
+## 2   93
+## 3   95
+## 4   95
+## 5   96
+## 6   98</code></pre>
+<p><strong>Code book for data frame Pulse</strong> See problem #3.2.5 in section 3.2.</p>
+<p><strong>Solution:</strong></p>
+<ol style="list-style-type: decimal">
+<li>State the random variables and the parameters in words.</li>
+</ol>
+<p><span class="math inline">\(x_1\)</span> = pulse of a smoking woman who drinks alcohol after exercise</p>
+<p><span class="math inline">\(x_1\)</span> = pulse of a smoking woman who drinks alcohol before exercise</p>
+<p><span class="math inline">\(\mu_1\)</span> = mean pulse of a smoking woman who drinks alcohol after exercise</p>
+<p><span class="math inline">\(\mu_1\)</span> = mean pulse of a smoking woman who drinks alcohol after exercise</p>
+<ol start="2" style="list-style-type: decimal">
+<li>State the null and alternative hypotheses and the level of significance</li>
+</ol>
+<p><span class="math inline">\(H_o: \mu_1=\mu_2\)</span></p>
+<p><span class="math inline">\(H_a: \mu_1\ne \mu_2\)</span></p>
+<p>level of significance, <span class="math inline">\(\alpha=0.05\)</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li>State and check the assumptions for the hypothesis test</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><p>A random sample of 110 pairs of pulse rates after and before exercise was taken. Check: The data frame says that the data was collected from students in classes for several years. Though this was not a random sample, it is probably a representative sample.</p></li>
+<li><p>The population of the difference in after and before pulse rates is normally distributed. Check: To see if this is true, look at the density plot and the normal quantile plot for the difference between after and before. This variable must be created before the density plot and normal quantile plot can be created. The other thing is that a new data frame must be created for females drink alcohol.</p></li>
+</ol>
+<p><strong>Table #9.2.4: Data frame Pulse of Females Who Drink Alcohol</strong></p>
+<div class="sourceCode" id="cb407"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb407-1"><a href="two-sample-inference.html#cb407-1"></a>Pulse_female&lt;-</span>
+<span id="cb407-2"><a href="two-sample-inference.html#cb407-2"></a>Pulse<span class="op">%&gt;%</span></span>
+<span id="cb407-3"><a href="two-sample-inference.html#cb407-3"></a><span class="kw">filter</span>(gender<span class="op">==</span><span class="st">&quot;female&quot;</span>, alcohol<span class="op">==</span><span class="st">&quot;yes&quot;</span>)</span>
+<span id="cb407-4"><a href="two-sample-inference.html#cb407-4"></a><span class="kw">head</span>(Pulse_female)</span></code></pre></div>
+<pre><code>##   height weight age gender smokes alcohol exercise ran pulse_before pulse_after
+## 1    165     60  19 female    yes     yes      low ran           88         120
+## 2    163     47  23 female    yes     yes      low ran           71         125
+## 3    173     57  18 female     no     yes moderate sat           86          88
+## 4    179     58  19 female     no     yes moderate ran           82         150
+## 5    167     62  18 female     no     yes     high ran           96         176
+## 6    173     64  18 female     no     yes      low sat           90          88
+##   year
+## 1   98
+## 2   98
+## 3   93
+## 4   93
+## 5   93
+## 6   93</code></pre>
+<p>Now mutate the Pulse_female data frame to include a difference variable</p>
+<p><strong>Table #9.2.5: Data frame Pulse of Females Who Drink Alcohol with Difference</strong></p>
+<div class="sourceCode" id="cb409"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb409-1"><a href="two-sample-inference.html#cb409-1"></a>Pulse_female_new&lt;-Pulse_female<span class="op">%&gt;%</span></span>
+<span id="cb409-2"><a href="two-sample-inference.html#cb409-2"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">difference=</span>pulse_after<span class="op">-</span>pulse_before)</span>
+<span id="cb409-3"><a href="two-sample-inference.html#cb409-3"></a><span class="kw">head</span>(Pulse_female_new)</span></code></pre></div>
+<pre><code>##   height weight age gender smokes alcohol exercise ran pulse_before pulse_after
+## 1    165     60  19 female    yes     yes      low ran           88         120
+## 2    163     47  23 female    yes     yes      low ran           71         125
+## 3    173     57  18 female     no     yes moderate sat           86          88
+## 4    179     58  19 female     no     yes moderate ran           82         150
+## 5    167     62  18 female     no     yes     high ran           96         176
+## 6    173     64  18 female     no     yes      low sat           90          88
+##   year difference
+## 1   98         32
+## 2   98         54
+## 3   93          2
+## 4   93         68
+## 5   93         80
+## 6   93         -2</code></pre>
+<p>Now create a density plot and normal quantile plot on the difference variable.</p>
+
+<div class="figure"><span id="fig:pulse9-female-density"></span>
+<img src="Statistics_using_technology_files/figure-html/pulse9-female-density-1.png" alt="Density Plot of Differences in pulse rates" width="672" />
+<p class="caption">
+Figure 9.1: Density Plot of Differences in pulse rates
+</p>
+</div>
+
+<div class="figure"><span id="fig:pulse9-female-qq"></span>
+<img src="Statistics_using_technology_files/figure-html/pulse9-female-qq-1.png" alt="Normal Quantile Plot of Differences in Weights" width="672" />
+<p class="caption">
+Figure 9.2: Normal Quantile Plot of Differences in Weights
+</p>
+</div>
+<p>The density plot is not symmetrical and the normal quantile plot on the differences is not linear.
+So you cannot assume that the distribution of the difference in pulse rates is normal. It is good that the t-test is robust if there is a large sample. The sample is of size 110, so that should be adequate to assume the conclusion is valid.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Find the sample statistic, test statistic, and p-value
+On R Studio, use the command:</li>
+</ol>
+<div class="sourceCode" id="cb411"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb411-1"><a href="two-sample-inference.html#cb411-1"></a><span class="kw">t.test</span>(<span class="op">~</span>difference, <span class="dt">data=</span>Pulse_female_new)</span></code></pre></div>
+<pre><code>## 
+##  One Sample t-test
+## 
+## data:  difference
+## t = 4.1353, df = 26, p-value = 0.0003283
+## alternative hypothesis: true mean is not equal to 0
+## 95 percent confidence interval:
+##  11.51152 34.26625
+## sample estimates:
+## mean of x 
+##  22.88889</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>Conclusion</li>
+</ol>
+<p>Since the p-value &lt; 0.05, reject <span class="math inline">\(H_o\)</span>.</p>
+<ol start="6" style="list-style-type: decimal">
+<li>Interpretation</li>
+</ol>
+<p>There is enough evidence to support that there is a difference in pulse rate before and after exercise of females who smoke.</p>
+</div>
+<div id="example-hypothesis-test-for-paired-samples-1" class="section level3">
+<h3><span class="header-section-number">9.2.3</span> Example: Hypothesis Test for Paired Samples</h3>
+<p>The New Zealand Air Force purchased a batch of flight helmets. They then found out that the helmets didn’t fit. In order to make sure that they order the correct size helmets, they measured the head size of recruits. To save money, they wanted to use cardboard calipers, but were not sure if they will be accurate enough. So they took 18 recruits and measured their heads with the cardboard calipers and also with metal calipers. The data frame is in table #9.2.6 (Helmet Sizes for New Zealand Airforce, 2019). Do the data provide enough evidence to show that there is a difference in measurements between the cardboard and metal calipers? Use a 5% level of significance.</p>
+<p><strong>Table #9.2.6: Data for Head Measurements</strong></p>
+<div class="sourceCode" id="cb413"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb413-1"><a href="two-sample-inference.html#cb413-1"></a>Helmet&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/helmet.csv&quot;</span>)</span>
+<span id="cb413-2"><a href="two-sample-inference.html#cb413-2"></a><span class="kw">head</span>(Helmet)</span></code></pre></div>
+<pre><code>##   Cardboard Metal
+## 1       146   145
+## 2       151   153
+## 3       163   161
+## 4       152   151
+## 5       151   145
+## 6       151   150</code></pre>
+<p><strong>Code book for data frame Helmet</strong></p>
+<p><strong>Description</strong>
+After purchasing a batch of flight helmets that did not fit the heads of many pilots, the NZ Airforce decided to measure the head sizes of all recruits. Before this was carried out, information was collected to determine the feasibility of using cheap cardboard calipers to make the measurements, instead of metal ones which were expensive and uncomfortable. The data lists the head diameters of 18 recruits measured once using cardboard calipers and again using metal calipers. One question is whether there is any systematic difference between the two sets of calipers. One might also ask whether there is more variability in the cardboard calipers measurement than that of the metal calipers.</p>
+<p>This data frame contains the following columns:</p>
+<p>Cardboard: measurement using cardboard calipers (cm)</p>
+<p>Metal: measurement using metal calipers (cm)</p>
+<p><strong>Source</strong>
+Helmet Sizes for New Zealand Airforce. (n.d.). Retrieved July 20, 2019, from <a href="http://www.statsci.org/data/oz/nzhelmet.html" class="uri">http://www.statsci.org/data/oz/nzhelmet.html</a></p>
+<p><strong>References</strong>
+Data courtesy of Dr Stephen Legg. Seber and Lee (1998). Page 545.</p>
+<p><strong>Solution:</strong></p>
+<ol style="list-style-type: decimal">
+<li>State the random variables and the parameters in words.</li>
+</ol>
+<p><span class="math inline">\(x_1\)</span> = head measurement of recruit using cardboard caliper</p>
+<p><span class="math inline">\(x_2\)</span> = head measurement of recruit using metal caliper</p>
+<p><span class="math inline">\(\mu_1\)</span>= mean head measurement of recruit using cardboard caliper</p>
+<p><span class="math inline">\(\mu_2\)</span> = mean head measurement of recruit using metal caliper</p>
+<ol start="2" style="list-style-type: decimal">
+<li>State the null and alternative hypotheses and the level of significance</li>
+</ol>
+<p><span class="math inline">\(H_o:\mu_1=\mu_2\)</span></p>
+<p><span class="math inline">\(H_a:\mu_1\ne \mu_2\)</span></p>
+<p>level of significance, <span class="math inline">\(\alpha=0.05\)</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li>State and check the assumptions for the hypothesis test</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><p>A random sample of 18 pairs of head measures of recruits with cardboard and metal caliper was taken. Check: This was not stated, but probably could be safely assumed.</p></li>
+<li><p>The population of the difference in head measurements between cardboard and metal calipers is normally distributed. Check: First create the difference variable, then the density plot and normal quantile plot.</p></li>
+</ol>
+<p><strong>Table #9.2.7: Data for Head Measurements with Difference Variable</strong></p>
+<div class="sourceCode" id="cb415"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb415-1"><a href="two-sample-inference.html#cb415-1"></a>Helmet_new&lt;-Helmet<span class="op">%&gt;%</span></span>
+<span id="cb415-2"><a href="two-sample-inference.html#cb415-2"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">difference=</span>Cardboard<span class="op">-</span>Metal)</span>
+<span id="cb415-3"><a href="two-sample-inference.html#cb415-3"></a><span class="kw">head</span>(Helmet_new)</span></code></pre></div>
+<pre><code>##   Cardboard Metal difference
+## 1       146   145          1
+## 2       151   153         -2
+## 3       163   161          2
+## 4       152   151          1
+## 5       151   145          6
+## 6       151   150          1</code></pre>
+
+<div class="sourceCode" id="cb417"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb417-1"><a href="two-sample-inference.html#cb417-1"></a><span class="kw">gf_density</span>(<span class="op">~</span>difference, <span class="dt">data=</span>Helmet_new)</span></code></pre></div>
+<div class="figure"><span id="fig:helmet9-new-denstiy"></span>
+<img src="Statistics_using_technology_files/figure-html/helmet9-new-denstiy-1.png" alt="Desnity Plot of Differences in Head Measurements" width="672" />
+<p class="caption">
+Figure 9.3: Desnity Plot of Differences in Head Measurements
+</p>
+</div>
+
+<div class="sourceCode" id="cb418"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb418-1"><a href="two-sample-inference.html#cb418-1"></a><span class="kw">gf_qq</span>(<span class="op">~</span>difference, <span class="dt">data=</span>Helmet_new)</span></code></pre></div>
+<div class="figure"><span id="fig:helmet9-new-qq"></span>
+<img src="Statistics_using_technology_files/figure-html/helmet9-new-qq-1.png" alt="Normal Quantile Plot of Differences in Head Measurements" width="672" />
+<p class="caption">
+Figure 9.4: Normal Quantile Plot of Differences in Head Measurements
+</p>
+</div>
+<p>This density plot looks somewhat bell shaped. The normal quantile plot on the differences looks somewhat linear. So you can assume that the distribution of the difference in weights is normal.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Find the sample statistic, test statistic, and p-value</li>
+</ol>
+<p>Using R Studio the command is</p>
+<div class="sourceCode" id="cb419"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb419-1"><a href="two-sample-inference.html#cb419-1"></a><span class="kw">t.test</span>(<span class="op">~</span>difference, <span class="dt">data=</span>Helmet_new)</span></code></pre></div>
+<pre><code>## 
+##  One Sample t-test
+## 
+## data:  difference
+## t = 3.1854, df = 17, p-value = 0.005415
+## alternative hypothesis: true mean is not equal to 0
+## 95 percent confidence interval:
+##  0.5440163 2.6782060
+## sample estimates:
+## mean of x 
+##  1.611111</code></pre>
+<p>The sample statistic is 1.6111, the test statistic is 3.1854, and the p-value is 0.005415.</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Conclusion</li>
+</ol>
+<p>Since the p-value <span class="math inline">\(&lt;\)</span> 0.05, reject <span class="math inline">\(H_o\)</span>.</p>
+<ol start="6" style="list-style-type: decimal">
+<li>Interpretation</li>
+</ol>
+<p>There is enough evidence to support that the mean head measurements using the cardboard calipers are not the same as when using the metal calipers. So it looks like the New Zealand Air Force shouldn’t use the cardboard calipers.</p>
+</div>
+<div id="example-confidence-interval-for-paired-samples" class="section level3">
+<h3><span class="header-section-number">9.2.4</span> Example: Confidence Interval for Paired Samples</h3>
+<p>The New Zealand Air Force purchased a batch of flight helmets. They then found out that the helmets didn’t fit. In order to make sure that they order the correct size helmets, they measured the head size of recruits. To save money, they wanted to use cardboard calipers, but were not sure if they will be accurate enough. So they took 18 recruits and measured their heads with the cardboard calipers and also with metal calipers. The data frame is in table #9.2.6 (Helmet Sizes for New Zealand Airforce, 2019). Estimate the difference in measurements between the cardboard and metal calipers using a 95% confidence interval.</p>
+<p><strong>Table #9.2.8: Data for Head Measurements</strong></p>
+<div class="sourceCode" id="cb421"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb421-1"><a href="two-sample-inference.html#cb421-1"></a>Helmet&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/helmet.csv&quot;</span>)</span>
+<span id="cb421-2"><a href="two-sample-inference.html#cb421-2"></a><span class="kw">head</span>(Helmet)</span></code></pre></div>
+<pre><code>##   Cardboard Metal
+## 1       146   145
+## 2       151   153
+## 3       163   161
+## 4       152   151
+## 5       151   145
+## 6       151   150</code></pre>
+<p><strong>Solution:</strong></p>
+<ol style="list-style-type: decimal">
+<li>State the random variables and the parameters in words.</li>
+</ol>
+<p>These were stated in example #9.2.2.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>State and check the assumptions for the confidence interval</li>
+</ol>
+<p>The assumptions were stated and checked in example #9.2.2.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Find the sample statistic and confidence interval</li>
+</ol>
+<p>Using R Studio the command is</p>
+<div class="sourceCode" id="cb423"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb423-1"><a href="two-sample-inference.html#cb423-1"></a><span class="kw">t.test</span>(<span class="op">~</span>difference, <span class="dt">data=</span>Helmet_new, <span class="dt">conf.leve=</span><span class="fl">0.95</span>)</span></code></pre></div>
+<pre><code>## 
+##  One Sample t-test
+## 
+## data:  difference
+## t = 3.1854, df = 17, p-value = 0.005415
+## alternative hypothesis: true mean is not equal to 0
+## 95 percent confidence interval:
+##  0.5440163 2.6782060
+## sample estimates:
+## mean of x 
+##  1.611111</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Statistical Interpretation: You are 95% confidence that <span class="math inline">\(0.5440163&lt;\mu_1-\mu_2&lt;2.6782060\)</span> contains the true mean difference in head measurement between using the cardboard and metal calibers.</p></li>
+<li><p>Real World Interpretation: The mean head measurement using the cardboard calibers is anywhere from 0.54 cm to 2.68 cm more than the head measurement using the metal calibers.</p></li>
+</ol>
+<p>Examples #9.2.2 and #9.2.4 use the same data set, but one is conducting a hypothesis test and the other is conducting a confidence interval. Notice that the hypothesis test’s conclusion was to reject and say that there was a difference in the means, and the confidence interval does not contain the number 0. If the confidence interval did contain the number 0, then that would mean that the two means could be the same. Since the interval did not contain 0, then you could say that the means are different just as in the hypothesis test. This means that the hypothesis test and the confidence interval can produce the same interpretation. Do be careful though, you can run a hypothesis test with a particular significance level and a confidence interval with a confidence level that is not compatible with your significance level. This will mean that the conclusion from the confidence interval would not be the same as with a hypothesis test. So if you want to estimate the mean difference, then conduct a confidence interval. If you want to show that the means are different, then conduct a hypothesis test. As a reminder, the American Statistical Association (ASA) suggests not conducting hypothesis tests and just create confidence intervals.</p>
+</div>
+<div id="homework-23" class="section level3">
+<h3><span class="header-section-number">9.2.5</span> Homework</h3>
+<p><strong>In each problem show all steps of the hypothesis test or confidence interval. If some of the assumptions are not met, note that the results of the test or interval may not be correct and then continue the process of the hypothesis test or confidence interval.</strong></p>
+<ol style="list-style-type: decimal">
+<li>The cholesterol level of patients who had heart attacks was measured multiple times after the heart attack. The researchers want to see if the cholesterol level of patients who have heart attacks changes as the time since their heart attack increases. The data is in table #9.2.9. Do the data show that the mean cholesterol level of patients that have had a heart attack changes as the time increases since their heart attack? Use day2 and day4 variables to answer the question. Test at the 1% level.</li>
+</ol>
+<p><strong>table #9.2.9: Cholesterol Levels of Patients After Heart Attack</strong></p>
+<div class="sourceCode" id="cb425"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb425-1"><a href="two-sample-inference.html#cb425-1"></a>Cholesterol&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/cholesterol.csv&quot;</span>)</span>
+<span id="cb425-2"><a href="two-sample-inference.html#cb425-2"></a><span class="kw">head</span>(Cholesterol)</span></code></pre></div>
+<pre><code>##   patient day2 day4 day14
+## 1       1  270  218   156
+## 2       2  236  234    NA
+## 3       3  210  214   242
+## 4       4  142  116    NA
+## 5       5  280  200    NA
+## 6       6  272  276   256</code></pre>
+<p><strong>Code book for Data Frame Cholesterol</strong> See problem 3.1.1 in Section 3.1 homework.</p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>The cholesterol level of patients who had heart attacks was measured multiple times after the heart attack. The researchers want to see if the cholesterol level of patients who have heart attacks changes as the time since their heart attack increases. The data is in table #9.2.9. Calculate a 98% confidence interval for the mean difference in cholesterol levels from day two to day four.</p></li>
+<li><p>All Fresh Seafood is a wholesale fish company based on the east coast of the U.S. Catalina Offshore Products is a wholesale fish company based on the west coast of the U.S. Table #9.2.10 contains prices from both companies for specific fish types ("Seafood online," 2013) ("Buy sushi grade," 2013). Do the data provide enough evidence to show that fish cost different from west coast fish wholesaler and east coast wholesaler? Test at the 5% level.</p></li>
+</ol>
+<p><strong>Table #9.2.10: Wholesale Prices of Fish in Dollars</strong></p>
+<div class="sourceCode" id="cb427"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb427-1"><a href="two-sample-inference.html#cb427-1"></a> Price &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/price.csv&quot;</span>)</span>
+<span id="cb427-2"><a href="two-sample-inference.html#cb427-2"></a><span class="kw">head</span>(Price)</span></code></pre></div>
+<pre><code>##             fish  east  west
+## 1            Cod 19.99 17.99
+## 2         Tilapi  6.00 13.99
+## 3  Farmed Salmon 19.99 22.99
+## 4 Organic Salmon 24.99 24.99
+## 5 Grouper Fillet 29.99 19.99
+## 6           Tuna 28.99 31.99</code></pre>
+<p><strong>Code book for data frame Price</strong></p>
+<p><strong>Description</strong>
+Price of fish was collected from two websites. One for Catalina Offshore Products (west coast) and the other for All Fresh Seafood (east coast) in 2013.</p>
+<p>This data frame contains the following columns:</p>
+<p>fish: type of fish for sale</p>
+<p>east: price of fish from east coast supplier ($)</p>
+<p>west: price of fish from west coast supplier ($)</p>
+<p><strong>Source</strong>
+Seafood online. (2013, November 20). Retrieved from <a href="http://www.allfreshseafood.com/" class="uri">http://www.allfreshseafood.com/</a></p>
+<p>Buy sushi grade fish online. (2013, November 20). Retrieved from <a href="http://www.catalinaop.com/" class="uri">http://www.catalinaop.com/</a></p>
+<p><strong>References</strong>
+Websites of Cataline Offshore Products and All Fresh Seafood</p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>All Fresh Seafood is a wholesale fish company based on the east coast of the U.S. Catalina Offshore Products is a wholesale fish company based on the west coast of the U.S. Table #9.2.10 contains prices from both companies for specific fish types ("Seafood online," 2013) ("Buy sushi grade," 2013). Find a 95% confidence interval for the mean difference in wholesale price between the east coast and west coast suppliers.</p></li>
+<li><p>The British Department of Transportation studied to see if people avoid driving or shopping, or have more accidents on Friday the 13th. They collected data from different locations (Friday the 13th, 2019). The data for each location on the two different dates is in table #9.2.11. Do the data show that on average different number of people are engaged in activities on Friday the 13th? Test at the 5% level.</p></li>
+</ol>
+<p><strong>Table #9.2.11: Traffic Count</strong></p>
+<div class="sourceCode" id="cb429"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb429-1"><a href="two-sample-inference.html#cb429-1"></a>Traffic &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/traffic.csv&quot;</span>)</span>
+<span id="cb429-2"><a href="two-sample-inference.html#cb429-2"></a><span class="kw">head</span>(Traffic)</span></code></pre></div>
+<pre><code>##    source  year     month   X6th  X13th location
+## 1 traffic 1990,      July 139246 138548   7 to 8
+## 2 traffic 1990,      July 134012 132908  9 to 10
+## 3 traffic 1991, September 137055 136018   7 to 8
+## 4 traffic 1991, September 133732 131843  9 to 10
+## 5 traffic 1991,  December 123552 121641   7 to 8
+## 6 traffic 1991,  December 121139 118723  9 to 10</code></pre>
+<p><strong>Code book for data frame Traffic</strong></p>
+<p><strong>Description</strong>
+This file consists of three separate data sets, all of which address the issues of how superstitions regarding Friday the 13th affect human behavior, and whether Friday the 13th is an unlucky day. Scanlon, et al. collected data on traffic and shopping patterns and accident frequency for Fridays the 6th and 13th between October of 1989 and November of 1992.</p>
+<p>For the first data set, the researchers obtained information from the British Department of Transport regarding the traffic flows between junctions 7 to 8 and junctions 9 to 10 of the M25 motorway. They collected the numbers of shoppers in nine different supermarkets in southeast England for the second data set. The third data set contains numbers of emergency admissions to hospitals due to transport accidents.</p>
+<p>We present the three data sets in a combined format, with the variable “Data set” as an identifier that may be used to separate them.</p>
+<p>This data frame contains the following columns:</p>
+<p>source: which data set the data were obtained from</p>
+<p>year: which year the data was collected from</p>
+<p>Month: the month that the Friday was in</p>
+<p>x6th: Number of cars passing through junction (traffic data set), shoppers for each supermarket (shopping data set), or admissions due to transport accidents (accident data set) on Friday the 6th</p>
+<p>x13th: Number of cars passing through junction (traffic data set), shoppers for each supermarket (shopping data set), or admissions due to transport accidents (accident data set) on Friday the 13th</p>
+<p>location: Motorway junction (traffic data set), supermarket location (shopping data set) or hospital (accident data set) to which the data correspond</p>
+<p><strong>Source</strong>
+(n.d.). Retrieved from <a href="https://www3.nd.edu/~busiforc/handouts/Data" class="uri">https://www3.nd.edu/~busiforc/handouts/Data</a> and Stories/t test/Friday The Thirteenth/Friday The Thirteenth Data.html</p>
+<p><strong>References</strong>
+Scanlon, T.J., Luben, R.N., Scanlon, F.L., Singleton, N. (1993), “Is Friday the 13th Bad For Your Health?,” BMJ, 307, 1584-1586.</p>
+<ol start="6" style="list-style-type: decimal">
+<li><p>The British Department of Transportation studied to see if people avoid driving or shopping, or have more accidents on Friday the 13th. They collected data from different locations (Friday the 13th, 2019). The data for each location on the two different dates is in table #9.2.11. Do the data show that on average different number of people are engaged in activities on Friday the 13th? Estimate the mean difference in activity count between the 6th and the 13th using a 95% level.</p></li>
+<li><p>To determine if Reiki is an effective method for treating pain, a pilot study was carried out where a certified second-degree Reiki therapist provided treatment on volunteers. Pain was measured using a visual analogue scale (VAS) and a likert scale immediately before and after the Reiki treatment (Olson &amp; Hanson, 1997). The data is in table #9.2.12. Do the data show that Reiki treatment reduces pain? Test at the 5% level.</p></li>
+</ol>
+<p><strong>Table #9.2.12: Pain Measures Before and After Reiki Treatment</strong></p>
+<div class="sourceCode" id="cb431"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb431-1"><a href="two-sample-inference.html#cb431-1"></a>Reiki&lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/reki.csv&quot;</span>)</span>
+<span id="cb431-2"><a href="two-sample-inference.html#cb431-2"></a><span class="kw">head</span>(Reiki)</span></code></pre></div>
+<pre><code>##   vas.before vas.after likert_before likert_after
+## 1          6         3             2            1
+## 2          2         1             2            1
+## 3          2         0             3            0
+## 4          9         1             3            1
+## 5          3         0             2            0
+## 6          3         2             2            2</code></pre>
+<p><strong>Code book for data frame Reiki</strong> see problem #3.2.7 in Section 3.2 Homework</p>
+<ol start="8" style="list-style-type: decimal">
+<li><p>To determine if Reiki is an effective method for treating pain, a pilot study was carried out where a certified second-degree Reiki therapist provided treatment on volunteers. Pain was measured using a visual analogue scale (VAS) and a likert scale immediately before and after the Reiki treatment (Olson &amp; Hanson, 1997). The data is in table #9.2.12. Compute a 90% confidence level for the mean difference in VAS score from before and after Reiki treatment.</p></li>
+<li><p>The female labor force participation rates (FLFPR) of women in countries from 1990 to 2018 are in table #9.2.13 (Labor force participation rate, female (% of female population ages 15+) (modeled ILO estimate), 2019). Do the data show that the mean female labor force participation rate in 1990 is different from that in the 2018 using a 5% level of significance?</p></li>
+</ol>
+<p><strong>Table #9.2.13: Female Labor Force Participation Rates</strong></p>
+<div class="sourceCode" id="cb433"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb433-1"><a href="two-sample-inference.html#cb433-1"></a>Labor &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/labor.csv&quot;</span>)</span>
+<span id="cb433-2"><a href="two-sample-inference.html#cb433-2"></a><span class="kw">head</span>(Labor)</span></code></pre></div>
+<pre><code>##   Country.Name Country.Code                    Region         IncomeGroup
+## 1        Aruba          ABW Latin America &amp; Caribbean         High income
+## 2  Afghanistan          AFG                South Asia          Low income
+## 3       Angola          AGO        Sub-Saharan Africa Lower middle income
+## 4      Albania          ALB     Europe &amp; Central Asia Upper middle income
+## 5      Andorra          AND     Europe &amp; Central Asia         High income
+## 6   Arab World          ARB                                              
+##      y1990    y1991    y1992    y1993    y1994    y1995    y1996    y1997
+## 1       NA       NA       NA       NA       NA       NA       NA       NA
+## 2 43.11500 43.12400 43.12900 43.07200 43.00300 43.01700 42.77000 42.55400
+## 3 74.94500 74.87900 74.82600 74.78200 74.77000 74.78400 74.78300 74.80600
+## 4 53.77100 56.29600 56.68700 55.74700 54.90400 53.74600 53.07500 53.81200
+## 5       NA       NA       NA       NA       NA       NA       NA       NA
+## 6 19.18997 19.24094 19.13159 19.29515 19.64479 19.66156 19.51602 19.27293
+##      y1998   y1999    y2000    y2001    y2002    y2003    y2004    y2005
+## 1       NA      NA       NA       NA       NA       NA       NA       NA
+## 2 42.41300 42.3340 42.27400 42.53900 42.89900 43.28600 43.66100 44.02500
+## 3 74.84600 74.8940 74.94100 74.96200 74.98400 75.01100 75.04800 75.09400
+## 4 53.15400 52.2540 51.76900 51.11000 50.67900 49.75900 48.87800 48.05100
+## 5       NA      NA       NA       NA       NA       NA       NA       NA
+## 6 19.07511 19.5351 19.59284 19.52237 19.08892 19.32403 19.44488 19.53444
+##      y2006    y2007   y2008    y2009    y2010    y2011    y2012    y2013
+## 1       NA       NA      NA       NA       NA       NA       NA       NA
+## 2 43.59700 43.19200 42.8730 42.70900 42.73500 43.32800 44.11700 45.03900
+## 3 75.12600 75.16500 75.2090 75.25600 75.30700 75.34400 75.38900 75.43300
+## 4 47.38900 46.80300 46.2690 44.94500 45.69300 47.10400 48.80600 44.65000
+## 5       NA       NA      NA       NA       NA       NA       NA       NA
+## 6 19.68183 20.17107 19.8473 20.05784 20.17166 20.27703 20.46453 20.76731
+##      y2014    y2015    y2016    y2017    y2018
+## 1       NA       NA       NA       NA       NA
+## 2 46.01700 47.00100 47.76600 48.47400 48.66000
+## 3 75.46500 75.47900 75.47000 75.45100 75.41200
+## 4 44.78900 47.67600 47.45900 47.31200 47.19100
+## 5       NA       NA       NA       NA       NA
+## 6 20.70378 20.51515 20.61605 20.56842 20.58152</code></pre>
+<p><strong>Code book for data frame Labor</strong></p>
+<p><strong>Description</strong>
+Labor force participation rate, female (% of female population ages 15+)</p>
+<p>This data frame contains the following columns:</p>
+<p>Country Name: The name of a country around the world</p>
+<p>Country Code: The 3 letter country code</p>
+<p>Region: The location of the country in the world</p>
+<p>IncomeGroup: The World Bank’s income classification</p>
+<p>y1990-y2018: Labor force participation rate, female (% of female population ages 15+) for the years 100–2018</p>
+<p><strong>Source</strong>
+Labor force participation rate, female (% of female population ages 15 ) (modeled ILO estimate). (n.d.). Retrieved July 20, 2019, from <a href="https://data.worldbank.org/indicator/SL.TLF.CACT.FE.ZS" class="uri">https://data.worldbank.org/indicator/SL.TLF.CACT.FE.ZS</a></p>
+<p><strong>References</strong>
+International Labour Organization, ILOSTAT database. Data retrieved in April 2019.</p>
+<ol start="10" style="list-style-type: decimal">
+<li><p>The female labor force participation rates (FLFPR) of women in countries from 1990 to 2018 are in table #9.2.13 (Labor force participation rate, female (% of female population ages 15+) (modeled ILO estimate), 2019).Estimate the mean difference in the female labor force participation rate in 1990 to 2018 using a 95% confidence level?</p></li>
+<li><p>Is the pulse rate after exercise different from the pulse rate before exercise for a man who drinks alcohol but doesn’t smoke? Use the data frame Pulse (table #9.2.3). Test at the 5% level.</p></li>
+</ol>
+<p><strong>Table#9.2.14: Pulse Rate Before and After Exercise</strong></p>
+<div class="sourceCode" id="cb435"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb435-1"><a href="two-sample-inference.html#cb435-1"></a>Pulse&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/pulse.csv&quot;</span>)</span>
+<span id="cb435-2"><a href="two-sample-inference.html#cb435-2"></a><span class="kw">head</span>(Pulse)</span></code></pre></div>
+<pre><code>##   height weight age gender smokes alcohol exercise ran pulse_before pulse_after
+## 1    170     68  22   male    yes     yes moderate sat           70          71
+## 2    182     75  26   male    yes     yes moderate sat           80          76
+## 3    180     85  19   male    yes     yes moderate ran           68         125
+## 4    182     85  20   male    yes     yes      low sat           70          68
+## 5    167     70  22   male    yes     yes      low sat           92          84
+## 6    178     86  21   male    yes     yes      low sat           76          80
+##   year
+## 1   93
+## 2   93
+## 3   95
+## 4   95
+## 5   96
+## 6   98</code></pre>
+<p><strong>Code book for data frame Pulse</strong> See problem 3.2.5 in section 3.2.</p>
+<ol start="12" style="list-style-type: decimal">
+<li>Table #9.2.14 contains pulse rates Compute a 95% confidence interval for the mean difference in pulse rates from before and after exercise for males who drink but do not smoke.</li>
+</ol>
+<p><strong><br />
+</strong></p>
+</div>
+</div>
+<div id="independent-samples-for-two-means" class="section level2">
+<h2><span class="header-section-number">9.3</span> Independent Samples for Two Means</h2>
+<p>This section will look at how to analyze when two samples are collected that are independent. As with all other hypothesis tests and confidence intervals, the process is the same though the formulas and assumptions are different.</p>
+<p><strong>Hypothesis Test for Independent t-Test (2-Sample t-Test)</strong></p>
+<ol style="list-style-type: decimal">
+<li>State the random variables and the parameters in words.</li>
+</ol>
+<p><span class="math inline">\(x_1\)</span> = random variable 1</p>
+<p><span class="math inline">\(x_2\)</span>= random variable 2</p>
+<p><span class="math inline">\(\mu_1\)</span>= mean of random variable 1</p>
+<p><span class="math inline">\(\mu_2\)</span>= mean of random variable 2</p>
+<ol start="2" style="list-style-type: decimal">
+<li>State the null and alternative hypotheses and the level of significance</li>
+</ol>
+<p>The hypotheses would be</p>
+<p><span class="math inline">\(H_o:\mu_1=\mu_2\)</span></p>
+<p><span class="math inline">\(H_a:\mu_1\ne \mu_2\)</span>, the <span class="math inline">\(\ne\)</span> can be replaced with <span class="math inline">\(&lt;\)</span> or <span class="math inline">\(&gt;\)</span></p>
+<p>Also, state your <span class="math inline">\(\alpha\)</span> level here.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>State and check the assumptions for the hypothesis test</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><p>A random sample of size <span class="math inline">\(n_1\)</span> is taken from population 1. A random sample of size <span class="math inline">\(n_2\)</span> is taken from population 2. Note: the samples do not need to be the same size, but the test is more robust if they are.</p></li>
+<li><p>The two samples are independent.</p></li>
+<li><p>Population 1 is normally distributed. Population 2 is normally distributed. Just as before, the t-test is fairly robust to the assumption if the sample size is large. This means that if this assumption isn’t met, but your sample sizes are quite large, then the results of the t-test are valid.</p></li>
+<li><p>The population variances are unknown and not assumed to be equal. The old assumption is that the variances are equal. However, this assumption is no longer an assumption that most statisticians use. This is because it isn’t really realistic to assume that the variances are equal. So just assume the assumption of the variances being unknown and not assumed to be equal is true, and it will not be checked.</p></li>
+</ol>
+<ol start="4" style="list-style-type: decimal">
+<li>Find the sample statistic, test statistic, and p-value</li>
+</ol>
+<p>The command using R is</p>
+<div class="sourceCode" id="cb437"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb437-1"><a href="two-sample-inference.html#cb437-1"></a><span class="kw">t.test</span>(variable<span class="op">~</span>factor, <span class="dt">data=</span>Data Frame)</span></code></pre></div>
+<p>Note: if the <span class="math inline">\(H_a\)</span> is &lt;, then the command becomes</p>
+<div class="sourceCode" id="cb438"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb438-1"><a href="two-sample-inference.html#cb438-1"></a><span class="kw">t.test</span>(variable<span class="op">~</span>factor, <span class="dt">data=</span>Data Frame, <span class="dt">alternative=</span><span class="st">&quot;less&quot;</span>)</span></code></pre></div>
+<p>Similarly for &gt; put alternative=“greater”</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Conclusion</li>
+</ol>
+<p>This is where you write reject or fail to reject . The rule is: if the p-value <span class="math inline">\(&lt;\alpha\)</span> , then reject <span class="math inline">\(H_o\)</span>. If the p-value <span class="math inline">\(\ge \alpha\)</span>, then fail to reject <span class="math inline">\(H_o\)</span>.</p>
+<ol start="6" style="list-style-type: decimal">
+<li>Interpretation</li>
+</ol>
+<p>This is where you interpret in real world terms the conclusion to the test. The conclusion for a hypothesis test is that you either have enough evidence to support <span class="math inline">\(H_a\)</span>, or you do not have enough evidence to support <span class="math inline">\(H_a\)</span>.</p>
+<p><strong>Confidence Interval for the Difference in Means from Two Independent Samples (2 Samp T-Int)</strong></p>
+<p>The confidence interval for the difference in means has the same random variables and means and the same assumptions as the hypothesis test for independent samples. If you have already completed the hypothesis test, then you do not need to state them again. If you haven’t completed the hypothesis test, then state the random variables and means and state and check the assumptions before completing the confidence interval step.</p>
+<p>Find the sample statistic and confidence interval</p>
+<p>On R Studio, the command is</p>
+<div class="sourceCode" id="cb439"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb439-1"><a href="two-sample-inference.html#cb439-1"></a><span class="kw">t.test</span>(variable<span class="op">~</span>factor, <span class="dt">data=</span>Data Frame, <span class="dt">conf.level=</span>C as a decimal)</span></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Statistical Interpretation: In general this looks like, “You are C% confident that the interval contains the true mean difference.”</p></li>
+<li><p>Real World Interpretation: This is where you state what interval contains the true difference in means, though often you state how much more (or less) the first mean is from the second mean.</p></li>
+</ol>
+<p><strong>How to check the assumptions of two sample t-test and confidence interval:</strong></p>
+<p>In order for the t-test or confidence interval to be valid, the assumptions of the test must be valid So whenever you run a t-test or confidence interval, you must make sure the assumptions are valid So you need to check them. Here is how you do this:</p>
+<ol style="list-style-type: decimal">
+<li><p>For the random sample assumption, describe how you took the two samples. Make sure your sampling technique is random for both samples.</p></li>
+<li><p>For the independent assumption, describe how they are independent samples.</p></li>
+<li><p>For the assumption about each population being normally distributed, remember the process of assessing normality from chapter 6. Make sure you assess each sample separately.</p></li>
+<li><p>You do not need to check the variance assumption since it is being assumed.</p></li>
+</ol>
+<div id="example-hypothesis-test-for-two-means" class="section level3">
+<h3><span class="header-section-number">9.3.1</span> Example: Hypothesis Test for Two Means</h3>
+<p>The cholesterol level of people vary for many reasons. The question is do people with diabetes have different cholesterol levels from people who do not have diabetes? Use the NHANES data frame. Test at the 5% level.</p>
+<p><strong>Table #9.3.1: NHANES Data Frame</strong></p>
+<div class="sourceCode" id="cb440"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb440-1"><a href="two-sample-inference.html#cb440-1"></a><span class="kw">names</span>(NHANES) <span class="co">#displays the names of the variables in a data frame</span></span></code></pre></div>
+<pre><code>##  [1] &quot;ID&quot;               &quot;SurveyYr&quot;         &quot;Gender&quot;           &quot;Age&quot;             
+##  [5] &quot;AgeDecade&quot;        &quot;AgeMonths&quot;        &quot;Race1&quot;            &quot;Race3&quot;           
+##  [9] &quot;Education&quot;        &quot;MaritalStatus&quot;    &quot;HHIncome&quot;         &quot;HHIncomeMid&quot;     
+## [13] &quot;Poverty&quot;          &quot;HomeRooms&quot;        &quot;HomeOwn&quot;          &quot;Work&quot;            
+## [17] &quot;Weight&quot;           &quot;Length&quot;           &quot;HeadCirc&quot;         &quot;Height&quot;          
+## [21] &quot;BMI&quot;              &quot;BMICatUnder20yrs&quot; &quot;BMI_WHO&quot;          &quot;Pulse&quot;           
+## [25] &quot;BPSysAve&quot;         &quot;BPDiaAve&quot;         &quot;BPSys1&quot;           &quot;BPDia1&quot;          
+## [29] &quot;BPSys2&quot;           &quot;BPDia2&quot;           &quot;BPSys3&quot;           &quot;BPDia3&quot;          
+## [33] &quot;Testosterone&quot;     &quot;DirectChol&quot;       &quot;TotChol&quot;          &quot;UrineVol1&quot;       
+## [37] &quot;UrineFlow1&quot;       &quot;UrineVol2&quot;        &quot;UrineFlow2&quot;       &quot;Diabetes&quot;        
+## [41] &quot;DiabetesAge&quot;      &quot;HealthGen&quot;        &quot;DaysPhysHlthBad&quot;  &quot;DaysMentHlthBad&quot; 
+## [45] &quot;LittleInterest&quot;   &quot;Depressed&quot;        &quot;nPregnancies&quot;     &quot;nBabies&quot;         
+## [49] &quot;Age1stBaby&quot;       &quot;SleepHrsNight&quot;    &quot;SleepTrouble&quot;     &quot;PhysActive&quot;      
+## [53] &quot;PhysActiveDays&quot;   &quot;TVHrsDay&quot;         &quot;CompHrsDay&quot;       &quot;TVHrsDayChild&quot;   
+## [57] &quot;CompHrsDayChild&quot;  &quot;Alcohol12PlusYr&quot;  &quot;AlcoholDay&quot;       &quot;AlcoholYear&quot;     
+## [61] &quot;SmokeNow&quot;         &quot;Smoke100&quot;         &quot;Smoke100n&quot;        &quot;SmokeAge&quot;        
+## [65] &quot;Marijuana&quot;        &quot;AgeFirstMarij&quot;    &quot;RegularMarij&quot;     &quot;AgeRegMarij&quot;     
+## [69] &quot;HardDrugs&quot;        &quot;SexEver&quot;          &quot;SexAge&quot;           &quot;SexNumPartnLife&quot; 
+## [73] &quot;SexNumPartYear&quot;   &quot;SameSex&quot;          &quot;SexOrientation&quot;   &quot;PregnantNow&quot;</code></pre>
+<p><strong>Code book for data frame NHANES</strong> type help(“NHANES”) in the R Console.</p>
+<p><strong>Solution:</strong></p>
+<ol style="list-style-type: decimal">
+<li>State the random variables and the parameters in words.</li>
+</ol>
+<p><span class="math inline">\(x_1\)</span> = Cholesterol level of people with diabetes</p>
+<p><span class="math inline">\(x_2\)</span> = Cholesterol level of people without diabetes</p>
+<p><span class="math inline">\(\mu_1\)</span> = mean cholesterol level of people with diabetes</p>
+<p><span class="math inline">\(\mu_2\)</span> = mean cholesterol level of people without diabetes</p>
+<ol start="2" style="list-style-type: decimal">
+<li>State the null and alternative hypotheses and the level of significance</li>
+</ol>
+<p>The hypotheses would be</p>
+<p><span class="math inline">\(H_o: \mu_1=\mu_2\)</span></p>
+<p><span class="math inline">\(H_a: \mu_1 \ne \mu_2\)</span></p>
+<p>level of significance, <span class="math inline">\(\alpha=0.05\)</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li>State and check the assumptions for the hypothesis test</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><p>A random sample of cholesterol levels of people with diabetes is taken. A random sample of cholesterol levels of people without diabetes is taken. Check: The NHANES data frame uses cluster sampling which incorporates random sampling, so the sample is probably representative. This assumption has been met.</p></li>
+<li><p>The two samples are independent. Check: This is because either they were dealing with people who have diabetes or not.</p></li>
+<li><p>Population of all cholesterol levels of people who have diabetes is normally distributed. Population of all cholesterol levels of people without diabetes is normally distributed.
+Check:</p></li>
+</ol>
+
+<div class="sourceCode" id="cb442"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb442-1"><a href="two-sample-inference.html#cb442-1"></a><span class="kw">gf_density</span>(<span class="op">~</span>TotChol<span class="op">|</span>Diabetes, <span class="dt">data=</span>NHANES)</span></code></pre></div>
+<div class="figure"><span id="fig:NHANES9-diabetes-density"></span>
+<img src="Statistics_using_technology_files/figure-html/NHANES9-diabetes-density-1.png" alt="Density Plot of Cholesterol levels of people with and without Diabetes:" width="672" />
+<p class="caption">
+Figure 9.5: Density Plot of Cholesterol levels of people with and without Diabetes:
+</p>
+</div>
+<p>Both the yes group and the no group look somewhat bell shaped.</p>
+
+<div class="sourceCode" id="cb443"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb443-1"><a href="two-sample-inference.html#cb443-1"></a><span class="kw">gf_qq</span>(<span class="op">~</span>TotChol<span class="op">|</span>Diabetes, <span class="dt">data=</span>NHANES)</span></code></pre></div>
+<div class="figure"><span id="fig:NHANES9-diabetes-qq"></span>
+<img src="Statistics_using_technology_files/figure-html/NHANES9-diabetes-qq-1.png" alt="Normal Quantile Plot of Cholesterol Levels of people with and without Diabetes" width="672" />
+<p class="caption">
+Figure 9.6: Normal Quantile Plot of Cholesterol Levels of people with and without Diabetes
+</p>
+</div>
+<p>Both the yes group and the no group look somewhat linear.</p>
+<p>The population of all cholesterol levels of people who have diabetes is probably normally distributed. The population of all cholesterol levels of people who do not have diabetes is probably normally distributed.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Find the sample statistic, test statistic, and p-value</li>
+</ol>
+<p>The variable is cholesterol (TotChol) and separating based on if a person has diabetes or not. So the factor is Diabetes. Using R Studio the command would be</p>
+<div class="sourceCode" id="cb444"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb444-1"><a href="two-sample-inference.html#cb444-1"></a><span class="kw">t.test</span>(TotChol<span class="op">~</span>Diabetes, <span class="dt">data=</span>NHANES)</span></code></pre></div>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  TotChol by Diabetes
+## t = 2.4286, df = 809.7, p-value = 0.01537
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  0.02105115 0.19851114
+## sample estimates:
+##  mean in group No mean in group Yes 
+##          4.887936          4.778155</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>Conclusion</li>
+</ol>
+<p>Reject <span class="math inline">\(H_o\)</span> since the p-value <span class="math inline">\(&lt;\alpha\)</span>.</p>
+<ol start="6" style="list-style-type: decimal">
+<li>Interpretation</li>
+</ol>
+<p>This is enough evidence to support that people who have diabetes have different cholesterol levels on average from people who do not have diabetes.</p>
+</div>
+<div id="example-confidence-interval-in-two-samples" class="section level3">
+<h3><span class="header-section-number">9.3.2</span> Example: Confidence Interval in Two Samples</h3>
+<p>The cholesterol level of people vary for many reasons. The question is how different is the cholesterol levels of people with diabetes from people who do not have diabetes? Use the NHANES data frame. Compute a 95% confidence interval.</p>
+<p><strong>Solution:</strong></p>
+<ol style="list-style-type: decimal">
+<li>State the random variables and the parameters in words.</li>
+</ol>
+<p>These were stated in example #9.3.1</p>
+<ol start="2" style="list-style-type: decimal">
+<li>State and check the assumptions for the hypothesis test</li>
+</ol>
+<p>The assumptions were stated and checked in example #9.3.1.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Find the sample statistic and confidence interval</li>
+</ol>
+<p>The variable is cholesterol (TotChol) and separating based on if a person has diabetes or not. So the factor is Diabetes. Using R Studio the command would be</p>
+<div class="sourceCode" id="cb446"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb446-1"><a href="two-sample-inference.html#cb446-1"></a><span class="kw">t.test</span>(TotChol<span class="op">~</span>Diabetes, <span class="dt">data=</span>NHANES, <span class="dt">conf.level=</span><span class="fl">0.95</span>)</span></code></pre></div>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  TotChol by Diabetes
+## t = 2.4286, df = 809.7, p-value = 0.01537
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  0.02105115 0.19851114
+## sample estimates:
+##  mean in group No mean in group Yes 
+##          4.887936          4.778155</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Statistical Interpretation: You are 95% confident that the interval <span class="math inline">\(0.02105115&lt;\mu_1-\mu_2&lt;0.19851114\)</span> contains the true difference in means.</p></li>
+<li><p>Real World Interpretation: The mean cholesterol level for people with diabetes is anywhere from 0.021 mmol/L to 0.199 mmol/L more than the mean cholesterol level for people without diabetes.</p></li>
+</ol>
+</div>
+<div id="example-hypothesis-test-for-two-means-1" class="section level3">
+<h3><span class="header-section-number">9.3.3</span> Example: Hypothesis Test for Two Means</h3>
+<p>The amount of sodium in beef and poultry hot dogs was measured. ("SOCR 012708 id," 2013). The data is in table #9.3.2. Is there enough evidence to show that beef has different amounts of sodium on average than poultry hot dogs? Use a 5% level of significance.</p>
+<p><strong>Table #9.3.2: Hotdog Data</strong></p>
+<div class="sourceCode" id="cb448"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb448-1"><a href="two-sample-inference.html#cb448-1"></a>Hotdog&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/hotdog_beef_poultry.csv&quot;</span>)</span>
+<span id="cb448-2"><a href="two-sample-inference.html#cb448-2"></a><span class="kw">head</span>(Hotdog)</span></code></pre></div>
+<pre><code>##   type calories sodium
+## 1 Beef      186    495
+## 2 Beef      181    477
+## 3 Beef      176    425
+## 4 Beef      149    322
+## 5 Beef      184    482
+## 6 Beef      190    587</code></pre>
+<p><strong>Code book for data frame Hotdog</strong></p>
+<p><strong>Description</strong>
+Results of a laboratory analysis of calories and sodium content of major hot dog brands. Researchers for Consumer Reports analyzed three types of hot dog: beef, poultry, and meat (mostly pork and beef, but up to 15% poultry meat). The meat was left off this data frame so a two-sample t-test could be performed.</p>
+<p>This data frame contains the following columns:</p>
+<p>type: Type of hot dog (beef or poultry)</p>
+<p>calories: Calories per hot dog</p>
+<p>sodium: Milligrams of sodium per hot dog</p>
+<p><strong>Source</strong>
+SOCR 012708 id data hotdogs. (2013, November 13). Retrieved from
+<a href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_012708_ID_Data_HotDogs" class="uri">http://wiki.stat.ucla.edu/socr/index.php/SOCR_012708_ID_Data_HotDogs</a></p>
+<p><strong>References</strong>
+SOCR Home page: <a href="http://www.socr.ucla.edu" class="uri">http://www.socr.ucla.edu</a></p>
+<p><strong>Solution:</strong></p>
+<ol style="list-style-type: decimal">
+<li>State the random variables and the parameters in words.</li>
+</ol>
+<p><span class="math inline">\(x_1\)</span> = sodium level in beef hotdogs</p>
+<p><span class="math inline">\(x_2\)</span> = sodium level in poultry hotdogs</p>
+<p><span class="math inline">\(\mu_1\)</span> = mean sodium level in beef hotdogs</p>
+<p><span class="math inline">\(\mu_2\)</span> = mean sodium level in poultry hotdogs</p>
+<ol start="2" style="list-style-type: decimal">
+<li>State the null and alternative hypotheses and the level of
+significance</li>
+</ol>
+<p>The hypotheses would be</p>
+<p><span class="math inline">\(H_o:\mu_1=\mu_2\)</span></p>
+<p><span class="math inline">\(H_o:\mu_1\ne \mu_2\)</span></p>
+<p>level of significance: <span class="math inline">\(\alpha=0.05\)</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li>State and check the assumptions for the hypothesis test</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><p>A random sample of 20 sodium levels in beef hotdogs is taken. A random sample of 20 sodium levels in poultry hotdogs. Check: The code does not state if either sample was randomly selected, but since Consumer Reports performed the test, it is safe to assume the samples were both random.</p></li>
+<li><p>The two samples are independent. Check: These are different types of hotdogs so this is true.</p></li>
+<li><p>Population of all sodium levels in beef hotdogs is normally distributed. Population of all sodium levels in poultry hotdogs is normally distributed. Check:</p></li>
+</ol>
+
+<div class="sourceCode" id="cb450"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb450-1"><a href="two-sample-inference.html#cb450-1"></a><span class="kw">gf_density</span>(<span class="op">~</span>sodium<span class="op">|</span>type, <span class="dt">data=</span>Hotdog)</span></code></pre></div>
+<div class="figure"><span id="fig:hotdog9-density"></span>
+<img src="Statistics_using_technology_files/figure-html/hotdog9-density-1.png" alt="Density Plot of Sodium Levels in Hotdogs" width="672" />
+<p class="caption">
+Figure 9.7: Density Plot of Sodium Levels in Hotdogs
+</p>
+</div>
+<p>The density plot for beef hotdogs looks somewhat bell shaped, but the density plot for poultry hotdogs does not look bell shaped.</p>
+
+<div class="sourceCode" id="cb451"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb451-1"><a href="two-sample-inference.html#cb451-1"></a><span class="kw">gf_qq</span>(<span class="op">~</span>sodium<span class="op">|</span>type, <span class="dt">data=</span>Hotdog)</span></code></pre></div>
+<div class="figure"><span id="fig:hotdog9-qq"></span>
+<img src="Statistics_using_technology_files/figure-html/hotdog9-qq-1.png" alt="Normal Quantile Plot of Sodium Levels in Hotdogs" width="672" />
+<p class="caption">
+Figure 9.8: Normal Quantile Plot of Sodium Levels in Hotdogs
+</p>
+</div>
+<p>The normal quantile plot for the sodium level in beef hotdogs looks somewhat linear. The normal quantile plot for the sodium level in poultry hotdogs does not look linear. The population of all sodium levels in beef hotdogs may be normally distributed, but the population of all sodium levels in poultry hotdogs is probably not normally distributed. The sample size is not very large so the results of the test may not be valid. A larger sample would be a good idea.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Find the sample statistic, test statistic, and p-value</li>
+</ol>
+<p>Using R Studio the variable is sodium levels (sodium) in different types of hot dogs. So the factor is type. The command is</p>
+<div class="sourceCode" id="cb452"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb452-1"><a href="two-sample-inference.html#cb452-1"></a><span class="kw">t.test</span>(sodium<span class="op">~</span>type, <span class="dt">data=</span>Hotdog)</span></code></pre></div>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  sodium by type
+## t = -1.8798, df = 34.983, p-value = 0.06848
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -120.325706    4.625706
+## sample estimates:
+##    mean in group Beef mean in group Poultry 
+##                401.15                459.00</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Conclusion: Fail to reject <span class="math inline">\(H_o\)</span> since the p-value <span class="math inline">\(\ge \alpha\)</span>.</p></li>
+<li><p>Interpretation</p></li>
+</ol>
+<p>This is not enough evidence to support that beef hotdogs’ sodium level is different from poultry hotdogs. (Though do realize that the population assumptions is not valid, so this interpretation may be invalid.)</p>
+</div>
+<div id="example-confidence-interval-for-two-independent-samples" class="section level3">
+<h3><span class="header-section-number">9.3.4</span> Example: Confidence Interval for Two Independent Samples</h3>
+<p>The amount of sodium in beef and poultry hotdogs was measured. ("SOCR 012708 id," 2013). The data is in table #9.3.2. Find a 95% confidence interval for the mean difference in sodium levels between beef and poultry hotdogs.</p>
+<p><strong>Solution:</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>State the random variables and the parameters in words.</p>
+<p>These were stated in example #9.3.3.</p></li>
+<li><p>State and check the assumptions for the hypothesis test</p></li>
+</ol>
+<p>The assumptions were stated and checked in example #9.3.3.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Find the sample statistic and confidence interval
+Using R Studio the variable is sodium levels (sodium) in different types of hot dogs. So the factor is type. The command is</li>
+</ol>
+<div class="sourceCode" id="cb454"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb454-1"><a href="two-sample-inference.html#cb454-1"></a><span class="kw">t.test</span>(sodium<span class="op">~</span>type, <span class="dt">data=</span>Hotdog, <span class="dt">conf.level=</span><span class="fl">0.95</span>)</span></code></pre></div>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  sodium by type
+## t = -1.8798, df = 34.983, p-value = 0.06848
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -120.325706    4.625706
+## sample estimates:
+##    mean in group Beef mean in group Poultry 
+##                401.15                459.00</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Statistical Interpretation: You are 95% confident that the interval <span class="math inline">\(-120.325706&lt;\mu_1-\mu_2&lt;4.625706\)</span> contains the true difference in mean sodium level between beef and poultry hot dogs.</p></li>
+<li><p>Real World Interpretation: The mean sodium level of beef hotdogs is anywhere from 120.33 mg less than the mean sodium level of poultry hotdogs to 4.63 mg more. (The negative sign on the lower limit implies that the first mean is less than the second mean. The positive sign on the upper limit implies that the first mean is greater than the second mean.)</p></li>
+</ol>
+<p>Do realize that the population assumptions is not valid, so this interpretation may be invalid.</p>
+</div>
+<div id="homework-24" class="section level3">
+<h3><span class="header-section-number">9.3.5</span> Homework</h3>
+<p><strong>In each problem show all steps of the hypothesis test or confidence interval. If some of the assumptions are not met, note that the results of the test or interval may not be correct and then continue the process of the hypothesis test or confidence interval.</strong></p>
+<ol style="list-style-type: decimal">
+<li>The NHANES data contains many variables. One variable is the income of households derived from the middle income of different income categories. The variable is called HHIncomeMid. Is there enough evidence to show that the mean income of males is different from the mean income of females? Test at the 1% level.</li>
+</ol>
+<p><strong>Table #9.3.3: NHANES</strong></p>
+<div class="sourceCode" id="cb456"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb456-1"><a href="two-sample-inference.html#cb456-1"></a><span class="kw">names</span>(NHANES)</span></code></pre></div>
+<pre><code>##  [1] &quot;ID&quot;               &quot;SurveyYr&quot;         &quot;Gender&quot;           &quot;Age&quot;             
+##  [5] &quot;AgeDecade&quot;        &quot;AgeMonths&quot;        &quot;Race1&quot;            &quot;Race3&quot;           
+##  [9] &quot;Education&quot;        &quot;MaritalStatus&quot;    &quot;HHIncome&quot;         &quot;HHIncomeMid&quot;     
+## [13] &quot;Poverty&quot;          &quot;HomeRooms&quot;        &quot;HomeOwn&quot;          &quot;Work&quot;            
+## [17] &quot;Weight&quot;           &quot;Length&quot;           &quot;HeadCirc&quot;         &quot;Height&quot;          
+## [21] &quot;BMI&quot;              &quot;BMICatUnder20yrs&quot; &quot;BMI_WHO&quot;          &quot;Pulse&quot;           
+## [25] &quot;BPSysAve&quot;         &quot;BPDiaAve&quot;         &quot;BPSys1&quot;           &quot;BPDia1&quot;          
+## [29] &quot;BPSys2&quot;           &quot;BPDia2&quot;           &quot;BPSys3&quot;           &quot;BPDia3&quot;          
+## [33] &quot;Testosterone&quot;     &quot;DirectChol&quot;       &quot;TotChol&quot;          &quot;UrineVol1&quot;       
+## [37] &quot;UrineFlow1&quot;       &quot;UrineVol2&quot;        &quot;UrineFlow2&quot;       &quot;Diabetes&quot;        
+## [41] &quot;DiabetesAge&quot;      &quot;HealthGen&quot;        &quot;DaysPhysHlthBad&quot;  &quot;DaysMentHlthBad&quot; 
+## [45] &quot;LittleInterest&quot;   &quot;Depressed&quot;        &quot;nPregnancies&quot;     &quot;nBabies&quot;         
+## [49] &quot;Age1stBaby&quot;       &quot;SleepHrsNight&quot;    &quot;SleepTrouble&quot;     &quot;PhysActive&quot;      
+## [53] &quot;PhysActiveDays&quot;   &quot;TVHrsDay&quot;         &quot;CompHrsDay&quot;       &quot;TVHrsDayChild&quot;   
+## [57] &quot;CompHrsDayChild&quot;  &quot;Alcohol12PlusYr&quot;  &quot;AlcoholDay&quot;       &quot;AlcoholYear&quot;     
+## [61] &quot;SmokeNow&quot;         &quot;Smoke100&quot;         &quot;Smoke100n&quot;        &quot;SmokeAge&quot;        
+## [65] &quot;Marijuana&quot;        &quot;AgeFirstMarij&quot;    &quot;RegularMarij&quot;     &quot;AgeRegMarij&quot;     
+## [69] &quot;HardDrugs&quot;        &quot;SexEver&quot;          &quot;SexAge&quot;           &quot;SexNumPartnLife&quot; 
+## [73] &quot;SexNumPartYear&quot;   &quot;SameSex&quot;          &quot;SexOrientation&quot;   &quot;PregnantNow&quot;</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li><p>The NHANES data contains many variables. One variable is the income of households derived from the middle income of different income categories. The variable is called HHIncomeMid. Estimate with 95% confidence the mean difference in incomes between males and females in the U.S.</p></li>
+<li><p>A study was conducted that measured the total brain volume (TBV) of patients that had schizophrenia and patients that do not have schizophrenia. Table #9.3.4 contains the TBV of the all patients ("SOCR data oct2009," 2013). Is there enough evidence to show that the patients with schizophrenia have a different TBV on average than a patient without schizophrenia? Test at the 10% level.</p></li>
+</ol>
+<p><strong>Table #9.3.4: Total Brain Volume of Patients</strong></p>
+<div class="sourceCode" id="cb458"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb458-1"><a href="two-sample-inference.html#cb458-1"></a>Brain &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/brain.csv&quot;</span>)</span>
+<span id="cb458-2"><a href="two-sample-inference.html#cb458-2"></a><span class="kw">head</span>(Brain)</span></code></pre></div>
+<pre><code>##   type  volume
+## 1    n 1663407
+## 2    n 1583940
+## 3    n 1299470
+## 4    n 1535137
+## 5    n 1431890
+## 6    n 1578698</code></pre>
+<p><strong>Code book for data frame Brain</strong></p>
+<p><strong>Description</strong>
+A study to measure the total brain volume (TBV) (in ) of patients that had schizophrenia and patients that do not have schizophrenia.</p>
+<p>This data frame contains the following columns:</p>
+<p>type: whether the patient had schizophrenia (s) or did not have schizophrenia (n)</p>
+<p>volume: the total brain volume of a patient.(<span class="math inline">\(mm^3\)</span>)</p>
+<p><strong>Source</strong>
+SOCR data Oct2009 id ni. (2013, November 16). Retrieved from
+<a href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_Oct2009_ID_NI" class="uri">http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_Oct2009_ID_NI</a></p>
+<p><strong>References</strong>
+"SOCR data nips," 2013</p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>A study was conducted that measured the total brain volume (TBV) of patients that had schizophrenia and patients that do not have schizophrenia. Table #9.3.4 contains the TBV of the all patients ("SOCR data oct2009," 2013). Is there enough evidence to show that the patients with schizophrenia have a different TBV on average than a patient without schizophrenia? Test at the 10% level. Compute a 90% confidence interval for the difference in TBV of patients with Schizophrenia and patients without Schizophrenia.</p></li>
+<li><p>The lengths (in kilometers) of rivers on the South Island of New Zealand and what body of water they flow into are listed in table #9.3.5 (Lee, 1994). Do the data provide enough evidence to show on average that the rivers that travel to the Pacific Ocean are different length than the rivers that travel to the Tasman Sea? Use a 5% level of significance.</p></li>
+</ol>
+<p><strong>Table #9.3.5: Lengths of Rivers (km) Flowing to Pacific Ocean</strong></p>
+<div class="sourceCode" id="cb460"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb460-1"><a href="two-sample-inference.html#cb460-1"></a>Length&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/length.csv&quot;</span>)</span>
+<span id="cb460-2"><a href="two-sample-inference.html#cb460-2"></a><span class="kw">head</span>(Length)</span></code></pre></div>
+<pre><code>##      river length flowsto
+## 1 Clarence    209 Pacific
+## 2   Conway     48 Pacific
+## 3    Waiau    169 Pacific
+## 4  Hurunui    138 Pacific
+## 5  Waipara     64 Pacific
+## 6   Ashley     97 Pacific</code></pre>
+<p><strong>Code book for data frame Length</strong> See problem 3.1.2 in Section 3.1 homework.</p>
+<ol start="6" style="list-style-type: decimal">
+<li><p>The lengths (in kilometers) of rivers on the South Island of New Zealand and what body of water they flow into are listed in table #9.3.5 (Lee, 1994). Estimate the difference in mean lengths of rivers between rivers in New Zealand that travel to the Pacific Ocean and ones that travel to the Tasman Sea. Use a 95% confidence level.</p></li>
+<li><p>A vitamin K shot is given to infants soon after birth. Nurses at Northbay Healthcare were involved in a study to see if how they handle the infants could reduce the pain the infants feel ("SOCR data nips," 2013). The data frame is in table #9.3.6. Is there enough evidence to show that infants cried a different amount on average when they are held by their mothers than if held using conventional methods? Test at the 5% level.</p></li>
+</ol>
+<p><strong>Table #9.3.6: Crying Time of Infants Given Shots Using New Methods</strong></p>
+<div class="sourceCode" id="cb462"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb462-1"><a href="two-sample-inference.html#cb462-1"></a>Crying&lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/crying.csv&quot;</span>)</span>
+<span id="cb462-2"><a href="two-sample-inference.html#cb462-2"></a><span class="kw">head</span>(Crying)</span></code></pre></div>
+<pre><code>##    method crying
+## 1 convent     63
+## 2 convent      0
+## 3 convent      2
+## 4 convent     46
+## 5 convent     33
+## 6 convent     33</code></pre>
+<p><strong>Code book for data frame Crying</strong></p>
+<p><strong>Description</strong>
+Nurses at Northbay Healthcare were involved in a study to see if how they handle the infants could reduce the pain the infants feel. One of the measurements taken was how long, in seconds, the infant cried after being given the shot. A random sample was taken from the group that was given the shot using conventional methods, and a random sample was taken from the group that was given the shot where the mother held the infant prior to and during the shot.</p>
+<p>This data frame contains the following columns:</p>
+<p>method: whether the infant was given the conventional method (convent) or the new method (new) prior to being given the vitamin K shot.</p>
+<p>crying: how long the infant cried after given a vitamin K shot. (seconds)</p>
+<p><strong>Source</strong>
+SOCR data nips infantvitK shotdata. (2013, November 16). Retrieved from
+<a href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_NIPS_InfantVitK_ShotData" class="uri">http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_NIPS_InfantVitK_ShotData</a></p>
+<p><strong>References</strong>
+"SOCR data nips," 2013</p>
+<ol start="8" style="list-style-type: decimal">
+<li>A vitamin K shot is given to infants soon after birth. Nurses at Northbay Healthcare were involved in a study to see if how they handle the infants could reduce the pain the infants feel ("SOCR data nips," 2013). The data frame is in table #9.3.6. Calculate a 95% confidence interval for the mean difference in mean crying time after being given a vitamin K shot between infants held using conventional methods and infants held by their mothers.</li>
+</ol>
+<p><strong><br />
+</strong></p>
+</div>
+</div>
+<div id="which-analysis-should-you-conduct" class="section level2">
+<h2><span class="header-section-number">9.4</span> Which Analysis Should You Conduct?</h2>
+<p>One of the most important concept that you need to understand is deciding which analysis you should conduct for a particular situation. To help you to figure out the analysis to conduct, there are a series of questions you should ask yourself.</p>
+<ol style="list-style-type: decimal">
+<li>Does the problem deal with mean or proportion?</li>
+</ol>
+<p>Sometimes the problem states explicitly the words mean or proportion, but other times you have to figure it out based on the information you are given. If you counted number of individuals that responded in the affirmative to a question, then you are dealing with proportion. If you measured something, then you are dealing with mean.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Does the problem have one or two samples?</li>
+</ol>
+<p>So look to see if one group was measured or if two groups were measured. You need to decide if the problem describes collecting data from one group or from two groups, or if you are comparing two different groups.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>If you have two samples, then you need to determine if the samples are independent or dependent.</li>
+</ol>
+<p>If the individuals are different for both samples, then most likely the samples are independent. If you can’t tell, then determine if a data value from the first sample influences the data value in the second sample. In other words, can you pair data values together so you can find the difference, and that difference has meaning. If the answer is yes, then the samples are paired. Otherwise, the samples are independent.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Does the situation involve a hypothesis test or a confidence interval?</li>
+</ol>
+<p>If the problem talks about “do the data show”, “is there evidence of”, “test to see”, then you are doing a hypothesis test. If the problem talks about “find the value”, “estimate the” or “find the interval”, then you are doing a confidence interval.</p>
+<p>So if you have a situation that has two samples, independent samples, involving the mean, and is a hypothesis test, then you have a two-sample independent t-test. Now you look up the assumptions and the technology process for doing this test. Every hypothesis test involves the same six steps, and you just have to use the correct assumptions and calculations. Every confidence interval has the same five steps, and again you just need to use the correct assumptions and calculations. So this is why it is so important to figure out what analysis you should conduct.</p>
+<p><strong><br />
+</strong></p>
+<p>Data Sources:</p>
+<p><em>AP exam scores</em>. (2013, November 20). Retrieved from
+<a href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_Dinov_030708_APExamScores" class="uri">http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_Dinov_030708_APExamScores</a></p>
+<p>Center for Disease Control and Prevention, Prevalence of Autism Spectrum
+Disorders - Autism and Developmental Disabilities Monitoring Network.
+(2008). <em>Autism and developmental disabilities monitoring network-2012</em>.
+Retrieved from website:
+<a href="http://www.cdc.gov/ncbddd/autism/documents/ADDM-2012-Community-Report.pdf" class="uri">http://www.cdc.gov/ncbddd/autism/documents/ADDM-2012-Community-Report.pdf</a></p>
+<p>Flanagan, R., Rooney, C., &amp; Griffiths, C. (2005). Fatal poisoning in
+childhood, england &amp; wales 1968-2000. <em>Forensic Science International</em>,
+<em>148:121-129</em>, Retrieved from
+<a href="http://www.cdc.gov/nchs/data/ice/fatal_poisoning_child.pdf" class="uri">http://www.cdc.gov/nchs/data/ice/fatal_poisoning_child.pdf</a></p>
+<p>Gettler, L. T., McDade, T. W., Feranil, A. B., &amp; Kuzawa, C. W. (2011).
+Longitudinal evidence that fatherhood decreases testosterone in human
+males. <em>The Proceedings of the National Academy of Sciences, PNAS 2011</em>,
+doi: 10.1073/pnas.1105403108</p>
+<p><em>Population reference bureau</em>. (2013, October 8). Retrieved from
+<a href="http://www.prb.org/DataFinder/Topic/Rankings.aspx?ind=25" class="uri">http://www.prb.org/DataFinder/Topic/Rankings.aspx?ind=25</a></p>
+<p>Helmet Sizes for New Zealand Airforce. (n.d.). Retrieved July 20, 2019, from <a href="http://www.statsci.org/data/oz/nzhelmet.html" class="uri">http://www.statsci.org/data/oz/nzhelmet.html</a></p>
+<p>Seafood online. (2013, November 20). Retrieved from <a href="http://www.allfreshseafood.com/" class="uri">http://www.allfreshseafood.com/</a></p>
+<p>Buy sushi grade fish online. (2013, November 20). Retrieved from <a href="http://www.catalinaop.com/" class="uri">http://www.catalinaop.com/</a></p>
+<p>(n.d.). Retrieved from <a href="https://www3.nd.edu/~busiforc/handouts/Data" class="uri">https://www3.nd.edu/~busiforc/handouts/Data</a> and Stories/t test/Friday The Thirteenth/Friday The Thirteenth Data.html</p>
+<p>Labor force participation rate, female (% of female population ages 15 ) (modeled ILO estimate). (n.d.). Retrieved July 20, 2019, from <a href="https://data.worldbank.org/indicator/SL.TLF.CACT.FE.ZS" class="uri">https://data.worldbank.org/indicator/SL.TLF.CACT.FE.ZS</a></p>
+<p>SOCR 012708 id data hotdogs. (2013, November 13). Retrieved from
+<a href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_012708_ID_Data_HotDogs" class="uri">http://wiki.stat.ucla.edu/socr/index.php/SOCR_012708_ID_Data_HotDogs</a></p>
+<p>SOCR data Oct2009 id ni. (2013, November 16). Retrieved from
+<a href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_Oct2009_ID_NI" class="uri">http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_Oct2009_ID_NI</a></p>
+<p>SOCR data nips infantvitK shotdata. (2013, November 16). Retrieved from
+<a href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_NIPS_InfantVitK_ShotData" class="uri">http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data_NIPS_InfantVitK_ShotData</a></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="estimation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="regression-and-correlation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["Statistics_using_technology.pdf", "Statistics_using_technology.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

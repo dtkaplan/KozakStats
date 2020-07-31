@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Probability | Statistics Using Technology</title>
+  <meta name="description" content="An introductory statistics textbook." />
+  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Probability | Statistics Using Technology" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="An introductory statistics textbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Probability | Statistics Using Technology" />
+  
+  <meta name="twitter:description" content="An introductory statistics textbook." />
+  
+
+<meta name="author" content="Kathryn Kozak" />
+
+
+<meta name="date" content="2020-07-30" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="numerical-descriptions-of-data.html"/>
+<link rel="next" href="discrete-probability-distributions.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Statistics Using Technology</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i><b>0.1</b> Acknowledgments:</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#new-to-the-third-edition"><i class="fa fa-check"></i><b>0.2</b> New to the Third Edition:</a></li>
+<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#packages-needed-for-r-studio"><i class="fa fa-check"></i><b>0.3</b> Packages needed for R Studio:</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="statistical-basics.html"><a href="statistical-basics.html"><i class="fa fa-check"></i><b>1</b> Statistical Basics</a><ul>
+<li class="chapter" data-level="1.1" data-path="statistical-basics.html"><a href="statistical-basics.html#what-is-statistics"><i class="fa fa-check"></i><b>1.1</b> What is Statistics?</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="statistical-basics.html"><a href="statistical-basics.html#example-stating-definitions-for-qualitative-variable"><i class="fa fa-check"></i><b>1.1.1</b> Example: Stating Definitions for Qualitative Variable**</a></li>
+<li class="chapter" data-level="1.1.2" data-path="statistical-basics.html"><a href="statistical-basics.html#example-stating-definitions-for-qualitative-variable-1"><i class="fa fa-check"></i><b>1.1.2</b> Example: Stating Definitions for Qualitative Variable</a></li>
+<li class="chapter" data-level="1.1.3" data-path="statistical-basics.html"><a href="statistical-basics.html#example-stating-definitions-for-quantitative-variable"><i class="fa fa-check"></i><b>1.1.3</b> Example: Stating Definitions for Quantitative Variable</a></li>
+<li class="chapter" data-level="1.1.4" data-path="statistical-basics.html"><a href="statistical-basics.html#example-stating-definitions-for-quantitative-variable-1"><i class="fa fa-check"></i><b>1.1.4</b> Example: Stating Definitions for Quantitative Variable</a></li>
+<li class="chapter" data-level="1.1.5" data-path="statistical-basics.html"><a href="statistical-basics.html#example-discrete-or-continuous"><i class="fa fa-check"></i><b>1.1.5</b> Example: Discrete or Continuous</a></li>
+<li class="chapter" data-level="1.1.6" data-path="statistical-basics.html"><a href="statistical-basics.html#example-measurement-scale"><i class="fa fa-check"></i><b>1.1.6</b> Example: Measurement Scale</a></li>
+<li class="chapter" data-level="1.1.7" data-path="statistical-basics.html"><a href="statistical-basics.html#homework-section-1.1"><i class="fa fa-check"></i><b>1.1.7</b> Homework Section 1.1</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="statistical-basics.html"><a href="statistical-basics.html#sampling-methods"><i class="fa fa-check"></i><b>1.2</b> Sampling Methods</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="statistical-basics.html"><a href="statistical-basics.html#example-choosing-a-simple-random-sample"><i class="fa fa-check"></i><b>1.2.1</b> Example: Choosing a Simple Random Sample</a></li>
+<li class="chapter" data-level="1.2.2" data-path="statistical-basics.html"><a href="statistical-basics.html#example-how-not-to-choose-a-simple-random-sample"><i class="fa fa-check"></i><b>1.2.2</b> Example: How Not to Choose a Simple Random Sample</a></li>
+<li class="chapter" data-level="1.2.3" data-path="statistical-basics.html"><a href="statistical-basics.html#example-how-to-choose-a-simple-random-sample-using-r"><i class="fa fa-check"></i><b>1.2.3</b> Example: How to Choose a Simple Random Sample using R</a></li>
+<li class="chapter" data-level="1.2.4" data-path="statistical-basics.html"><a href="statistical-basics.html#example-sampling-type"><i class="fa fa-check"></i><b>1.2.4</b> Example: Sampling type</a></li>
+<li class="chapter" data-level="1.2.5" data-path="statistical-basics.html"><a href="statistical-basics.html#homework-section-1.2"><i class="fa fa-check"></i><b>1.2.5</b> Homework Section 1.2</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="statistical-basics.html"><a href="statistical-basics.html#experimental-design"><i class="fa fa-check"></i><b>1.3</b> Experimental Design</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="statistical-basics.html"><a href="statistical-basics.html#example-observational-study-or-experiment"><i class="fa fa-check"></i><b>1.3.1</b> Example: Observational Study or Experiment</a></li>
+<li class="chapter" data-level="1.3.2" data-path="statistical-basics.html"><a href="statistical-basics.html#homework-section-1.3"><i class="fa fa-check"></i><b>1.3.2</b> Homework Section 1.3</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="statistical-basics.html"><a href="statistical-basics.html#how-not-to-do-statistics"><i class="fa fa-check"></i><b>1.4</b> How Not to Do Statistics</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="statistical-basics.html"><a href="statistical-basics.html#example-bias-in-a-study"><i class="fa fa-check"></i><b>1.4.1</b> Example: Bias in a Study**</a></li>
+<li class="chapter" data-level="1.4.2" data-path="statistical-basics.html"><a href="statistical-basics.html#example-cause-and-effect"><i class="fa fa-check"></i><b>1.4.2</b> Example: Cause and Effect</a></li>
+<li class="chapter" data-level="1.4.3" data-path="statistical-basics.html"><a href="statistical-basics.html#example-generalizations"><i class="fa fa-check"></i><b>1.4.3</b> Example: Generalizations</a></li>
+<li class="chapter" data-level="1.4.4" data-path="statistical-basics.html"><a href="statistical-basics.html#homework-section-1.4"><i class="fa fa-check"></i><b>1.4.4</b> Homework Section 1.4</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html"><i class="fa fa-check"></i><b>2</b> Graphical Descriptions of Data</a><ul>
+<li class="chapter" data-level="2.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#qualitative-data"><i class="fa fa-check"></i><b>2.1</b> Qualitative Data</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-drawing-a-bar-chart"><i class="fa fa-check"></i><b>2.1.1</b> Example: Drawing a Bar Chart**</a></li>
+<li class="chapter" data-level="2.1.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework"><i class="fa fa-check"></i><b>2.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#quantitative-data"><i class="fa fa-check"></i><b>2.2</b> Quantitative Data</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-drawing-a-histogram-and-density-plot"><i class="fa fa-check"></i><b>2.2.1</b> Example: Drawing a Histogram and Density plot</a></li>
+<li class="chapter" data-level="2.2.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-drawing-a-histogram-and-density-plot-1"><i class="fa fa-check"></i><b>2.2.2</b> Example: Drawing a Histogram and Density plot</a></li>
+<li class="chapter" data-level="2.2.3" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework-1"><i class="fa fa-check"></i><b>2.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#other-graphical-representations-of-data"><i class="fa fa-check"></i><b>2.3</b> Other Graphical Representations of Data</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-scatter-plot"><i class="fa fa-check"></i><b>2.3.1</b> Example: Scatter Plot**</a></li>
+<li class="chapter" data-level="2.3.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-time-series-plot"><i class="fa fa-check"></i><b>2.3.2</b> Example: Time-Series Plot**</a></li>
+<li class="chapter" data-level="2.3.3" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework-2"><i class="fa fa-check"></i><b>2.3.3</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html"><i class="fa fa-check"></i><b>3</b> Numerical Descriptions of Data</a><ul>
+<li class="chapter" data-level="3.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#measures-of-center"><i class="fa fa-check"></i><b>3.1</b> Measures of Center</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-finding-the-mean-and-median-using-r"><i class="fa fa-check"></i><b>3.1.1</b> Example: Finding the Mean and Median using R</a></li>
+<li class="chapter" data-level="3.1.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-finding-mean-and-median-with-filtering"><i class="fa fa-check"></i><b>3.1.2</b> Example: Finding Mean and Median with filtering</a></li>
+<li class="chapter" data-level="3.1.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-affect-of-extreme-values-on-mean-and-median"><i class="fa fa-check"></i><b>3.1.3</b> Example: Affect of Extreme Values on Mean and Median**</a></li>
+<li class="chapter" data-level="3.1.4" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-weighted-average"><i class="fa fa-check"></i><b>3.1.4</b> Example: Weighted Average</a></li>
+<li class="chapter" data-level="3.1.5" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-weighted-average-1"><i class="fa fa-check"></i><b>3.1.5</b> Example: Weighted Average</a></li>
+<li class="chapter" data-level="3.1.6" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-3"><i class="fa fa-check"></i><b>3.1.6</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#measures-of-spread"><i class="fa fa-check"></i><b>3.2</b> Measures of Spread</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-range"><i class="fa fa-check"></i><b>3.2.1</b> Example: Range</a></li>
+<li class="chapter" data-level="3.2.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-finding-the-standard-deviation"><i class="fa fa-check"></i><b>3.2.2</b> Example: Finding the Standard Deviation</a></li>
+<li class="chapter" data-level="3.2.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-the-gneral-rule"><i class="fa fa-check"></i><b>3.2.3</b> Example: the gneral rule</a></li>
+<li class="chapter" data-level="3.2.4" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-determining-if-a-value-is-unusual"><i class="fa fa-check"></i><b>3.2.4</b> Example: Determining If a Value Is Unusual</a></li>
+<li class="chapter" data-level="3.2.5" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-4"><i class="fa fa-check"></i><b>3.2.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#ranking"><i class="fa fa-check"></i><b>3.3</b> Ranking</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-interpreting-percentile"><i class="fa fa-check"></i><b>3.3.1</b> Example: Interpreting Percentile</a></li>
+<li class="chapter" data-level="3.3.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-percentile-versus-score"><i class="fa fa-check"></i><b>3.3.2</b> Example: Percentile Versus Score</a></li>
+<li class="chapter" data-level="3.3.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-five-number-summary-and-boxplot"><i class="fa fa-check"></i><b>3.3.3</b> Example: Five-number Summary and Boxplot</a></li>
+<li class="chapter" data-level="3.3.4" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-separating-based-on-a-factor"><i class="fa fa-check"></i><b>3.3.4</b> Example: Separating based on a factor</a></li>
+<li class="chapter" data-level="3.3.5" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-putting-it-all-together"><i class="fa fa-check"></i><b>3.3.5</b> Example: Putting it all together</a></li>
+<li class="chapter" data-level="3.3.6" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-5"><i class="fa fa-check"></i><b>3.3.6</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>4</b> Probability</a><ul>
+<li class="chapter" data-level="4.1" data-path="probability.html"><a href="probability.html#empirical-probability"><i class="fa fa-check"></i><b>4.1</b> Empirical Probability</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="probability.html"><a href="probability.html#example-statistics-class-survey"><i class="fa fa-check"></i><b>4.1.1</b> Example: Statistics class survey</a></li>
+<li class="chapter" data-level="4.1.2" data-path="probability.html"><a href="probability.html#homework-6"><i class="fa fa-check"></i><b>4.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="probability.html"><a href="probability.html#theoretical-probability"><i class="fa fa-check"></i><b>4.2</b> Theoretical Probability</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="probability.html"><a href="probability.html#example-equally-likely-outcomes"><i class="fa fa-check"></i><b>4.2.1</b> Example: Equally Likely Outcomes</a></li>
+<li class="chapter" data-level="4.2.2" data-path="probability.html"><a href="probability.html#example-calculating-theoretical-probabilities"><i class="fa fa-check"></i><b>4.2.2</b> Example: Calculating Theoretical Probabilities</a></li>
+<li class="chapter" data-level="4.2.3" data-path="probability.html"><a href="probability.html#example-calculating-theoretical-probabilities-1"><i class="fa fa-check"></i><b>4.2.3</b> Example: Calculating Theoretical Probabilities</a></li>
+<li class="chapter" data-level="4.2.4" data-path="probability.html"><a href="probability.html#example-calculating-theoretical-probabilities-2"><i class="fa fa-check"></i><b>4.2.4</b> Example: Calculating Theoretical Probabilities</a></li>
+<li class="chapter" data-level="4.2.5" data-path="probability.html"><a href="probability.html#example-complementary-events"><i class="fa fa-check"></i><b>4.2.5</b> Example: Complementary Events</a></li>
+<li class="chapter" data-level="4.2.6" data-path="probability.html"><a href="probability.html#example-using-the-complement-to-find-probabilities"><i class="fa fa-check"></i><b>4.2.6</b> Example: Using the Complement to Find Probabilities</a></li>
+<li class="chapter" data-level="4.2.7" data-path="probability.html"><a href="probability.html#example-using-addition-rules"><i class="fa fa-check"></i><b>4.2.7</b> Example: Using Addition Rules</a></li>
+<li class="chapter" data-level="4.2.8" data-path="probability.html"><a href="probability.html#example-odds-against-and-payoff-odds"><i class="fa fa-check"></i><b>4.2.8</b> Example: Odds Against and Payoff Odds</a></li>
+<li class="chapter" data-level="4.2.9" data-path="probability.html"><a href="probability.html#homework-7"><i class="fa fa-check"></i><b>4.2.9</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="probability.html"><a href="probability.html#conditional-probability"><i class="fa fa-check"></i><b>4.3</b> Conditional Probability</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="probability.html"><a href="probability.html#example-conditional-probabilities"><i class="fa fa-check"></i><b>4.3.1</b> Example: Conditional Probabilities</a></li>
+<li class="chapter" data-level="4.3.2" data-path="probability.html"><a href="probability.html#example-independent-events"><i class="fa fa-check"></i><b>4.3.2</b> Example: Independent Events</a></li>
+<li class="chapter" data-level="4.3.3" data-path="probability.html"><a href="probability.html#example-multiplication-rule"><i class="fa fa-check"></i><b>4.3.3</b> Example: Multiplication Rule</a></li>
+<li class="chapter" data-level="4.3.4" data-path="probability.html"><a href="probability.html#example-application-problem"><i class="fa fa-check"></i><b>4.3.4</b> Example: Application Problem</a></li>
+<li class="chapter" data-level="4.3.5" data-path="probability.html"><a href="probability.html#homework-8"><i class="fa fa-check"></i><b>4.3.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="probability.html"><a href="probability.html#counting-techniques"><i class="fa fa-check"></i><b>4.4</b> Counting Techniques</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="probability.html"><a href="probability.html#example-multiplication-rule-in-counting"><i class="fa fa-check"></i><b>4.4.1</b> Example: Multiplication Rule in Counting</a></li>
+<li class="chapter" data-level="4.4.2" data-path="probability.html"><a href="probability.html#example-multiplication-rule-in-counting-1"><i class="fa fa-check"></i><b>4.4.2</b> Example: Multiplication Rule in Counting</a></li>
+<li class="chapter" data-level="4.4.3" data-path="probability.html"><a href="probability.html#homework-9"><i class="fa fa-check"></i><b>4.4.3</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html"><i class="fa fa-check"></i><b>5</b> Discrete Probability Distributions</a><ul>
+<li class="chapter" data-level="5.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#basics-of-probability-distributions"><i class="fa fa-check"></i><b>5.1</b> Basics of Probability Distributions</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-probability-distribution"><i class="fa fa-check"></i><b>5.1.1</b> Example: Probability Distribution</a></li>
+<li class="chapter" data-level="5.1.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-calculating-the-expected-value"><i class="fa fa-check"></i><b>5.1.2</b> Example: Calculating the Expected Value</a></li>
+<li class="chapter" data-level="5.1.3" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-is-the-event-unusual"><i class="fa fa-check"></i><b>5.1.3</b> Example: Is the Event Unusual</a></li>
+<li class="chapter" data-level="5.1.4" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-10"><i class="fa fa-check"></i><b>5.1.4</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#binomial-probability-distribution"><i class="fa fa-check"></i><b>5.2</b> Binomial Probability Distribution</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-calculating-binomial-probabilities"><i class="fa fa-check"></i><b>5.2.1</b> Example: Calculating Binomial Probabilities</a></li>
+<li class="chapter" data-level="5.2.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-calculating-binomial-probabilities-1"><i class="fa fa-check"></i><b>5.2.2</b> Example: Calculating Binomial Probabilities</a></li>
+<li class="chapter" data-level="5.2.3" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-11"><i class="fa fa-check"></i><b>5.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#mean-and-standard-deviation-of-binomial-distribution"><i class="fa fa-check"></i><b>5.3</b> Mean and Standard Deviation of Binomial Distribution</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-finding-the-probability-distribution-mean-variance-and-standard-deviation-of-a-binomial-distribution"><i class="fa fa-check"></i><b>5.3.1</b> Example: Finding the Probability Distribution, Mean, Variance and Standard Deviation of a Binomial Distribution</a></li>
+<li class="chapter" data-level="5.3.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-12"><i class="fa fa-check"></i><b>5.3.2</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html"><i class="fa fa-check"></i><b>6</b> Continuous Probability Distributions</a><ul>
+<li class="chapter" data-level="6.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#finding-probabilities-for-the-normal-distribution"><i class="fa fa-check"></i><b>6.1</b> Finding Probabilities for the Normal Distribution</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-general-normal-distribution"><i class="fa fa-check"></i><b>6.1.1</b> Example: General Normal Distribution</a></li>
+<li class="chapter" data-level="6.1.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-general-normal-distribution-1"><i class="fa fa-check"></i><b>6.1.2</b> Example: General Normal Distribution</a></li>
+<li class="chapter" data-level="6.1.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-13"><i class="fa fa-check"></i><b>6.1.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#assessing-normality"><i class="fa fa-check"></i><b>6.2</b> Assessing Normality</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-is-it-normal"><i class="fa fa-check"></i><b>6.2.1</b> Example: Is It Normal?</a></li>
+<li class="chapter" data-level="6.2.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-is-it-normal-1"><i class="fa fa-check"></i><b>6.2.2</b> Example: Is It Normal?</a></li>
+<li class="chapter" data-level="6.2.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-14"><i class="fa fa-check"></i><b>6.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#sampling-distribution-and-the-central-limit-theorem"><i class="fa fa-check"></i><b>6.3</b> Sampling Distribution and the Central Limit Theorem</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-sampling-distribution"><i class="fa fa-check"></i><b>6.3.1</b> Example: Sampling Distribution</a></li>
+<li class="chapter" data-level="6.3.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-finding-probabilities-for-sample-means"><i class="fa fa-check"></i><b>6.3.2</b> Example: Finding Probabilities for Sample Means</a></li>
+<li class="chapter" data-level="6.3.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-finding-probabilities-for-sample-means-1"><i class="fa fa-check"></i><b>6.3.3</b> Example: Finding Probabilities for Sample Means</a></li>
+<li class="chapter" data-level="6.3.4" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-15"><i class="fa fa-check"></i><b>6.3.4</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="one-sample-inference.html"><a href="one-sample-inference.html"><i class="fa fa-check"></i><b>7</b> One-Sample Inference</a><ul>
+<li class="chapter" data-level="7.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#basics-of-hypothesis-testing"><i class="fa fa-check"></i><b>7.1</b> Basics of Hypothesis Testing</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-basics-of-hypothesis-testing"><i class="fa fa-check"></i><b>7.1.1</b> Example: Basics of Hypothesis Testing</a></li>
+<li class="chapter" data-level="7.1.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-battery-example-revisited."><i class="fa fa-check"></i><b>7.1.2</b> Example: Battery Example Revisited.</a></li>
+<li class="chapter" data-level="7.1.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-conclusions-in-hypothesis-tests"><i class="fa fa-check"></i><b>7.1.3</b> Example: Conclusions in Hypothesis Tests</a></li>
+<li class="chapter" data-level="7.1.4" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-stating-hypotheses"><i class="fa fa-check"></i><b>7.1.4</b> Example: Stating Hypotheses</a></li>
+<li class="chapter" data-level="7.1.5" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-stating-type-i-and-ii-errors-and-picking-level-of-significance"><i class="fa fa-check"></i><b>7.1.5</b> Example: Stating Type I and II Errors and Picking Level of Significance</a></li>
+<li class="chapter" data-level="7.1.6" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-16"><i class="fa fa-check"></i><b>7.1.6</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#one-sample-proportion-test"><i class="fa fa-check"></i><b>7.2</b> One-Sample Proportion Test</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-hypothesis-test-for-one-proportion"><i class="fa fa-check"></i><b>7.2.1</b> Example: Hypothesis Test for One Proportion</a></li>
+<li class="chapter" data-level="7.2.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-hypothesis-test-for-one-proportion-1"><i class="fa fa-check"></i><b>7.2.2</b> Example: Hypothesis Test for One Proportion</a></li>
+<li class="chapter" data-level="7.2.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-17"><i class="fa fa-check"></i><b>7.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#one-sample-test-for-the-mean"><i class="fa fa-check"></i><b>7.3</b> One-Sample Test for the Mean</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-resampling"><i class="fa fa-check"></i><b>7.3.1</b> Example: Resampling</a></li>
+<li class="chapter" data-level="7.3.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-test-of-the-mean-using-one-sample-t-test"><i class="fa fa-check"></i><b>7.3.2</b> Example: Test of the Mean Using One Sample T-test</a></li>
+<li class="chapter" data-level="7.3.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-test-of-the-mean-using-one-sample-t-test-1"><i class="fa fa-check"></i><b>7.3.3</b> Example: Test of the Mean Using One Sample T-test</a></li>
+<li class="chapter" data-level="7.3.4" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-18"><i class="fa fa-check"></i><b>7.3.4</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="estimation.html"><a href="estimation.html"><i class="fa fa-check"></i><b>8</b> Estimation</a><ul>
+<li class="chapter" data-level="8.1" data-path="estimation.html"><a href="estimation.html#basics-of-confidence-intervals"><i class="fa fa-check"></i><b>8.1</b> Basics of Confidence Intervals</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="estimation.html"><a href="estimation.html#example-stating-the-statistical-and-real-world-interpretations-for-a-confidence-interval"><i class="fa fa-check"></i><b>8.1.1</b> Example: Stating the Statistical and Real World Interpretations for a Confidence Interval</a></li>
+<li class="chapter" data-level="8.1.2" data-path="estimation.html"><a href="estimation.html#homework-19"><i class="fa fa-check"></i><b>8.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="estimation.html"><a href="estimation.html#one-sample-interval-for-the-proportion"><i class="fa fa-check"></i><b>8.2</b> One-Sample Interval for the Proportion</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="estimation.html"><a href="estimation.html#example-confidence-interval-for-the-population-proportion"><i class="fa fa-check"></i><b>8.2.1</b> Example: Confidence Interval for the Population Proportion</a></li>
+<li class="chapter" data-level="8.2.2" data-path="estimation.html"><a href="estimation.html#example-confidence-interval-for-the-population-proportion-1"><i class="fa fa-check"></i><b>8.2.2</b> Example: Confidence Interval for the Population Proportion</a></li>
+<li class="chapter" data-level="8.2.3" data-path="estimation.html"><a href="estimation.html#homework-20"><i class="fa fa-check"></i><b>8.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="estimation.html"><a href="estimation.html#one-sample-interval-for-the-mean"><i class="fa fa-check"></i><b>8.3</b> One-Sample Interval for the Mean</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="estimation.html"><a href="estimation.html#example-confidence-interval-for-the-population-mean"><i class="fa fa-check"></i><b>8.3.1</b> Example: Confidence Interval for the Population Mean</a></li>
+<li class="chapter" data-level="8.3.2" data-path="estimation.html"><a href="estimation.html#example-confidence-interval-for-the-population-mean-1"><i class="fa fa-check"></i><b>8.3.2</b> Example: Confidence Interval for the Population Mean</a></li>
+<li class="chapter" data-level="8.3.3" data-path="estimation.html"><a href="estimation.html#homework-21"><i class="fa fa-check"></i><b>8.3.3</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="two-sample-inference.html"><a href="two-sample-inference.html"><i class="fa fa-check"></i><b>9</b> Two-Sample Inference</a><ul>
+<li class="chapter" data-level="9.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#two-proportions"><i class="fa fa-check"></i><b>9.1</b> Two Proportions</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-two-population-proportions"><i class="fa fa-check"></i><b>9.1.1</b> Example: Hypothesis Test for Two Population Proportions</a></li>
+<li class="chapter" data-level="9.1.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-confidence-interval-for-two-population-proportions"><i class="fa fa-check"></i><b>9.1.2</b> Example: Confidence Interval for Two Population Proportions</a></li>
+<li class="chapter" data-level="9.1.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-22"><i class="fa fa-check"></i><b>9.1.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#paired-samples-for-two-means"><i class="fa fa-check"></i><b>9.2</b> Paired Samples for Two Means</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-independent-or-dependent-samples"><i class="fa fa-check"></i><b>9.2.1</b> Example: Independent or Dependent Samples</a></li>
+<li class="chapter" data-level="9.2.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-paired-samples"><i class="fa fa-check"></i><b>9.2.2</b> Example: Hypothesis Test for Paired Samples</a></li>
+<li class="chapter" data-level="9.2.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-paired-samples-1"><i class="fa fa-check"></i><b>9.2.3</b> Example: Hypothesis Test for Paired Samples</a></li>
+<li class="chapter" data-level="9.2.4" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-confidence-interval-for-paired-samples"><i class="fa fa-check"></i><b>9.2.4</b> Example: Confidence Interval for Paired Samples</a></li>
+<li class="chapter" data-level="9.2.5" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-23"><i class="fa fa-check"></i><b>9.2.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#independent-samples-for-two-means"><i class="fa fa-check"></i><b>9.3</b> Independent Samples for Two Means</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-two-means"><i class="fa fa-check"></i><b>9.3.1</b> Example: Hypothesis Test for Two Means</a></li>
+<li class="chapter" data-level="9.3.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-confidence-interval-in-two-samples"><i class="fa fa-check"></i><b>9.3.2</b> Example: Confidence Interval in Two Samples</a></li>
+<li class="chapter" data-level="9.3.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-two-means-1"><i class="fa fa-check"></i><b>9.3.3</b> Example: Hypothesis Test for Two Means</a></li>
+<li class="chapter" data-level="9.3.4" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-confidence-interval-for-two-independent-samples"><i class="fa fa-check"></i><b>9.3.4</b> Example: Confidence Interval for Two Independent Samples</a></li>
+<li class="chapter" data-level="9.3.5" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-24"><i class="fa fa-check"></i><b>9.3.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="two-sample-inference.html"><a href="two-sample-inference.html#which-analysis-should-you-conduct"><i class="fa fa-check"></i><b>9.4</b> Which Analysis Should You Conduct?</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html"><i class="fa fa-check"></i><b>10</b> Regression and Correlation</a><ul>
+<li class="chapter" data-level="10.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#regression"><i class="fa fa-check"></i><b>10.1</b> Regression</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-determining-if-there-is-a-relationship"><i class="fa fa-check"></i><b>10.1.1</b> Example: Determining If There Is a Relationship</a></li>
+<li class="chapter" data-level="10.1.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-25"><i class="fa fa-check"></i><b>10.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#correlation"><i class="fa fa-check"></i><b>10.2</b> Correlation</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-find-the-coefficient-of-determinatin-r2"><i class="fa fa-check"></i><b>10.2.1</b> Example: Find the coefficient of determinatin <span class="math inline">\(R^2\)</span></a></li>
+<li class="chapter" data-level="10.2.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-calculating-the-linear-correlation-coefficient-r"><i class="fa fa-check"></i><b>10.2.2</b> Example: Calculating the Linear Correlation Coefficient, <em>r</em></a></li>
+<li class="chapter" data-level="10.2.3" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-correlation-versus-causation"><i class="fa fa-check"></i><b>10.2.3</b> Example: Correlation Versus Causation</a></li>
+<li class="chapter" data-level="10.2.4" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-26"><i class="fa fa-check"></i><b>10.2.4</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#inference-for-regression-and-correlation"><i class="fa fa-check"></i><b>10.3</b> Inference for Regression and Correlation</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-finding-the-standard-error-of-the-estimate"><i class="fa fa-check"></i><b>10.3.1</b> Example: Finding the Standard Error of the Estimate</a></li>
+<li class="chapter" data-level="10.3.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-testing-the-claim-of-a-linear-correlation"><i class="fa fa-check"></i><b>10.3.2</b> Example: Testing the Claim of a Linear Correlation</a></li>
+<li class="chapter" data-level="10.3.3" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-27"><i class="fa fa-check"></i><b>10.3.3</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html"><i class="fa fa-check"></i><b>11</b> Chi-Square and ANOVA Tests</a><ul>
+<li class="chapter" data-level="11.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#chi-square-test-for-independence"><i class="fa fa-check"></i><b>11.1</b> Chi-Square Test for Independence</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#example-hypothesis-test-with-chi-square-test"><i class="fa fa-check"></i><b>11.1.1</b> Example: Hypothesis Test with Chi-Square Test</a></li>
+<li class="chapter" data-level="11.1.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-28"><i class="fa fa-check"></i><b>11.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#chi-square-goodness-of-fit"><i class="fa fa-check"></i><b>11.2</b> Chi-Square Goodness of Fit</a><ul>
+<li class="chapter" data-level="11.2.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#example-goodness-of-fit-test"><i class="fa fa-check"></i><b>11.2.1</b> Example: Goodness of Fit Test</a></li>
+<li class="chapter" data-level="11.2.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-29"><i class="fa fa-check"></i><b>11.2.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#analysis-of-variance-anova"><i class="fa fa-check"></i><b>11.3</b> Analysis of Variance (ANOVA)</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#example-hypothesis-test-involving-several-means"><i class="fa fa-check"></i><b>11.3.1</b> Example: Hypothesis Test Involving Several Means</a></li>
+<li class="chapter" data-level="11.3.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-30"><i class="fa fa-check"></i><b>11.3.2</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/StatPREP/Stat_using_technology" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistics Using Technology</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="probability" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Probability</h1>
+<p>Understanding probabilities are important in life. Examples of mundane questions that probability can answer for you are if you need to carry an umbrella or wear a heavy coat on a given day. More important questions that probability can help with are your chances that the car you are buying will need more maintenance, your chances of passing a class, your chances of winning the lottery, your chances of being in a car accident, and the chances that the U.S. will be attacked by terrorists. Most people do not have a very good understanding of probability, so they worry about being attacked by a terrorist but not about being in a car accident. The probability of being in a terrorist attack is much smaller than the probability of being in a car accident, thus it actually would make more sense to worry about driving. Also, the chance of you winning the lottery is very small, yet many people will spend their money on lottery tickets. Yet, if instead they saved the money that they spend on the lottery, they would have more money. In general, events that have a low probability (under 5%) are unlikely to occur. Whereas if an event has a high probability of happening (over 80%), then there is a good chance that the event will happen. This chapter will present some of the theory that you need to help make a determination of whether an event is likely to happen or not.</p>
+<p>One story about how probability theory was developed is that a gambler wanted to know when to bet more and when to bet less. He talked to a couple of friends of his that happened to be mathematicians. Their names were Pierre de Fermat and Blaise Pascal. Since then many other mathematicians have worked to develop probability theory. There are actually two types of probability, <strong>Empirical Probability</strong> and <strong>Theoretical Probability</strong> that have been developed since the start of probability.</p>
+<div id="empirical-probability" class="section level2">
+<h2><span class="header-section-number">4.1</span> Empirical Probability</h2>
+<p>Empirical probabilities are found by actually conducting an experiment many times and counting the number of times the event happens. To understand how this is performed, first some definitions are needed.</p>
+<p><strong>Outcomes:</strong> the results of an experiment</p>
+<p><strong>Event:</strong> a set of certain outcomes of an experiment that you want to have happen</p>
+<p><strong>Sample Space:</strong> collection of all possible outcomes of the experiment. Usually denoted as SS.</p>
+<p><strong>Event space:</strong> the set of outcomes that make up an event. The symbol is usually a capital letter.</p>
+<p><strong>Frequency:</strong> how often an event happens</p>
+<p><strong>Relative Frequency:</strong> the frequency divided by the number of times the experiment is repeated</p>
+<p>Start with an experiment. Suppose that the experiment is rolling a die. The sample space is {1, 2, 3, 4, 5, 6}. The event that you want is to get a 6, and the event space is {6}. To do this, roll a die 10 times. When you do that, you get a 6 two times. Based on this experiment, the probability of getting a 6 is 2 out of 10 or 1/5. To get more accuracy, repeat the experiment more times. It is easiest to put this in a table, where <em>n</em> represents the number of times the experiment is repeated. When you put the number of 6s found over the number of times you repeat the experiment, this is the relative frequency.</p>
+<p><strong>Table #4.1.1: Trials for Die Experiment</strong></p>
+<pre><code>##      n number_of_6s relative_frequency
+## 1   10            2              0.200
+## 2   50            6              0.120
+## 3  100           18              0.180
+## 4  500           81              0.162
+## 5 1000         1630              0.163</code></pre>
+<p>Notice that as <em>n</em> increased, the relative frequency seems to approach a number. It looks like it is approaching 0.163. You can say that the probability of getting a 6 is approximately 0.163. If you want more accuracy, then increase <em>n</em> even more.</p>
+<p>These probabilities are called <strong>experimental probabilities</strong> since they
+are found by actually doing the experiment. They come about from the
+relative frequencies and give an approximation of the true probability.
+The approximate probability of an event <em>A</em>, <span class="math inline">\(P(A)\)</span>, is</p>
+<p><strong>Experimental Probabilities</strong>
+<span class="math inline">\(P(A)=\frac{\text{number of times} }{ \text{number of times experiment is conducted}}\)</span></p>
+<p>For the event of getting a 6, the probability would be <span class="math inline">\(P(6)=\frac{163}{1000}=0.163\)</span>.</p>
+<p>You must do experimental probabilities whenever it is not possible to calculate probabilities using other means. An example is if you want to find the probability that a family has 5 children, you would have to
+actually look at many families, and count how many have 5 children. Then you could calculate the probability. Another example is if you want to figure out if a die is fair. You would have to roll the die many times and count how often each side comes up. Make sure you repeat an experiment many times, because otherwise you will not be able to estimate the true probability. This is due to the law of large numbers.</p>
+<p><strong>Law of large numbers</strong>: as <em>n</em> increases, the relative frequency tends towards the actual probability value.</p>
+<p>Note: probability, relative frequency, percentage, and proportion are all different words for the same concept. Also, probabilities can be given as percentages, decimals, or fractions.</p>
+<p>You can take a data frame and count the number of values to find the probability.</p>
+<div id="example-statistics-class-survey" class="section level3">
+<h3><span class="header-section-number">4.1.1</span> Example: Statistics class survey</h3>
+<p>Data was collected for two semesters in a statistics class. The data frame in is the table #4.1.2.</p>
+<p><strong>Table #4.1.2: Statistics class survey</strong></p>
+<div class="sourceCode" id="cb168"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb168-1"><a href="probability.html#cb168-1"></a>Class&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/class_survey.csv&quot;</span>)</span>
+<span id="cb168-2"><a href="probability.html#cb168-2"></a><span class="kw">head</span>(Class)</span></code></pre></div>
+<pre><code>##   vehicle gender distance_campus           ice_cream rent
+## 1    None Female             1.5        Cookie Dough  724
+## 2 Mercury Female            14.7             Sherbet  200
+## 3    Ford Female             2.4 Chocolate Brownie.   600
+## 4  Toyota Female             5.2              coffee    0
+## 5    Jeep   Male             2.0        Cookie Dough  600
+## 6  Subaru   Male             5.0                none  500
+##                                      major height        winter
+## 1 Environmental and Sustainability Studies     61      Liked it
+## 2                   Administrative Justice     60 Don&#39;t like it
+## 3                                 Bio Chem     68      Liked it
+## 4                                              66      Loved it
+## 5                       Pre-health Careers     71      Loved it
+## 6                                  Finance     72    No opinion</code></pre>
+<p>Find the probability (proportion) of people who like Cookie Dough ice cream.</p>
+<p><strong>Solution</strong></p>
+<p>To count the number of people who like cookie dough ice cream, use the following command in R Studio:</p>
+<div class="sourceCode" id="cb170"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb170-1"><a href="probability.html#cb170-1"></a><span class="kw">tally</span>(<span class="op">~</span>ice_cream, <span class="dt">data=</span>Class)</span></code></pre></div>
+<pre><code>## ice_cream
+##           Butter Pecan              Chocolate    Chocolate Brownie.  
+##                      2                      2                      1 
+##                 coffee           Cookie Dough      Cookies and Cream 
+##                      1                      6                      1 
+##                Mint CC           Moose Tracks                   none 
+##                      6                      1                      1 
+##             Rocky Road                Sherbet Strawberry and banana  
+##                      2                      2                      1 
+##                Vanilla 
+##                      1</code></pre>
+<p>From this tally, it can be seen that 6 people like cookie dough ice cream. The probability that someone likes cookie dough is thus 6 divided by the number of people in the data frame. Instead of adding up all the numbers, the following command will find the proportions for you. Proportions are just probabilities.</p>
+<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="probability.html#cb172-1"></a><span class="kw">tally</span>(<span class="op">~</span>ice_cream, <span class="dt">data=</span>Class, <span class="dt">format=</span><span class="st">&quot;proportion&quot;</span>)</span></code></pre></div>
+<pre><code>## ice_cream
+##           Butter Pecan              Chocolate    Chocolate Brownie.  
+##             0.07407407             0.07407407             0.03703704 
+##                 coffee           Cookie Dough      Cookies and Cream 
+##             0.03703704             0.22222222             0.03703704 
+##                Mint CC           Moose Tracks                   none 
+##             0.22222222             0.03703704             0.03703704 
+##             Rocky Road                Sherbet Strawberry and banana  
+##             0.07407407             0.07407407             0.03703704 
+##                Vanilla 
+##             0.03703704</code></pre>
+<p>So the probability that a person in the class likes cookie dough ice cream is 0.22.</p>
+</div>
+<div id="homework-6" class="section level3">
+<h3><span class="header-section-number">4.1.2</span> Homework</h3>
+<ol style="list-style-type: decimal">
+<li>Table #4.1.3 contains the number of M&amp;M’s of each color that were found in a packet (M&amp;M’s Color Distribution Analysis, 2019).</li>
+</ol>
+<p><strong>Table #4.1.3: M&amp;M Distribution</strong></p>
+<pre><code>##    color  type pack
+## 1 orange plain    1
+## 2    red plain    1
+## 3  green plain    1
+## 4    red plain    1
+## 5 yellow plain    1
+## 6   blue plain    1</code></pre>
+<p><strong>Code book for Data Frame MaM</strong></p>
+<p><strong>Description</strong>
+An analysis of the colors in a case of M&amp;M’s to see if they match the published percentages</p>
+<p><strong>Usage</strong>
+MaM</p>
+<p><strong>Format</strong></p>
+<p>This data frame contains the following columns:</p>
+<p>color: color of M&amp;Ms</p>
+<p>type: The type of M&amp;M such as plain, peanut, peanut butter</p>
+<p>pack: which pack the M&amp;Ms came from.</p>
+<p><strong>Source</strong>
+M&amp;M’s Color Distribution Analysis. (n.d.). Retrieved July 11, 2019, from <a href="https://joshmadison.com/2007/12/02/mms-color-distribution-analysis/" class="uri">https://joshmadison.com/2007/12/02/mms-color-distribution-analysis/</a></p>
+<p><strong>References</strong>
+Josh Madison, 2019</p>
+<p>Find the probability of choosing each color based on this data frame.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Eyeglassomatic manufactures eyeglasses for different retailers. They test to see how many defective lenses they made the time period of January 1 to March 31. Table #4.1.4 gives the defect and the number
+of defects.</li>
+</ol>
+<p><strong>Table #4.1.4: Number of Defective Lenses</strong></p>
+<div class="sourceCode" id="cb175"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb175-1"><a href="probability.html#cb175-1"></a>Defects&lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/defects.csv&quot;</span>) </span>
+<span id="cb175-2"><a href="probability.html#cb175-2"></a><span class="kw">head</span>(Defects)</span></code></pre></div>
+<pre><code>##      type
+## 1   small
+## 2   small
+## 3      pd
+## 4  flaked
+## 5 scratch
+## 6    spot</code></pre>
+<p><strong>Code book for Data Frame Defects</strong> See Problem 2.1.5 in Section 2.1.</p>
+<p>Find the probability of each defect type based on this data.</p>
+<ol start="3" style="list-style-type: decimal">
+<li><p>In Australia in 1995, of the 2907 indigenous people in prison 17 of them died. In that same year, of the 14501 non-indigenous people in prison 42 of them died ("Aboriginal deaths in," 2013). Find the
+probability that an indigenous person dies in prison and the probability that a non-indigenous person dies in prison. Compare these numbers and discuss what the numbers may mean.</p></li>
+<li><p>A project conducted by the Australian Federal Office of Road Safety asked people many questions about their cars. One question was the reason that a person chooses a given car, and that data is in table
+#4.1.5 (Car Preferences, 2019).</p></li>
+</ol>
+<p><strong>Table #4.1.5: Reason for Choosing a Car</strong></p>
+<pre><code>##    ID Age    Sex LicYr LicMth ActCar Kids5 Kids6 PreferCar Carsmall_new5K
+## 1 110  18   male     0      2  large    no    no    medium     large_used
+## 2 111  25 female     8      0  small    no    no     small      small_new
+## 3 112  63   male    46      0  large    no    no     large     large_used
+## 4 113  51 female    35      0  large    no    no    medium     large_used
+## 5 114  19 female     2      0 medium    no    no    medium      small_new
+## 6 115  51 female    30      0 medium   yes   yes    medium     large_used
+##    Reason              Cost       Reliable        Perform           Fuel
+## 1  safety         important very_important      important      important
+## 2  safety    very_important very_important very_important very_important
+## 3 comfort         important      important      important      important
+## 4  safety little_importance      important      important      important
+## 5   looks         important      important very_important      important
+## 6 comfort         important very_important very_important      important
+##           Safety             AC.PS           Park           Room
+## 1      important         important      important      important
+## 2 very_important         important very_important very_important
+## 3      important         important      important      important
+## 4 very_important         important      important      important
+## 5      important little_importance      important      important
+## 6 very_important    very_important      important      important
+##               Doors          Prestige            Colour
+## 1         important         important little_importance
+## 2 little_importance         important         important
+## 3         important         important         important
+## 4         important     not_important         important
+## 5 little_importance         important         important
+## 6         important little_importance         important</code></pre>
+<p><strong>Code book for Data Frame Car_pref</strong></p>
+<p><strong>Description</strong>
+These data were collected as part of a project for the Federal Office for Road Safety conducted by the Research Institute of Gender and Health at the University of Newcastle. There is evidence that women drivers who are involved in motor vehicle accidents are more likely than men to be injured. A possible reason is that women often drive smaller cars that provide less protection in a collision. One of the aims of the project was to examine preferences for cars among men and women and investigate the extent to which safety was a factor in determining preferences. The survey was conducted by research assistants who asked people in car parks to participate and administered a structured questionnaire. They were instructed to obtain data from men and women with small, medium and large cars, with 50 people per group for a total of 300 respondents. (The sample size was based on power requirements for another part of the survey that involved anthropometric measurements.) The research assistants approached people in car parks of the University of Newcastle and nearby shopping centers during December 1997 and January 1998.</p>
+<p><strong>Usage</strong>
+Car_pref</p>
+<p><strong>Format</strong></p>
+<p>This data frame contains the following columns:</p>
+<p>ID: Identification number of respondent</p>
+<p>Age: Age of respondent (years)</p>
+<p>Sex: female, male</p>
+<p>LicYr: Time they have held a full driving licence, in years and months (years)</p>
+<p>LicMth: Time they have held a full driving licence, in years and months (months)</p>
+<p>ActCar: Make, model and year of car most often driven, coded to size of car small, medium, large</p>
+<p>Kids5: Children under five, yes, no</p>
+<p>Kids6: Children 6 to 16, yes, no</p>
+<p>PrefCar: Preferred car, coded to size of car small, medium, large</p>
+<p>Car15k: Preferred type of car if cost $15000, small new car; large second-hand car</p>
+<p>Reason: safety, reliability, cost, performance, comfort, looks</p>
+<p>Cost: How important is cost when buying a car? not important, little importance, important, very important</p>
+<p>Reliable: How important is reliability …?</p>
+<p>Perform: How important is performance …?</p>
+<p>Fuel: How important is fuel consumption …?</p>
+<p>Safety: How important is safety …?</p>
+<p>AC/PS: How important is air conditioning/power steering …?</p>
+<p>Park: How important is ease of parking …?</p>
+<p>Room: How important is space/roominess …?</p>
+<p>Doors: How important is the number of doors …?</p>
+<p>Prestige: How important is prestige/style …?</p>
+<p>Colour: How important is colour …?</p>
+<p><strong>Source</strong></p>
+<p>Car Preferences. (n.d.). Retrieved July 11, 2019, from <a href="http://www.statsci.org/data/oz/carprefs.html" class="uri">http://www.statsci.org/data/oz/carprefs.html</a></p>
+<p><strong>References</strong></p>
+<p>The data was contributed to OzDASL by Professor Annette Dobson, University of Queensland. Information on the data set was originally provided by Jenny Powers.</p>
+<p>Find the probability a person chooses a car for each of the given reasons.</p>
+<p><strong><br />
+</strong></p>
+</div>
+</div>
+<div id="theoretical-probability" class="section level2">
+<h2><span class="header-section-number">4.2</span> Theoretical Probability</h2>
+<p>It is not always feasible to conduct an experiment over and over again, so it would be better to be able to find the probabilities without conducting the experiment. These probabilities are called <strong>Theoretical Probabilities.</strong></p>
+<p>To be able to do theoretical probabilities, there is an assumption that you need to consider. It is that all of the outcomes in the sample space need to be <strong>equally likely outcomes</strong>. This means that every outcome of the experiment needs to have the same chance of happening.</p>
+<div id="example-equally-likely-outcomes" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> Example: Equally Likely Outcomes</h3>
+<p>Which of the following experiments have equally likely outcomes?</p>
+<ol style="list-style-type: lower-alpha">
+<li>Rolling a fair die.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Since the die is fair, every side of the die has the same chance of coming up. The outcomes are the different sides, so each outcome is equally likely</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Flip a coin that is weighted so one side comes up more often than the other.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Since the coin is weighted, one side is more likely to come up than the other side. The outcomes are the different sides, so each outcome is not equally likely</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Pull a ball out of a can containing 6 red balls and 8 green balls. All balls are the same size.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Since each ball is the same size, then each ball has the same chance of being chosen. The outcomes of this experiment are the individual balls, so each outcome is equally likely. Don’t assume that because the chances of pulling a red ball are less than pulling a green ball that the outcomes are not equally likely. The outcomes are the individual balls and they are equally likely.</p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Picking a card from a deck.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>If you assume that the deck is fair, then each card has the same chance of being chosen. Thus the outcomes are equally likely outcomes. You do have to make this assumption. For many of the experiments you will do, you do have to make this kind of assumption.</p>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>Rolling a die to see if it is fair.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>In this case you are not sure the die is fair. The only way to determine if it is fair is to actually conduct the experiment, since you don’t know if the outcomes are equally likely. If the
+experimental probabilities are fairly close to the theoretical probabilities, then the die is fair.</p>
+<p>If the outcomes are not equally likely, then you must do experimental probabilities. If the outcomes are equally likely, then you can do theoretical probabilities.</p>
+<p><strong>Theoretical Probabilities:</strong> If the outcomes of an experiment are equally likely, then the probability of event A happening is <span class="math inline">\(P(A)=\frac{\text{number of outcomes in event space}}{\text{number of outcomes in sample space}}\)</span></p>
+</div>
+<div id="example-calculating-theoretical-probabilities" class="section level3">
+<h3><span class="header-section-number">4.2.2</span> Example: Calculating Theoretical Probabilities</h3>
+<p>Suppose you conduct an experiment where you flip a fair coin twice</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the sample space?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>There are several different sample spaces you can do. One is SS={0, 1, 2} where you are counting the number of heads. However, the outcomes are not equally likely since you can get one head by getting a head on the first flip and a tail on the second or a tail on the first flip and a head on the second. There are 2 ways to get that outcome and only one way to get the other outcomes. Instead it might be better to give the sample space as listing what can happen on each flip. Let H = head and T = tail, and list which can happen on each flip.</p>
+<p>SS={HH, HT, TH, TT}</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>What is the probability of getting exactly one head?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Let A = getting exactly one head. The event space is A = {HT, TH}. So <span class="math inline">\(P(A)=\frac{2}{4}\)</span></p>
+<p>It may not be advantageous to reduce the fractions to lowest terms, since it is easier to compare fractions if they have the same denominator.</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>What is the probability of getting at least one head?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Let B = getting at least one head. At least one head means get one or more. The event space is B = {HT, TH, HH} and <span class="math inline">\(P(B)=\frac{3}{4}\)</span> Since P(B) is greater than the P(A), then event B is more likely to
+happen than event A.</p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>What is the probability of getting a head and a tail?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Let C = getting a head and a tail = {HT, TH} and <span class="math inline">\(P(C)=\frac{2}{4}\)</span> This is the same event space as event A, but it is a different event. Sometimes two different events can give the same event space.</p>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>What is the probability of getting a head or a tail?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Let D = getting a head or a tail. Since or means one or the other or both and it doesn’t specify the number of heads or tails, then D = {HH, HT, TH, TT} and <span class="math inline">\(P(D)=\frac{3}{4}\)</span></p>
+<ol start="6" style="list-style-type: lower-alpha">
+<li>What is the probability of getting a foot?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Let E = getting a foot. Since you can’t get a foot, E = {} or the empty set and <span class="math inline">\(P(E)=\frac{0}{4}=0\)</span></p>
+<ol start="7" style="list-style-type: lower-alpha">
+<li>What is the probability of each outcome? What is the sum of these probabilities?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p><span class="math inline">\(P(HH)=P(HT)=P(TH)=P(TT)=\frac{1}{4}\)</span>. If you add all of these probabilities together you get 1.</p>
+<p>This example had some results in it that are important concepts. They are summarized below:</p>
+<p><strong>Probability Properties</strong></p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(0 \le P(\text{event}) \le 1\)</span></li>
+<li>If the P(event) = 1, then it will happen and is called the certain event</li>
+<li>If the P(event) = 0, then it cannot happen and is called the impossible event</li>
+<li><span class="math inline">\(\sum{P(outcome)}=1\)</span></li>
+</ol>
+</div>
+<div id="example-calculating-theoretical-probabilities-1" class="section level3">
+<h3><span class="header-section-number">4.2.3</span> Example: Calculating Theoretical Probabilities</h3>
+<p>Suppose you conduct an experiment where you pull a card from a standard deck.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the sample space?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>SS = {2S, 3S, 4S, 5S, 6S, 7S, 8S, 9S, 10S, JS, QS, KS, AS, 2C, 3C, 4C, 5C, 6C, 7C, 8C, 9C, 10C, JC, QC, KC, AC, 2D, 3D, 4D, 5D, 6D, 7D, 8D, 9D, 10D, JD, QD, KD, AD, 2H, 3H, 4H, 5H, 6H, 7H, 8H, 9H, 10H, JH, QH, KH, AH}</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>What is the probability of getting a Spade?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Getting a spade = {2S, 3S, 4S, 5S, 6S, 7S, 8S, 9S, 10S, JS, QS, KS, AS} so <span class="math inline">\(P(spade)=\frac{13}{52}\)</span></p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>What is the probability of getting a Jack?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Getting a Jack = {JS, JC, JH, JD} so <span class="math inline">\(P(jack)=\frac{4}{52}\)</span></p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>What is the probability of getting an Ace?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Getting an Ace = {AS, AC, AH, AD} so <span class="math inline">\(P(ace)=\frac{4}{52}\)</span></p>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>What is the probability of not getting an Ace?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Not getting an Ace = {2S, 3S, 4S, 5S, 6S, 7S, 8S, 9S, 10S, JS, QS, KS, 2C, 3C, 4C, 5C, 6C, 7C, 8C, 9C, 10C, JC, QC, KC, 2D, 3D, 4D, 5D, 6D, 7D, 8D, 9D, 10D, JD, QD, KD, 2H, 3H, 4H, 5H, 6H, 7H, 8H, 9H, 10H, JH, QH, KH} so <span class="math inline">\(P(\text{not ace})=\frac{48}{52}\)</span></p>
+<p>Notice, <span class="math inline">\(P(ace)+P(\text{not ace})=1\)</span>, so you could have found the probability of not ace by doing 1 minus the probability of ace. <span class="math inline">\(P(\text{not ace})\)</span>=<span class="math inline">\(1-P(ace)\)</span> = <span class="math inline">\(1-\frac{4}{52}\)</span> = <span class="math inline">\(\frac{48}{52}\)</span></p>
+<ol start="6" style="list-style-type: lower-alpha">
+<li>What is the probability of getting a Spade and an Ace?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Getting a Spade and an Ace = {AS} so <span class="math inline">\(P(AS)=\frac{1}{52}\)</span></p>
+<ol start="7" style="list-style-type: lower-alpha">
+<li>What is the probability of getting a Spade or an Ace?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Getting a Spade and an Ace ={2S, 3S, 4S, 5S, 6S, 7S, 8S, 9S, 10S, JS, QS, KS, AS, AC, AD, AH} so <span class="math inline">\(P(\text{spade and ace})=\frac{16}{52}\)</span></p>
+<ol start="8" style="list-style-type: lower-alpha">
+<li>What is the probability of getting a Jack and an Ace?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Getting a Jack and an Ace = { } since you can’t do that when picking one card. So <span class="math inline">\(P(\text{Jack and Ace})=\frac{0}{52}=0\)</span></p>
+<ol style="list-style-type: lower-roman">
+<li>What is the probability of getting a Jack or an Ace?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Getting a Jack or an Ace = {JS, JC, JD, JH, AS, AC, AD, AH} so <span class="math inline">\(P(\text{Jack or Ace})=\frac{8}{52}\)</span></p>
+</div>
+<div id="example-calculating-theoretical-probabilities-2" class="section level3">
+<h3><span class="header-section-number">4.2.4</span> Example: Calculating Theoretical Probabilities</h3>
+<p>Suppose you have an iPhone and playing iTunes with the following songs on it: 5 Rolling Stones songs, 7 Beatles songs, 9 Bob Dylan songs, 4 Faith Hill songs, 2 Taylor Swift songs, 7 U2 songs, 4 Mariah Carey songs, 7 Bob Marley songs, 6 Bunny Wailer songs, 7 Elton John songs, 5 Led Zeppelin songs, and 4 Dave Mathews Band songs. The different genre that you have are rock from the 60s which includes Rolling Stones, Beatles, and Bob Dylan; country includes Faith Hill and Taylor Swift; rock of the 90s includes U2 and Mariah Carey; Reggae includes Bob Marley and Bunny Wailer; rock of the 70s includes Elton John and Led Zeppelin; and bluegrasss/rock includes Dave Mathews Band.</p>
+<p>Suppose the iTunes is set to shuffle the songs, so it randomly picks the next song so you have no idea what the next song will be. Now you would like to calculate the probability that you will hear the type of music or the artist that you are interested in. The sample set is too difficult to write out, but you can figure it from looking at the number in each set and the total number. The total number of songs you have is 67.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability that you will hear a Faith Hill song?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>There are 4 Faith Hill songs out of the 67 songs, so <span class="math inline">\(P(\text{Faith Hill})=\frac{4}{67}\)</span></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>What is the probability that you will hear a Bunny Wailer song?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>There are 6 Bunny Wailer songs, so <span class="math inline">\(P(\text{Bunny Wailer})=\frac{6}{67}\)</span></p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>What is the probability that you will hear a song from the 60s?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>There are 5, 7, and 9 songs that are classified as rock from the 60s, which is 21 total, so <span class="math inline">\(P(\text{song from 60s})=\frac{21}{67}\)</span></p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>What is the probability that you will hear a Reggae song?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>There are 6 and 7 songs that are classified as Reggae, which is 13 total, so <span class="math inline">\(P(\text{Reggae})=\frac{13}{67}\)</span></p>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>What is the probability that you will hear a song from the 90s or a bluegrass-rock song?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>There are 7 and 4 songs that are songs from the 90s and 4 songs that are bluegrass-rock, for a total of 15, so <span class="math inline">\(P(\text{song 90s or bluegrass-rock})=\frac{15}{67}\)</span></p>
+<ol start="6" style="list-style-type: lower-alpha">
+<li>What is the probability that you will hear an Elton John or a Taylor Swift song?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>There are 7 Elton John songs and 2 Taylor Swift songs, for a total of 9, so <span class="math inline">\(P(\text{Elton John or Taylor Swift})=\frac{9}{67}\)</span></p>
+<ol start="7" style="list-style-type: lower-alpha">
+<li>What is the probability that you will hear a country song or a U2 song?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>There are 6 country songs and 7 U2 songs, for a total of 13, so <span class="math inline">\(P(\text{country or U2})=\frac{13}{67}\)</span></p>
+<p>Of course you can do any other combinations you would like.</p>
+<p>Notice in example #4.2.3 part e, it was mentioned that the probability of getting and ace plus the probability of not getting an ace was 1. This is because these two events have no outcomes in common, and together they make up the entire sample space. Events that have this property are called <strong>complementary events</strong>.</p>
+<p>If two events are <strong>complementary events</strong> then to find the probability of one just subtract the probability of the other from one. Notation used for complement of A is not A or <span class="math inline">\(A^{c}\)</span>.</p>
+<p><span class="math inline">\(P(A)+P(A^{c}=1)\)</span></p>
+</div>
+<div id="example-complementary-events" class="section level3">
+<h3><span class="header-section-number">4.2.5</span> Example: Complementary Events</h3>
+<ol style="list-style-type: lower-alpha">
+<li>Suppose you know that the probability of it raining today is 0.45. What is the probability of it not raining?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Since not raining is the complement of raining, then <span class="math inline">\(P(\text{not raining})=1-P(\text{raining}) = 1-0.45=0.55\)</span></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Suppose you know the probability of not getting the flu is 0.24. What is the probability of getting the flu?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Since getting the flu is the complement of not getting the flu, then <span class="math inline">\(P(\text{getting flu})=1-P(flu)=1-0.24=0.76\)</span></p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>In an experiment of picking a card from a deck, what is the probability of not getting a card that is a Queen?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>You could do this problem by listing all the ways to not get a queen, but that set is fairly large. One advantage of the complement is that it reduces the workload. You use the complement in many situations to make the work shorter and easier. In this case it is easier to list all the ways to get a Queen, find the probability of the Queen, and then subtract from one.</p>
+<p>Queen = {QS, QC, QD, QH} so <span class="math inline">\(P(Queen)=\frac{4}{52}\)</span> and <span class="math inline">\(P(\text{not Queen})=1-P(Queen)=1-\frac{4}{52}=\frac{48}{52}\)</span></p>
+<p><strong><br />
+</strong></p>
+<p>The complement is useful when you are trying to find the probability of an event that involves the words at least or an event that involves the words at most. As an example of an at least event is suppose you want to find the probability of making at least $50,000 when you graduate from college. That means you want the probability of your salary being greater than or equal to $50,000. An example of an at most event is suppose you want to find the probability of rolling a die and getting at most a 4. That means that you want to get less than or equal to a 4 on the die. The reason to use the complement is that sometimes it is easier to find the probability of the complement and then subtract from 1. Example #4.2.6 demonstrates how to do this.</p>
+</div>
+<div id="example-using-the-complement-to-find-probabilities" class="section level3">
+<h3><span class="header-section-number">4.2.6</span> Example: Using the Complement to Find Probabilities</h3>
+<ol style="list-style-type: lower-alpha">
+<li>In an experiment of rolling a fair die one time, find the probability of rolling at most a 4 on the die.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>The sample space for this experiment is {1, 2, 3, 4, 5, 6}. You want the event of getting at most a 4, which is the same as thinking of getting 4 or less. The event space is {1, 2, 3, 4}. The probability is <span class="math inline">\(P(\text{at most a 4})=\frac{4}{6}\)</span></p>
+<p>Or you could have used the complement. The complement of rolling at most a 4 would be rolling number bigger than 4. The event space for the complement is {5, 6}. The probability of the complement is <span class="math inline">\(P(\text{more than 4})=\frac{2}{6}\)</span>. The probability of at most 4 would be <span class="math inline">\(P(\text{at most 4})=1-P(\text{more than 4})=1-\frac{2}{6}=\frac{4}{6}\)</span></p>
+<p>Notice you have the same answer, but the event space was easier to write out. For this example the complement probability wasn’t that useful, but in the future there will be events where it is much easier to use the
+complement.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>In an experiment of pulling a card from a fair deck, find the probability of pulling at least a 5 (ace is a high card in this example).</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>The sample space for this experiment is SS = {2S, 3S, 4S, 5S, 6S, 7S, 8S, 9S, 10S, JS, QS, KS, AS, 2C, 3C, 4C, 5C, 6C, 7C, 8C, 9C, 10C, JC, QC, KC, AC, 2D, 3D, 4D, 5D, 6D, 7D, 8D, 9D, 10D, JD, QD, KD, AD, 2H, 3H, 4H, 5H, 6H, 7H, 8H, 9H, 10H, JH, QH, KH, AH}</p>
+<p>Pulling a card that is at least a 5 would involve listing all of the cards that are a 5 or more. It would be much easier to list the outcomes that make up the complement. The complement of at least a 5 is less than a 5. That would be the event of 4 or less. The event space for the complement would be {2S, 3S, 4S, 2C, 3C, 4C, 2D, 3D, 4D, 2H, 3H, 4H}. The probability of the complement would be <span class="math inline">\(\frac{12}{52}\)</span>. The probability of at least a 5 would be <span class="math inline">\(P(\text{at least 5})=1-P(\text{at most 4})=1-\frac{12}{52}=\frac{40}{52}\)</span></p>
+<p>Another concept was shown in example #4.2.3 parts g and i. The problems were looking for the probability of one event or another. In part g, it was looking for the probability of getting a Spade or an Ace. That was equal to <span class="math inline">\(\frac{16}{52}\)</span>. In part i, it was looking for the probability of getting a Jack or an Ace. That was equal to <span class="math inline">\(\frac{8}{52}\)</span>. If you look back at the parts b, c, and d, you might notice the following result: <span class="math inline">\(P(\text{Jack or Ace})=P(Jack)+P(Ace)\)</span> but <span class="math inline">\(P(\text{Spade or Ace})\ne P(Spade)+P(Ace)\)</span>.</p>
+<p>Why does adding two individual probabilities together work in one situation to give the probability of one or another event and not give the correct probability in the other?</p>
+<p>The reason this is true in the case of the Jack and the Ace is that these two events cannot happen together. There is no overlap between the two events, and in fact the <span class="math inline">\(P(\text{Jack and Ace})=0\)</span>. However, in the case of the Spade and Ace, they can happen together. There is overlap, mainly the ace of spades. The <span class="math inline">\(P(\text{Spade and Ace})\ne0\)</span>.</p>
+<p>When two events cannot happen at the same time, they are called <strong>mutually exclusive</strong>. In the above situation, the events Jack and Ace are mutually exclusive, while the events Spade and Ace are not mutually exclusive.</p>
+<p><strong>Addition Rules:</strong></p>
+<p>If two events A and B are mutually exclusive, then <span class="math inline">\(P(\text{A and B})=0\)</span> and <span class="math inline">\(P(\text{A or B})=P(A)+P(B)\)</span></p>
+<p>If two events A and B are not mutually exclusive, then <span class="math inline">\(P(\text{A or B})=P(A)+P(B)-P(\text{A and B})\)</span></p>
+</div>
+<div id="example-using-addition-rules" class="section level3">
+<h3><span class="header-section-number">4.2.7</span> Example: Using Addition Rules</h3>
+<p>Suppose your experiment is to roll two fair dice.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the sample space?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>As with the other examples you need to come up with a sample space that has equally likely outcomes. One sample space is to list the sums possible on each roll. That sample space would look like: SS = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}. However, there are more ways to get a sum of 7 then there are to get a sum of 2, so these outcomes are not equally likely. Another thought is to list the possibilities on each roll. As an example you could roll the dice and on the first die you could get a 1. The other die could be any number between 1 and 6, but say it is a 1 also. Then this outcome would look like (1,1). Similarly, you could get (1, 2), (1, 3), (1,4), (1, 5), or (1, 6). Also, you could get a 2, 3, 4, 5, or 6 on the first die instead. Putting this all together, you get the sample space:</p>
+<p>SS = {(1,1), (1,2), (1,3), (1,4), (1,5), (1,6),</p>
+<p>(2,1), (2,2), (2,3), (2,4), (2,5), (2,6),</p>
+<p>(3,1), (3,2), (3,3), (3,4), (3,5), (3,6),</p>
+<p>(4,1), (4,2), (4,3), (4,4), (4,5), (4,6),</p>
+<p>(5,1), (5,2), (5,3), (5,4), (5,5), (5,6),</p>
+<p>(6,1), (6,2), (6,3), (6,4), (6,5), (6,6)}</p>
+<p>Notice that a (2,3) is different from a (3,2), since the order that you roll the die is important and you can tell the difference between these two outcomes. You don’t need any of the doubles twice, since these are not distinguishable from each other in either order.</p>
+<p><strong>This will always be the sample space for rolling two dice.</strong></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>What is the probability of getting a sum of 5?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Getting a sum of 5 = {(4,1), (3,2), (2,3), (1,4)} so <span class="math inline">\(P(\text{sum of 5})=\frac{4}{36}\)</span></p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>What is the probability of getting the first die a 2?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Getting first die a 2 = {(2,1), (2,2), (2,3), (2,4), (2,5), (2,6)} so <span class="math inline">\(P(\text{1st die 2})=\frac{6}{36}\)</span></p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>What is the probability of getting a sum of 7?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Getting a sum of 7 = {(6,1), (5,2), (4,3), (3,4), (2,5), (1,6)} so <span class="math inline">\(P(\text{sum of 7})=\frac{6}{36}\)</span></p>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>What is the probability of getting a sum of 5 and the first die a 2?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>This is events A and B which contains the outcome {(2,3)} so <span class="math inline">\(P(\text{sum of 5 and 1st die a 2})=\frac{1}{36}\)</span></p>
+<ol start="6" style="list-style-type: lower-alpha">
+<li>What is the probability of getting a sum of 5 or the first die a 2?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Notice from part e, that these two events are not mutually exclusive, so <span class="math inline">\(P(\text{sum of 5 or 1st die a 2})=P(\text{sum of 5})+P(\text{1st die 2})-P(\text{sum of 5 and 1st die a 2})\)</span> = <span class="math inline">\(\frac{4}{36}+\frac{6}{36}-\frac{1}{36}=\frac{9}{36}\)</span></p>
+<ol start="7" style="list-style-type: lower-alpha">
+<li>What is the probability of getting a sum of 5 and sum of 7?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>These are the events parts a and c, which have no outcomes in common. Thus sum of 5 and sum of 7 = { } so <span class="math inline">\(P(\text{sum of 5 and sum of 7})=0\)</span></p>
+<ol start="8" style="list-style-type: lower-alpha">
+<li>What is the probability of getting a sum of 5 or sum of 7?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>From part g, these two events are mutually exclusive, so <span class="math inline">\(P(\text{sum of 5 or sum of 7})=P(\text{sum of 5})+P(\text{sum of 7})=\frac{4}{36}+\frac{6}{36}=\frac{10}{36}\)</span></p>
+<p><strong><br />
+</strong></p>
+<p><strong>Odds</strong></p>
+<p>Many people like to talk about the odds of something happening or not happening. Mathematicians, statisticians, and scientists prefer to deal with probabilities since odds are difficult to work with, but gamblers prefer to work in odds for figuring out how much they are paid if they win.</p>
+<p>The <strong>actual odds against</strong> event <em>A</em> occurring are the ratio <span class="math inline">\(\frac{P(A^c)}{P(A)}\)</span>, usually expressed in the form <em>a:b</em> or <em>a</em> to <em>b</em>, where <em>a</em> and <em>b</em> are integers with no common factors.</p>
+<p>The <strong>actual odds in favor</strong> event <em>A</em> occurring are the ratio <span class="math inline">\(\frac{P(Ac)}{P(A^c)}\)</span>, which is the reciprocal of the odds against. If the odds against event <em>A</em> are <em>a:b</em>, then the odds in favor event <em>A</em> are <em>b:a</em>.</p>
+<p>The <strong>payoff odds</strong> against event <em>A</em> occurring are the ratio of the net profit (if you win) to the amount bet.</p>
+<p>payoff odds against event <em>A</em> = (net profit) : (amount bet)</p>
+</div>
+<div id="example-odds-against-and-payoff-odds" class="section level3">
+<h3><span class="header-section-number">4.2.8</span> Example: Odds Against and Payoff Odds</h3>
+<p>In the game of Craps, if a shooter has a come-out roll of a 7 or an 11, it is called a natural and the pass line wins. The payoff odds are given by a casino as 1:1.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Find the probability of a natural.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>A natural is a 7 or 11. The sample space is</p>
+<p>SS = {(1,1), (1,2), (1,3), (1,4), (1,5), (1,6),
+(2,1), (2,2), (2,3), (2,4), (2,5), (2,6),
+(3,1), (3,2), (3,3), (3,4), (3,5), (3,6),
+(4,1), (4,2), (4,3), (4,4), (4,5), (4,6),
+(5,1), (5,2), (5,3), (5,4), (5,5), (5,6),
+(6,1), (6,2), (6,3), (6,4), (6,5), (6,6)}</p>
+<p>The event space is {(1,6), (2,5), (3,4), (4,3), (5,2), (6,1), (5,6),
+(6,5)}</p>
+<p>So <span class="math inline">\(P(\text{7 or 11})=\frac{8}{36}\)</span></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Find the actual odds for a natural.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p><span class="math inline">\(\text{odds of natural}=\frac{P(\text{7 or 11})}{P(\text{not 7 or 11})}\)</span>
+<span class="math inline">\(=\frac{\frac{8}{36}}{1-\frac{8}{36}}\)</span>
+<span class="math inline">\(=\frac{\frac{8}{36}}{\frac{28}{36}}\)</span>
+<span class="math inline">\(=\frac{8}{28}=\frac{2}{7}\)</span></p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Find the actual odds against a natural.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p><span class="math inline">\(\text{odds of against a natural}=\frac{P(\text{not 7 or 11})}{P(\text{7 or 11})}\)</span>
+<span class="math inline">\(=\frac{1-\frac{8}{36}}{\frac{8}{36}}\)</span>
+<span class="math inline">\(=\frac{\frac{28}{36}}{\frac{8}{36}}\)</span>
+<span class="math inline">\(=\frac{28}{8}=\frac{3.5}{1}\)</span></p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>If the casino pays 1:1, how much profit does the casino make on a $10 bet?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>The actual odds are 3.5 to 1 while the payoff odds are 1 to 1. The casino pays you $10 for your $10 bet. If the casino paid you the actual odds, they would pay $3.50 on every $1 bet, and on $10, they pay <span class="math inline">\(3.5*10\)</span> =$35. Their profit is <span class="math inline">\(35-10=\)</span> $25.</p>
+</div>
+<div id="homework-7" class="section level3">
+<h3><span class="header-section-number">4.2.9</span> Homework</h3>
+<ol style="list-style-type: decimal">
+<li>In problem 4.1.1, the probabilities of each color of M&amp;Ms in a packet were found. Use that information to answer the following questions.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Find the probability of choosing a green or red M&amp;M.</li>
+<li>Find the probability of choosing a blue, red, or yellow M&amp;M.</li>
+<li>Find the probability of not choosing a brown M&amp;M.</li>
+<li>Find the probability of not choosing a green M&amp;M.</li>
+</ol>
+<ol start="2" style="list-style-type: decimal">
+<li>In problem 4.1.2, the probabilities for defects in eyeglasses manufactured by Eyeglassomatic were calculated. Use that information to find the following probabilities.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Find the probability of picking a lens that is scratched or flaked.</li>
+<li>Find the probability of picking a lens that is the wrong PD or was lost in lab.</li>
+<li>Find the probability of picking a lens that is not scratched.</li>
+<li>Find the probability of picking a lens that is not the wrong shape.</li>
+</ol>
+<ol start="3" style="list-style-type: decimal">
+<li>An experiment is to flip a fair coin three times.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>State the sample space.</li>
+<li>Find the probability of getting exactly two heads. Make sure you state the event space.</li>
+<li>Find the probability of getting at least two heads. Make sure you state the event space.</li>
+<li>Find the probability of getting an odd number of heads. Make sure you state the event space.</li>
+<li>Find the probability of getting all heads or all tails. Make sure you state the event space.</li>
+<li>Find the probability of getting exactly two heads or exactly two tails.</li>
+<li>Find the probability of not getting an odd number of heads.</li>
+</ol>
+<ol start="4" style="list-style-type: decimal">
+<li>An experiment is rolling a fair die and then flipping a fair coin.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>State the sample space.</li>
+<li>Find the probability of getting a head. Make sure you state the event space.</li>
+<li>Find the probability of getting a 6. Make sure you state the event space.</li>
+<li>Find the probability of getting a 6 or a head.</li>
+<li>Find the probability of getting a 3 and a tail.</li>
+</ol>
+<ol start="5" style="list-style-type: decimal">
+<li>An experiment is rolling two fair dice.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>State the sample space.</li>
+<li>Find the probability of getting a sum of 3. Make sure you state the event space.</li>
+<li>Find the probability of getting the first die is a 4. Make sure you state the event space.</li>
+<li>Find the probability of getting a sum of 8. Make sure you state the event space.</li>
+<li>Find the probability of getting a sum of 3 or sum of 8.</li>
+<li>Find the probability of getting a sum of 3 or the first die is a 4.</li>
+<li>Find the probability of getting a sum of 8 or the first die is a 4.</li>
+<li>Find the probability of not getting a sum of 8.</li>
+</ol>
+<ol start="6" style="list-style-type: decimal">
+<li>An experiment is pulling one card from a fair deck.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>State the sample space.</li>
+<li>Find the probability of getting a Ten. Make sure you state the event space.</li>
+<li>Find the probability of getting a Diamond. Make sure you state the event space.</li>
+<li>Find the probability of getting a Club. Make sure you state the event space.</li>
+<li>Find the probability of getting a Diamond or a Club.</li>
+<li>Find the probability of getting a Ten or a Diamond.</li>
+</ol>
+<ol start="7" style="list-style-type: decimal">
+<li>An experiment is pulling a ball from an urn that contains 3 blue balls and 5 red balls.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Find the probability of getting a red ball.</li>
+<li>Find the probability of getting a blue ball.</li>
+<li>Find the odds for getting a red ball.</li>
+<li>Find the odds for getting a blue ball.</li>
+</ol>
+<ol start="8" style="list-style-type: decimal">
+<li>In the game of roulette, there is a wheel with spaces marked 0 through 36 and a space marked 00.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Find the probability of winning if you pick the number 7 and it comes up on the wheel.</li>
+<li>Find the odds against winning if you pick the number 7.</li>
+<li>The casino will pay you $20 for every dollar you bet if your number comes up. How much profit is the casino making on the bet?</li>
+</ol>
+<p><strong><br />
+</strong></p>
+</div>
+</div>
+<div id="conditional-probability" class="section level2">
+<h2><span class="header-section-number">4.3</span> Conditional Probability</h2>
+<p>Suppose you want to figure out if you should buy a new car. When you first go and look, you find two cars that you like the most. In your mind they are equal, and so each has a 50% chance that you will pick it. Then you start to look at the reviews of the cars and realize that the first car has had 40% of them needing to be repaired in the first year, while the second car only has 10% of the cars needing to be repaired in the first year. You could use this information to help you decide which car you want to actually purchase. Both cars no longer have a 50% chance of being the car you choose. You could actually calculate the probability you will buy each car, which is a conditional probability. You probably wouldn’t do this, but it gives you an example of what a conditional probability is.</p>
+<p><strong>Conditional probabilities</strong> are probabilities calculated after information is given. This is where you want to find the probability of event A happening after you know that event B has happened. If you know that B has happened, then you don’t need to consider the rest of the sample space. You only need the outcomes that make up event B. Event B becomes the new sample space, which is called the <strong>restricted sample space, R</strong>. If you always write a restricted sample space when doing conditional probabilities and use this as your sample space, you will have no trouble with conditional probabilities. The notation for conditional probabilities is <span class="math inline">\(P(\text{A, given B})=P(A|B)\)</span>. The event following the vertical line is always the restricted sample space.</p>
+<div id="example-conditional-probabilities" class="section level3">
+<h3><span class="header-section-number">4.3.1</span> Example: Conditional Probabilities</h3>
+<ol style="list-style-type: lower-alpha">
+<li>Suppose you roll two dice. What is the probability of getting a sum of 5, given that the first die is a 2?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Since you know that the first die is a 2, then this is your restricted sample space, R = {(2,1), (2,2), (2,3), (2,4), (2,5), (2,6)} Out of this restricted sample space, the way to get a sum of 5 is
+{(2,3)}. Thus <span class="math inline">\(P(\text{sum of 5, given first die a 2})=P(\text{sum of 5}|\text{first die 2})=\frac{1}{6}\)</span></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Suppose you roll two dice. What is the probability of getting a sum of 7, given the first die is a 4?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Since you know that the first die is a 4, this is your restricted sample space, R = {(4,1), (4,2), (4,3), (4,4), (4,5), (4,6)} Out of this restricted sample space, the way to get a sum of 7 is {(4,3)}. Thus <span class="math inline">\(P(\text{sum of 7, given first die a 4})=P(\text{sum of 7}|\text{first die 4})=\frac{1}{6}\)</span></p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Suppose you roll two dice. What is the probability of getting the
+second die a 2, given the sum is a 9?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Since you know the sum is a 9, this is your restricted sample space, R = {(3,6), (4,5), (5,4), (6,3)}. Out of this restricted sample space there is no way to get the second die a 2. Thus <span class="math inline">\(P(\text{first die a 2, given sum is 9})=P(\text{1st die a 2}|\text{sum of 9})=\frac{0}{4}\)</span></p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Suppose you pick a card from a deck. What is the probability of getting a Spade, given that the card is a Jack?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Since you know that the card is a Jack, this is your restricted sample space, R = {JS, JC, JD, JH}. Out of this restricted sample space, the way to get a Spade is {JS}. Thus <span class="math inline">\(P(\text{spade, given card a Jack})=P(\text{spade}|\text{Jack})=\frac{1}{4}\)</span></p>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>Suppose you pick a card from a deck. What is the probability of getting an Ace, given the card is a Queen?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Since you know that the card is a Queen, then this is your restricted sample space, R = {QS, QC, QD, QH} Out of this restricted sample space, there is no way to get an Ace, thus <span class="math inline">\(P(\text{Ace, given Queen})=P(\text{Ace}|\text{Queen})=\frac{0}{4}\)</span></p>
+<p>If you look at the results of example #4.2.7 part d and example #4.3.1 part b, you will notice that you get the same answer. This means that knowing that the first die is a 4 did not change the probability that the sum is a 7. This added knowledge did not help you in any way. It is as if that information was not given at all. However, if you compare example #4.2.7 part b and example #4.3.1 part a, you will notice that they are not the same answer. In this case, knowing that the first die is a 2 did change the probability of getting a sum of 5. In the first case, the events sum of 7 and first die is a 4 are called <strong>independent events.</strong> In the second case, the events sum of 5 and first die is a 2 are called <strong>dependent events.</strong></p>
+<p>Events A and B are considered <strong>independent events</strong> if the fact that one event happens does not change the probability of the other event happening. In other words, events A and B are independent if the fact that B has happened does not affect the probability of event A happening and the fact that A has happened does not affect the probability of event B happening. Otherwise, the two events are dependent.</p>
+<p>In symbols, A and B are independent if <span class="math inline">\(P(A|B)=P(A)\)</span> or <span class="math inline">\(P(B|A)=P(B)\)</span></p>
+</div>
+<div id="example-independent-events" class="section level3">
+<h3><span class="header-section-number">4.3.2</span> Example: Independent Events</h3>
+<ol style="list-style-type: lower-alpha">
+<li>Suppose you roll two dice. Are the events “sum of 7” and “first die is a 3” independent?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>To determine if they are independent, you need to see if <span class="math inline">\(P(\text{sum of 7| first die a 3}=P(\text{sum of 7})\)</span> or the other way around. It doesn’t matter which order these are calculated in, so pick whichever is easier.
+sum of 7 = {(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)}
+first die is a 3 = {(3,1), (3,2), (3,3), (3,4), (3,5), (3,6)}
+<span class="math inline">\(P(\text{sum of 7| first die a 3})\)</span> means that you assume that first die is a 3 has happened. The restricted sample space is the first die is a 3, R = {(3,1), (3,2), (3,3), (3,4), (3,5), (3,6)}
+In this restricted sample space, the way for a sum of 7 to happen is {(3,4)},
+so <span class="math inline">\(P(\text{sum of 7| first die a 3})=\frac{1}{6}\)</span>
+The <span class="math inline">\(P(\text{sum of 7})=\frac{6}{36}=\frac{1}{6}\)</span>.
+Since <span class="math inline">\(P(\text{sum of 7| first die a 3})=P(\text{sum of 7})\)</span>, the “sum of 7” and “first die is a 3” are independent events.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Suppose you roll two dice. Are the events “sum of 6” and “first die is a 4” independent?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>To determine if they are independent, you need to see if <span class="math inline">\(P(\text{sum of 6| first die a 4})=P(\text{sum of 6})\)</span>. Again it doesn’t matter what order you do this in. Do which is easier.
+sum of 6 = {(1,5), (2,4), (3,3), (4,2), (5,1)} and first die is a 4 = {(4,1), (4,2), (4,3), (4,4), (4,5), (4,6)}, if want <span class="math inline">\(P(\text{sum of 6| first die a 4}\)</span>, the restricted sample space is 1st die is a 4, R = {(4,1), (4,2), (4,3), (4,4), (4,5), (4,6)}
+In this restricted sample space, the way to get a sum of 6 is {(4,2)},
+so <span class="math inline">\(P(\text{sum of 6| first die a 4})=\frac{1}{6}\)</span>.
+The <span class="math inline">\(P(\text{sum of 6})=\frac{5}{36}\)</span>
+Notice <span class="math inline">\(P(\text{sum of 6| first die a 4})\ne P(\text{sum of 6})\)</span>, Thus “sum of 6” and “first die is a 4” are dependent.</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Suppose you pick a card from a deck. Are the events “Jack” and “Spade” independent?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>To determine if they are independent, you need to see if <span class="math inline">\(P(\text{Jack| Spade})=P(\text{Jack})\)</span>. Rember, you can do this the other order if you wish.
+Jack = {JS, JC, JD, JH} and B = Spade {2S, 3S, 4S, 5S, 6S,7S, 8S, 9S, 10S, JS, QS, KS, AS}
+For <span class="math inline">\(P(\text{Jack| Spade})\)</span>, the restricted sample space is Spade, R = {2S, 3S, 4S, 5S, 6S, 7S, 8S, 9S, 10S, JS, QS, KS, AS}. In this restricted sample space, the way to get a Jack is {JS}, so <span class="math inline">\(P(\text{Jack| Spade})=\frac{1}{13}\)</span>.
+The <span class="math inline">\(P(Jack)=\frac{4}{52}=\frac{1}{13}\)</span>
+Since <span class="math inline">\(P(\text{Jack| Spade})=P(\text{Jack})\)</span>, “Jack” and “Spade” are independent.</p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Suppose you pick a card from a deck. Are the events “Heart” and “Red” card independent?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>To determine if they are independent, you need to see if <span class="math inline">\(P(\text{Heart| Red})=P(\text{Heart})\)</span>.
+Heart = {2H, 3H, 4H, 5H, 6H, 7H, 8H, 9H, 10H, JH, QH, KH, AH} and
+Red card = {2D, 3D, 4D, 5D, 6D, 7D, 8D, 9D, 10D, JD, QD,KD, AD, 2H, 3H, 4H, 5H, 6H, 7H, 8H, 9H, 10H, JH, QH, KH, AH}.
+The restricted sample space is, red card, R = {2D, 3D, 4D, 5D, 6D, 7D, 8D, 9D, 10D, JD, QD, KD, AD, 2H, 3H,4H, 5H, 6H, 7H, 8H, 9H, 10H, JH, QH, KH, AH}
+In this restricted sample space, the way to get a heart is 13, and
+<span class="math inline">\(P(\text{Heart| Red})=\frac{13}{26}\)</span>.
+The <span class="math inline">\(P(\text{Heart})=\frac{13}{52}\)</span>
+Note <span class="math inline">\(P(\text{Heart| Red})\ne P(\text{Heart})\)</span>, so, “Heart” and “Red” card are dependent.</p>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>Suppose you have two children via separate births. Are the events “the first is a boy” and “the second is a girl” independent?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>In this case, you actually don’t need to do any calculations. The sex of one child does not affect the sex of the second child. The events are independent.</p>
+<ol start="6" style="list-style-type: lower-alpha">
+<li>Suppose you flip a coin 50 times and get a head every time, what is the probability of getting a head on the next flip?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Since one flip of the coin does not affect the next flip (the coin does not remember what it did the time before), the probability of getting a head on the next flip is still one-half.</p>
+<p><strong>Multiplication Rule:</strong></p>
+<p>Two more useful formulas:</p>
+<p>If two events are dependent, then <span class="math inline">\(P(\text{A and B})=P(A)*P(B|A)\)</span></p>
+<p>If two events are independent, then <span class="math inline">\(P(\text{A and B})=P(A)*P(B)\)</span></p>
+<p>These two formulas are useful if the sample space is too large to write out, but it the sample space isn’t too large, it is better to find probabilities of and statements using the sample space techniques.</p>
+<p>If you solve the first equation for <span class="math inline">\(P(B|A)\)</span>, you obtain <span class="math inline">\(P(B|A)=\frac{P(\text{A and B})}{P(A)}\)</span>, which is a formula to calculate a conditional probability. However, it is easier to find a conditional probability by using the restricted sample space and counting unless the sample space is large.</p>
+</div>
+<div id="example-multiplication-rule" class="section level3">
+<h3><span class="header-section-number">4.3.3</span> Example: Multiplication Rule</h3>
+<ol style="list-style-type: lower-alpha">
+<li>Suppose you pick three cards from a deck, what is the probability that they are all Queens if the cards are not replaced after they are picked?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>This sample space is too large to write out, so using the multiplication rule makes sense. Since the cards are not replaced, then the probability will change for the second and third cards. They are dependent events. This means that on the second draw there is one less Queen and one less card, and on the third draw there are two less Queens and 2 less cards.
+<span class="math inline">\(P(\text{3 Queens})=P(\text{Queen on 1st})*P(\text{Queen on 2nd, given Queen on first})*P(\text{Queen on third, given Queens on fist 2 draws})\)</span>
+<span class="math inline">\(=\frac{4}{52}*\frac{3}{51}*\frac{2}{50}\)</span></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Suppose you pick three cards from a deck, what is the probability
+that they are all Queens if the cards are replaced after they are
+picked and before the next card is picked?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Again, the sample space is too large to write out, so using the multiplication rule makes sense. Since the cards are put back, one draw has no affect on the next draw and they are all independent.
+<span class="math inline">\(P(\text{3 Queens})=P(\text{Queen on 1st})*P(\text{Queen on 2nd})*P(\text{Queen on 3rd})\)</span>
+<span class="math inline">\(=\frac{4}{52}*\frac{4}{52}*\frac{4}{52}\)</span></p>
+</div>
+<div id="example-application-problem" class="section level3">
+<h3><span class="header-section-number">4.3.4</span> Example: Application Problem</h3>
+<p>A project conducted by the Australian Federal Office of Road Safety asked people many questions about their cars. One question was the reason that a person chooses a given car, and that data is in table #4.3.1 (Car Preferences, 2019).</p>
+<p><strong>Table #4.3.1: Reason for Choosing a Car</strong></p>
+<pre><code>##    ID Age    Sex LicYr LicMth ActCar Kids5 Kids6 PreferCar Carsmall_new5K
+## 1 110  18   male     0      2  large    no    no    medium     large_used
+## 2 111  25 female     8      0  small    no    no     small      small_new
+## 3 112  63   male    46      0  large    no    no     large     large_used
+## 4 113  51 female    35      0  large    no    no    medium     large_used
+## 5 114  19 female     2      0 medium    no    no    medium      small_new
+## 6 115  51 female    30      0 medium   yes   yes    medium     large_used
+##    Reason              Cost       Reliable        Perform           Fuel
+## 1  safety         important very_important      important      important
+## 2  safety    very_important very_important very_important very_important
+## 3 comfort         important      important      important      important
+## 4  safety little_importance      important      important      important
+## 5   looks         important      important very_important      important
+## 6 comfort         important very_important very_important      important
+##           Safety             AC.PS           Park           Room
+## 1      important         important      important      important
+## 2 very_important         important very_important very_important
+## 3      important         important      important      important
+## 4 very_important         important      important      important
+## 5      important little_importance      important      important
+## 6 very_important    very_important      important      important
+##               Doors          Prestige            Colour
+## 1         important         important little_importance
+## 2 little_importance         important         important
+## 3         important         important         important
+## 4         important     not_important         important
+## 5 little_importance         important         important
+## 6         important little_importance         important</code></pre>
+<p><strong>Code book for Data Frame Car_pref</strong> see Problem 4.1.4 in Section 4.1</p>
+<p>A contingency table, is a cross tabulation of the data into different categories. As an example, a contingency table of if the person has children under 5 and their current car is in table #4.3.2, the following command in R Studio can be used to create this table.</p>
+<p><strong>Table #4.3.2: Reason for Choosing a Car</strong></p>
+<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="probability.html#cb179-1"></a><span class="kw">tally</span>(<span class="op">~</span>Kids5<span class="op">+</span>ActCar, <span class="dt">data=</span>Car_pref)</span></code></pre></div>
+<pre><code>##      ActCar
+## Kids5 large medium small
+##   no     87     90    94
+##   yes    13     10     6</code></pre>
+<ol style="list-style-type: lower-alpha">
+<li>Find the probability that a person questioned has kids under 5.</li>
+</ol>
+<p><strong>Solution: </strong></p>
+<p>First, you need to find the number of people questioned. Add the first row, there are 150 people who did not have kids under 5. Adding the second row, there are 29 peole who do have kids under 5. Also, you can add the colums. There are 100 people who have large cars, 100 people who have medium cars, and 100 who have small cars. Adding either the row totals or the coumns totals, gives you 300 people in the study. Out of the 300 people, 29 people had kids under 5. So the <span class="math inline">\(P(\text{kids under 5})=\frac{29}{300}\)</span>. So 9.7% of the people questioned had children under 5.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Find the probability that a person questioned actually has a large car.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>There are 100 people with large cars out of 300 people. So, <span class="math inline">\(P(\text{large car})= \frac{100}{300}\)</span>. There are 33% of the peple who have a large car.</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Find the probability that a person questioned actually has a large car and has children under 5.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>There are 13 peole who have a large car and have children under 5, so the <span class="math inline">\(P(\text{large car and chldren under 5})=\frac{13}{300}=0.043\)</span>. 4.3% of all people surveyed have a large car and children under 5.</p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Find the probability that a person questioned has a large car given that they have children under 5.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>In this case you know that the person had children under 5. You don’t need to consider the peole who don’t. You only need to look at the row with people who have have children under 5. In that row, look to see how many people have a large car. There are 13 people with a large car out of the 29 peole with kids under 5. So,<span class="math inline">\(P(\text{large car|kids under 5})=\frac{13}{29}=0.45\)</span></p>
+<p>There is 45% chance that a person with a large car have children under 5.</p>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>Find the probability that a person has a large car or has children under 5.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>This prolem can be done two ways. One is to use the addition formula, but a better way is to realize that there are 29 people who have kids under 5, and there are 100 people who have a large car. That is 34 people. But the 13 people who have large cars and kids under 5 were just counted twice. So subtract the 13 people from the 34. That give 21 poeople who have either kids under 5 or a large car. So <span class="math inline">\(P(\text{large car or kids under 5})=\frac{21}{300}=0.07\)</span>. That means 70% of the people questioned has a large car or has children under 5.</p>
+<ol start="6" style="list-style-type: lower-alpha">
+<li>Find the probability that a person questioned has children under 5 given that they have a large car.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>In this case you know that the person has a large car. You don’t need to include the people who have medium or small cars. You only need to consider the column headed by large. In that column, there
+are 100 people who have large cars and out of those 100, 13 have children under 5. So, <span class="math inline">\(P(\text{kids under 5|large})=\frac{13}{100}=0.13\)</span>. Thus 13% of people have children under 5 given that they have a large car.</p>
+<ol style="list-style-type: lower-roman">
+<li>Are the events that a person questioned has a “large car” and “kids under 5” independent events? Why or why not?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>In order for these events to be independent, either <span class="math inline">\(P(\text{kids under 5|large car})=P(\text{kids under 5})\)</span> or <span class="math inline">\(P(\text{large car|kids under 5})=P(\text{large car})\)</span> have to be true. Part (d) showed <span class="math inline">\(P(\text{kids under 5|large car})=0.44\)</span> and part (b) showed <span class="math inline">\(P(\text{kids under 5})==0.33\)</span>. Since these are not equal, then these two events are dependent.</p>
+<p>A big deal has been made about the difference between dependent and independent events while calculating the probability of <em>and</em> compound events. You must multiply the probability of the first event with the
+conditional probability of the second event.</p>
+<p>Why do you care? Calculating probabilities when performing sampling is important, as this will be seen later. But here is a simplification that can make the calculations a lot easier: when the sample size is very small compared to the population size, you can assume that the conditional probabilities just don’t change very much over the sample.</p>
+<p>For example, consider acceptance sampling. Suppose there is a big population of parts delivered to you factory, say 12,000 parts. Suppose there are 85 defective parts in the population. You decide to randomly select ten parts, and see if you should reject the shipment. What is the probability of rejecting the shipment?</p>
+<p>There are many different ways you could reject the shipment. For example, maybe the first three parts are good, one is bad, and the rest are good. Or all ten parts could be bad, or maybe the first five. So many ways to reject! But there is only <strong>one</strong> way that you’d accept the shipment: if <strong>all</strong> <strong>ten</strong> parts are good. That would happen if the first part is good, <strong>and</strong> the second part is good, <strong>and</strong> the third part is good, and so on. Since the probability of the second part being good is (slightly) dependent on whether the first part was good, technically you should take this into consideration when you calculate the probability that all ten are good.</p>
+<p>The probability of getting the first sampled part good is <span class="math inline">\(\frac{1200-85}{1200}=\frac{11915}{1200}\)</span>. So the probability that all ten being good is <span class="math inline">\(\frac{11915}{1200}*\frac{11914}{1200}*\frac{11913}{1200}*\cdots*\frac{11906}{1200}=0.931357\)</span>. If instead you assume that the probability doesn’t change much, you get
+<span class="math inline">\((\frac{11915}{12000})^{10}=0.931382\)</span>. So as you can see, there is not much difference.
+So here is the rule:
+if the sample is very small compared to the size of the population, then you can assume that the probabilities are independent, even though they aren’t technically. By the way, the probability of rejecting the shipment is <span class="math inline">\(1-0.9314=0.0686\)</span>.</p>
+</div>
+<div id="homework-8" class="section level3">
+<h3><span class="header-section-number">4.3.5</span> Homework</h3>
+<ol style="list-style-type: decimal">
+<li><p>Are owning a refrigerator and owning a car independent events? Why or why not?</p></li>
+<li><p>Are owning a computer, tablet, or smart phone and paying for Internet service independent events? Why or why not?</p></li>
+<li><p>Are passing your statistics class and passing your biology class independent events? Why or why not?</p></li>
+<li><p>Are owning a bike and owning a car independent events? Why or why not?</p></li>
+<li><p>An experiment is picking a card from a fair deck.</p></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability of picking a Jack given that the card is a face card?</li>
+<li>What is the probability of picking a heart given that the card is a three?</li>
+<li>What is the probability of picking a red card given that the card is an ace?</li>
+<li>Are the events Jack and face card independent events? Why or why not?</li>
+<li>Are the events red card and ace independent events? Why or why not?</li>
+</ol>
+<ol start="6" style="list-style-type: decimal">
+<li>An experiment is rolling two dice.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability that the sum is 6 given that the first die is a 5?</li>
+<li>What is the probability that the first die is a 3 given that the sum is 11?</li>
+<li>What is the probability that the sum is 7 given that the fist die is a 2?</li>
+<li>Are the two events sum of 6 and first die is a 5 independent events? Why or why not?</li>
+<li>Are the two events sum of 7 and first die is a 2 independent events? Why or why not?</li>
+</ol>
+<ol start="7" style="list-style-type: decimal">
+<li><p>You flip a coin four times. What is the probability that all four of them are heads?</p></li>
+<li><p>You flip a coin six times. What is the probability that all six of them are heads?</p></li>
+<li><p>You pick three cards from a deck with replacing the card each time before picking the next card. What is the probability that all three cards are kings?</p></li>
+<li><p>You pick three cards from a deck without replacing a card before picking the next card. What is the probability that all three cards are kings?</p></li>
+<li><p>A project conducted by the Australian Federal Office of Road Safety asked people many questions about their cars. One question was the reason that a person chooses a given car, and that data is in table #4.3.3 (Car Preferences, 2019).</p></li>
+</ol>
+<p><strong>Table #4.3.3: Reason for Choosing a Car</strong></p>
+<pre><code>##    ID Age    Sex LicYr LicMth ActCar Kids5 Kids6 PreferCar Carsmall_new5K
+## 1 110  18   male     0      2  large    no    no    medium     large_used
+## 2 111  25 female     8      0  small    no    no     small      small_new
+## 3 112  63   male    46      0  large    no    no     large     large_used
+## 4 113  51 female    35      0  large    no    no    medium     large_used
+## 5 114  19 female     2      0 medium    no    no    medium      small_new
+## 6 115  51 female    30      0 medium   yes   yes    medium     large_used
+##    Reason              Cost       Reliable        Perform           Fuel
+## 1  safety         important very_important      important      important
+## 2  safety    very_important very_important very_important very_important
+## 3 comfort         important      important      important      important
+## 4  safety little_importance      important      important      important
+## 5   looks         important      important very_important      important
+## 6 comfort         important very_important very_important      important
+##           Safety             AC.PS           Park           Room
+## 1      important         important      important      important
+## 2 very_important         important very_important very_important
+## 3      important         important      important      important
+## 4 very_important         important      important      important
+## 5      important little_importance      important      important
+## 6 very_important    very_important      important      important
+##               Doors          Prestige            Colour
+## 1         important         important little_importance
+## 2 little_importance         important         important
+## 3         important         important         important
+## 4         important     not_important         important
+## 5 little_importance         important         important
+## 6         important little_importance         important</code></pre>
+<p><strong>Code book for Data Frame Car_pref</strong> see Problem 4.1.4 in Section 4.1</p>
+<p>The contingency table for the sex of a person and the size car the person prefers is in table #4.3.4</p>
+<p><strong>Table #4.3.4: Sex of person and reason for car</strong></p>
+<div class="sourceCode" id="cb182"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb182-1"><a href="probability.html#cb182-1"></a><span class="kw">tally</span>(<span class="op">~</span>PreferCar<span class="op">+</span>Sex, <span class="dt">data=</span>Car_pref)</span></code></pre></div>
+<pre><code>##          Sex
+## PreferCar female male
+##    4           6   17
+##    large      26   47
+##    medium     75   61
+##    small      43   25</code></pre>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability that a person questioned was female?</li>
+<li>What is the probability that a person questioned prefers a medium car?</li>
+<li>What is the probability that a person questioned prefers a medium car given that the person was female?</li>
+<li>What is the probability that a person questioned was a female and prefers a medium car?</li>
+<li>What is the probability that a person questioned was a female or prefers a medium car?</li>
+<li>Are the events person questioned is a female and person questioned prefers a medium car mutually exclusive? Why or why not?</li>
+<li>Are the events person questioned is a female and person questioned prefers a medium car independent? Why or why not?</li>
+</ol>
+<ol start="12" style="list-style-type: decimal">
+<li>Researchers watched groups of dolphins off the coast of Ireland in 1998 to determine what activities the dolphins partake in at certain times of the day (Activities of Dolphin Groups, 2019). The numbers in
+table #4.3.5 represent the number of groups of dolphins that were partaking in an activity at certain times of days.</li>
+</ol>
+<p><strong>Table #4.3.5: Dolphin Activity</strong></p>
+<div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb184-1"><a href="probability.html#cb184-1"></a>Dolphin&lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/dolphins.csv&quot;</span>) </span>
+<span id="cb184-2"><a href="probability.html#cb184-2"></a><span class="kw">head</span>(Dolphin)</span></code></pre></div>
+<pre><code>##   activity  period  X X.1 X.2 X.3 X.4 X.5
+## 1   Travel Morning NA  NA  NA  NA  NA  NA
+## 2   Travel Morning NA  NA  NA  NA  NA  NA
+## 3   Travel Morning NA  NA  NA  NA  NA  NA
+## 4   Travel Morning NA  NA  NA  NA  NA  NA
+## 5   Travel Morning NA  NA  NA  NA  NA  NA
+## 6   Travel Morning NA  NA  NA  NA  NA  NA</code></pre>
+<p><strong>Code book for Data Frame Dolphin</strong></p>
+<p><strong>Description</strong>
+Groups of dolphins were observed off the coast of Iceland near Keflavik in 1998. The data here give the time of the day and the main activity of the group, whether travelling quickly, feeding or socializing. The dolphin groups varied in size - usually feeding or socializing groups were larger than travelling groups.</p>
+<p><strong>Usage</strong>
+Dolphin</p>
+<p><strong>Format</strong></p>
+<p>This data frame contains the following columns:</p>
+<p>Activity: Main activity of group: travelling (Travel), feeding (Feed) or socializing (Social)</p>
+<p>Period: Time of the day: Morning, Noon, Afternoon or Evening</p>
+<p><strong>Source</strong>
+Activities of Dolphin Groups. (n.d.). Retrieved July 12, 2019, from <a href="http://www.statsci.org/data/general/dolpacti.html" class="uri">http://www.statsci.org/data/general/dolpacti.html</a></p>
+<p><strong>References</strong>
+Marianne Rasmussen, Department of Biology, University of Southern Denmark, Odense, Denmark.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability that a dolphin group is partaking in travel?</li>
+<li>What is the probability that a dolphin group is around in the morning?</li>
+<li>What is the probability that a dolphin group is partaking in travel given that it is morning?</li>
+<li>What is the probability that a dolphin group is around in the morning given that it is partaking in socializing?</li>
+<li>What is the probability that a dolphin group is around in theafternoon given that it is partaking in feeding?</li>
+<li>What is the probability that a dolphin group is around in the afternoon and is partaking in feeding?</li>
+<li>What is the probability that a dolphin group is around in the afternoon or is partaking in feeding?</li>
+<li>Are the events dolphin group around in the afternoon and dolphin group feeding mutually exclusive events? Why or why not?</li>
+<li>Are the events dolphin group around in the morning and dolphin group partaking in travel independent events? Why or why not?</li>
+</ol>
+<p><strong><br />
+</strong></p>
+</div>
+</div>
+<div id="counting-techniques" class="section level2">
+<h2><span class="header-section-number">4.4</span> Counting Techniques</h2>
+<p>There are times when the sample space or event space are very large, that it isn’t feasible to write it out. In that case, it helps to have mathematical tools for counting the size of the sample space and event space. These tools are known as counting techniques.</p>
+<p><strong>Multiplication Rule in Counting Techniques</strong></p>
+<p>If task 1 can be done ways, task 2 can be done ways, and so forth to task <em>n</em> being done ways. Then the number of ways to do task 1, 2,…, <em>n</em> together would be <span class="math inline">\(m_{1}*m_{2}*\cdots *m_{n}\)</span>.</p>
+<div id="example-multiplication-rule-in-counting" class="section level3">
+<h3><span class="header-section-number">4.4.1</span> Example: Multiplication Rule in Counting</h3>
+<p>A menu offers a choice of 3 salads, 8 main dishes, and 5 desserts. How many different meals consisting of one salad, one main dish, and one dessert are possible?</p>
+<p><strong>Solution:</strong></p>
+<p>There are three tasks, picking a salad, a main dish, and a dessert. The salad task can be done 3 ways, the main dish task can be done 8 ways, and the dessert task can be done 5 ways. The ways to pick a salad, main dish, and dessert are <span class="math inline">\(3*8*5=120\)</span>.</p>
+</div>
+<div id="example-multiplication-rule-in-counting-1" class="section level3">
+<h3><span class="header-section-number">4.4.2</span> Example: Multiplication Rule in Counting</h3>
+<p>How many three letter “words” can be made from the letters a, b, and c with no letters repeating? A “word” is just an ordered group of letters. It doesn’t have to be a real word in a dictionary.</p>
+<p><strong>Solution:</strong></p>
+<p>There are three tasks that must be done in this case. The tasks are to pick the first letter, then the second letter, and then the third letter. The first task can be done 3 ways since there are 3 letters. The second task can be done 2 ways, since the first task took one of the letters. The third task can be done 1 way, since the first and second task took two of the letters. There are <span class="math inline">\(3*2*1=6\)</span></p>
+<p>In example #4.4.2, the solution was found by find <span class="math inline">\(3*2*1\)</span>. Many counting problems involve multiplying a list of decreasing numbers. This is called a <strong>factorial</strong>. There is a special symbol for this.</p>
+<p><strong>Factorial</strong>
+<span class="math inline">\(n!=n(n-1)(n-2)*\cdots*2*1\)</span></p>
+<p>As an example:
+<span class="math inline">\(5!=5*4*3*2*1=120\)</span>
+<span class="math inline">\(8!=8*7*6*5*4*3*2*1=40320\)</span></p>
+<p><strong>0 factorial</strong> is defined to be 0!=1 and <strong>1 factorial</strong> is defined to be 1!=1. In R Studio, the command for factorial is factorial(number). As and example 7! using R Studio would be</p>
+<div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb186-1"><a href="probability.html#cb186-1"></a><span class="kw">factorial</span>(<span class="dv">7</span>)</span></code></pre></div>
+<pre><code>## [1] 5040</code></pre>
+<p>Sometimes you are trying to select <em>r</em> objects from <em>n</em> total objects. The number of ways to do this depends on if the order you choose the <em>r</em> objects matters or if it doesn’t. As an example if you are trying to call a person on the phone, you have to have their number in the right order. Otherwise, you call someone you didn’t mean to. In this case, the order of the numbers matters. If however you were picking random numbers for the lottery, it doesn’t matter which number you pick first. As long
+as you have the same numbers that the lottery people pick, you win. In this case the order doesn’t matter. A <strong>permutation</strong> is an arrangement of items with a specific order. You use permutations to count items when the order matters. When the order doesn’t matter you use combinations. A <strong>combination</strong> is an arrangement of items when order is not important. When you do a counting problem, the first thing you should ask yourself is “does order matter?”</p>
+<p><strong>Permutation Formula</strong></p>
+<p>Picking <em>r</em> objects from <em>n</em> total objects when order matters <span class="math inline">\(_{n}P_{r}=\frac{n!}{(n-r)!}\)</span>.</p>
+<p><strong>Combination Formula</strong></p>
+<p>Picking <em>r</em> objects from <em>n</em> total objects when order doesn’t matter <span class="math inline">\(_{n}C_{r}=\frac{n!}{r!(n-r)!}\)</span></p>
+<p>Most calculators have a factorial button on them, and many have the combination and permutation functions also.</p>
+</div>
+<div id="homework-9" class="section level3">
+<h3><span class="header-section-number">4.4.3</span> Homework</h3>
+<ol style="list-style-type: decimal">
+<li><p>You are going to a benefit dinner, and need to decide before the dinner what you want for salad, main dish, and dessert. You have 2 different salads to choose from, 3 main dishes, and 5 desserts. How many different meals are available?</p></li>
+<li><p>How many different phone numbers are possible in the area code 928?</p></li>
+<li><p>You are opening a T-shirt store. You can have long sleeves or short sleeves, three different colors, five different designs, and four different sizes. How many different shirts can you make?</p></li>
+<li><p>The California license plate has one number followed by three letters followed by three numbers. How many different license plates are there?</p></li>
+<li><p>Find <span class="math inline">\(_9P_4\)</span></p></li>
+<li><p>Find <span class="math inline">\(_{10}P_6\)</span></p></li>
+<li><p>Find <span class="math inline">\(_{10}C_5\)</span></p></li>
+<li><p>Find <span class="math inline">\(_{20}P_4\)</span></p></li>
+<li><p>You have a group of twelve people. You need to pick a president, treasurer, and secretary from the twelve. How many different ways can you do this?</p></li>
+<li><p>A baseball team has a 25-person roster. A batting order has nine people. How many different batting orders are there?</p></li>
+<li><p>An urn contains five red balls, seven yellow balls, and eight white balls. How many different ways can you pick two red balls?</p></li>
+<li><p>How many ways can you choose seven people from a group of twenty?</p></li>
+</ol>
+<p><strong><br />
+</strong></p>
+<p><strong>Data sources:</strong></p>
+<p><em>Aboriginal deaths in custody</em>. (2013, September 26). Retrieved from
+&lt;<a href="http://www.statsci.org/data/oz/custody.html" class="uri">http://www.statsci.org/data/oz/custody.html</a></p>
+<p>Activities of Dolphin Groups. (n.d.). Retrieved July 12, 2019, from <a href="http://www.statsci.org/data/general/dolpacti.html" class="uri">http://www.statsci.org/data/general/dolpacti.html</a></p>
+<p>Car Preferences. (n.d.). Retrieved July 11, 2019, from <a href="http://www.statsci.org/data/oz/carprefs.html" class="uri">http://www.statsci.org/data/oz/carprefs.html</a></p>
+<p>M&amp;M’s Color Distribution Analysis. (n.d.). Retrieved July 11, 2019, from <a href="https://joshmadison.com/2007/12/02/mms-color-distribution-analysis/" class="uri">https://joshmadison.com/2007/12/02/mms-color-distribution-analysis/</a></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="numerical-descriptions-of-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="discrete-probability-distributions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["Statistics_using_technology.pdf", "Statistics_using_technology.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

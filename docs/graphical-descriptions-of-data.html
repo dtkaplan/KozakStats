@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Graphical Descriptions of Data | Statistics Using Technology</title>
+  <meta name="description" content="An introductory statistics textbook." />
+  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Graphical Descriptions of Data | Statistics Using Technology" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="An introductory statistics textbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Graphical Descriptions of Data | Statistics Using Technology" />
+  
+  <meta name="twitter:description" content="An introductory statistics textbook." />
+  
+
+<meta name="author" content="Kathryn Kozak" />
+
+
+<meta name="date" content="2020-07-30" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="statistical-basics.html"/>
+<link rel="next" href="numerical-descriptions-of-data.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Statistics Using Technology</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i><b>0.1</b> Acknowledgments:</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#new-to-the-third-edition"><i class="fa fa-check"></i><b>0.2</b> New to the Third Edition:</a></li>
+<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#packages-needed-for-r-studio"><i class="fa fa-check"></i><b>0.3</b> Packages needed for R Studio:</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="statistical-basics.html"><a href="statistical-basics.html"><i class="fa fa-check"></i><b>1</b> Statistical Basics</a><ul>
+<li class="chapter" data-level="1.1" data-path="statistical-basics.html"><a href="statistical-basics.html#what-is-statistics"><i class="fa fa-check"></i><b>1.1</b> What is Statistics?</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="statistical-basics.html"><a href="statistical-basics.html#example-stating-definitions-for-qualitative-variable"><i class="fa fa-check"></i><b>1.1.1</b> Example: Stating Definitions for Qualitative Variable**</a></li>
+<li class="chapter" data-level="1.1.2" data-path="statistical-basics.html"><a href="statistical-basics.html#example-stating-definitions-for-qualitative-variable-1"><i class="fa fa-check"></i><b>1.1.2</b> Example: Stating Definitions for Qualitative Variable</a></li>
+<li class="chapter" data-level="1.1.3" data-path="statistical-basics.html"><a href="statistical-basics.html#example-stating-definitions-for-quantitative-variable"><i class="fa fa-check"></i><b>1.1.3</b> Example: Stating Definitions for Quantitative Variable</a></li>
+<li class="chapter" data-level="1.1.4" data-path="statistical-basics.html"><a href="statistical-basics.html#example-stating-definitions-for-quantitative-variable-1"><i class="fa fa-check"></i><b>1.1.4</b> Example: Stating Definitions for Quantitative Variable</a></li>
+<li class="chapter" data-level="1.1.5" data-path="statistical-basics.html"><a href="statistical-basics.html#example-discrete-or-continuous"><i class="fa fa-check"></i><b>1.1.5</b> Example: Discrete or Continuous</a></li>
+<li class="chapter" data-level="1.1.6" data-path="statistical-basics.html"><a href="statistical-basics.html#example-measurement-scale"><i class="fa fa-check"></i><b>1.1.6</b> Example: Measurement Scale</a></li>
+<li class="chapter" data-level="1.1.7" data-path="statistical-basics.html"><a href="statistical-basics.html#homework-section-1.1"><i class="fa fa-check"></i><b>1.1.7</b> Homework Section 1.1</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="statistical-basics.html"><a href="statistical-basics.html#sampling-methods"><i class="fa fa-check"></i><b>1.2</b> Sampling Methods</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="statistical-basics.html"><a href="statistical-basics.html#example-choosing-a-simple-random-sample"><i class="fa fa-check"></i><b>1.2.1</b> Example: Choosing a Simple Random Sample</a></li>
+<li class="chapter" data-level="1.2.2" data-path="statistical-basics.html"><a href="statistical-basics.html#example-how-not-to-choose-a-simple-random-sample"><i class="fa fa-check"></i><b>1.2.2</b> Example: How Not to Choose a Simple Random Sample</a></li>
+<li class="chapter" data-level="1.2.3" data-path="statistical-basics.html"><a href="statistical-basics.html#example-how-to-choose-a-simple-random-sample-using-r"><i class="fa fa-check"></i><b>1.2.3</b> Example: How to Choose a Simple Random Sample using R</a></li>
+<li class="chapter" data-level="1.2.4" data-path="statistical-basics.html"><a href="statistical-basics.html#example-sampling-type"><i class="fa fa-check"></i><b>1.2.4</b> Example: Sampling type</a></li>
+<li class="chapter" data-level="1.2.5" data-path="statistical-basics.html"><a href="statistical-basics.html#homework-section-1.2"><i class="fa fa-check"></i><b>1.2.5</b> Homework Section 1.2</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="statistical-basics.html"><a href="statistical-basics.html#experimental-design"><i class="fa fa-check"></i><b>1.3</b> Experimental Design</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="statistical-basics.html"><a href="statistical-basics.html#example-observational-study-or-experiment"><i class="fa fa-check"></i><b>1.3.1</b> Example: Observational Study or Experiment</a></li>
+<li class="chapter" data-level="1.3.2" data-path="statistical-basics.html"><a href="statistical-basics.html#homework-section-1.3"><i class="fa fa-check"></i><b>1.3.2</b> Homework Section 1.3</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="statistical-basics.html"><a href="statistical-basics.html#how-not-to-do-statistics"><i class="fa fa-check"></i><b>1.4</b> How Not to Do Statistics</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="statistical-basics.html"><a href="statistical-basics.html#example-bias-in-a-study"><i class="fa fa-check"></i><b>1.4.1</b> Example: Bias in a Study**</a></li>
+<li class="chapter" data-level="1.4.2" data-path="statistical-basics.html"><a href="statistical-basics.html#example-cause-and-effect"><i class="fa fa-check"></i><b>1.4.2</b> Example: Cause and Effect</a></li>
+<li class="chapter" data-level="1.4.3" data-path="statistical-basics.html"><a href="statistical-basics.html#example-generalizations"><i class="fa fa-check"></i><b>1.4.3</b> Example: Generalizations</a></li>
+<li class="chapter" data-level="1.4.4" data-path="statistical-basics.html"><a href="statistical-basics.html#homework-section-1.4"><i class="fa fa-check"></i><b>1.4.4</b> Homework Section 1.4</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html"><i class="fa fa-check"></i><b>2</b> Graphical Descriptions of Data</a><ul>
+<li class="chapter" data-level="2.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#qualitative-data"><i class="fa fa-check"></i><b>2.1</b> Qualitative Data</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-drawing-a-bar-chart"><i class="fa fa-check"></i><b>2.1.1</b> Example: Drawing a Bar Chart**</a></li>
+<li class="chapter" data-level="2.1.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework"><i class="fa fa-check"></i><b>2.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#quantitative-data"><i class="fa fa-check"></i><b>2.2</b> Quantitative Data</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-drawing-a-histogram-and-density-plot"><i class="fa fa-check"></i><b>2.2.1</b> Example: Drawing a Histogram and Density plot</a></li>
+<li class="chapter" data-level="2.2.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-drawing-a-histogram-and-density-plot-1"><i class="fa fa-check"></i><b>2.2.2</b> Example: Drawing a Histogram and Density plot</a></li>
+<li class="chapter" data-level="2.2.3" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework-1"><i class="fa fa-check"></i><b>2.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#other-graphical-representations-of-data"><i class="fa fa-check"></i><b>2.3</b> Other Graphical Representations of Data</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-scatter-plot"><i class="fa fa-check"></i><b>2.3.1</b> Example: Scatter Plot**</a></li>
+<li class="chapter" data-level="2.3.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-time-series-plot"><i class="fa fa-check"></i><b>2.3.2</b> Example: Time-Series Plot**</a></li>
+<li class="chapter" data-level="2.3.3" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework-2"><i class="fa fa-check"></i><b>2.3.3</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html"><i class="fa fa-check"></i><b>3</b> Numerical Descriptions of Data</a><ul>
+<li class="chapter" data-level="3.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#measures-of-center"><i class="fa fa-check"></i><b>3.1</b> Measures of Center</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-finding-the-mean-and-median-using-r"><i class="fa fa-check"></i><b>3.1.1</b> Example: Finding the Mean and Median using R</a></li>
+<li class="chapter" data-level="3.1.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-finding-mean-and-median-with-filtering"><i class="fa fa-check"></i><b>3.1.2</b> Example: Finding Mean and Median with filtering</a></li>
+<li class="chapter" data-level="3.1.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-affect-of-extreme-values-on-mean-and-median"><i class="fa fa-check"></i><b>3.1.3</b> Example: Affect of Extreme Values on Mean and Median**</a></li>
+<li class="chapter" data-level="3.1.4" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-weighted-average"><i class="fa fa-check"></i><b>3.1.4</b> Example: Weighted Average</a></li>
+<li class="chapter" data-level="3.1.5" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-weighted-average-1"><i class="fa fa-check"></i><b>3.1.5</b> Example: Weighted Average</a></li>
+<li class="chapter" data-level="3.1.6" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-3"><i class="fa fa-check"></i><b>3.1.6</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#measures-of-spread"><i class="fa fa-check"></i><b>3.2</b> Measures of Spread</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-range"><i class="fa fa-check"></i><b>3.2.1</b> Example: Range</a></li>
+<li class="chapter" data-level="3.2.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-finding-the-standard-deviation"><i class="fa fa-check"></i><b>3.2.2</b> Example: Finding the Standard Deviation</a></li>
+<li class="chapter" data-level="3.2.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-the-gneral-rule"><i class="fa fa-check"></i><b>3.2.3</b> Example: the gneral rule</a></li>
+<li class="chapter" data-level="3.2.4" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-determining-if-a-value-is-unusual"><i class="fa fa-check"></i><b>3.2.4</b> Example: Determining If a Value Is Unusual</a></li>
+<li class="chapter" data-level="3.2.5" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-4"><i class="fa fa-check"></i><b>3.2.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#ranking"><i class="fa fa-check"></i><b>3.3</b> Ranking</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-interpreting-percentile"><i class="fa fa-check"></i><b>3.3.1</b> Example: Interpreting Percentile</a></li>
+<li class="chapter" data-level="3.3.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-percentile-versus-score"><i class="fa fa-check"></i><b>3.3.2</b> Example: Percentile Versus Score</a></li>
+<li class="chapter" data-level="3.3.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-five-number-summary-and-boxplot"><i class="fa fa-check"></i><b>3.3.3</b> Example: Five-number Summary and Boxplot</a></li>
+<li class="chapter" data-level="3.3.4" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-separating-based-on-a-factor"><i class="fa fa-check"></i><b>3.3.4</b> Example: Separating based on a factor</a></li>
+<li class="chapter" data-level="3.3.5" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-putting-it-all-together"><i class="fa fa-check"></i><b>3.3.5</b> Example: Putting it all together</a></li>
+<li class="chapter" data-level="3.3.6" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-5"><i class="fa fa-check"></i><b>3.3.6</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>4</b> Probability</a><ul>
+<li class="chapter" data-level="4.1" data-path="probability.html"><a href="probability.html#empirical-probability"><i class="fa fa-check"></i><b>4.1</b> Empirical Probability</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="probability.html"><a href="probability.html#example-statistics-class-survey"><i class="fa fa-check"></i><b>4.1.1</b> Example: Statistics class survey</a></li>
+<li class="chapter" data-level="4.1.2" data-path="probability.html"><a href="probability.html#homework-6"><i class="fa fa-check"></i><b>4.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="probability.html"><a href="probability.html#theoretical-probability"><i class="fa fa-check"></i><b>4.2</b> Theoretical Probability</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="probability.html"><a href="probability.html#example-equally-likely-outcomes"><i class="fa fa-check"></i><b>4.2.1</b> Example: Equally Likely Outcomes</a></li>
+<li class="chapter" data-level="4.2.2" data-path="probability.html"><a href="probability.html#example-calculating-theoretical-probabilities"><i class="fa fa-check"></i><b>4.2.2</b> Example: Calculating Theoretical Probabilities</a></li>
+<li class="chapter" data-level="4.2.3" data-path="probability.html"><a href="probability.html#example-calculating-theoretical-probabilities-1"><i class="fa fa-check"></i><b>4.2.3</b> Example: Calculating Theoretical Probabilities</a></li>
+<li class="chapter" data-level="4.2.4" data-path="probability.html"><a href="probability.html#example-calculating-theoretical-probabilities-2"><i class="fa fa-check"></i><b>4.2.4</b> Example: Calculating Theoretical Probabilities</a></li>
+<li class="chapter" data-level="4.2.5" data-path="probability.html"><a href="probability.html#example-complementary-events"><i class="fa fa-check"></i><b>4.2.5</b> Example: Complementary Events</a></li>
+<li class="chapter" data-level="4.2.6" data-path="probability.html"><a href="probability.html#example-using-the-complement-to-find-probabilities"><i class="fa fa-check"></i><b>4.2.6</b> Example: Using the Complement to Find Probabilities</a></li>
+<li class="chapter" data-level="4.2.7" data-path="probability.html"><a href="probability.html#example-using-addition-rules"><i class="fa fa-check"></i><b>4.2.7</b> Example: Using Addition Rules</a></li>
+<li class="chapter" data-level="4.2.8" data-path="probability.html"><a href="probability.html#example-odds-against-and-payoff-odds"><i class="fa fa-check"></i><b>4.2.8</b> Example: Odds Against and Payoff Odds</a></li>
+<li class="chapter" data-level="4.2.9" data-path="probability.html"><a href="probability.html#homework-7"><i class="fa fa-check"></i><b>4.2.9</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="probability.html"><a href="probability.html#conditional-probability"><i class="fa fa-check"></i><b>4.3</b> Conditional Probability</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="probability.html"><a href="probability.html#example-conditional-probabilities"><i class="fa fa-check"></i><b>4.3.1</b> Example: Conditional Probabilities</a></li>
+<li class="chapter" data-level="4.3.2" data-path="probability.html"><a href="probability.html#example-independent-events"><i class="fa fa-check"></i><b>4.3.2</b> Example: Independent Events</a></li>
+<li class="chapter" data-level="4.3.3" data-path="probability.html"><a href="probability.html#example-multiplication-rule"><i class="fa fa-check"></i><b>4.3.3</b> Example: Multiplication Rule</a></li>
+<li class="chapter" data-level="4.3.4" data-path="probability.html"><a href="probability.html#example-application-problem"><i class="fa fa-check"></i><b>4.3.4</b> Example: Application Problem</a></li>
+<li class="chapter" data-level="4.3.5" data-path="probability.html"><a href="probability.html#homework-8"><i class="fa fa-check"></i><b>4.3.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="probability.html"><a href="probability.html#counting-techniques"><i class="fa fa-check"></i><b>4.4</b> Counting Techniques</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="probability.html"><a href="probability.html#example-multiplication-rule-in-counting"><i class="fa fa-check"></i><b>4.4.1</b> Example: Multiplication Rule in Counting</a></li>
+<li class="chapter" data-level="4.4.2" data-path="probability.html"><a href="probability.html#example-multiplication-rule-in-counting-1"><i class="fa fa-check"></i><b>4.4.2</b> Example: Multiplication Rule in Counting</a></li>
+<li class="chapter" data-level="4.4.3" data-path="probability.html"><a href="probability.html#homework-9"><i class="fa fa-check"></i><b>4.4.3</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html"><i class="fa fa-check"></i><b>5</b> Discrete Probability Distributions</a><ul>
+<li class="chapter" data-level="5.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#basics-of-probability-distributions"><i class="fa fa-check"></i><b>5.1</b> Basics of Probability Distributions</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-probability-distribution"><i class="fa fa-check"></i><b>5.1.1</b> Example: Probability Distribution</a></li>
+<li class="chapter" data-level="5.1.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-calculating-the-expected-value"><i class="fa fa-check"></i><b>5.1.2</b> Example: Calculating the Expected Value</a></li>
+<li class="chapter" data-level="5.1.3" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-is-the-event-unusual"><i class="fa fa-check"></i><b>5.1.3</b> Example: Is the Event Unusual</a></li>
+<li class="chapter" data-level="5.1.4" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-10"><i class="fa fa-check"></i><b>5.1.4</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#binomial-probability-distribution"><i class="fa fa-check"></i><b>5.2</b> Binomial Probability Distribution</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-calculating-binomial-probabilities"><i class="fa fa-check"></i><b>5.2.1</b> Example: Calculating Binomial Probabilities</a></li>
+<li class="chapter" data-level="5.2.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-calculating-binomial-probabilities-1"><i class="fa fa-check"></i><b>5.2.2</b> Example: Calculating Binomial Probabilities</a></li>
+<li class="chapter" data-level="5.2.3" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-11"><i class="fa fa-check"></i><b>5.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#mean-and-standard-deviation-of-binomial-distribution"><i class="fa fa-check"></i><b>5.3</b> Mean and Standard Deviation of Binomial Distribution</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-finding-the-probability-distribution-mean-variance-and-standard-deviation-of-a-binomial-distribution"><i class="fa fa-check"></i><b>5.3.1</b> Example: Finding the Probability Distribution, Mean, Variance and Standard Deviation of a Binomial Distribution</a></li>
+<li class="chapter" data-level="5.3.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-12"><i class="fa fa-check"></i><b>5.3.2</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html"><i class="fa fa-check"></i><b>6</b> Continuous Probability Distributions</a><ul>
+<li class="chapter" data-level="6.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#finding-probabilities-for-the-normal-distribution"><i class="fa fa-check"></i><b>6.1</b> Finding Probabilities for the Normal Distribution</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-general-normal-distribution"><i class="fa fa-check"></i><b>6.1.1</b> Example: General Normal Distribution</a></li>
+<li class="chapter" data-level="6.1.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-general-normal-distribution-1"><i class="fa fa-check"></i><b>6.1.2</b> Example: General Normal Distribution</a></li>
+<li class="chapter" data-level="6.1.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-13"><i class="fa fa-check"></i><b>6.1.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#assessing-normality"><i class="fa fa-check"></i><b>6.2</b> Assessing Normality</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-is-it-normal"><i class="fa fa-check"></i><b>6.2.1</b> Example: Is It Normal?</a></li>
+<li class="chapter" data-level="6.2.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-is-it-normal-1"><i class="fa fa-check"></i><b>6.2.2</b> Example: Is It Normal?</a></li>
+<li class="chapter" data-level="6.2.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-14"><i class="fa fa-check"></i><b>6.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#sampling-distribution-and-the-central-limit-theorem"><i class="fa fa-check"></i><b>6.3</b> Sampling Distribution and the Central Limit Theorem</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-sampling-distribution"><i class="fa fa-check"></i><b>6.3.1</b> Example: Sampling Distribution</a></li>
+<li class="chapter" data-level="6.3.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-finding-probabilities-for-sample-means"><i class="fa fa-check"></i><b>6.3.2</b> Example: Finding Probabilities for Sample Means</a></li>
+<li class="chapter" data-level="6.3.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-finding-probabilities-for-sample-means-1"><i class="fa fa-check"></i><b>6.3.3</b> Example: Finding Probabilities for Sample Means</a></li>
+<li class="chapter" data-level="6.3.4" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-15"><i class="fa fa-check"></i><b>6.3.4</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="one-sample-inference.html"><a href="one-sample-inference.html"><i class="fa fa-check"></i><b>7</b> One-Sample Inference</a><ul>
+<li class="chapter" data-level="7.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#basics-of-hypothesis-testing"><i class="fa fa-check"></i><b>7.1</b> Basics of Hypothesis Testing</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-basics-of-hypothesis-testing"><i class="fa fa-check"></i><b>7.1.1</b> Example: Basics of Hypothesis Testing</a></li>
+<li class="chapter" data-level="7.1.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-battery-example-revisited."><i class="fa fa-check"></i><b>7.1.2</b> Example: Battery Example Revisited.</a></li>
+<li class="chapter" data-level="7.1.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-conclusions-in-hypothesis-tests"><i class="fa fa-check"></i><b>7.1.3</b> Example: Conclusions in Hypothesis Tests</a></li>
+<li class="chapter" data-level="7.1.4" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-stating-hypotheses"><i class="fa fa-check"></i><b>7.1.4</b> Example: Stating Hypotheses</a></li>
+<li class="chapter" data-level="7.1.5" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-stating-type-i-and-ii-errors-and-picking-level-of-significance"><i class="fa fa-check"></i><b>7.1.5</b> Example: Stating Type I and II Errors and Picking Level of Significance</a></li>
+<li class="chapter" data-level="7.1.6" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-16"><i class="fa fa-check"></i><b>7.1.6</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#one-sample-proportion-test"><i class="fa fa-check"></i><b>7.2</b> One-Sample Proportion Test</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-hypothesis-test-for-one-proportion"><i class="fa fa-check"></i><b>7.2.1</b> Example: Hypothesis Test for One Proportion</a></li>
+<li class="chapter" data-level="7.2.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-hypothesis-test-for-one-proportion-1"><i class="fa fa-check"></i><b>7.2.2</b> Example: Hypothesis Test for One Proportion</a></li>
+<li class="chapter" data-level="7.2.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-17"><i class="fa fa-check"></i><b>7.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#one-sample-test-for-the-mean"><i class="fa fa-check"></i><b>7.3</b> One-Sample Test for the Mean</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-resampling"><i class="fa fa-check"></i><b>7.3.1</b> Example: Resampling</a></li>
+<li class="chapter" data-level="7.3.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-test-of-the-mean-using-one-sample-t-test"><i class="fa fa-check"></i><b>7.3.2</b> Example: Test of the Mean Using One Sample T-test</a></li>
+<li class="chapter" data-level="7.3.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-test-of-the-mean-using-one-sample-t-test-1"><i class="fa fa-check"></i><b>7.3.3</b> Example: Test of the Mean Using One Sample T-test</a></li>
+<li class="chapter" data-level="7.3.4" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-18"><i class="fa fa-check"></i><b>7.3.4</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="estimation.html"><a href="estimation.html"><i class="fa fa-check"></i><b>8</b> Estimation</a><ul>
+<li class="chapter" data-level="8.1" data-path="estimation.html"><a href="estimation.html#basics-of-confidence-intervals"><i class="fa fa-check"></i><b>8.1</b> Basics of Confidence Intervals</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="estimation.html"><a href="estimation.html#example-stating-the-statistical-and-real-world-interpretations-for-a-confidence-interval"><i class="fa fa-check"></i><b>8.1.1</b> Example: Stating the Statistical and Real World Interpretations for a Confidence Interval</a></li>
+<li class="chapter" data-level="8.1.2" data-path="estimation.html"><a href="estimation.html#homework-19"><i class="fa fa-check"></i><b>8.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="estimation.html"><a href="estimation.html#one-sample-interval-for-the-proportion"><i class="fa fa-check"></i><b>8.2</b> One-Sample Interval for the Proportion</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="estimation.html"><a href="estimation.html#example-confidence-interval-for-the-population-proportion"><i class="fa fa-check"></i><b>8.2.1</b> Example: Confidence Interval for the Population Proportion</a></li>
+<li class="chapter" data-level="8.2.2" data-path="estimation.html"><a href="estimation.html#example-confidence-interval-for-the-population-proportion-1"><i class="fa fa-check"></i><b>8.2.2</b> Example: Confidence Interval for the Population Proportion</a></li>
+<li class="chapter" data-level="8.2.3" data-path="estimation.html"><a href="estimation.html#homework-20"><i class="fa fa-check"></i><b>8.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="estimation.html"><a href="estimation.html#one-sample-interval-for-the-mean"><i class="fa fa-check"></i><b>8.3</b> One-Sample Interval for the Mean</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="estimation.html"><a href="estimation.html#example-confidence-interval-for-the-population-mean"><i class="fa fa-check"></i><b>8.3.1</b> Example: Confidence Interval for the Population Mean</a></li>
+<li class="chapter" data-level="8.3.2" data-path="estimation.html"><a href="estimation.html#example-confidence-interval-for-the-population-mean-1"><i class="fa fa-check"></i><b>8.3.2</b> Example: Confidence Interval for the Population Mean</a></li>
+<li class="chapter" data-level="8.3.3" data-path="estimation.html"><a href="estimation.html#homework-21"><i class="fa fa-check"></i><b>8.3.3</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="two-sample-inference.html"><a href="two-sample-inference.html"><i class="fa fa-check"></i><b>9</b> Two-Sample Inference</a><ul>
+<li class="chapter" data-level="9.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#two-proportions"><i class="fa fa-check"></i><b>9.1</b> Two Proportions</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-two-population-proportions"><i class="fa fa-check"></i><b>9.1.1</b> Example: Hypothesis Test for Two Population Proportions</a></li>
+<li class="chapter" data-level="9.1.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-confidence-interval-for-two-population-proportions"><i class="fa fa-check"></i><b>9.1.2</b> Example: Confidence Interval for Two Population Proportions</a></li>
+<li class="chapter" data-level="9.1.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-22"><i class="fa fa-check"></i><b>9.1.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#paired-samples-for-two-means"><i class="fa fa-check"></i><b>9.2</b> Paired Samples for Two Means</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-independent-or-dependent-samples"><i class="fa fa-check"></i><b>9.2.1</b> Example: Independent or Dependent Samples</a></li>
+<li class="chapter" data-level="9.2.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-paired-samples"><i class="fa fa-check"></i><b>9.2.2</b> Example: Hypothesis Test for Paired Samples</a></li>
+<li class="chapter" data-level="9.2.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-paired-samples-1"><i class="fa fa-check"></i><b>9.2.3</b> Example: Hypothesis Test for Paired Samples</a></li>
+<li class="chapter" data-level="9.2.4" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-confidence-interval-for-paired-samples"><i class="fa fa-check"></i><b>9.2.4</b> Example: Confidence Interval for Paired Samples</a></li>
+<li class="chapter" data-level="9.2.5" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-23"><i class="fa fa-check"></i><b>9.2.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#independent-samples-for-two-means"><i class="fa fa-check"></i><b>9.3</b> Independent Samples for Two Means</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-two-means"><i class="fa fa-check"></i><b>9.3.1</b> Example: Hypothesis Test for Two Means</a></li>
+<li class="chapter" data-level="9.3.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-confidence-interval-in-two-samples"><i class="fa fa-check"></i><b>9.3.2</b> Example: Confidence Interval in Two Samples</a></li>
+<li class="chapter" data-level="9.3.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-two-means-1"><i class="fa fa-check"></i><b>9.3.3</b> Example: Hypothesis Test for Two Means</a></li>
+<li class="chapter" data-level="9.3.4" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-confidence-interval-for-two-independent-samples"><i class="fa fa-check"></i><b>9.3.4</b> Example: Confidence Interval for Two Independent Samples</a></li>
+<li class="chapter" data-level="9.3.5" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-24"><i class="fa fa-check"></i><b>9.3.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="two-sample-inference.html"><a href="two-sample-inference.html#which-analysis-should-you-conduct"><i class="fa fa-check"></i><b>9.4</b> Which Analysis Should You Conduct?</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html"><i class="fa fa-check"></i><b>10</b> Regression and Correlation</a><ul>
+<li class="chapter" data-level="10.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#regression"><i class="fa fa-check"></i><b>10.1</b> Regression</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-determining-if-there-is-a-relationship"><i class="fa fa-check"></i><b>10.1.1</b> Example: Determining If There Is a Relationship</a></li>
+<li class="chapter" data-level="10.1.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-25"><i class="fa fa-check"></i><b>10.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#correlation"><i class="fa fa-check"></i><b>10.2</b> Correlation</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-find-the-coefficient-of-determinatin-r2"><i class="fa fa-check"></i><b>10.2.1</b> Example: Find the coefficient of determinatin <span class="math inline">\(R^2\)</span></a></li>
+<li class="chapter" data-level="10.2.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-calculating-the-linear-correlation-coefficient-r"><i class="fa fa-check"></i><b>10.2.2</b> Example: Calculating the Linear Correlation Coefficient, <em>r</em></a></li>
+<li class="chapter" data-level="10.2.3" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-correlation-versus-causation"><i class="fa fa-check"></i><b>10.2.3</b> Example: Correlation Versus Causation</a></li>
+<li class="chapter" data-level="10.2.4" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-26"><i class="fa fa-check"></i><b>10.2.4</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#inference-for-regression-and-correlation"><i class="fa fa-check"></i><b>10.3</b> Inference for Regression and Correlation</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-finding-the-standard-error-of-the-estimate"><i class="fa fa-check"></i><b>10.3.1</b> Example: Finding the Standard Error of the Estimate</a></li>
+<li class="chapter" data-level="10.3.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-testing-the-claim-of-a-linear-correlation"><i class="fa fa-check"></i><b>10.3.2</b> Example: Testing the Claim of a Linear Correlation</a></li>
+<li class="chapter" data-level="10.3.3" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-27"><i class="fa fa-check"></i><b>10.3.3</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html"><i class="fa fa-check"></i><b>11</b> Chi-Square and ANOVA Tests</a><ul>
+<li class="chapter" data-level="11.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#chi-square-test-for-independence"><i class="fa fa-check"></i><b>11.1</b> Chi-Square Test for Independence</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#example-hypothesis-test-with-chi-square-test"><i class="fa fa-check"></i><b>11.1.1</b> Example: Hypothesis Test with Chi-Square Test</a></li>
+<li class="chapter" data-level="11.1.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-28"><i class="fa fa-check"></i><b>11.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#chi-square-goodness-of-fit"><i class="fa fa-check"></i><b>11.2</b> Chi-Square Goodness of Fit</a><ul>
+<li class="chapter" data-level="11.2.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#example-goodness-of-fit-test"><i class="fa fa-check"></i><b>11.2.1</b> Example: Goodness of Fit Test</a></li>
+<li class="chapter" data-level="11.2.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-29"><i class="fa fa-check"></i><b>11.2.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#analysis-of-variance-anova"><i class="fa fa-check"></i><b>11.3</b> Analysis of Variance (ANOVA)</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#example-hypothesis-test-involving-several-means"><i class="fa fa-check"></i><b>11.3.1</b> Example: Hypothesis Test Involving Several Means</a></li>
+<li class="chapter" data-level="11.3.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-30"><i class="fa fa-check"></i><b>11.3.2</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/StatPREP/Stat_using_technology" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistics Using Technology</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="graphical-descriptions-of-data" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Graphical Descriptions of Data</h1>
+<p>In chapter 1, you were introduced to the concepts of population, which again is a collection of all the measurements from the individuals of interest. Remember, in most cases you can’t collect the entire
+population, so you have to take a sample. Thus, you collect data either through a sample or a census. Now you have a large number of data values. What can you do with them? No one likes to look at just a set of numbers. One thing is to organize the data into a table or graph. Ultimately though, you want to be able to use that graph to interpret the data, to describe the distribution of the data set, and to explore different characteristics of the data. The characteristics that will be discussed in this chapter and the next chapter are:</p>
+<ol style="list-style-type: decimal">
+<li>Center: middle of the data set, also known as the average.</li>
+<li>Variation: how much the data varies.</li>
+<li>Distribution: shape of the data (symmetric, uniform, or skewed).</li>
+<li>Qualitative data: analysis of the data</li>
+<li>Outliers: data values that are far from the majority of the data.</li>
+<li>Time: changing characteristics of the data over time.</li>
+</ol>
+<p>This chapter will focus mostly on using the graphs to understand aspects of the data, and not as much on how to create the graphs. There is technology that will create most of the graphs, though it is important for you to understand the basics of how to create them.</p>
+<p>This textbook uses R Studio to perform all graphical and descriptive statistics, and all statistical inference. When using R Studio, every command is performed the same way. You start off with a
+goal(explanatory variable ~ response variable, data=data frame_name,…)</p>
+<p>R Studio uses packages to make calculations easier. For this textbook, you will mostly need the package mosaic. There will be others that you will need on occasion, but you will be told that at the time. Most likely, mosaic is already installed in your R Studio. If you wish to install other packages you use the command</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="graphical-descriptions-of-data.html#cb5-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;name of package&quot;</span>)</span></code></pre></div>
+<p>where you replace the name of package with the package you wish to install.</p>
+<p>Once the package is installed, then you will need to tell R Studio you want to use it every time you start R Studio. The command to tell R Studio you want to use a package is</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="graphical-descriptions-of-data.html#cb6-1"></a><span class="kw">library</span>(<span class="st">&quot;name of package&quot;</span>)</span></code></pre></div>
+<p>You will need to turn on the package mosaic. The NHANES package contains a data frame that is useful. Both are accessed by doing.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="graphical-descriptions-of-data.html#cb7-1"></a><span class="kw">library</span>(<span class="st">&quot;mosaic&quot;</span>)</span>
+<span id="cb7-2"><a href="graphical-descriptions-of-data.html#cb7-2"></a><span class="kw">library</span>(<span class="st">&quot;NHANES&quot;</span>)</span>
+<span id="cb7-3"><a href="graphical-descriptions-of-data.html#cb7-3"></a><span class="kw">library</span>(<span class="st">&quot;StatsUsingTechnologyData&quot;</span>)</span></code></pre></div>
+<p>Back to the basic command</p>
+<p>goal(explanatory variable ~ response variable, data=data frame_name,…)</p>
+<p>The goal depends on what you want to do. If you want to create a graph then you would need</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="graphical-descriptions-of-data.html#cb8-1"></a><span class="kw">gf_graphtype</span>(explanatory variable <span class="op">~</span><span class="st"> </span>response variable, <span class="dt">data=</span>dataframe_name, ...)</span></code></pre></div>
+<p>As an example if you want to create a density plot of cholesterol levels on day 2 from a dataframe called Cholesterol, then your command would be</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="graphical-descriptions-of-data.html#cb9-1"></a><span class="kw">gf_density</span>(<span class="op">~</span>day2, <span class="dt">data=</span>Cholesterol)</span></code></pre></div>
+<p>You will see more on what the different commands are that you would use. A word about the … at the end of the command. That means there are other things you can do, but that is up to you if you want to actually do them. They do not need to be used if you don’t want to. The following sections will show you how to create the different graphs that are usually completed in an introductory statistics course.</p>
+<p><em><br />
+</em></p>
+<div id="qualitative-data" class="section level2">
+<h2><span class="header-section-number">2.1</span> Qualitative Data</h2>
+<p>Remember, qualitative data are words describing a characteristic of the individual. There are several different graphs that are used for qualitative data. These graphs include bar graphs, Pareto charts, and pie charts. Bar graphs can be created using a statistical program like R Studio.</p>
+<p><strong>Bar graphs or charts</strong> consist of the frequencies on one axis and the categories on the other axis. Drawing the bar graph using R is performed using the following command.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="graphical-descriptions-of-data.html#cb10-1"></a><span class="kw">gf_bar</span>(<span class="op">~</span>explanatory variable, <span class="dt">data=</span>Dataframe)</span></code></pre></div>
+<div id="example-drawing-a-bar-chart" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Example: Drawing a Bar Chart**</h3>
+<p>Data was collected for two semesters in a statistics class. The data frame in is the #2.1.1. The command</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="graphical-descriptions-of-data.html#cb11-1"></a><span class="kw">head</span>(data frame) </span></code></pre></div>
+<p>shows the variables and the first few lines of the data set.</p>
+<p><strong>Table #2.1.1: Statistis class survey</strong></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="graphical-descriptions-of-data.html#cb12-1"></a>Class&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/class_survey.csv&quot;</span>)</span>
+<span id="cb12-2"><a href="graphical-descriptions-of-data.html#cb12-2"></a><span class="kw">head</span>(Class)</span></code></pre></div>
+<pre><code>##   vehicle gender distance_campus           ice_cream rent
+## 1    None Female             1.5        Cookie Dough  724
+## 2 Mercury Female            14.7             Sherbet  200
+## 3    Ford Female             2.4 Chocolate Brownie.   600
+## 4  Toyota Female             5.2              coffee    0
+## 5    Jeep   Male             2.0        Cookie Dough  600
+## 6  Subaru   Male             5.0                none  500
+##                                      major height        winter
+## 1 Environmental and Sustainability Studies     61      Liked it
+## 2                   Administrative Justice     60 Don&#39;t like it
+## 3                                 Bio Chem     68      Liked it
+## 4                                              66      Loved it
+## 5                       Pre-health Careers     71      Loved it
+## 6                                  Finance     72    No opinion</code></pre>
+<p>Every data frame has a code book that describes the data set, the source of the data set, and a listing and description of the variables in the data frame.</p>
+<p><strong>Code book for Data Frame Class</strong></p>
+<p><strong>Description</strong>
+Survey results from two semesters of statistics classes at Coconino Community College in the years 2018-2019.</p>
+<p><strong>Format</strong></p>
+<p>This data frame contains the following columns:</p>
+<p>vehicle: Type of car a student drives</p>
+<p>gender: Self declared gender of a student</p>
+<p>distance_campus: how far a student lives from the Lone Tree Campus of Coconino Community College (miles)</p>
+<p>ice_cream: favorite ice cream flavor</p>
+<p>rent: How much a student pays in rent</p>
+<p>major: Students declared major</p>
+<p>height: height of the student (inches)</p>
+<p>winter: Student’s opinion of winter (Love it, Like it, Don’t like, No opinion)</p>
+<p><strong>Source</strong></p>
+<p>Kozak K (2019). Survey results form surveys collected in statistics class at Coconino Community College.</p>
+<p><strong>References</strong></p>
+<p>Kozak, 2019</p>
+<p>Create a bar graph of vehicle type. To do this in R Studio, use the command</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="graphical-descriptions-of-data.html#cb14-1"></a><span class="kw">gf_bar</span>(<span class="op">~</span>variable, <span class="dt">data=</span>DataFrame, ...)</span></code></pre></div>
+<p>where gf_bar is the goal, vehicle is the name of the response variable (there is no explanatory variable), the dataframe is Class, and a title was added to the graph.</p>
+
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="graphical-descriptions-of-data.html#cb15-1"></a><span class="kw">gf_bar</span>(<span class="op">~</span>vehicle, <span class="dt">data=</span>Class, <span class="dt">title=</span><span class="st">&quot;Cars driving by students in statistics class&quot;</span>)</span></code></pre></div>
+<div class="figure"><span id="fig:class-data-bar"></span>
+<img src="Statistics_using_technology_files/figure-html/class-data-bar-1.png" alt="Bar Graph for Type of Car Data" width="672" />
+<p class="caption">
+Figure 2.1: Bar Graph for Type of Car Data
+</p>
+</div>
+<p>Notice from the graph (Figure <a href="graphical-descriptions-of-data.html#fig:class-data-bar">2.1</a>), you can see that Chevrolet and Ford are the more popular car, with Jeep, Subaru, and Toyota not far behind. Many types seems to be the lesser used, and tied for last place. However, more data would help to figure this out.</p>
+<ul>
+<li>All graphs should have labels on each axis and a title for the graph.*</li>
+</ul>
+<p>The beauty of data frames with multiple variables is that you can answer many questions from the data. Suppose you want to see if gender makes a difference for the type of car a person drives. If you are a car manufacturer, if you knew that certain genders like certain cars, then you would advertise to the different genders. To create a bar graph that separates based on gender, perform the following command in R Studio.</p>
+
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="graphical-descriptions-of-data.html#cb16-1"></a><span class="kw">gf_bar</span>(<span class="op">~</span>vehicle<span class="op">|</span>gender, <span class="dt">data=</span>Class, <span class="dt">title=</span><span class="st">&quot;Cars driving by students in statistics class&quot;</span>)</span></code></pre></div>
+<div class="figure"><span id="fig:class-data-bar-gender"></span>
+<img src="Statistics_using_technology_files/figure-html/class-data-bar-gender-1.png" alt="Bar Graph for Type of Car Data" width="672" />
+<p class="caption">
+Figure 2.2: Bar Graph for Type of Car Data
+</p>
+</div>
+<p>Notice a Ford is driven by females more than any other car, while Chevrolet, Mercury, and Subaru cars are equally driven by males. Obviously a larger sample would be needed to make any conclusions from this data.</p>
+<p>There are other types of graphs that can be created for quantitative variables. Another type is known as a dot plot. The command for this graph (Figure <a href="graphical-descriptions-of-data.html#fig:class-data-dot-gender">2.3</a>) is as follows.</p>
+
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="graphical-descriptions-of-data.html#cb17-1"></a><span class="kw">gf_dotplot</span>(<span class="op">~</span>vehicle, <span class="dt">data=</span>Class, <span class="dt">title=</span><span class="st">&quot;Cars driving by students in statistics class&quot;</span>)</span></code></pre></div>
+<pre><code>## `stat_bindot()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<div class="figure"><span id="fig:class-data-dot-gender"></span>
+<img src="Statistics_using_technology_files/figure-html/class-data-dot-gender-1.png" alt="Dot Plot for Type of Car Data" width="672" />
+<p class="caption">
+Figure 2.3: Dot Plot for Type of Car Data
+</p>
+</div>
+<p>Notice a dot plot is like a bar chart. Both give you the same information. You can also divide a dot plot by gender. Another type of graph that is also useful and similar to the dot plot is a point plot (scatter plot). In this plot (Figure <a href="graphical-descriptions-of-data.html#fig:car-data-gender">2.4</a>) you can graph the explanatory variable versus the response variable. The command for this in R Studio is as follows.</p>
+
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="graphical-descriptions-of-data.html#cb19-1"></a><span class="kw">gf_point</span>(vehicle<span class="op">~</span>gender, <span class="dt">data=</span>Class, <span class="dt">title=</span><span class="st">&quot;Cars driving by students in statistics class&quot;</span>)</span></code></pre></div>
+<div class="figure"><span id="fig:car-data-gender"></span>
+<img src="Statistics_using_technology_files/figure-html/car-data-gender-1.png" alt="Point plot for Type of Car Data versus gender" width="672" />
+<p class="caption">
+Figure 2.4: Point plot for Type of Car Data versus gender
+</p>
+</div>
+<p>The problem with this graph (Figure <a href="graphical-descriptions-of-data.html#fig:car-data-gender">2.4</a>) is that if there are multiple females who drive a Ford, only one dot is shown. So it is best to spread the dots out using a plot known as a jitter plot. In a jitter plot the dots are randomly moved off the center line. The command for a jitter plot is as follows:</p>
+
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="graphical-descriptions-of-data.html#cb20-1"></a><span class="kw">gf_jitter</span>(vehicle<span class="op">~</span>gender, <span class="dt">data=</span>Class, <span class="dt">title=</span><span class="st">&quot;Cars driving by students in statistics class&quot;</span>)</span></code></pre></div>
+<div class="figure"><span id="fig:car-data-gender-jitter"></span>
+<img src="Statistics_using_technology_files/figure-html/car-data-gender-jitter-1.png" alt="Jitter plot for Type of Car Data versus gender" width="672" />
+<p class="caption">
+Figure 2.5: Jitter plot for Type of Car Data versus gender
+</p>
+</div>
+<p>Now you can see (Figure <a href="graphical-descriptions-of-data.html#fig:car-data-gender-jitter">2.5</a>) that there are 4 females who drive a Ford. There is one female who drives a Honda. Other information about other cars and genders can be seen better than in the point plot and the bar graph. Jitter plots are useful to see how many data values are for each qualitative data values.</p>
+<p>There are many other types of graphs that can be used on qualitative data. There are spreadsheet software packages that will create most of them, and it is better to look at them to see how to create then. It depends on your data as to which may be useful, but the bar, dot, and jitter plots are really the most useful.</p>
+</div>
+<div id="homework" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> Homework</h3>
+<ol style="list-style-type: decimal">
+<li>Eyeglassomatic manufactures eyeglasses for different retailers. The number of lenses for different activities is in table #2.1.2.</li>
+</ol>
+<p><strong>Table #2.1.2: Data for Eyeglassomatic</strong></p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="graphical-descriptions-of-data.html#cb21-1"></a>Eyeglasses&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/eyglasses.csv&quot;</span>)</span>
+<span id="cb21-2"><a href="graphical-descriptions-of-data.html#cb21-2"></a><span class="kw">head</span>(Eyeglasses)</span></code></pre></div>
+<pre><code>##   activity
+## 1    Grind
+## 2    Grind
+## 3    Grind
+## 4    Grind
+## 5    Grind
+## 6    Grind</code></pre>
+<p><strong>Code book for Data Frame Eyeglasses</strong></p>
+<p><strong>Description</strong>
+Activities that an Eyeglass company performs when making eyeglasses, Grind means ground the lenses and put them in frames, multicoat means put tinting or coatings on lenses and then put them in frames, assemble means received frames and lenses from other sources and put them together, make frames means made the frames and put lenses in from other sources, receive finished means received glasses from other source unknown means do not know where the lenses came from.</p>
+<p><strong>Format</strong></p>
+<p>This data frame contains the following columns:</p>
+<p>activity: The activity that is completed to make the eyeglasses by Eyeglassomatic</p>
+<p><strong>Source</strong>
+John Matic provided the data from a company he worked with. The company’s name is fictitious, but the data is from an actual company.</p>
+<p><strong>References</strong>
+John Matic (2013)</p>
+<p>Make a bar chart of this data. State any findings you can see from the graph.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Data was collected for two semesters in a statistics class drive. The data frame in is the table #2.1.3.</li>
+</ol>
+<p><strong>Table #2.1.3 Data Frame of Statistics Class Survey</strong></p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="graphical-descriptions-of-data.html#cb23-1"></a>Class&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/class_survey.csv&quot;</span>)</span>
+<span id="cb23-2"><a href="graphical-descriptions-of-data.html#cb23-2"></a><span class="kw">head</span>(Class)</span></code></pre></div>
+<pre><code>##   vehicle gender distance_campus           ice_cream rent
+## 1    None Female             1.5        Cookie Dough  724
+## 2 Mercury Female            14.7             Sherbet  200
+## 3    Ford Female             2.4 Chocolate Brownie.   600
+## 4  Toyota Female             5.2              coffee    0
+## 5    Jeep   Male             2.0        Cookie Dough  600
+## 6  Subaru   Male             5.0                none  500
+##                                      major height        winter
+## 1 Environmental and Sustainability Studies     61      Liked it
+## 2                   Administrative Justice     60 Don&#39;t like it
+## 3                                 Bio Chem     68      Liked it
+## 4                                              66      Loved it
+## 5                       Pre-health Careers     71      Loved it
+## 6                                  Finance     72    No opinion</code></pre>
+<p><strong>Code book for Data Frame Class</strong> see Example #2.1.1</p>
+<p>Create a bar graph and dot plot of the variable ice cream. State any findings you can see from the graphs.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>The number of deaths in the US due to carbon monoxide (CO) poisoning from generators from the years 1999 to 2011 are in table #2.1.4 (Hinatov, 2012). Create a bar chart of this data. State any findings you see from the graph.</li>
+</ol>
+<p><strong>Table #2.1.4: Data of Number of Deaths Due to CO Poisoning</strong></p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="graphical-descriptions-of-data.html#cb25-1"></a>Area&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/area.csv&quot;</span>)</span>
+<span id="cb25-2"><a href="graphical-descriptions-of-data.html#cb25-2"></a><span class="kw">head</span>(Area)</span></code></pre></div>
+<pre><code>##   deaths
+## 1  Urban
+## 2  Urban
+## 3  Urban
+## 4  Urban
+## 5  Urban
+## 6  Urban</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Data was collected for two semesters in a statistics class drive. The data frame in is the table #2.1.5. Create a bar graph and dot plot of the variable major. Create a jitter plot of major and gender. State any findings you can see from the graphs.</li>
+</ol>
+<p>**Table #2.1.5 Data Frame of Class Survey</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="graphical-descriptions-of-data.html#cb27-1"></a>Class&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/class_survey.csv&quot;</span>)</span>
+<span id="cb27-2"><a href="graphical-descriptions-of-data.html#cb27-2"></a><span class="kw">head</span>(Class)</span></code></pre></div>
+<pre><code>##   vehicle gender distance_campus           ice_cream rent
+## 1    None Female             1.5        Cookie Dough  724
+## 2 Mercury Female            14.7             Sherbet  200
+## 3    Ford Female             2.4 Chocolate Brownie.   600
+## 4  Toyota Female             5.2              coffee    0
+## 5    Jeep   Male             2.0        Cookie Dough  600
+## 6  Subaru   Male             5.0                none  500
+##                                      major height        winter
+## 1 Environmental and Sustainability Studies     61      Liked it
+## 2                   Administrative Justice     60 Don&#39;t like it
+## 3                                 Bio Chem     68      Liked it
+## 4                                              66      Loved it
+## 5                       Pre-health Careers     71      Loved it
+## 6                                  Finance     72    No opinion</code></pre>
+<p><strong>Code book for Data Frame Class</strong> see Example #2.1.1</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Eyeglassomatic manufactures eyeglasses for different retailers. They test to see how many defective lenses they made during the time period of January 1 to March 31. Table #2.1.6 gives the defect and the number of defects. Create a bar chart of the data and then describe what this tells you about what causes the most defects.</li>
+</ol>
+<p><strong>Table #2.1.6: Data of Defect Type</strong></p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="graphical-descriptions-of-data.html#cb29-1"></a>Defects&lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/defects.csv&quot;</span>) </span>
+<span id="cb29-2"><a href="graphical-descriptions-of-data.html#cb29-2"></a><span class="kw">head</span>(Defects)</span></code></pre></div>
+<pre><code>##      type
+## 1   small
+## 2   small
+## 3      pd
+## 4  flaked
+## 5 scratch
+## 6    spot</code></pre>
+<p><strong>Code book for Data Frame Defects</strong></p>
+<p><strong>Description</strong>
+Types of defects that an Eyeglass company sees in the lenses they make into eyeglasses.</p>
+<p><strong>Format</strong></p>
+<p>This data frame contains the following columns:</p>
+<p>type: The type of defect that is Seen when making eyeglasses by Eyeglassomatic</p>
+<p><strong>Source</strong>
+John Matic provided the data from a company he worked with. The company’s name is fictitious, but the data is from an actual company.</p>
+<p><strong>References</strong>
+John Matic (2013)</p>
+<ol start="6" style="list-style-type: decimal">
+<li>American National Health and Nutrition Examination (NHANES) surveys is collected every year by the US National Center for Health Statistics (NCHS). The data frame is in table #2.1.7. Create a bar chart of MartialStatus. Create a jitter plot of MaritalStatus versus Education. Describe any findings from the graphs.</li>
+</ol>
+<p><strong>Table #2.1.7: Data Frame NHANES</strong></p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="graphical-descriptions-of-data.html#cb31-1"></a><span class="kw">head</span>(NHANES)</span></code></pre></div>
+<pre><code>## # A tibble: 6 x 76
+##      ID SurveyYr Gender   Age AgeDecade AgeMonths Race1 Race3 Education
+##   &lt;int&gt; &lt;fct&gt;    &lt;fct&gt;  &lt;int&gt; &lt;fct&gt;         &lt;int&gt; &lt;fct&gt; &lt;fct&gt; &lt;fct&gt;    
+## 1 51624 2009_10  male      34 &quot; 30-39&quot;        409 White &lt;NA&gt;  High Sch…
+## 2 51624 2009_10  male      34 &quot; 30-39&quot;        409 White &lt;NA&gt;  High Sch…
+## 3 51624 2009_10  male      34 &quot; 30-39&quot;        409 White &lt;NA&gt;  High Sch…
+## 4 51625 2009_10  male       4 &quot; 0-9&quot;           49 Other &lt;NA&gt;  &lt;NA&gt;     
+## 5 51630 2009_10  female    49 &quot; 40-49&quot;        596 White &lt;NA&gt;  Some Col…
+## 6 51638 2009_10  male       9 &quot; 0-9&quot;          115 White &lt;NA&gt;  &lt;NA&gt;     
+## # … with 67 more variables: MaritalStatus &lt;fct&gt;, HHIncome &lt;fct&gt;,
+## #   HHIncomeMid &lt;int&gt;, Poverty &lt;dbl&gt;, HomeRooms &lt;int&gt;, HomeOwn &lt;fct&gt;,
+## #   Work &lt;fct&gt;, Weight &lt;dbl&gt;, Length &lt;dbl&gt;, HeadCirc &lt;dbl&gt;, Height &lt;dbl&gt;,
+## #   BMI &lt;dbl&gt;, BMICatUnder20yrs &lt;fct&gt;, BMI_WHO &lt;fct&gt;, Pulse &lt;int&gt;,
+## #   BPSysAve &lt;int&gt;, BPDiaAve &lt;int&gt;, BPSys1 &lt;int&gt;, BPDia1 &lt;int&gt;, BPSys2 &lt;int&gt;,
+## #   BPDia2 &lt;int&gt;, BPSys3 &lt;int&gt;, BPDia3 &lt;int&gt;, Testosterone &lt;dbl&gt;,
+## #   DirectChol &lt;dbl&gt;, TotChol &lt;dbl&gt;, UrineVol1 &lt;int&gt;, UrineFlow1 &lt;dbl&gt;,
+## #   UrineVol2 &lt;int&gt;, UrineFlow2 &lt;dbl&gt;, Diabetes &lt;fct&gt;, DiabetesAge &lt;int&gt;,
+## #   HealthGen &lt;fct&gt;, DaysPhysHlthBad &lt;int&gt;, DaysMentHlthBad &lt;int&gt;,
+## #   LittleInterest &lt;fct&gt;, Depressed &lt;fct&gt;, nPregnancies &lt;int&gt;, nBabies &lt;int&gt;,
+## #   Age1stBaby &lt;int&gt;, SleepHrsNight &lt;int&gt;, SleepTrouble &lt;fct&gt;,
+## #   PhysActive &lt;fct&gt;, PhysActiveDays &lt;int&gt;, TVHrsDay &lt;fct&gt;, CompHrsDay &lt;fct&gt;,
+## #   TVHrsDayChild &lt;int&gt;, CompHrsDayChild &lt;int&gt;, Alcohol12PlusYr &lt;fct&gt;,
+## #   AlcoholDay &lt;int&gt;, AlcoholYear &lt;int&gt;, SmokeNow &lt;fct&gt;, Smoke100 &lt;fct&gt;,
+## #   Smoke100n &lt;fct&gt;, SmokeAge &lt;int&gt;, Marijuana &lt;fct&gt;, AgeFirstMarij &lt;int&gt;,
+## #   RegularMarij &lt;fct&gt;, AgeRegMarij &lt;int&gt;, HardDrugs &lt;fct&gt;, SexEver &lt;fct&gt;,
+## #   SexAge &lt;int&gt;, SexNumPartnLife &lt;int&gt;, SexNumPartYear &lt;int&gt;, SameSex &lt;fct&gt;,
+## #   SexOrientation &lt;fct&gt;, PregnantNow &lt;fct&gt;</code></pre>
+<p>To view the code book for NHANES, type help(“NHANES”) in R Studio after you load the NHANES packages using library(“NHANES”)</p>
+<p><em><br />
+</em></p>
+</div>
+</div>
+<div id="quantitative-data" class="section level2">
+<h2><span class="header-section-number">2.2</span> Quantitative Data</h2>
+<p>There are several different graphs for quantitative data. With quantitative data, you can talk about how the data is distributed, called a distribution. The shape of the distribution can be described from the graphs.</p>
+<p><strong>Histogram</strong>: a graph of frequencies (counts) on the vertical axis and classes on the horizontal axis. The height of the rectangles is the frequency and the width is the class width. The width depends on how many classes (bins) are in the histogram. The shape of a histogram is dependent on the number of bins. In R Studio the command to create a histogram is</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="graphical-descriptions-of-data.html#cb33-1"></a><span class="kw">gf_histogram</span>(<span class="op">~</span>response variable, <span class="dt">data=</span>Data Frame, <span class="dt">title=</span><span class="st">&quot;title of the graph&quot;</span>)</span></code></pre></div>
+<p>The last part of the command puts a title on the graph. You type in what ever you want for the title in the quotes.</p>
+<p><strong>Density Plot</strong>: Similar to a histogram, except smoothing is created to smooth out the graph. The shape is not dependent on the number of bins so the distribution is easier to determine from the density plot. In R Studio the command to create a density plot is</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="graphical-descriptions-of-data.html#cb34-1"></a><span class="kw">gf_density</span>(<span class="op">~</span>response variable, <span class="dt">data=</span>Data Frame, <span class="dt">title=</span><span class="st">&quot;title of the graph&quot;</span>)</span></code></pre></div>
+<p>The last part of the command puts a title on the graph. You type in what every you want for the title in the quotes.</p>
+<p><strong>Dot Plot</strong>: Dot plots can be created for both quantitative and qualitative variables. For smaller data frames, a dot plot can be useful to determine the shape of the distribution. The command in R Studio is</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="graphical-descriptions-of-data.html#cb35-1"></a><span class="kw">gf_dotplot</span>(<span class="op">~</span>response variable, <span class="dt">data=</span>Data Frame, <span class="dt">title=</span><span class="st">&quot;title of the graph&quot;</span>)</span></code></pre></div>
+<p>The last part of the command puts a title on the graph. You type in what ever you want for the title in the quotes.</p>
+<div id="example-drawing-a-histogram-and-density-plot" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Example: Drawing a Histogram and Density plot</h3>
+<p>Data was collected for two semesters in a statistics class drive.</p>
+<p><strong>Table #2.2.1: Statistis class survey</strong></p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="graphical-descriptions-of-data.html#cb36-1"></a>Class&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/class_survey.csv&quot;</span>)</span>
+<span id="cb36-2"><a href="graphical-descriptions-of-data.html#cb36-2"></a><span class="kw">head</span>(Class)</span></code></pre></div>
+<pre><code>##   vehicle gender distance_campus           ice_cream rent
+## 1    None Female             1.5        Cookie Dough  724
+## 2 Mercury Female            14.7             Sherbet  200
+## 3    Ford Female             2.4 Chocolate Brownie.   600
+## 4  Toyota Female             5.2              coffee    0
+## 5    Jeep   Male             2.0        Cookie Dough  600
+## 6  Subaru   Male             5.0                none  500
+##                                      major height        winter
+## 1 Environmental and Sustainability Studies     61      Liked it
+## 2                   Administrative Justice     60 Don&#39;t like it
+## 3                                 Bio Chem     68      Liked it
+## 4                                              66      Loved it
+## 5                       Pre-health Careers     71      Loved it
+## 6                                  Finance     72    No opinion</code></pre>
+<p><strong>Code book for Data Frame Class</strong> See Example #2.1.1.</p>
+<p>Draw a histogram, density plot, and a dot plot for the variable the distance a student lives from the Lone Tree Campus of Coconino Community College. Describe the story the graphs tell.</p>
+<p><strong>Solution:</strong></p>
+
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="graphical-descriptions-of-data.html#cb38-1"></a><span class="kw">gf_histogram</span>(<span class="op">~</span>distance_campus, <span class="dt">data=</span>Class, <span class="dt">title=</span><span class="st">&quot;Distance in miles from the Lone Tree Campus&quot;</span>)</span></code></pre></div>
+<div class="figure"><span id="fig:distance-campus-hist-cap"></span>
+<img src="Statistics_using_technology_files/figure-html/distance-campus-hist-cap-1.png" alt="Histogram of Distance a Student Lives from the Lone Tree Campus" width="672" />
+<p class="caption">
+Figure 2.6: Histogram of Distance a Student Lives from the Lone Tree Campus
+</p>
+</div>
+
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="graphical-descriptions-of-data.html#cb39-1"></a><span class="kw">gf_density</span>(<span class="op">~</span>distance_campus, <span class="dt">data=</span>Class, <span class="dt">title=</span><span class="st">&quot;Distance in miles from the Lone Tree Campus&quot;</span>)</span></code></pre></div>
+<div class="figure"><span id="fig:distance-campus-density"></span>
+<img src="Statistics_using_technology_files/figure-html/distance-campus-density-1.png" alt="Density plot of Distance a Student Lives from the Lone Tree Campus" width="672" />
+<p class="caption">
+Figure 2.7: Density plot of Distance a Student Lives from the Lone Tree Campus
+</p>
+</div>
+
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="graphical-descriptions-of-data.html#cb40-1"></a><span class="kw">gf_dotplot</span>(<span class="op">~</span>distance_campus, <span class="dt">data=</span>Class, <span class="dt">title=</span><span class="st">&quot;Distance in miles from the Lone Tree Campus&quot;</span>)</span></code></pre></div>
+<pre><code>## `stat_bindot()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<div class="figure"><span id="fig:distance-campus-dot"></span>
+<img src="Statistics_using_technology_files/figure-html/distance-campus-dot-1.png" alt="Dot Plot of Distance a Student Lives from the Lone Tree Campus" width="672" />
+<p class="caption">
+Figure 2.8: Dot Plot of Distance a Student Lives from the Lone Tree Campus
+</p>
+</div>
+<p>Notice the histogram, density plot, and dot plot are all very similar, but the density plot is smother. They all tell you similar ideas of the shape of the distribution. Reviewing the graphs you can see that most of the students live within 10 miles of the Lone Tree Campus, in fact most live within 5 miles from the campus. However, there is a student who lives around 50 miles from the Lone Tree Campus. This is a great deal farther from the rest of the data. This value could be considered an outlier. An <strong>outlier</strong> is a data value that is far from the rest of the values. It may be an unusual value or a mistake. It is a data value that should be investigated. In this case, the student lived really far from campus, thus the value is not a mistake, and is just very unusual. The density plot is probably the best plot for most data frames.</p>
+<p>There are other aspects that can be discussed, but first some other concepts need to be introduced.</p>
+<p>** Shapes of the distribution:**</p>
+<p>When you look at a distribution, look at the basic shape. There are some basic shapes that are seen in histograms. Realize though that some distributions have no shape. The common shapes are symmetric, skewed,
+and uniform. Another interest is how many peaks a graph may have. This is known as modal.</p>
+<p>Symmetric means that you can fold the graph in half down the middle and the two sides will line up. You can think of the two sides as being mirror images of each other. Skewed means one “tail” of the graph is
+longer than the other. The graph is skewed in the direction of the longer tail (backwards from what you would expect). A uniform graph has all the bars the same height.</p>
+<p>Modal refers to the number of peaks. Unimodal has one peak and bimodal has two peaks. Usually if a graph has more than two peaks, the modal information is not longer of interest.</p>
+<p>Other important features to consider are gaps between bars, a repetitive pattern, how spread out is the data, and where the center of the graph is.</p>
+<p><strong>Examples of graphs:</strong></p>
+<p>This graph is roughly symmetric and unimodal:</p>
+<p><strong>Graph #.2.1: Symetric Distribution</strong>
+<img src="symmetric.png" alt="Graph of roughly symmetric graph" /></p>
+<p>This graph is symmetric and bimodal:</p>
+<p><strong>Graph #2.2.2: Symmetric and Bimodal Distribution</strong>
+<img src="bimodal_symmetric.png" alt="Graph of symmetric and bimodal graph" /></p>
+<p>This graph is skewed to the right:</p>
+<p><strong>Graph #2.2.3: Skewed Right Distribution</strong>
+<img src="skewed_right.png" alt="Graph of skewed right graph" /></p>
+<p>This graph is skewed to the left and has a gap:</p>
+<p><strong>Graph #2.2.4: Skewed Left Distribution</strong>
+<img src="skewed_left.png" alt="Graph of Skewed Left graph" /></p>
+<p>This graph is uniform since all the bars are the same height:</p>
+<p><strong>Graph #2.2.5: Uniform Distribution</strong>
+<img src="Uniform.png" alt="Graph of uniform graph" /></p>
+</div>
+<div id="example-drawing-a-histogram-and-density-plot-1" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Example: Drawing a Histogram and Density plot</h3>
+<p>Data was collected from the Chronicle of Higher Education for tuition from public four year colleges, private four year colleges, and for profit four year colleges. The data frame is in table #2.2.2. Draw a density plot of instate tuition levels for all four year institutions, and then separate the density plot for instate tuition based on type of institution. Describe any findings from the graph.</p>
+<p>table #2.2.2: Tuition of Four Year Colleges</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="graphical-descriptions-of-data.html#cb42-1"></a>Tuition&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/Tuition_4_year.csv&quot;</span>)</span>
+<span id="cb42-2"><a href="graphical-descriptions-of-data.html#cb42-2"></a><span class="kw">head</span>(Tuition)</span></code></pre></div>
+<pre><code>##                                                   INSTITUTION           TYPE
+## 1                 University of Alaska AnchoragePublic 4-year  Public_4 year
+## 2                 University of Alaska FairbanksPublic 4-year  Public_4 year
+## 3                 University of Alaska SoutheastPublic 4-year  Public_4 year
+## 4                          Alaska Bible CollegePrivate 4-year Private_4_year
+## 5                     Alaska Pacific UniversityPrivate 4-year Private_4_year
+## 6 Alabama Agricultural and Mechanical UniversityPublic 4-year  Public_4 year
+##   STATE ROOM_BOARD INSTATE_TUITION INSTATE_TOTAL OUTOFSTATE_TUITION
+## 1    AK      12200            7688         19888              23858
+## 2    AK       8930            8087         17017              24257
+## 3    AK       9200            7092         16292              19404
+## 4    AK       5700            9300         15000               9300
+## 5    AK       7300           20830         28130              20830
+## 6    AL       8379            9698         18077              17918
+##   OUTOFSTATE_TOTAL
+## 1            36058
+## 2            33187
+## 3            28604
+## 4            15000
+## 5            28130
+## 6            26297</code></pre>
+<p><strong>Code book for Data Frame Tuition</strong></p>
+<p><strong>Description</strong>
+Cost of four year institutions.</p>
+<p><strong>Format</strong></p>
+<p>This data frame contains the following columns:</p>
+<p>INSTITUTION: Name of four year institution</p>
+<p>TYPE: Type of four year institution, Public_4_year, Private_4_year, For_profit_4_year.</p>
+<p>STATE: What state the institution resides</p>
+<p>ROOM_BOARD: The cost of room and board at the institution ($)</p>
+<p>INSTATE_TUTION: The cost of instate tuition ($)</p>
+<p>INSTATE_TOTAL: The cost of room and board and instate tuition ($ per year)</p>
+<p>OUTOFSTATE_TUTION: The cost of out of state tuition ($ per year)</p>
+<p>OUTOFSTATE_TOTAL: The cost of room and board and out of state tuition ($ per year)</p>
+<p><strong>Source</strong>
+Tuition and Fees, 1998-99 Through 2018-19. (2018, December 31). Retrieved from <a href="https://www.chronicle.com/interactives/tuition-and-fees" class="uri">https://www.chronicle.com/interactives/tuition-and-fees</a></p>
+<p><strong>References</strong>
+Chronicle of Higher Education *, December 31, 2018.</p>
+<p>** Soultion **</p>
+
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="graphical-descriptions-of-data.html#cb44-1"></a><span class="kw">gf_density</span>(<span class="op">~</span>INSTATE_TUITION, <span class="dt">data=</span>Tuition, <span class="dt">title=</span><span class="st">&quot;Instate Tuition at all Four Year instittions&quot;</span>)</span></code></pre></div>
+<div class="figure"><span id="fig:tuition-instate"></span>
+<img src="Statistics_using_technology_files/figure-html/tuition-instate-1.png" alt="Density Plot for Instate Tuition Levels at all Four-Year Colleges**" width="672" />
+<p class="caption">
+Figure 2.9: Density Plot for Instate Tuition Levels at all Four-Year Colleges**
+</p>
+</div>
+
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="graphical-descriptions-of-data.html#cb45-1"></a><span class="kw">gf_density</span>(<span class="op">~</span>INSTATE_TUITION<span class="op">|</span>TYPE, <span class="dt">data=</span>Tuition, <span class="dt">title=</span><span class="st">&quot;Instate Tuition at all Four Year instittions&quot;</span>)</span></code></pre></div>
+<div class="figure"><span id="fig:tuition-instate-type"></span>
+<img src="Statistics_using_technology_files/figure-html/tuition-instate-type-1.png" alt="Density Plot for Instate Tuition Levels at all Four-Year Colleges**" width="672" />
+<p class="caption">
+Figure 2.10: Density Plot for Instate Tuition Levels at all Four-Year Colleges**
+</p>
+</div>
+<p>The distribution is skewed right, with no gaps. Most institutions in state is less than $ 20,000 per year though some go as high as $ 60,00 per year. When separated by public versus private and for profit, most public are much less than $ 20,000 per year while private four year cost around $ 30,000 per year, and for profit are around $ 20,000 per year.</p>
+<p>There are other types of graphs for quantitative data. They will be explored in the next section.</p>
+</div>
+<div id="homework-1" class="section level3">
+<h3><span class="header-section-number">2.2.3</span> Homework</h3>
+<ol style="list-style-type: decimal">
+<li>The weekly median incomes of males and females for specific occupations, are given in table #2.2.3 (CPS News Releases. (n.d.). Retrieved July 8, 2019, from <a href="https://www.bls.gov/cps/" class="uri">https://www.bls.gov/cps/</a>). Create a density plot for males and females. Discuss any findings from the graph. Note: to put two graphs on the same axis, type %&gt;% at the end of the first command and then type the command for the second graph on the next line. Also, use fill=“pick a color” in the command to plot the graphs with different colors so the two graphs can be easier to distinguish.</li>
+</ol>
+<p>table #2.2.3: Weekly median wages for certain occupations</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="graphical-descriptions-of-data.html#cb46-1"></a>Wages&lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/wages.csv&quot;</span>)</span>
+<span id="cb46-2"><a href="graphical-descriptions-of-data.html#cb46-2"></a><span class="kw">head</span>(Wages)</span></code></pre></div>
+<pre><code>##                                                   Occupation Numworkers
+## 1          Management, professional, and related occupations      48808
+## 2 Management, business, and financial operations occupations      19863
+## 3                                     Management occupations      13477
+## 4                                           Chief executives       1098
+## 5                            General and operations managers        939
+## 6                                                Legislators         14
+##   median_wage male_worker male_wage female_worker female_wage
+## 1        1246       23685      1468         25123        1078
+## 2        1355       10668      1537          9195        1168
+## 3        1429        7754      1585          5724        1236
+## 4        2291         790      2488           307        1736
+## 5        1338         656      1427           283        1139
+## 6          NA          10        NA             4          NA</code></pre>
+<p><strong>Code book for Data Frame Wages</strong></p>
+<p><strong>Description</strong>
+Median weekly earnings of full-time wage and salary workers by detailed occupation and sex. The Current Population Survey (CPS) is a monthly survey of households conducted by the Bureau of Census for the Bureau of Labor Statistics. It provides a comprehensive body of data on the labor force, employment, unemployment, persons not in the labor force, hours of work, earnings, and other demographic and labor force characteristics.</p>
+<p><strong>Format</strong></p>
+<p>This data frame contains the following columns:</p>
+<p>Occupation: Occupations of workers.</p>
+<p>Numworkers: The number of workers in each occupation (in thousands of workers)</p>
+<p>median_wage: Median weekly wage ($)</p>
+<p>male_worker: number of male workers (in thousands of workers)</p>
+<p>male_wage: Median weekly wage of male workers ($)</p>
+<p>female_worker: number of female workers (in thousands of workers)</p>
+<p>female_wage: Median weekly wage of female workers ($)</p>
+<p><strong>Source</strong>
+CPS News Releases. (n.d.). Retrieved July 8, 2019, from <a href="https://www.bls.gov/cps/" class="uri">https://www.bls.gov/cps/</a></p>
+<p><strong>References</strong>
+Current Population Survey (CPS) retrieved July 8, 2019.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>The density of people per square kilometer for certain countries is in table #2.2.4 (World Bank, 2019). Create density plot of density in 2018 for just Sub-Saharan Africa. Describe what story the graph tells.</li>
+</ol>
+<p><strong>Table #2.2.4: Data of Density of People per Square Kilometer</strong></p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="graphical-descriptions-of-data.html#cb48-1"></a>Density&lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/density.csv&quot;</span>) </span>
+<span id="cb48-2"><a href="graphical-descriptions-of-data.html#cb48-2"></a><span class="kw">head</span>(Density)</span></code></pre></div>
+<pre><code>##   Country_Name Country_Code                    Region         IncomeGroup
+## 1        Aruba          ABW Latin America &amp; Caribbean         High income
+## 2  Afghanistan          AFG                South Asia          Low income
+## 3       Angola          AGO        Sub-Saharan Africa Lower middle income
+## 4      Albania          ALB     Europe &amp; Central Asia Upper middle income
+## 5      Andorra          AND     Europe &amp; Central Asia         High income
+## 6   Arab World          ARB                                              
+##        y1961      y1962      y1963      y1964      y1965      y1966      y1967
+## 1 307.988889 312.361111 314.972222 316.844444 318.666667 320.638889 322.527778
+## 2  14.044987  14.323808  14.617537  14.926295  15.250314  15.585020  15.929795
+## 3   4.436891   4.498708   4.555593   4.600180   4.628676   4.637213   4.631622
+## 4  60.576642  62.456898  64.329234  66.209307  68.058066  69.874927  71.737153
+## 5  30.585106  32.702128  34.919149  37.168085  39.465957  41.802128  44.165957
+## 6   8.430860   8.663154   8.903441   9.152526   9.410965   9.679951   9.959490
+##        y1968      y1969      y1970      y1971      y1972      y1973      y1974
+## 1 324.366667 326.255556 328.127778 330.222222 332.444444 334.683333 336.266667
+## 2  16.293023  16.686236  17.114913  17.577191  18.060863  18.547565  19.013188
+## 3   4.629544   4.654892   4.724765   4.845413   5.012073   5.211328   5.423422
+## 4  73.805547  75.974270  77.937190  79.848650  81.865912  83.823066  85.770949
+## 5  46.574468  49.059574  51.651064  54.380851  57.217021  60.068085  62.808511
+## 6  10.247580  10.541383  10.839409  11.140162  11.445801  11.762925  12.100336
+##        y1975      y1976      y1977      y1978      y1979      y1980      y1981
+## 1 336.983333 336.588889 335.366667 333.905556 333.222222 333.866667 336.483333
+## 2  19.436265  19.825220  20.174779  20.435006  20.542009  20.458461  20.175341
+## 3   5.634074   5.839022   6.042941   6.249063   6.463517   6.690695   6.930654
+## 4  87.767555  89.727226  91.735255  93.659343  95.541314  97.518139  99.491095
+## 5  65.329787  67.610638  69.725532  71.780851  74.080851  76.738298  79.787234
+## 6  12.464221  12.856964  13.276051  13.716559  14.171137  14.634158  15.103942
+##        y1982      y1983      y1984      y1985      y1986      y1987      y1988
+## 1 340.805556 345.561111 349.088889 350.144444 348.022222 343.516667 339.327778
+## 2  19.732451  19.204316  18.693582  18.286015  17.976563  17.774920  17.795553
+## 3   7.181319   7.442124   7.712163   7.990693   8.277943   8.574035   8.877878
+## 4 101.615985 103.794161 106.001058 108.202993 110.315146 112.540329 114.683796
+## 5  83.221277  86.951064  90.863830  94.893617  98.972340 103.095745 107.306383
+## 6  15.581254  16.065812  16.557944  17.057705  17.563945  18.075438  18.592082
+##        y1989      y1990      y1991     y1992     y1993     y1994     y1995
+## 1 339.066667 345.272222 359.011111 379.08333 402.80000 426.11111 446.24444
+## 2  18.179820  19.012205  20.370396  22.18783  24.22664  26.15527  27.74049
+## 3   9.188078   9.503799   9.825059  10.15270  10.48773  10.83159  11.18570
+## 4 117.808139 119.946788 119.225912 118.50507 117.78420 117.06336 116.34248
+## 5 111.591489 115.976596 120.576596 125.29362 129.72553 133.35532 135.85106
+## 6  19.114029  19.817110  20.358106  20.73408  21.29364  21.84602  22.52760
+##       y1996     y1997     y1998     y1999     y2000     y2001     y2002
+## 1 462.22222 474.72778 484.87222 494.47222 504.73889 516.10000 527.73333
+## 2  28.87822  29.64974  30.23277  30.89612  31.82911  33.09590  34.61810
+## 3  11.55107  11.92875  12.32021  12.72709  13.15110  13.59249  14.05263
+## 4 115.62164 114.90077 114.17993 113.45905 112.73821 111.68515 111.35073
+## 5 136.93617 136.86596 136.47234 136.95745 139.12766 143.27872 149.04043
+## 6  23.05216  23.57027  24.08237  24.60020  25.12980  25.67166  26.22642
+##       y2003     y2004     y2005     y2006     y2007     y2008     y2009
+## 1 538.98333 548.53889 555.72778 560.18889 562.34444 563.10000 563.63889
+## 2  36.27251  37.87440  39.29522  40.48808  41.51049  42.46282  43.49296
+## 3  14.53556  15.04624  15.58803  16.16259  16.76856  17.40245  18.05910
+## 4 110.93489 110.47223 109.90828 109.21704 108.39478 107.56620 106.84376
+## 5 155.70638 162.22128 167.80213 172.32553 175.92340 178.42979 179.70851
+## 6  26.80081  27.40153  28.03371  28.69994  29.39751  30.11889  30.85858
+##       y2010     y2011     y2012     y2013     y2014     y2015     y2016
+## 1 564.82778 566.92222 569.77778 573.10556 576.52222 579.67222 582.62222
+## 2  44.70408  46.13150  47.73056  49.42804  51.11478  52.71207  54.19711
+## 3  18.73446  19.42782  20.13951  20.86771  21.61047  22.36655  23.13506
+## 4 106.31463 106.02901 105.85405 105.66029 105.44175 105.13515 104.96719
+## 5 179.67872 178.18511 175.37660 171.85957 168.53830 165.98085 164.46170
+## 6  31.59402  32.33012  33.06767  33.80379  34.53398  35.25690  35.96876
+##       y2017     y2018
+## 1 585.36667 588.02778
+## 2  55.59599  56.93776
+## 3  23.91654  24.71305
+## 4 104.87069 104.61226
+## 5 163.83191 163.84255
+## 6  36.66980  37.37237</code></pre>
+<p><strong>Code book for Data Frame Density</strong></p>
+<p><strong>Description</strong>
+Population density of all countries in the world</p>
+<p><strong>Format</strong></p>
+<p>This data frame contains the following columns:</p>
+<p>Country_Name: The name of countries or regions around the world</p>
+<p>Country_Code: The 3 letter code for a country or region</p>
+<p>Region: World Banks classification of where the country is in the world</p>
+<p>Incomegroup: World Banks classification of what income level the country is considered to be</p>
+<p>y1961-y2018: population density for the years 1961 through 2018, people per sq. km of land area, population density is midyear population divided by land area in square kilometers. Population is based on the de facto definition of population, which counts all residents regardless of legal status or citizenship–except for refugees not permanently settled in the country of asylum, who are generally considered part of the population of their country of origin. Land area is a country’s total area, excluding area under inland water bodies, national claims to continental shelf, and exclusive economic zones. In most cases the definition of inland water bodies includes major rivers and lakes.</p>
+<p><strong>Source</strong>
+Population density (people per sq. km of land area). (n.d.). Retrieved July 9, 2019, from <a href="https://data.worldbank.org/indicator/EN.POP.DNST" class="uri">https://data.worldbank.org/indicator/EN.POP.DNST</a></p>
+<p><strong>References</strong>
+Food and Agriculture Organization and World Bank population estimates.</p>
+<p>Since the Density data frame is for all countries, a new data frame must be created with just Su-Saharan Africa. This is created by using the following command</p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="graphical-descriptions-of-data.html#cb50-1"></a>Africa&lt;-</span>
+<span id="cb50-2"><a href="graphical-descriptions-of-data.html#cb50-2"></a><span class="st">  </span>Density<span class="op">%&gt;%</span></span>
+<span id="cb50-3"><a href="graphical-descriptions-of-data.html#cb50-3"></a><span class="kw">filter</span>(Region<span class="op">==</span><span class="st">&quot;Sub-Saharan Africa&quot;</span>)</span>
+<span id="cb50-4"><a href="graphical-descriptions-of-data.html#cb50-4"></a><span class="kw">head</span>(Africa)</span></code></pre></div>
+<pre><code>##               Country_Name Country_Code             Region         IncomeGroup
+## 1                   Angola          AGO Sub-Saharan Africa Lower middle income
+## 2                  Burundi          BDI Sub-Saharan Africa          Low income
+## 3                    Benin          BEN Sub-Saharan Africa          Low income
+## 4             Burkina Faso          BFA Sub-Saharan Africa          Low income
+## 5                 Botswana          BWA Sub-Saharan Africa Upper middle income
+## 6 Central African Republic          CAF Sub-Saharan Africa          Low income
+##         y1961       y1962       y1963       y1964       y1965      y1966
+## 1   4.4368910   4.4987078   4.5555932   4.6001797   4.6286757   4.637213
+## 2 111.0762461 113.2134346 115.4371885 117.8461838 120.4976246 123.461449
+## 3  21.8682778  22.1966655  22.5510731  22.9333540  23.3447677  23.786440
+## 4  17.8895468  18.1298465  18.3765387  18.6362939  18.9139985  19.211853
+## 5   0.9046371   0.9242108   0.9452208   0.9667267   0.9881143   1.009235
+## 6   2.4496228   2.4911073   2.5351857   2.5821310   2.6320363   2.685510
+##        y1967      y1968      y1969      y1970      y1971      y1972      y1973
+## 1   4.631622   4.629544   4.654892   4.724765   4.845413   5.012073   5.211328
+## 2 126.682944 129.942640 132.940187 135.477959 137.460942 139.005685 140.386527
+## 3  24.257778  24.756917  25.280782  25.827776  26.397410  26.991548  27.613294
+## 4  19.528578  19.861261  20.205314  20.557749  20.918790  21.290837  21.675742
+## 5   1.030635   1.053318   1.078644   1.107609   1.140485   1.177090   1.217356
+## 6   2.742146   2.799759   2.855406   2.907227   2.954377   2.998141   3.041595
+##        y1974      y1975      y1976      y1977      y1978      y1979      y1980
+## 1   5.423422   5.634074   5.839022   6.042941   6.249063   6.463517   6.690695
+## 2 141.994977 144.115265 146.840771 150.095210 153.787617 157.758333 161.888551
+## 3  28.267222  28.956767  29.684046  30.449087  31.251667  32.090511  32.965280
+## 4  22.076173  22.494682  22.931422  23.387920  23.869952  24.384708  24.937292
+## 5   1.261116   1.308127   1.358635   1.412540   1.468895   1.526432   1.584296
+## 6   3.089004   3.143547   3.205583   3.274453   3.351092   3.436349   3.530380
+##        y1981      y1982      y1983      y1984      y1985      y1986      y1987
+## 1   6.930654   7.181319   7.442124   7.712163   7.990693   8.277943   8.574035
+## 2 166.141744 170.550000 175.137578 179.949494 185.001441 190.293731 195.760826
+## 3  33.878397  34.832512  35.827856  36.864305  37.943429  39.060890  40.220495
+## 4  25.530556  26.163213  26.830793  27.526469  28.245274  28.986455  29.751729
+## 5   1.641713   1.699001   1.757680   1.819983   1.887287   1.960269   2.037842
+## 6   3.634855   3.748648   3.865801   3.978269   4.080659   4.169895   4.248676
+##        y1988      y1989      y1990      y1991      y1992      y1993      y1994
+## 1   8.877878   9.188078   9.503799   9.825059  10.152696  10.487727  10.831593
+## 2 201.273287 206.661565 211.797391 216.702726 221.400506 225.780880 229.710553
+## 3  41.440688  42.745796  44.151259  45.667781  47.284525  48.969165  50.675949
+## 4  30.542050  31.359002  32.204072  33.077792  33.980676  34.914020  35.879342
+## 5   2.117529   2.195903   2.270492   2.340307   2.406003   2.468742   2.530410
+## 6   4.324333   4.407419   4.505336   4.620548   4.750130   4.889642   5.032288
+##        y1995      y1996      y1997      y1998      y1999      y2000      y2001
+## 1  11.185695  11.551070  11.928748  12.320206  12.727095  13.151097  13.592487
+## 2 233.140304 235.985631 238.400701 240.870794 244.046885 248.398403 254.110008
+## 3  52.372810  54.046284  55.708044  57.380853  59.099840  60.889952  62.759250
+## 4  36.878209  37.912080  38.982259  40.090365  41.237942  42.426689  43.657116
+## 5   2.592370   2.655109   2.718093   2.780555   2.841325   2.899677   2.954984
+## 6   5.172969   5.310336   5.445497   5.578818   5.711281   5.843570   5.974539
+##        y2002      y2003      y2004      y2005      y2006      y2007      y2008
+## 1  14.052633  14.535557  15.046238  15.588034  16.162590  16.768559  17.402450
+## 2 261.063590 269.048053 277.713902 286.793692 296.255802 306.160981 316.436994
+## 3  64.698421  66.695238  68.730082  70.789509  72.870672  74.980427  77.127714
+## 4  44.930921  46.252270  47.626349  49.056762  50.545234  52.090720  53.690515
+## 5   3.007856   3.060360   3.115288   3.174489   3.239476   3.309264   3.380162
+## 6   6.103130   6.230025   6.356344   6.482362   6.610275   6.738595   6.859556
+##        y2009      y2010      y2011      y2012      y2013      y2014      y2015
+## 1  18.059101  18.734456  19.427818  20.139513  20.867715  21.610475  22.366553
+## 2 327.011994 337.834969 348.847586 360.046262 371.506581 383.344899 395.639797
+## 3  79.325186  81.582645  83.902359  86.282795  88.724619  91.227758  93.791699
+## 4  55.340270  57.036612  58.778914  60.567420  62.400493  64.276378  66.193801
+## 5   3.446964   3.506264   3.556194   3.598805   3.639363   3.685378   3.742022
+## 6   6.962703   7.041587   7.092741   7.121280   7.139783   7.165840   7.212382
+##        y2016      y2017      y2018
+## 1  23.135064  23.916538  24.713052
+## 2 408.411137 421.613084 435.178271
+## 3  96.417763  99.106101 101.853920
+## 4  68.151966  70.150892  72.191283
+## 5   3.811240   3.890967   3.977425
+## 6   7.283841   7.377489   7.490412</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>The Affordable Care Act created a market place for individuals to purchase health care plans. In 2014, the premiums for a 27 year old for the different levels health insurance are given in table #2.2.5 ("Health insurance marketplace," 2013). Create a density plot of bronze_lowest, then silver_lowest, and gold_lowest all on the same aces. Use %&gt;% at the end of each command. Describe the story the graphs tells.</li>
+</ol>
+<p><strong>Table #2.2.5: Data of Health Insurance Premiums</strong></p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="graphical-descriptions-of-data.html#cb52-1"></a>Insurance&lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/insurance.csv&quot;</span>)</span>
+<span id="cb52-2"><a href="graphical-descriptions-of-data.html#cb52-2"></a><span class="kw">head</span>(Insurance)</span></code></pre></div>
+<pre><code>##   state average_QHP bronze_lowest silver_lowest gold_lowest catastrophic
+## 1    AK          34           254           312         401          236
+## 2    AL           7           162           200         248          138
+## 3    AR          28           181           231         263          135
+## 4    AZ         106           141           164         187          107
+## 5    DE          19           203           234         282          137
+## 6    FL         102           169           200         229          132
+##   second_silver_pretax second_silver_posttax lowest_bronze_posttax
+## 1                  312                   107                    48
+## 2                  209                   145                    98
+## 3                  241                   145                    85
+## 4                  166                   145                   120
+## 5                  237                   145                   111
+## 6                  218                   145                    96
+##   silver_family_pretax silver_family_posttax bronze_family_posttax
+## 1                 1131                   205                     0
+## 2                  757                   282                   112
+## 3                  873                   282                    64
+## 4                  600                   282                   192
+## 5                  859                   282                   158
+## 6                  789                   282                   104</code></pre>
+<p><strong>Code book for Data Frame Insurance</strong></p>
+<p><strong>Description</strong>
+The Affordable Care Act created a market place for individuals to purchase health care plans.The data is from 2014.</p>
+<p><strong>Format</strong></p>
+<p>This data frame contains the following columns:</p>
+<p>state: state of insured.</p>
+<p>average_QHP: The number of qualified health plans</p>
+<p>bronze_lowest: premium for the lowest bronze level of insurance for a single person ($)</p>
+<p>silver_lowest: premium for the lowest silver level of insurance for a single person ($)</p>
+<p>gold_lowest: premium for the lowest gold level of insurance for a single person ($)</p>
+<p>catastrophic: premium for the catastrophic level of insurance for a single person ($)</p>
+<p>second_silver_pretax: premium for the second silver level of insurance for a single person pretax ($)</p>
+<p>second_silver_posttax: premium for the second silver level of insurance for a single person posttax ($)</p>
+<p>second_bronze_posttax: premium for the lowest bronze level of insurance for a single person posttax ($)</p>
+<p>silver_family_pretax: premium for the silver level of insurance for a family pretax ($)</p>
+<p>silver_family_posttax: premium for the silver level of insurance for a family posttax ($)</p>
+<p>bronze_family_posttax: premium for the bronze level of insurance for a family posttax ($)</p>
+<p><strong>Source</strong>
+Health Insurance Market Place Retrieved from website:
+<a href="http://aspe.hhs.gov/health/reports/2013/marketplacepremiums/ib_premiumslandscape.pdf" class="uri">http://aspe.hhs.gov/health/reports/2013/marketplacepremiums/ib_premiumslandscape.pdf</a>
+premiums for 2014.</p>
+<p><strong>References</strong>
+Department of Health and Human Services, ASPE. (2013). Health insurance marketplace</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Students in a statistics class took their first test. The following are the scores they earned. Create a density plot for grades. Describe the shape of the distribution.</li>
+</ol>
+<p><strong>Table #2.2.6: Data of Test 1 Grades</strong></p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="graphical-descriptions-of-data.html#cb54-1"></a>Firsttest_<span class="dv">1</span>&lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/firsttest_1.csv&quot;</span>)</span>
+<span id="cb54-2"><a href="graphical-descriptions-of-data.html#cb54-2"></a><span class="kw">head</span>(Firsttest_<span class="dv">1</span>)</span></code></pre></div>
+<pre><code>##   grades
+## 1     80
+## 2     79
+## 3     89
+## 4     74
+## 5     73
+## 6     67</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>Students in a statistics class took their first test. The following are the scores they earned. Create a density plot for grades. Describe the shape of the distribution. Compare to the graph in question 4.</li>
+</ol>
+<p><strong>Table #2.2.7: Data of Test 1 Grades</strong></p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="graphical-descriptions-of-data.html#cb56-1"></a>Firsttest_<span class="dv">2</span>&lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/firsttest_2.csv&quot;</span>)</span>
+<span id="cb56-2"><a href="graphical-descriptions-of-data.html#cb56-2"></a><span class="kw">head</span>(Firsttest_<span class="dv">2</span>)</span></code></pre></div>
+<pre><code>##   grades
+## 1     67
+## 2     67
+## 3     76
+## 4     47
+## 5     85
+## 6     70</code></pre>
+<p><em><br />
+</em></p>
+</div>
+</div>
+<div id="other-graphical-representations-of-data" class="section level2">
+<h2><span class="header-section-number">2.3</span> Other Graphical Representations of Data</h2>
+<p>There are many other types of graphs. Some of the more common ones are the point plot (scatter plot), and a time-series plot. There are also many different graphs that have emerged lately for qualitative data. Many are found in publications and websites. The following is a description of the point plot (scatter plot), and the time-series plot.</p>
+<p><strong>Point Plots or Scatter Plot</strong></p>
+<p>Sometimes you have two different variables and you want to see if they are related in any way. A scatter plot helps you to see what the relationship would look like. A scatter plot is just a plotting of the
+ordered pairs.</p>
+<div id="example-scatter-plot" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> Example: Scatter Plot**</h3>
+<p>Is there a relationship between systolic blood pressure and weight? To answer this question some data is needed. The data frame NHANES contains this data, but given the size of the data frame, it may be not be very useful to look at the graph of all the data. It makes sense to take a sample form the data frame. A random sample is the better type of sample to take. Once the sample is taken, then a scatter plot can be created. The R studio command for a scatter plot is</p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="graphical-descriptions-of-data.html#cb58-1"></a><span class="kw">gf_point</span>(response variable <span class="op">~</span><span class="st"> </span>explanatory variable, <span class="dt">data=</span> Data Frame)</span></code></pre></div>
+<p><strong>Solution:</strong></p>
+<p><strong>Table #2.3.1: Random sample of size 100 from the data frame NHANES</strong></p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="graphical-descriptions-of-data.html#cb59-1"></a>sample_NHANES &lt;-</span>
+<span id="cb59-2"><a href="graphical-descriptions-of-data.html#cb59-2"></a><span class="st">  </span>NHANES<span class="op">%&gt;%</span></span>
+<span id="cb59-3"><a href="graphical-descriptions-of-data.html#cb59-3"></a><span class="st">  </span><span class="kw">sample_n</span>(<span class="dt">size =</span> <span class="dv">100</span>)</span>
+<span id="cb59-4"><a href="graphical-descriptions-of-data.html#cb59-4"></a><span class="kw">head</span>(sample_NHANES)</span></code></pre></div>
+<pre><code>## # A tibble: 6 x 76
+##      ID SurveyYr Gender   Age AgeDecade AgeMonths Race1 Race3 Education
+##   &lt;int&gt; &lt;fct&gt;    &lt;fct&gt;  &lt;int&gt; &lt;fct&gt;         &lt;int&gt; &lt;fct&gt; &lt;fct&gt; &lt;fct&gt;    
+## 1 59522 2009_10  male      37 &quot; 30-39&quot;        446 Black &lt;NA&gt;  9 - 11th…
+## 2 61836 2009_10  female    77 &quot; 70+&quot;          924 White &lt;NA&gt;  8th Grade
+## 3 61472 2009_10  male      15 &quot; 10-19&quot;        190 White &lt;NA&gt;  &lt;NA&gt;     
+## 4 71833 2011_12  female    30 &quot; 30-39&quot;         NA Other Asian College …
+## 5 57902 2009_10  male       6 &quot; 0-9&quot;           80 White &lt;NA&gt;  &lt;NA&gt;     
+## 6 52886 2009_10  female    48 &quot; 40-49&quot;        585 Other &lt;NA&gt;  College …
+## # … with 67 more variables: MaritalStatus &lt;fct&gt;, HHIncome &lt;fct&gt;,
+## #   HHIncomeMid &lt;int&gt;, Poverty &lt;dbl&gt;, HomeRooms &lt;int&gt;, HomeOwn &lt;fct&gt;,
+## #   Work &lt;fct&gt;, Weight &lt;dbl&gt;, Length &lt;dbl&gt;, HeadCirc &lt;dbl&gt;, Height &lt;dbl&gt;,
+## #   BMI &lt;dbl&gt;, BMICatUnder20yrs &lt;fct&gt;, BMI_WHO &lt;fct&gt;, Pulse &lt;int&gt;,
+## #   BPSysAve &lt;int&gt;, BPDiaAve &lt;int&gt;, BPSys1 &lt;int&gt;, BPDia1 &lt;int&gt;, BPSys2 &lt;int&gt;,
+## #   BPDia2 &lt;int&gt;, BPSys3 &lt;int&gt;, BPDia3 &lt;int&gt;, Testosterone &lt;dbl&gt;,
+## #   DirectChol &lt;dbl&gt;, TotChol &lt;dbl&gt;, UrineVol1 &lt;int&gt;, UrineFlow1 &lt;dbl&gt;,
+## #   UrineVol2 &lt;int&gt;, UrineFlow2 &lt;dbl&gt;, Diabetes &lt;fct&gt;, DiabetesAge &lt;int&gt;,
+## #   HealthGen &lt;fct&gt;, DaysPhysHlthBad &lt;int&gt;, DaysMentHlthBad &lt;int&gt;,
+## #   LittleInterest &lt;fct&gt;, Depressed &lt;fct&gt;, nPregnancies &lt;int&gt;, nBabies &lt;int&gt;,
+## #   Age1stBaby &lt;int&gt;, SleepHrsNight &lt;int&gt;, SleepTrouble &lt;fct&gt;,
+## #   PhysActive &lt;fct&gt;, PhysActiveDays &lt;int&gt;, TVHrsDay &lt;fct&gt;, CompHrsDay &lt;fct&gt;,
+## #   TVHrsDayChild &lt;int&gt;, CompHrsDayChild &lt;int&gt;, Alcohol12PlusYr &lt;fct&gt;,
+## #   AlcoholDay &lt;int&gt;, AlcoholYear &lt;int&gt;, SmokeNow &lt;fct&gt;, Smoke100 &lt;fct&gt;,
+## #   Smoke100n &lt;fct&gt;, SmokeAge &lt;int&gt;, Marijuana &lt;fct&gt;, AgeFirstMarij &lt;int&gt;,
+## #   RegularMarij &lt;fct&gt;, AgeRegMarij &lt;int&gt;, HardDrugs &lt;fct&gt;, SexEver &lt;fct&gt;,
+## #   SexAge &lt;int&gt;, SexNumPartnLife &lt;int&gt;, SexNumPartYear &lt;int&gt;, SameSex &lt;fct&gt;,
+## #   SexOrientation &lt;fct&gt;, PregnantNow &lt;fct&gt;</code></pre>
+<p>Preliminary: State the explanatory variable and the response variable
+Let x=explanatory variable = Weight
+y=response variable = BPSys1</p>
+
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="graphical-descriptions-of-data.html#cb61-1"></a><span class="kw">gf_point</span>(BPSys1<span class="op">~</span>Weight, <span class="dt">data=</span>sample_NHANES)</span></code></pre></div>
+<div class="figure"><span id="fig:weight-bp-sys-data"></span>
+<img src="Statistics_using_technology_files/figure-html/weight-bp-sys-data-1.png" alt="Scatter Plot of Blood Pressure versus Weight" width="672" />
+<p class="caption">
+Figure 2.11: Scatter Plot of Blood Pressure versus Weight
+</p>
+</div>
+<p>Looking at the graph, it appears that there is a linear relationship between weight and systolic blood pressure though it looks somewhat weak. It also appears to be a positive relationship, thus as weight increases, the systolic blood pressure increases.</p>
+<p><strong>Time-Series </strong></p>
+<p>A time-series plot is a graph showing the data measurements in chronological order, the data being quantitative data. For example, a time-series plot is used to show profits over the last 5 years. To
+create a time-series plot on R Studio, use the command</p>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="graphical-descriptions-of-data.html#cb62-1"></a><span class="kw">gf_line</span>(response variable <span class="op">~</span><span class="st"> </span>explanatory variable, <span class="dt">data=</span>Data Frame)</span></code></pre></div>
+<p>The purpose of a time-series graph is to look for trends over time. Caution, you must realize that the trend may not continue. Just because you see an increase, doesn’t mean the increase will continue forever. As an example, prior to 2007, many people noticed that housing prices were increasing. The belief at the time was that housing prices would continue to increase. However, the housing bubble burst in 2007, and many houses lost value, and haven’t recovered.</p>
+</div>
+<div id="example-time-series-plot" class="section level3">
+<h3><span class="header-section-number">2.3.2</span> Example: Time-Series Plot**</h3>
+<p>The bank assets (in billions of Australia dollars (AUD)) of the Reserve Bank of Australia (RBA) and other financial organizations for the time period of September 1 1969, through March 1 2019, are contained in table #2.3.2 (Reserve Bank of Australia, 2019). Create a time-series plot of the total assets of Authorized Deposit-taking Institutions (ADIs) and interpret any findings.</p>
+<p><strong>Table #2.3.2: Data of Date versus RBA Assets</strong></p>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="graphical-descriptions-of-data.html#cb63-1"></a>Australian&lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/Australian_financial.csv&quot;</span>)</span>
+<span id="cb63-2"><a href="graphical-descriptions-of-data.html#cb63-2"></a><span class="kw">head</span>(Australian)</span></code></pre></div>
+<pre><code>##     Date Day Assets_RBA Assets_ADIs_Banks Assets_ADIs_Building Assets_ADIs_CU
+## 1 Sep-69   0        2.7                NA                   NA             NA
+## 2 Dec-69  90        2.9                NA                   NA             NA
+## 3 Mar-70 180        3.0                NA                   NA             NA
+## 4 Jun-70 270        3.0                NA                   NA             NA
+## 5 Sep-70 360        3.0                NA                   NA             NA
+## 6 Dec-70 450        3.0                NA                   NA             NA
+##   Assets_ADIs_Total Assets_RFCs_MM Assets_RFCs_Finance Assets_RFCs_Total
+## 1                NA             NA                  NA                NA
+## 2                NA             NA                  NA                NA
+## 3                NA             NA                  NA                NA
+## 4                NA             NA                  NA                NA
+## 5                NA             NA                  NA                NA
+## 6                NA             NA                  NA                NA
+##   Assets_Life.offices Assets_Life_funds Assets_Life_Total
+## 1                  NA                NA                NA
+## 2                  NA                NA                NA
+## 3                  NA                NA                NA
+## 4                  NA                NA                NA
+## 5                  NA                NA                NA
+## 6                  NA                NA                NA
+##   Assets_Other_Public_trusts Assets_Other_Cash_trusts Assets_Other_Common_funds
+## 1                         NA                       NA                        NA
+## 2                         NA                       NA                        NA
+## 3                         NA                       NA                        NA
+## 4                         NA                       NA                        NA
+## 5                         NA                       NA                        NA
+## 6                         NA                       NA                        NA
+##   Assets_Others_Friendly Assets_Other_General_insurance Assets_Other_vehicles
+## 1                     NA                             NA                    NA
+## 2                     NA                             NA                    NA
+## 3                     NA                             NA                    NA
+## 4                     NA                             NA                    NA
+## 5                     NA                             NA                    NA
+## 6                     NA                             NA                    NA
+##   Assets_Unconsolidated
+## 1                    NA
+## 2                    NA
+## 3                    NA
+## 4                    NA
+## 5                    NA
+## 6                    NA</code></pre>
+<p><strong>Code book for Data frame Australian</strong></p>
+<p><strong>Description</strong>
+The data is a range of economic and financial data produced by the Reserve Bank of Australia and other organizations.</p>
+<p><strong>Format</strong></p>
+<p>This data frame contains the following columns:</p>
+<p>Date: quarters from September 1 1969 to March 1, 2019</p>
+<p>Day: The number of days since September 1, 1969 using 90 days between starts of a quarter. This column is to make it easier to graph in R Studio, and has no other purpose.</p>
+<p>Assets_RBA: The assets for the Royal Bank of Australia</p>
+<p>Assets_ADIs_Banks: The assets for Authorized Deposit-taking Institutions (ADIs), Banks</p>
+<p>Assets_ADIs_Building: The assets for Authorized Deposit-taking Institutions (ADIs), Building societies</p>
+<p>Assets_ADIs_CU: The assets for Authorized Deposit-taking Institutions (ADIs), Credit Unions</p>
+<p>Assets_ADIs_Total: The assets for Authorized Deposit-taking Institutions (ADIs), total</p>
+<p>Assets_RFCs_MM: The assets for Registered Financial Corporations (RFCs), Money Market Corporations</p>
+<p>Assets_RFCs_Finance: The assets for Registered Financial Corporations (RFCs), Finance companies and general financiers</p>
+<p>Assets_RFCs_Total: The assets for Registered Financial Corporations (RFCs) total</p>
+<p>Assets_Life offices: The Assets of Life offices and superannuation funds; Life insurance offices</p>
+<p>Assets_Life_funds: The Assets of Life offices and superannuation funds; Superannuation funds</p>
+<p>Assets_Life_Total: The Assets of Life offices and superannuation; Total</p>
+<p>Assets_Other_Public_trusts: The Assets of Other managed funds; Public unit trusts</p>
+<p>Assets_Other_Cash_trusts: The Assets of Other managed funds; Cash management trusts</p>
+<p>Assets_Other_Common_funds: The Assets of Other managed funds; Common funds</p>
+<p>Assets_Others_Friendly: The Assets of Other managed funds; Friendly societies</p>
+<p>Assets_Other_General_insurance: The Assets of Other financial institutions; General insurance offices</p>
+<p>Assets_Other_vehicles: The Assets Other financial institutions; Securitisation vehicles</p>
+<p>Assets_Unconsolidated: The Assets of Unconsolidated; Statutory funds of life insurance offices; Superannuation</p>
+<p><strong>Source</strong>
+Reserve Bank of Australia. (2019, May 13). Statistical Tables. Retrieved July 10, 2019, from <a href="https://www.rba.gov.au/statistics/tables/" class="uri">https://www.rba.gov.au/statistics/tables/</a></p>
+<p><strong>References</strong>
+Reserve Bank of Australia and other organizations</p>
+<p><strong>Solution:</strong>
+variable, x=total assets of Authorized Deposit-taking Institutions (ADIs)</p>
+<p>Looking at the code book, one can see that the variable Assets_ADIs_Total is the variable in the data frame that is of interest here. With a time series plot, the other variable is time. In this case the variable in the data frame that represents time is Date. The problem with Date is that the units are every quarter. This is not easily interpreted by R Studio, so a column was created called Day. From the code book, this is the number of days since September 1, 1969 using 90 days between starts of a quarter. Even though this isn’t perfect, it will work for determining trends. So create a time series plot of Assets_ADIs_Total versus Day. The command is:</p>
+
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="graphical-descriptions-of-data.html#cb65-1"></a><span class="kw">gf_line</span>(Assets_ADIs_Total<span class="op">~</span>Day, <span class="dt">data=</span>Australian, <span class="dt">title=</span><span class="st">&quot;Total Assets of Authorized Deposit-taking Institutions (ADIs)&quot;</span>)</span></code></pre></div>
+<div class="figure"><span id="fig:Assets"></span>
+<img src="Statistics_using_technology_files/figure-html/Assets-1.png" alt="Time-Series Graph of Total Assets of ADIs versus Time" width="672" />
+<p class="caption">
+Figure 2.12: Time-Series Graph of Total Assets of ADIs versus Time
+</p>
+</div>
+<p>From the graph, total assets of Authorized Deposit-taking Institutions (ADIs) appear to be increasing with a slight dip around 14000 days since September 1, 1969. That would be around the year 2008 (14000 days /360 days per year + 1969).</p>
+<p>Be careful when making a graph. If the vertical axis doesn’t start at 0, then the change can look much more dramatic than it really is. For a graph to be useful to the reader, it needs to have a title that explains what the graph contains, the axes should be labeled so the reader knows what each axes represents, each axes should have a scale marked, and it is best if the vertical axis contains 0 to show the relationship.</p>
+</div>
+<div id="homework-2" class="section level3">
+<h3><span class="header-section-number">2.3.3</span> Homework</h3>
+<ol style="list-style-type: decimal">
+<li>When an anthropologist finds skeletal remains, they need to figure out the height of the person. The height of a person (in cm) and the length of one of their metacarpal bone (in cm) were collected and are in table #2.3.3 (Prediction of height, 2013). Create a scatter plot of length and height and state if there is a relationship between the height of a person and the length of their metacarpal.</li>
+</ol>
+<p><strong>Table #2.3.3: Data of Metacarpal versus Height</strong></p>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="graphical-descriptions-of-data.html#cb66-1"></a>Metacarpal&lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/metacarpal.csv&quot;</span>) </span>
+<span id="cb66-2"><a href="graphical-descriptions-of-data.html#cb66-2"></a><span class="kw">head</span>(Metacarpal)</span></code></pre></div>
+<pre><code>##   length height
+## 1     45    171
+## 2     51    178
+## 3     39    157
+## 4     41    163
+## 5     48    172
+## 6     49    183</code></pre>
+<p><strong>Code book for Data frame Metacarpal</strong></p>
+<p><strong>Description</strong>
+When anthropologists analyze human skeletal remains, an important piece of information is living stature. Since skeletons are commonly based on statistical methods that utilize measurements on small bones. The following data was presented in a paper in the American Journal of Physical Anthropology to validate one such method.</p>
+<p><strong>Format</strong></p>
+<p>This data frame contains the following columns:</p>
+<p>length: length of Metacarpal I bone in cm</p>
+<p>height: stature of skeleton in cm</p>
+<p><strong>Source</strong>
+Prediction of Height from Metacarpal Bone Length. (n.d.). Retrieved July 9, 2019, from <a href="http://www.statsci.org/data/general/stature.html" class="uri">http://www.statsci.org/data/general/stature.html</a></p>
+<p><strong>References</strong>
+Musgrave, J., and Harneja, N. (1978). The estimation of adult stature from metacarpal bone length. Amer. J. Phys. Anthropology 48, 113-120.</p>
+<p>Devore, J., and Peck, R. (1986). Statistics. The Exploration and Analysis of Data. West Publishing, St Paul, Minnesota.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Table #2.3.4 contains the value of the house and the amount of rental income in a year that the house brings in (Capital and rental 2013). Create a scatter plot and state if there is a relationship between the value of the house and the annual rental income.</li>
+</ol>
+<p><strong>Table #2.3.4: Data of House Value versus Rental</strong></p>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="graphical-descriptions-of-data.html#cb68-1"></a>House&lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/house.csv&quot;</span>)</span>
+<span id="cb68-2"><a href="graphical-descriptions-of-data.html#cb68-2"></a><span class="kw">head</span>(House)</span></code></pre></div>
+<pre><code>##   capital rental
+## 1   61500   6656
+## 2   67500   6864
+## 3   75000   4992
+## 4   75000   7280
+## 5   76000   6656
+## 6   77000   4576</code></pre>
+<p><strong>Code book for Data frame House</strong></p>
+<p><strong>Description</strong>
+The data show the capital value and annual rental value of domestic properties in Auckland in 1991.</p>
+<p><strong>Format</strong></p>
+<p>This data frame contains the following columns:</p>
+<p>Capital: Selling price of house in Australian dollar (AUD)</p>
+<p>rental: rental price of a house in Australian dollar (AUD)</p>
+<p><strong>Source</strong>
+Capital and rental values of Auckland properties. (2013, September 26). Retrieved from
+<a href="http://www.statsci.org/data/oz/rentcap.html" class="uri">http://www.statsci.org/data/oz/rentcap.html</a></p>
+<p><strong>References</strong>
+Lee, A. (1994) Data Analysis: An introduction based on R. Auckland: Department of Statistics, University of Auckland. Data courtesy of Sage Consultants Ltd.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>The World Bank collects information on the life expectancy of a person in each country ("Life expectancy at," 2013) and the fertility rate per woman in the country ("Fertility rate," 2013). The data for countries for the year 2011 are in table #2.3.5. Create a scatter plot of the data and state if there appears to be a relationship between life expectancy and the number of births per woman in 2011.</li>
+</ol>
+<p><strong>Table #2.3.5: Data of Life Expectancy versus Fertility Rate</strong></p>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="graphical-descriptions-of-data.html#cb70-1"></a>Fertility&lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/fertility.csv&quot;</span>)</span>
+<span id="cb70-2"><a href="graphical-descriptions-of-data.html#cb70-2"></a><span class="kw">head</span>(Fertility)</span></code></pre></div>
+<pre><code>##                country lifexp_2011 fertilrate_2011 lifexp_2000 fertilrate_2000
+## 1     Macao SAR, China       79.91            1.03       77.62            0.94
+## 2 Hong Kong SAR, China       83.42            1.20       80.88            1.04
+## 3            Singapore       81.89            1.20       78.05              NA
+## 4              Hungary       74.86            1.23       71.25            1.32
+## 5          Korea, Rep.       80.87            1.24       75.86            1.47
+## 6              Romania       74.51            1.25       71.16            1.31
+##   lifexp_1990 fertilrate_1990
+## 1       75.28            1.69
+## 2       77.38            1.27
+## 3       76.03            1.87
+## 4       69.32            1.84
+## 5       71.29            1.59
+## 6       69.74            1.84</code></pre>
+<p><strong>Code book for Data frame Fertility</strong></p>
+<p><strong>Description</strong>
+Data is from the World Bank on the life expectancy of countries and the fertility rates in those countries.</p>
+<p><strong>Format</strong></p>
+<p>This data frame contains the following columns:</p>
+<p>Country: Countries in the World</p>
+<p>lifexp_2011: Life expectancy of a person born in 2011</p>
+<p>fertilrate_2011: Fertility rate in the country in 2011</p>
+<p>lifexp_2000: Life expectancy of a person born in 2000</p>
+<p>fertilrate_2000: Fertility rate in the country in 2000</p>
+<p>lifexp_1990: Life expectancy of a person born in 1990</p>
+<p>fertilrate_1990: Fertility rate in the country in 1990</p>
+<p><strong>Source</strong>
+Life expectancy at birth. (2013, October 14). Retrieved from
+<a href="http://data.worldbank.org/indicator/SP.DYN.LE00.IN" class="uri">http://data.worldbank.org/indicator/SP.DYN.LE00.IN</a></p>
+<p><strong>References</strong>
+Data from World Bank, Life expectancy at birth, total (years)</p>
+<ol start="4" style="list-style-type: decimal">
+<li>The World Bank collected data on the percentage of gross domestic product (GDP) that a country spends on health expenditures (Current health expenditure (% of GDP), 2019), the fertility rate of the country (Fertility rate, total (births per woman), 2019), and the percentage of woman receiving prenatal care (Pregnant women receiving prenatal care (%), 2019). The data for the countries where this information is available in table #2.3.6. Create a scatter plot of the health expenditure and percentage of woman receiving prenatal care in the year 2014, and state if there appears to be a relationship between percentage spent on health expenditure and the percentage of woman receiving prenatal care.</li>
+</ol>
+<p><strong>Table #2.3.6: Data of Prenatal Care versus Health Expenditure</strong></p>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="graphical-descriptions-of-data.html#cb72-1"></a>Fert_prenatal&lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/fertility_prenatal.csv&quot;</span>)</span>
+<span id="cb72-2"><a href="graphical-descriptions-of-data.html#cb72-2"></a><span class="kw">head</span>(Fert_prenatal)</span></code></pre></div>
+<pre><code>##    Country.Name Country.Code                    Region         IncomeGroup
+## 1        Angola          AGO        Sub-Saharan Africa Lower middle income
+## 2       Armenia          ARM     Europe &amp; Central Asia Upper middle income
+## 3        Belize          BLZ Latin America &amp; Caribbean Upper middle income
+## 4 Cote d&#39;Ivoire          CIV        Sub-Saharan Africa Lower middle income
+## 5      Ethiopia          ETH        Sub-Saharan Africa          Low income
+## 6        Guinea          GIN        Sub-Saharan Africa          Low income
+##   f1960 f1961 f1962 f1963 f1964 f1965 f1966 f1967 f1968 f1969 f1970 f1971 f1972
+## 1 7.478 7.524 7.563 7.592 7.611 7.619 7.618 7.613 7.608 7.604 7.601 7.603 7.606
+## 2 4.786 4.670 4.521 4.345 4.150 3.950 3.758 3.582 3.429 3.302 3.199 3.114 3.035
+## 3 6.500 6.480 6.460 6.440 6.420 6.400 6.379 6.358 6.337 6.316 6.299 6.288 6.284
+## 4 7.691 7.720 7.750 7.781 7.811 7.841 7.868 7.893 7.912 7.927 7.936 7.941 7.942
+## 5 6.880 6.877 6.875 6.872 6.867 6.864 6.867 6.880 6.903 6.937 6.978 7.020 7.060
+## 6 6.114 6.127 6.138 6.147 6.154 6.160 6.168 6.177 6.189 6.205 6.225 6.249 6.277
+##   f1973 f1974 f1975 f1976 f1977 f1978 f1979 f1980 f1981 f1982 f1983 f1984 f1985
+## 1 7.611 7.614 7.615 7.609 7.594 7.571 7.540 7.504 7.469 7.438 7.413 7.394 7.380
+## 2 2.956 2.875 2.792 2.712 2.641 2.582 2.538 2.510 2.499 2.503 2.517 2.538 2.559
+## 3 6.285 6.287 6.278 6.250 6.195 6.109 5.992 5.849 5.684 5.510 5.336 5.170 5.019
+## 4 7.939 7.929 7.910 7.877 7.828 7.763 7.682 7.590 7.488 7.383 7.278 7.176 7.078
+## 5 7.094 7.121 7.143 7.167 7.195 7.230 7.271 7.316 7.360 7.397 7.424 7.437 7.435
+## 6 6.306 6.337 6.369 6.402 6.436 6.468 6.500 6.529 6.557 6.581 6.602 6.619 6.631
+##   f1986 f1987 f1988 f1989 f1990 f1991 f1992 f1993 f1994 f1995 f1996 f1997 f1998
+## 1 7.366 7.349 7.324 7.291 7.247 7.193 7.130 7.063 6.992 6.922 6.854 6.791 6.734
+## 2 2.578 2.591 2.592 2.578 2.544 2.484 2.400 2.297 2.179 2.056 1.938 1.832 1.747
+## 3 4.886 4.771 4.671 4.584 4.508 4.436 4.363 4.286 4.201 4.109 4.010 3.908 3.805
+## 4 6.984 6.892 6.801 6.710 6.622 6.536 6.454 6.374 6.298 6.224 6.152 6.079 6.006
+## 5 7.418 7.387 7.347 7.298 7.246 7.193 7.143 7.094 7.046 6.995 6.935 6.861 6.769
+## 6 6.637 6.637 6.631 6.618 6.598 6.570 6.535 6.493 6.444 6.391 6.334 6.273 6.211
+##   f1999 f2000 f2001 f2002 f2003 f2004 f2005 f2006 f2007 f2008 f2009 f2010 f2011
+## 1 6.683 6.639 6.602 6.568 6.536 6.502 6.465 6.420 6.368 6.307 6.238 6.162 6.082
+## 2 1.685 1.648 1.635 1.637 1.648 1.665 1.681 1.694 1.702 1.706 1.703 1.693 1.680
+## 3 3.703 3.600 3.496 3.390 3.282 3.175 3.072 2.977 2.893 2.821 2.762 2.715 2.676
+## 4 5.932 5.859 5.787 5.717 5.651 5.589 5.531 5.476 5.423 5.372 5.321 5.269 5.216
+## 5 6.659 6.529 6.380 6.216 6.044 5.867 5.690 5.519 5.355 5.201 5.057 4.924 4.798
+## 6 6.147 6.082 6.015 5.947 5.877 5.804 5.729 5.653 5.575 5.496 5.417 5.336 5.256
+##   f2012 f2013 f2014 f2015 f2016 f2017 p1986 p1987 p1988 p1989 p1990 p1991 p1992
+## 1 6.000 5.920 5.841 5.766 5.694 5.623    NA    NA    NA    NA    NA    NA    NA
+## 2 1.664 1.648 1.634 1.622 1.612 1.604    NA    NA    NA    NA    NA    NA    NA
+## 3 2.642 2.610 2.578 2.544 2.510 2.475    NA    NA    NA    NA    NA    96    NA
+## 4 5.160 5.101 5.039 4.976 4.911 4.846    NA    NA    NA    NA    NA    NA    NA
+## 5 4.677 4.556 4.437 4.317 4.198 4.081    NA    NA    NA    NA    NA    NA    NA
+## 6 5.175 5.094 5.014 4.934 4.855 4.777    NA    NA    NA    NA    NA    NA  57.6
+##   p1993 p1994 p1995 p1996 p1997 p1998 p1999 p2000 p2001 p2002 p2003 p2004 p2005
+## 1    NA    NA    NA    NA    NA    NA    NA    NA  65.6    NA    NA    NA    NA
+## 2    NA    NA    NA    NA    82    NA    NA  92.4    NA    NA    NA    NA  93.0
+## 3    NA    NA    NA    NA    NA    98  95.9 100.0    NA    98    NA    NA  94.0
+## 4    NA  83.2    NA    NA    NA    NA  84.3  87.6    NA    NA    NA    NA  87.3
+## 5    NA    NA    NA    NA    NA    NA    NA  26.7    NA    NA    NA    NA  27.6
+## 6    NA    NA    NA    NA    NA    NA  70.7    NA    NA    NA  84.3    NA  82.2
+##   p2006 p2007 p2008 p2009 p2010 p2011 p2012 p2013 p2014 p2015 p2016 p2017 p2018
+## 1    NA  79.8    NA    NA    NA    NA    NA    NA    NA    NA  81.6    NA    NA
+## 2    NA    NA    NA    NA  99.1    NA    NA    NA    NA    NA  99.6    NA    NA
+## 3  94.0  99.2    NA    NA    NA  96.2    NA    NA    NA  97.2  97.2    NA    NA
+## 4  84.8    NA    NA    NA    NA    NA  90.6    NA    NA    NA  93.2    NA    NA
+## 5    NA    NA    NA    NA    NA  33.9    NA    NA  41.2    NA  62.4    NA    NA
+## 6    NA  88.4    NA    NA    NA    NA  85.2    NA    NA    NA  84.3    NA    NA
+##      e2000    e2001    e2002    e2003    e2004    e2005    e2006    e2007
+## 1 2.334435 5.483824 4.072288 4.454100 4.757211 3.734836 3.366183 3.211438
+## 2 6.505224 6.536262 5.690812 5.610725 8.227844 7.034880 5.588461 5.445144
+## 3 3.942030 4.228792 3.864327 4.260178 4.091610 4.216728 4.163924 4.568384
+## 4 5.672228 4.850694 4.476869 4.645306 5.213588 5.353556 5.808850 6.259154
+## 5 4.365290 4.713670 4.705820 4.885341 4.304562 4.100981 4.226696 4.801925
+## 6 3.697726 3.884610 4.384152 3.651081 3.365547 2.949490 2.960601 3.013074
+##      e2008    e2009    e2010    e2011    e2012    e2013     e2014     e2015
+## 1 3.495036 3.578677 2.736684 2.840603 2.692890 2.990929  2.798719  2.950431
+## 2 4.346749 4.689046 5.264181 3.777260 6.711859 8.269840 10.178299 10.117628
+## 3 4.646109 5.311070 5.764874 5.575126 5.322589 5.727331  5.652458  5.884248
+## 4 6.121604 6.223329 6.146566 5.978840 6.019660 5.074942  5.043462  5.262711
+## 5 4.280639 4.412473 5.466372 4.468978 4.539596 4.075065  4.033651  3.975932
+## 6 2.762090 2.936868 3.067742 3.789550 3.503983 3.461137  4.780977  5.827122
+##      e2016
+## 1 2.877825
+## 2 9.927321
+## 3 6.121374
+## 4 4.403621
+## 5 3.974016
+## 6 5.478273</code></pre>
+<p><strong>Code book for Data frame Fert_prenatal</strong></p>
+<p><strong>Description</strong>
+Data is from the World Bank on money spent on expenditure of countries and the percentage of woman receiving prenatal care in those countries.</p>
+<p><strong>Format</strong></p>
+<p>This data frame contains the following columns:</p>
+<p>Country.Name: Countries around the world</p>
+<p>Country.Code: Three letter country code for countries around the world</p>
+<p>Region: Location of a country around the world as classified by the World Bank</p>
+<p>IncomeGroup: The income level of a country as classified by the World Bank</p>
+<p>f1960-f2017: Fertility rate of a country from 1960-2017</p>
+<p>p1986-p2018: Percentage of woman receiving prenatal care in the country in 1986-2018</p>
+<p>e200-2016: Expenditure amounts of the countries for medical care in 2000-2016 (% of GDP)</p>
+<p><strong>Source</strong>
+Fertility rate, total (births per woman). (n.d.). Retrieved July 8, 2019, from <a href="https://data.worldbank.org/indicator/SP.DYN.TFRT.IN" class="uri">https://data.worldbank.org/indicator/SP.DYN.TFRT.IN</a>
+Pregnant women receiving prenatal care (%). (n.d.). Retrieved July 9, 2019, from <a href="https://data.worldbank.org/indicator/SH.STA.ANVC.ZS" class="uri">https://data.worldbank.org/indicator/SH.STA.ANVC.ZS</a>
+Current health expenditure (% of GDP). (n.d.). Retrieved July 9, 2019, from <a href="https://data.worldbank.org/indicator/SH.XPD.CHEX.GD.ZS" class="uri">https://data.worldbank.org/indicator/SH.XPD.CHEX.GD.ZS</a></p>
+<p><strong>References</strong>
+Data from World Bank, fertility rate, expenditure on health, and pregnant woman rate of prenatal care.</p>
+<ol start="5" style="list-style-type: decimal">
+<li>The Australian Institute of Criminology gathered data on the number of deaths (per 100,000 people) due to firearms during the period 1983 to 1997 ("Deaths from firearms," 2013). The data is in table #2.3.7. Create a time-series plot of the data and state any findings you can from the graph.</li>
+</ol>
+<p><strong>Table #2.3.7: Data of Year versus Number of Deaths due to Firearms</strong></p>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="graphical-descriptions-of-data.html#cb74-1"></a>Firearm&lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/rate.csv&quot;</span>)</span>
+<span id="cb74-2"><a href="graphical-descriptions-of-data.html#cb74-2"></a><span class="kw">head</span>(Firearm)</span></code></pre></div>
+<pre><code>##   year rate
+## 1 1983 4.31
+## 2 1984 4.42
+## 3 1985 4.52
+## 4 1986 4.35
+## 5 1987 4.39
+## 6 1988 4.21</code></pre>
+<p><strong>Code book for Data Frame Firearm</strong></p>
+<p><strong>Description</strong>
+The data give the number of deaths caused by firearms in Australia from 1983 to 1997, expressed as a rate per 100,000 of population.</p>
+<p><strong>Format</strong></p>
+<p>This data frame contains the following columns:</p>
+<p>Year: Years from 1983 to 1997</p>
+<p>Rate: Rate of deaths caused by firearms in Australia per 100,000 population</p>
+<p><strong>Source</strong>
+Deaths from firearms. (2013, September 26). Retrieved from
+<a href="http://www.statsci.org/data/oz/firearms.html" class="uri">http://www.statsci.org/data/oz/firearms.html</a></p>
+<p><strong>References</strong>
+Australian Institute of Criminology, 1999.The data was contributed by Rex Boggs, Glenmore State High School, Rockhampton, Queensland, Australia.</p>
+<ol start="6" style="list-style-type: decimal">
+<li>The economic crisis of 2008 affected many countries, though some more than others. Some people in Australia have claimed that Australia wasn’t hurt that badly from the crisis. The bank assets (in billions of Australia dollars (AUD)) of the Reserve Bank of Australia (RBA) for the time period of September 1 1969 through March 1 2019 are contained in table #2.3.8 (Reserve Bank of Australia, 2019). Create a time-series plot of the assets of the RBA and interpret any findings.</li>
+</ol>
+<p><strong>Table #2.3.8: Data of Date versus RBA Assets</strong></p>
+<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="graphical-descriptions-of-data.html#cb76-1"></a>Australian&lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/Australian_financial.csv&quot;</span>)</span>
+<span id="cb76-2"><a href="graphical-descriptions-of-data.html#cb76-2"></a><span class="kw">head</span>(Australian)</span></code></pre></div>
+<pre><code>##     Date Day Assets_RBA Assets_ADIs_Banks Assets_ADIs_Building Assets_ADIs_CU
+## 1 Sep-69   0        2.7                NA                   NA             NA
+## 2 Dec-69  90        2.9                NA                   NA             NA
+## 3 Mar-70 180        3.0                NA                   NA             NA
+## 4 Jun-70 270        3.0                NA                   NA             NA
+## 5 Sep-70 360        3.0                NA                   NA             NA
+## 6 Dec-70 450        3.0                NA                   NA             NA
+##   Assets_ADIs_Total Assets_RFCs_MM Assets_RFCs_Finance Assets_RFCs_Total
+## 1                NA             NA                  NA                NA
+## 2                NA             NA                  NA                NA
+## 3                NA             NA                  NA                NA
+## 4                NA             NA                  NA                NA
+## 5                NA             NA                  NA                NA
+## 6                NA             NA                  NA                NA
+##   Assets_Life.offices Assets_Life_funds Assets_Life_Total
+## 1                  NA                NA                NA
+## 2                  NA                NA                NA
+## 3                  NA                NA                NA
+## 4                  NA                NA                NA
+## 5                  NA                NA                NA
+## 6                  NA                NA                NA
+##   Assets_Other_Public_trusts Assets_Other_Cash_trusts Assets_Other_Common_funds
+## 1                         NA                       NA                        NA
+## 2                         NA                       NA                        NA
+## 3                         NA                       NA                        NA
+## 4                         NA                       NA                        NA
+## 5                         NA                       NA                        NA
+## 6                         NA                       NA                        NA
+##   Assets_Others_Friendly Assets_Other_General_insurance Assets_Other_vehicles
+## 1                     NA                             NA                    NA
+## 2                     NA                             NA                    NA
+## 3                     NA                             NA                    NA
+## 4                     NA                             NA                    NA
+## 5                     NA                             NA                    NA
+## 6                     NA                             NA                    NA
+##   Assets_Unconsolidated
+## 1                    NA
+## 2                    NA
+## 3                    NA
+## 4                    NA
+## 5                    NA
+## 6                    NA</code></pre>
+<p><strong>Code book for Data Frame Australian</strong> See Example #2.3.2</p>
+<ol start="7" style="list-style-type: decimal">
+<li>The consumer price index (CPI) is a measure used by the U.S. government to describe the cost of living. Table #2.3.9 gives the cost of living for the U.S. from the years 1913 through 2019, with the year 1982 being used as the year that all others are compared (Consumer Price Index Data from 1913 to 2019, 2019). Create a time-series plot of the Average Annual CPI and interpret.</li>
+</ol>
+<p><strong>Table #2.3.9: Data of Time versus CPI</strong></p>
+<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="graphical-descriptions-of-data.html#cb78-1"></a>CPI&lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/CPI_US.csv&quot;</span>)</span>
+<span id="cb78-2"><a href="graphical-descriptions-of-data.html#cb78-2"></a><span class="kw">head</span>(CPI)</span></code></pre></div>
+<pre><code>##   Year  Jan  Feb  Mar  Apr  May June July  Aug  Sep  Oct  Nov  Dec Annual_avg
+## 1 1913  9.8  9.8  9.8  9.8  9.7  9.8  9.9  9.9 10.0 10.0 10.1 10.0        9.9
+## 2 1914 10.0  9.9  9.9  9.8  9.9  9.9 10.0 10.2 10.2 10.1 10.2 10.1       10.0
+## 3 1915 10.1 10.0  9.9 10.0 10.1 10.1 10.1 10.1 10.1 10.2 10.3 10.3       10.1
+## 4 1916 10.4 10.4 10.5 10.6 10.7 10.8 10.8 10.9 11.1 11.3 11.5 11.6       10.9
+## 5 1917 11.7 12.0 12.0 12.6 12.8 13.0 12.8 13.0 13.3 13.5 13.5 13.7       12.8
+## 6 1918 14.0 14.1 14.0 14.2 14.5 14.7 15.1 15.4 15.7 16.0 16.3 16.5       15.1
+##   PerDec_Dec Perc_Avg_Avg
+## 1          –            –
+## 2          1            1
+## 3          2            1
+## 4       12.6          7.9
+## 5       18.1         17.4
+## 6       20.4           18</code></pre>
+<p><strong>Code book for Data frame CPI</strong></p>
+<p><strong>Description</strong>
+This table of Consumer Price Index (CPI) data is based upon a 1982 base of 100.</p>
+<p><strong>Format</strong></p>
+<p>This data frame contains the following columns:</p>
+<p>Year: Year from 1913 to 2019</p>
+<p>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec: CPI for a particular month</p>
+<p>Average_Avg: The average CPI for a particular year</p>
+<p>PerDec_Dec: Percent change from December to December</p>
+<p>Per_Avg_Avg: Percent change from Annual Average to Annual Average</p>
+<p><strong>Source</strong>
+Consumer Price Index Data from 1913 to 2019. (2019, June 12). Retrieved July 10, 2019, from <a href="https://www.usinflationcalculator.com/inflation/consumer-price-index-and-annual-percent-changes-from-1913-to-2008/" class="uri">https://www.usinflationcalculator.com/inflation/consumer-price-index-and-annual-percent-changes-from-1913-to-2008/</a></p>
+<p><strong>References</strong>
+US Inflation Calculator website, 2019.</p>
+<ol start="8" style="list-style-type: decimal">
+<li>The mean and median incomes income in current dollars is given in Table #2.3.10. Create a time-series plot and interpret.</li>
+</ol>
+<p><strong>Table #2.3.10: Data of US Mean and Median Income</strong></p>
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="graphical-descriptions-of-data.html#cb80-1"></a>US_income&lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/US_income.csv&quot;</span>)</span>
+<span id="cb80-2"><a href="graphical-descriptions-of-data.html#cb80-2"></a><span class="kw">head</span>(US_income)</span></code></pre></div>
+<pre><code>##   year number med_income_current med_income_2017 mean_income_current
+## 1 2017 127586              61372           61372               86220
+## 2 2016 126224              59039           60309               83143
+## 3 2015 125819              56516           58476               79263
+## 4 2014 124587              53657           55613               75738
+## 5 2013 122952              51939           54744               72641
+## 6 2012 122459              51017           54569               71274
+##   mean_income_2017
+## 1            86220
+## 2            84931
+## 3            82012
+## 4            78500
+## 5            76565
+## 6            76237</code></pre>
+<p><strong>Code book for Data Frame US_income</strong></p>
+<p><strong>Description</strong>
+This table is of US mean and median incomes in both current dollars and in 2017 dollars.</p>
+<p><strong>Format</strong></p>
+<p>This data frame contains the following columns:</p>
+<p>Year: Year from 1975 to 2017</p>
+<p>number: Households as of March of the following year. (in thousands)</p>
+<p>med_income_current: median income of a US household in current dollars</p>
+<p>med_income_2017: median income of a US household in 2017 CPI-U-RS adjusted dollars</p>
+<p>mean_income_current: mean income of a US household in current dollars</p>
+<p>mean_income_2017: mean income of a US household in 2017 CPI-U-RS adjusted dollars</p>
+<p><strong>Source</strong>
+US Census Bureau. (2018, March 06). Data. Retrieved July 21, 2019, from <a href="https://www.census.gov/programs-surveys/cps/data-detail.html" class="uri">https://www.census.gov/programs-surveys/cps/data-detail.html</a></p>
+<p><strong>References</strong>
+U.S. Census Bureau, Current Population Survey, Annual Social and Economic Supplements.</p>
+<p><strong><br />
+</strong>
+Data Sources:</p>
+<p>Capital and rental values of Auckland properties. (2013, September 26). Retrieved from
+<a href="http://www.statsci.org/data/oz/rentcap.html" class="uri">http://www.statsci.org/data/oz/rentcap.html</a></p>
+<p>Consumer Price Index Data from 1913 to 2019. (2019, June 12). Retrieved July 10, 2019, from <a href="https://www.usinflationcalculator.com/inflation/consumer-price-index-and-annual-percent-changes-from-1913-to-2008/" class="uri">https://www.usinflationcalculator.com/inflation/consumer-price-index-and-annual-percent-changes-from-1913-to-2008/</a></p>
+<p>CPS News Releases. (n.d.). Retrieved July 8, 2019, from <a href="https://www.bls.gov/cps/" class="uri">https://www.bls.gov/cps/</a></p>
+<p>Current health expenditure (% of GDP). (n.d.). Retrieved July 9, 2019, from <a href="https://data.worldbank.org/indicator/SH.XPD.CHEX.GD.ZS" class="uri">https://data.worldbank.org/indicator/SH.XPD.CHEX.GD.ZS</a></p>
+<p>Deaths from firearms. (2013, September 26). Retrieved from
+<a href="http://www.statsci.org/data/oz/firearms.html" class="uri">http://www.statsci.org/data/oz/firearms.html</a></p>
+<p>Fertility rate, total (births per woman). (n.d.). Retrieved July 8, 2019, from <a href="https://data.worldbank.org/indicator/SP.DYN.TFRT.IN" class="uri">https://data.worldbank.org/indicator/SP.DYN.TFRT.IN</a></p>
+<p>Health Insurance Market Place Retrieved from website:
+<a href="http://aspe.hhs.gov/health/reports/2013/marketplacepremiums/ib_premiumslandscape.pdf" class="uri">http://aspe.hhs.gov/health/reports/2013/marketplacepremiums/ib_premiumslandscape.pdf</a></p>
+<p>John Matic provided the data from a company he worked with. The company’s name is fictitious, but the data is from an actual company.</p>
+<p>Kozak K (2019). Survey results form surveys collected in statistics class at Coconino Community College.</p>
+<p>Life expectancy at birth. (2013, October 14). Retrieved from
+<a href="http://data.worldbank.org/indicator/SP.DYN.LE00.IN" class="uri">http://data.worldbank.org/indicator/SP.DYN.LE00.IN</a></p>
+<p>Population density (people per sq. km of land area). (n.d.). Retrieved July 9, 2019, from <a href="https://data.worldbank.org/indicator/EN.POP.DNST" class="uri">https://data.worldbank.org/indicator/EN.POP.DNST</a></p>
+<p>Prediction of Height from Metacarpal Bone Length. (n.d.). Retrieved July 9, 2019, from <a href="http://www.statsci.org/data/general/stature.html" class="uri">http://www.statsci.org/data/general/stature.html</a></p>
+<p>Pregnant women receiving prenatal care (%). (n.d.). Retrieved July 9, 2019, from <a href="https://data.worldbank.org/indicator/SH.STA.ANVC.ZS" class="uri">https://data.worldbank.org/indicator/SH.STA.ANVC.ZS</a></p>
+<p>Reserve Bank of Australia. (2019, May 13). Statistical Tables. Retrieved July 10, 2019, from <a href="https://www.rba.gov.au/statistics/tables/" class="uri">https://www.rba.gov.au/statistics/tables/</a></p>
+<p>Tuition and Fees, 1998-99 Through 2018-19. (2018, December 31). Retrieved from <a href="https://www.chronicle.com/interactives/tuition-and-fees" class="uri">https://www.chronicle.com/interactives/tuition-and-fees</a></p>
+<p>U.S. Census Bureau, Current Population Survey, Annual Social and Economic Supplements.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="statistical-basics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="numerical-descriptions-of-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["Statistics_using_technology.pdf", "Statistics_using_technology.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+--- 
+title: "Statistics Using Technology"
+author: "Kathryn Kozak"
+date: "`r Sys.Date()`"
+output: word_document
+description: An introductory statistics textbook.
+documentclass: book
+link-citations: yes
+bibliography: book.bib
+site: bookdown::bookdown_site
+subtitle: Third Edition
+biblio-style: apalike
+---
+
+# Preface {-}
+
+I hope you find this book useful in teaching statistics.  When writing this book, I tried to follow the GAISE Standards (GAISE recommendations. (2014, January 05). Retrieved from http://www.amstat.org/education/gaise/GAISECollege_Recommendations.pdf
+
+* Teach statistical thinking.
+* Focus on conceptual understanding.
+* Integrate real data with a context and a purpose.
+* Foster active learning.
+* Use technology to explore concepts and analyze data.
+* Use assessments to improve and evaluate student learning
+
+To this end, I ask students to interpret the results of their calculations.  I incorporated the use of technology (R Studio) for most calculations.  Because of that you will not find me using any of the computational formulas for standard deviations or correlation and regression since I prefer students understand the concept of these quantities.  Also, because I utilize technology you will not find the standard normal table, Student’s t-table, binomial table, chi-square distribution table, and F-distribution table in the book. Another difference between this book and other statistics books is the order of hypothesis testing and confidence intervals.  Most books present confidence intervals first and then hypothesis tests.  I find that presenting hypothesis testing first and then confidence intervals is more understandable for students.  Lastly, I have de-emphasized the use of the z-test.  In fact, I only use it to introduce hypothesis testing, and never utilize it again. Two samples should be emphasised over one sample test. Lastly, to aid student understanding and interest, most of the homework and examples utilize real data with multiple variables. The beauty of multiple variables, is that you can ask the students to investigate different analysis with different variables. This way students can work with data and come up with connections of asking questions and using data to answer the questions.  Again, I hope you find this book useful for your introductory statistics class.
+
+I want to make a comment about the mathematical knowledge that I assumed the students possess.  The course for which I wrote this book has a higher prerequisite than most introductory statistics books.  However, I do feel that students can read and understand this book as long as they can read critically.  I do not show how to create most of the graphs, but all graphs are created with R Studio.  So I hope the mathematical level is appropriate for your course.
+
+The technology that I utilized for creating the graphs and statistical analysis is R Studio. This is a statistical software that are used by statisticians and so using it gives students skills they may need in the future.  Please feel free to use any other technology that is more appropriate for your students.  Do make sure that you use some technology.
+
+## Acknowledgments:
+
+I would like to thank the following people for taking their valuable time to review the book.  Their comments and insights improved this book immensely.
+
+- Daniel Kaplan, Macalester College
+- Jane Tanner, Onondaga Community College
+- Rob Farinelli, College of Southern Maryland
+- Carrie Kinnison, retired engineer
+- Sean Simpson, Westchester Community College
+- Kim Sonier, Coconino Community College
+- Jim Ham, Delta College 
+- David Straayer, Tacoma Community College
+- Kendra Feinstein, Tacoma Community College
+- Students of Coconino Community College
+- Students of Tacoma Community College
+
+I also want to thank Coconino Community College for granting me a sabbatical so that I would have the time to write the book.  On a personal note, I wanted to thank my brother, John Matic, his wife Jenelle, and their children Hannah and Eli for their hospitality when writing the first edition. In addition to allowing my family access to their home, John provided numerous examples and data sets for business applications in this book. I inadvertently left this thank you out of the first edition of the book, and for that I apologize. His help and his family’s hospitality were invaluable to me.
+Lastly, I want to thank my husband Rich and my son Dylan for supporting me in this project.  Without their love and support, I would not have been able to complete the book.
+
+
+## New to the Third Edition:
+
+The additions to this edition mostly involve adding the commands to create graphs, compute descriptive statistics, finding probabilities, and computing inferential analysis using the open source software R Studio, and the removal of all other technologies. Data Frames with multiple variables and multiple units of measurements were expanded to most of the data. This is to make the course more data-centric. Lastly, minor explanations were made and corrections were made where necessary.
+
+## Packages needed for R Studio:
+
+You will need the following packages installed and loaded in R Studio: arm, mosaic, MASS, Weighted.Desc.Stat.

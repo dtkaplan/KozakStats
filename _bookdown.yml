@@ -1,0 +1,20 @@
+book_filename: "Statistics_using_technology"
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Chapter "
+output_dir: "docs"
+rmd_files: ["index.Rmd",
+            "010-basics.Rmd",
+            "020-graphics.Rmd",
+            "030-numerical-summaries.Rmd",
+            "040-probability.Rmd",
+            "050-discrete.Rmd",
+            "060-continuous.Rmd",
+            "070-one-sample.Rmd",
+            "080-estimation.Rmd",
+            "090-two-sample.Rmd",
+            "100-regression.Rmd",
+            "110-chisq-anova.Rmd"
+            ]
+            

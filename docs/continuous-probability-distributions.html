@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 6 Continuous Probability Distributions | Statistics Using Technology</title>
+  <meta name="description" content="An introductory statistics textbook." />
+  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 6 Continuous Probability Distributions | Statistics Using Technology" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="An introductory statistics textbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 Continuous Probability Distributions | Statistics Using Technology" />
+  
+  <meta name="twitter:description" content="An introductory statistics textbook." />
+  
+
+<meta name="author" content="Kathryn Kozak" />
+
+
+<meta name="date" content="2020-07-30" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="discrete-probability-distributions.html"/>
+<link rel="next" href="one-sample-inference.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Statistics Using Technology</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i><b>0.1</b> Acknowledgments:</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#new-to-the-third-edition"><i class="fa fa-check"></i><b>0.2</b> New to the Third Edition:</a></li>
+<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#packages-needed-for-r-studio"><i class="fa fa-check"></i><b>0.3</b> Packages needed for R Studio:</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="statistical-basics.html"><a href="statistical-basics.html"><i class="fa fa-check"></i><b>1</b> Statistical Basics</a><ul>
+<li class="chapter" data-level="1.1" data-path="statistical-basics.html"><a href="statistical-basics.html#what-is-statistics"><i class="fa fa-check"></i><b>1.1</b> What is Statistics?</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="statistical-basics.html"><a href="statistical-basics.html#example-stating-definitions-for-qualitative-variable"><i class="fa fa-check"></i><b>1.1.1</b> Example: Stating Definitions for Qualitative Variable**</a></li>
+<li class="chapter" data-level="1.1.2" data-path="statistical-basics.html"><a href="statistical-basics.html#example-stating-definitions-for-qualitative-variable-1"><i class="fa fa-check"></i><b>1.1.2</b> Example: Stating Definitions for Qualitative Variable</a></li>
+<li class="chapter" data-level="1.1.3" data-path="statistical-basics.html"><a href="statistical-basics.html#example-stating-definitions-for-quantitative-variable"><i class="fa fa-check"></i><b>1.1.3</b> Example: Stating Definitions for Quantitative Variable</a></li>
+<li class="chapter" data-level="1.1.4" data-path="statistical-basics.html"><a href="statistical-basics.html#example-stating-definitions-for-quantitative-variable-1"><i class="fa fa-check"></i><b>1.1.4</b> Example: Stating Definitions for Quantitative Variable</a></li>
+<li class="chapter" data-level="1.1.5" data-path="statistical-basics.html"><a href="statistical-basics.html#example-discrete-or-continuous"><i class="fa fa-check"></i><b>1.1.5</b> Example: Discrete or Continuous</a></li>
+<li class="chapter" data-level="1.1.6" data-path="statistical-basics.html"><a href="statistical-basics.html#example-measurement-scale"><i class="fa fa-check"></i><b>1.1.6</b> Example: Measurement Scale</a></li>
+<li class="chapter" data-level="1.1.7" data-path="statistical-basics.html"><a href="statistical-basics.html#homework-section-1.1"><i class="fa fa-check"></i><b>1.1.7</b> Homework Section 1.1</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="statistical-basics.html"><a href="statistical-basics.html#sampling-methods"><i class="fa fa-check"></i><b>1.2</b> Sampling Methods</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="statistical-basics.html"><a href="statistical-basics.html#example-choosing-a-simple-random-sample"><i class="fa fa-check"></i><b>1.2.1</b> Example: Choosing a Simple Random Sample</a></li>
+<li class="chapter" data-level="1.2.2" data-path="statistical-basics.html"><a href="statistical-basics.html#example-how-not-to-choose-a-simple-random-sample"><i class="fa fa-check"></i><b>1.2.2</b> Example: How Not to Choose a Simple Random Sample</a></li>
+<li class="chapter" data-level="1.2.3" data-path="statistical-basics.html"><a href="statistical-basics.html#example-how-to-choose-a-simple-random-sample-using-r"><i class="fa fa-check"></i><b>1.2.3</b> Example: How to Choose a Simple Random Sample using R</a></li>
+<li class="chapter" data-level="1.2.4" data-path="statistical-basics.html"><a href="statistical-basics.html#example-sampling-type"><i class="fa fa-check"></i><b>1.2.4</b> Example: Sampling type</a></li>
+<li class="chapter" data-level="1.2.5" data-path="statistical-basics.html"><a href="statistical-basics.html#homework-section-1.2"><i class="fa fa-check"></i><b>1.2.5</b> Homework Section 1.2</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="statistical-basics.html"><a href="statistical-basics.html#experimental-design"><i class="fa fa-check"></i><b>1.3</b> Experimental Design</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="statistical-basics.html"><a href="statistical-basics.html#example-observational-study-or-experiment"><i class="fa fa-check"></i><b>1.3.1</b> Example: Observational Study or Experiment</a></li>
+<li class="chapter" data-level="1.3.2" data-path="statistical-basics.html"><a href="statistical-basics.html#homework-section-1.3"><i class="fa fa-check"></i><b>1.3.2</b> Homework Section 1.3</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="statistical-basics.html"><a href="statistical-basics.html#how-not-to-do-statistics"><i class="fa fa-check"></i><b>1.4</b> How Not to Do Statistics</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="statistical-basics.html"><a href="statistical-basics.html#example-bias-in-a-study"><i class="fa fa-check"></i><b>1.4.1</b> Example: Bias in a Study**</a></li>
+<li class="chapter" data-level="1.4.2" data-path="statistical-basics.html"><a href="statistical-basics.html#example-cause-and-effect"><i class="fa fa-check"></i><b>1.4.2</b> Example: Cause and Effect</a></li>
+<li class="chapter" data-level="1.4.3" data-path="statistical-basics.html"><a href="statistical-basics.html#example-generalizations"><i class="fa fa-check"></i><b>1.4.3</b> Example: Generalizations</a></li>
+<li class="chapter" data-level="1.4.4" data-path="statistical-basics.html"><a href="statistical-basics.html#homework-section-1.4"><i class="fa fa-check"></i><b>1.4.4</b> Homework Section 1.4</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html"><i class="fa fa-check"></i><b>2</b> Graphical Descriptions of Data</a><ul>
+<li class="chapter" data-level="2.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#qualitative-data"><i class="fa fa-check"></i><b>2.1</b> Qualitative Data</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-drawing-a-bar-chart"><i class="fa fa-check"></i><b>2.1.1</b> Example: Drawing a Bar Chart**</a></li>
+<li class="chapter" data-level="2.1.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework"><i class="fa fa-check"></i><b>2.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#quantitative-data"><i class="fa fa-check"></i><b>2.2</b> Quantitative Data</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-drawing-a-histogram-and-density-plot"><i class="fa fa-check"></i><b>2.2.1</b> Example: Drawing a Histogram and Density plot</a></li>
+<li class="chapter" data-level="2.2.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-drawing-a-histogram-and-density-plot-1"><i class="fa fa-check"></i><b>2.2.2</b> Example: Drawing a Histogram and Density plot</a></li>
+<li class="chapter" data-level="2.2.3" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework-1"><i class="fa fa-check"></i><b>2.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#other-graphical-representations-of-data"><i class="fa fa-check"></i><b>2.3</b> Other Graphical Representations of Data</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-scatter-plot"><i class="fa fa-check"></i><b>2.3.1</b> Example: Scatter Plot**</a></li>
+<li class="chapter" data-level="2.3.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-time-series-plot"><i class="fa fa-check"></i><b>2.3.2</b> Example: Time-Series Plot**</a></li>
+<li class="chapter" data-level="2.3.3" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework-2"><i class="fa fa-check"></i><b>2.3.3</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html"><i class="fa fa-check"></i><b>3</b> Numerical Descriptions of Data</a><ul>
+<li class="chapter" data-level="3.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#measures-of-center"><i class="fa fa-check"></i><b>3.1</b> Measures of Center</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-finding-the-mean-and-median-using-r"><i class="fa fa-check"></i><b>3.1.1</b> Example: Finding the Mean and Median using R</a></li>
+<li class="chapter" data-level="3.1.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-finding-mean-and-median-with-filtering"><i class="fa fa-check"></i><b>3.1.2</b> Example: Finding Mean and Median with filtering</a></li>
+<li class="chapter" data-level="3.1.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-affect-of-extreme-values-on-mean-and-median"><i class="fa fa-check"></i><b>3.1.3</b> Example: Affect of Extreme Values on Mean and Median**</a></li>
+<li class="chapter" data-level="3.1.4" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-weighted-average"><i class="fa fa-check"></i><b>3.1.4</b> Example: Weighted Average</a></li>
+<li class="chapter" data-level="3.1.5" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-weighted-average-1"><i class="fa fa-check"></i><b>3.1.5</b> Example: Weighted Average</a></li>
+<li class="chapter" data-level="3.1.6" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-3"><i class="fa fa-check"></i><b>3.1.6</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#measures-of-spread"><i class="fa fa-check"></i><b>3.2</b> Measures of Spread</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-range"><i class="fa fa-check"></i><b>3.2.1</b> Example: Range</a></li>
+<li class="chapter" data-level="3.2.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-finding-the-standard-deviation"><i class="fa fa-check"></i><b>3.2.2</b> Example: Finding the Standard Deviation</a></li>
+<li class="chapter" data-level="3.2.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-the-gneral-rule"><i class="fa fa-check"></i><b>3.2.3</b> Example: the gneral rule</a></li>
+<li class="chapter" data-level="3.2.4" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-determining-if-a-value-is-unusual"><i class="fa fa-check"></i><b>3.2.4</b> Example: Determining If a Value Is Unusual</a></li>
+<li class="chapter" data-level="3.2.5" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-4"><i class="fa fa-check"></i><b>3.2.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#ranking"><i class="fa fa-check"></i><b>3.3</b> Ranking</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-interpreting-percentile"><i class="fa fa-check"></i><b>3.3.1</b> Example: Interpreting Percentile</a></li>
+<li class="chapter" data-level="3.3.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-percentile-versus-score"><i class="fa fa-check"></i><b>3.3.2</b> Example: Percentile Versus Score</a></li>
+<li class="chapter" data-level="3.3.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-five-number-summary-and-boxplot"><i class="fa fa-check"></i><b>3.3.3</b> Example: Five-number Summary and Boxplot</a></li>
+<li class="chapter" data-level="3.3.4" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-separating-based-on-a-factor"><i class="fa fa-check"></i><b>3.3.4</b> Example: Separating based on a factor</a></li>
+<li class="chapter" data-level="3.3.5" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-putting-it-all-together"><i class="fa fa-check"></i><b>3.3.5</b> Example: Putting it all together</a></li>
+<li class="chapter" data-level="3.3.6" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-5"><i class="fa fa-check"></i><b>3.3.6</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>4</b> Probability</a><ul>
+<li class="chapter" data-level="4.1" data-path="probability.html"><a href="probability.html#empirical-probability"><i class="fa fa-check"></i><b>4.1</b> Empirical Probability</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="probability.html"><a href="probability.html#example-statistics-class-survey"><i class="fa fa-check"></i><b>4.1.1</b> Example: Statistics class survey</a></li>
+<li class="chapter" data-level="4.1.2" data-path="probability.html"><a href="probability.html#homework-6"><i class="fa fa-check"></i><b>4.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="probability.html"><a href="probability.html#theoretical-probability"><i class="fa fa-check"></i><b>4.2</b> Theoretical Probability</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="probability.html"><a href="probability.html#example-equally-likely-outcomes"><i class="fa fa-check"></i><b>4.2.1</b> Example: Equally Likely Outcomes</a></li>
+<li class="chapter" data-level="4.2.2" data-path="probability.html"><a href="probability.html#example-calculating-theoretical-probabilities"><i class="fa fa-check"></i><b>4.2.2</b> Example: Calculating Theoretical Probabilities</a></li>
+<li class="chapter" data-level="4.2.3" data-path="probability.html"><a href="probability.html#example-calculating-theoretical-probabilities-1"><i class="fa fa-check"></i><b>4.2.3</b> Example: Calculating Theoretical Probabilities</a></li>
+<li class="chapter" data-level="4.2.4" data-path="probability.html"><a href="probability.html#example-calculating-theoretical-probabilities-2"><i class="fa fa-check"></i><b>4.2.4</b> Example: Calculating Theoretical Probabilities</a></li>
+<li class="chapter" data-level="4.2.5" data-path="probability.html"><a href="probability.html#example-complementary-events"><i class="fa fa-check"></i><b>4.2.5</b> Example: Complementary Events</a></li>
+<li class="chapter" data-level="4.2.6" data-path="probability.html"><a href="probability.html#example-using-the-complement-to-find-probabilities"><i class="fa fa-check"></i><b>4.2.6</b> Example: Using the Complement to Find Probabilities</a></li>
+<li class="chapter" data-level="4.2.7" data-path="probability.html"><a href="probability.html#example-using-addition-rules"><i class="fa fa-check"></i><b>4.2.7</b> Example: Using Addition Rules</a></li>
+<li class="chapter" data-level="4.2.8" data-path="probability.html"><a href="probability.html#example-odds-against-and-payoff-odds"><i class="fa fa-check"></i><b>4.2.8</b> Example: Odds Against and Payoff Odds</a></li>
+<li class="chapter" data-level="4.2.9" data-path="probability.html"><a href="probability.html#homework-7"><i class="fa fa-check"></i><b>4.2.9</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="probability.html"><a href="probability.html#conditional-probability"><i class="fa fa-check"></i><b>4.3</b> Conditional Probability</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="probability.html"><a href="probability.html#example-conditional-probabilities"><i class="fa fa-check"></i><b>4.3.1</b> Example: Conditional Probabilities</a></li>
+<li class="chapter" data-level="4.3.2" data-path="probability.html"><a href="probability.html#example-independent-events"><i class="fa fa-check"></i><b>4.3.2</b> Example: Independent Events</a></li>
+<li class="chapter" data-level="4.3.3" data-path="probability.html"><a href="probability.html#example-multiplication-rule"><i class="fa fa-check"></i><b>4.3.3</b> Example: Multiplication Rule</a></li>
+<li class="chapter" data-level="4.3.4" data-path="probability.html"><a href="probability.html#example-application-problem"><i class="fa fa-check"></i><b>4.3.4</b> Example: Application Problem</a></li>
+<li class="chapter" data-level="4.3.5" data-path="probability.html"><a href="probability.html#homework-8"><i class="fa fa-check"></i><b>4.3.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="probability.html"><a href="probability.html#counting-techniques"><i class="fa fa-check"></i><b>4.4</b> Counting Techniques</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="probability.html"><a href="probability.html#example-multiplication-rule-in-counting"><i class="fa fa-check"></i><b>4.4.1</b> Example: Multiplication Rule in Counting</a></li>
+<li class="chapter" data-level="4.4.2" data-path="probability.html"><a href="probability.html#example-multiplication-rule-in-counting-1"><i class="fa fa-check"></i><b>4.4.2</b> Example: Multiplication Rule in Counting</a></li>
+<li class="chapter" data-level="4.4.3" data-path="probability.html"><a href="probability.html#homework-9"><i class="fa fa-check"></i><b>4.4.3</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html"><i class="fa fa-check"></i><b>5</b> Discrete Probability Distributions</a><ul>
+<li class="chapter" data-level="5.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#basics-of-probability-distributions"><i class="fa fa-check"></i><b>5.1</b> Basics of Probability Distributions</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-probability-distribution"><i class="fa fa-check"></i><b>5.1.1</b> Example: Probability Distribution</a></li>
+<li class="chapter" data-level="5.1.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-calculating-the-expected-value"><i class="fa fa-check"></i><b>5.1.2</b> Example: Calculating the Expected Value</a></li>
+<li class="chapter" data-level="5.1.3" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-is-the-event-unusual"><i class="fa fa-check"></i><b>5.1.3</b> Example: Is the Event Unusual</a></li>
+<li class="chapter" data-level="5.1.4" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-10"><i class="fa fa-check"></i><b>5.1.4</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#binomial-probability-distribution"><i class="fa fa-check"></i><b>5.2</b> Binomial Probability Distribution</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-calculating-binomial-probabilities"><i class="fa fa-check"></i><b>5.2.1</b> Example: Calculating Binomial Probabilities</a></li>
+<li class="chapter" data-level="5.2.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-calculating-binomial-probabilities-1"><i class="fa fa-check"></i><b>5.2.2</b> Example: Calculating Binomial Probabilities</a></li>
+<li class="chapter" data-level="5.2.3" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-11"><i class="fa fa-check"></i><b>5.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#mean-and-standard-deviation-of-binomial-distribution"><i class="fa fa-check"></i><b>5.3</b> Mean and Standard Deviation of Binomial Distribution</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-finding-the-probability-distribution-mean-variance-and-standard-deviation-of-a-binomial-distribution"><i class="fa fa-check"></i><b>5.3.1</b> Example: Finding the Probability Distribution, Mean, Variance and Standard Deviation of a Binomial Distribution</a></li>
+<li class="chapter" data-level="5.3.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-12"><i class="fa fa-check"></i><b>5.3.2</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html"><i class="fa fa-check"></i><b>6</b> Continuous Probability Distributions</a><ul>
+<li class="chapter" data-level="6.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#finding-probabilities-for-the-normal-distribution"><i class="fa fa-check"></i><b>6.1</b> Finding Probabilities for the Normal Distribution</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-general-normal-distribution"><i class="fa fa-check"></i><b>6.1.1</b> Example: General Normal Distribution</a></li>
+<li class="chapter" data-level="6.1.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-general-normal-distribution-1"><i class="fa fa-check"></i><b>6.1.2</b> Example: General Normal Distribution</a></li>
+<li class="chapter" data-level="6.1.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-13"><i class="fa fa-check"></i><b>6.1.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#assessing-normality"><i class="fa fa-check"></i><b>6.2</b> Assessing Normality</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-is-it-normal"><i class="fa fa-check"></i><b>6.2.1</b> Example: Is It Normal?</a></li>
+<li class="chapter" data-level="6.2.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-is-it-normal-1"><i class="fa fa-check"></i><b>6.2.2</b> Example: Is It Normal?</a></li>
+<li class="chapter" data-level="6.2.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-14"><i class="fa fa-check"></i><b>6.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#sampling-distribution-and-the-central-limit-theorem"><i class="fa fa-check"></i><b>6.3</b> Sampling Distribution and the Central Limit Theorem</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-sampling-distribution"><i class="fa fa-check"></i><b>6.3.1</b> Example: Sampling Distribution</a></li>
+<li class="chapter" data-level="6.3.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-finding-probabilities-for-sample-means"><i class="fa fa-check"></i><b>6.3.2</b> Example: Finding Probabilities for Sample Means</a></li>
+<li class="chapter" data-level="6.3.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-finding-probabilities-for-sample-means-1"><i class="fa fa-check"></i><b>6.3.3</b> Example: Finding Probabilities for Sample Means</a></li>
+<li class="chapter" data-level="6.3.4" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-15"><i class="fa fa-check"></i><b>6.3.4</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="one-sample-inference.html"><a href="one-sample-inference.html"><i class="fa fa-check"></i><b>7</b> One-Sample Inference</a><ul>
+<li class="chapter" data-level="7.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#basics-of-hypothesis-testing"><i class="fa fa-check"></i><b>7.1</b> Basics of Hypothesis Testing</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-basics-of-hypothesis-testing"><i class="fa fa-check"></i><b>7.1.1</b> Example: Basics of Hypothesis Testing</a></li>
+<li class="chapter" data-level="7.1.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-battery-example-revisited."><i class="fa fa-check"></i><b>7.1.2</b> Example: Battery Example Revisited.</a></li>
+<li class="chapter" data-level="7.1.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-conclusions-in-hypothesis-tests"><i class="fa fa-check"></i><b>7.1.3</b> Example: Conclusions in Hypothesis Tests</a></li>
+<li class="chapter" data-level="7.1.4" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-stating-hypotheses"><i class="fa fa-check"></i><b>7.1.4</b> Example: Stating Hypotheses</a></li>
+<li class="chapter" data-level="7.1.5" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-stating-type-i-and-ii-errors-and-picking-level-of-significance"><i class="fa fa-check"></i><b>7.1.5</b> Example: Stating Type I and II Errors and Picking Level of Significance</a></li>
+<li class="chapter" data-level="7.1.6" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-16"><i class="fa fa-check"></i><b>7.1.6</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#one-sample-proportion-test"><i class="fa fa-check"></i><b>7.2</b> One-Sample Proportion Test</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-hypothesis-test-for-one-proportion"><i class="fa fa-check"></i><b>7.2.1</b> Example: Hypothesis Test for One Proportion</a></li>
+<li class="chapter" data-level="7.2.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-hypothesis-test-for-one-proportion-1"><i class="fa fa-check"></i><b>7.2.2</b> Example: Hypothesis Test for One Proportion</a></li>
+<li class="chapter" data-level="7.2.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-17"><i class="fa fa-check"></i><b>7.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#one-sample-test-for-the-mean"><i class="fa fa-check"></i><b>7.3</b> One-Sample Test for the Mean</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-resampling"><i class="fa fa-check"></i><b>7.3.1</b> Example: Resampling</a></li>
+<li class="chapter" data-level="7.3.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-test-of-the-mean-using-one-sample-t-test"><i class="fa fa-check"></i><b>7.3.2</b> Example: Test of the Mean Using One Sample T-test</a></li>
+<li class="chapter" data-level="7.3.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-test-of-the-mean-using-one-sample-t-test-1"><i class="fa fa-check"></i><b>7.3.3</b> Example: Test of the Mean Using One Sample T-test</a></li>
+<li class="chapter" data-level="7.3.4" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-18"><i class="fa fa-check"></i><b>7.3.4</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="estimation.html"><a href="estimation.html"><i class="fa fa-check"></i><b>8</b> Estimation</a><ul>
+<li class="chapter" data-level="8.1" data-path="estimation.html"><a href="estimation.html#basics-of-confidence-intervals"><i class="fa fa-check"></i><b>8.1</b> Basics of Confidence Intervals</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="estimation.html"><a href="estimation.html#example-stating-the-statistical-and-real-world-interpretations-for-a-confidence-interval"><i class="fa fa-check"></i><b>8.1.1</b> Example: Stating the Statistical and Real World Interpretations for a Confidence Interval</a></li>
+<li class="chapter" data-level="8.1.2" data-path="estimation.html"><a href="estimation.html#homework-19"><i class="fa fa-check"></i><b>8.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="estimation.html"><a href="estimation.html#one-sample-interval-for-the-proportion"><i class="fa fa-check"></i><b>8.2</b> One-Sample Interval for the Proportion</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="estimation.html"><a href="estimation.html#example-confidence-interval-for-the-population-proportion"><i class="fa fa-check"></i><b>8.2.1</b> Example: Confidence Interval for the Population Proportion</a></li>
+<li class="chapter" data-level="8.2.2" data-path="estimation.html"><a href="estimation.html#example-confidence-interval-for-the-population-proportion-1"><i class="fa fa-check"></i><b>8.2.2</b> Example: Confidence Interval for the Population Proportion</a></li>
+<li class="chapter" data-level="8.2.3" data-path="estimation.html"><a href="estimation.html#homework-20"><i class="fa fa-check"></i><b>8.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="estimation.html"><a href="estimation.html#one-sample-interval-for-the-mean"><i class="fa fa-check"></i><b>8.3</b> One-Sample Interval for the Mean</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="estimation.html"><a href="estimation.html#example-confidence-interval-for-the-population-mean"><i class="fa fa-check"></i><b>8.3.1</b> Example: Confidence Interval for the Population Mean</a></li>
+<li class="chapter" data-level="8.3.2" data-path="estimation.html"><a href="estimation.html#example-confidence-interval-for-the-population-mean-1"><i class="fa fa-check"></i><b>8.3.2</b> Example: Confidence Interval for the Population Mean</a></li>
+<li class="chapter" data-level="8.3.3" data-path="estimation.html"><a href="estimation.html#homework-21"><i class="fa fa-check"></i><b>8.3.3</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="two-sample-inference.html"><a href="two-sample-inference.html"><i class="fa fa-check"></i><b>9</b> Two-Sample Inference</a><ul>
+<li class="chapter" data-level="9.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#two-proportions"><i class="fa fa-check"></i><b>9.1</b> Two Proportions</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-two-population-proportions"><i class="fa fa-check"></i><b>9.1.1</b> Example: Hypothesis Test for Two Population Proportions</a></li>
+<li class="chapter" data-level="9.1.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-confidence-interval-for-two-population-proportions"><i class="fa fa-check"></i><b>9.1.2</b> Example: Confidence Interval for Two Population Proportions</a></li>
+<li class="chapter" data-level="9.1.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-22"><i class="fa fa-check"></i><b>9.1.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#paired-samples-for-two-means"><i class="fa fa-check"></i><b>9.2</b> Paired Samples for Two Means</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-independent-or-dependent-samples"><i class="fa fa-check"></i><b>9.2.1</b> Example: Independent or Dependent Samples</a></li>
+<li class="chapter" data-level="9.2.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-paired-samples"><i class="fa fa-check"></i><b>9.2.2</b> Example: Hypothesis Test for Paired Samples</a></li>
+<li class="chapter" data-level="9.2.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-paired-samples-1"><i class="fa fa-check"></i><b>9.2.3</b> Example: Hypothesis Test for Paired Samples</a></li>
+<li class="chapter" data-level="9.2.4" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-confidence-interval-for-paired-samples"><i class="fa fa-check"></i><b>9.2.4</b> Example: Confidence Interval for Paired Samples</a></li>
+<li class="chapter" data-level="9.2.5" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-23"><i class="fa fa-check"></i><b>9.2.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#independent-samples-for-two-means"><i class="fa fa-check"></i><b>9.3</b> Independent Samples for Two Means</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-two-means"><i class="fa fa-check"></i><b>9.3.1</b> Example: Hypothesis Test for Two Means</a></li>
+<li class="chapter" data-level="9.3.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-confidence-interval-in-two-samples"><i class="fa fa-check"></i><b>9.3.2</b> Example: Confidence Interval in Two Samples</a></li>
+<li class="chapter" data-level="9.3.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-two-means-1"><i class="fa fa-check"></i><b>9.3.3</b> Example: Hypothesis Test for Two Means</a></li>
+<li class="chapter" data-level="9.3.4" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-confidence-interval-for-two-independent-samples"><i class="fa fa-check"></i><b>9.3.4</b> Example: Confidence Interval for Two Independent Samples</a></li>
+<li class="chapter" data-level="9.3.5" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-24"><i class="fa fa-check"></i><b>9.3.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="two-sample-inference.html"><a href="two-sample-inference.html#which-analysis-should-you-conduct"><i class="fa fa-check"></i><b>9.4</b> Which Analysis Should You Conduct?</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html"><i class="fa fa-check"></i><b>10</b> Regression and Correlation</a><ul>
+<li class="chapter" data-level="10.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#regression"><i class="fa fa-check"></i><b>10.1</b> Regression</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-determining-if-there-is-a-relationship"><i class="fa fa-check"></i><b>10.1.1</b> Example: Determining If There Is a Relationship</a></li>
+<li class="chapter" data-level="10.1.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-25"><i class="fa fa-check"></i><b>10.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#correlation"><i class="fa fa-check"></i><b>10.2</b> Correlation</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-find-the-coefficient-of-determinatin-r2"><i class="fa fa-check"></i><b>10.2.1</b> Example: Find the coefficient of determinatin <span class="math inline">\(R^2\)</span></a></li>
+<li class="chapter" data-level="10.2.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-calculating-the-linear-correlation-coefficient-r"><i class="fa fa-check"></i><b>10.2.2</b> Example: Calculating the Linear Correlation Coefficient, <em>r</em></a></li>
+<li class="chapter" data-level="10.2.3" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-correlation-versus-causation"><i class="fa fa-check"></i><b>10.2.3</b> Example: Correlation Versus Causation</a></li>
+<li class="chapter" data-level="10.2.4" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-26"><i class="fa fa-check"></i><b>10.2.4</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#inference-for-regression-and-correlation"><i class="fa fa-check"></i><b>10.3</b> Inference for Regression and Correlation</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-finding-the-standard-error-of-the-estimate"><i class="fa fa-check"></i><b>10.3.1</b> Example: Finding the Standard Error of the Estimate</a></li>
+<li class="chapter" data-level="10.3.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-testing-the-claim-of-a-linear-correlation"><i class="fa fa-check"></i><b>10.3.2</b> Example: Testing the Claim of a Linear Correlation</a></li>
+<li class="chapter" data-level="10.3.3" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-27"><i class="fa fa-check"></i><b>10.3.3</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html"><i class="fa fa-check"></i><b>11</b> Chi-Square and ANOVA Tests</a><ul>
+<li class="chapter" data-level="11.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#chi-square-test-for-independence"><i class="fa fa-check"></i><b>11.1</b> Chi-Square Test for Independence</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#example-hypothesis-test-with-chi-square-test"><i class="fa fa-check"></i><b>11.1.1</b> Example: Hypothesis Test with Chi-Square Test</a></li>
+<li class="chapter" data-level="11.1.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-28"><i class="fa fa-check"></i><b>11.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#chi-square-goodness-of-fit"><i class="fa fa-check"></i><b>11.2</b> Chi-Square Goodness of Fit</a><ul>
+<li class="chapter" data-level="11.2.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#example-goodness-of-fit-test"><i class="fa fa-check"></i><b>11.2.1</b> Example: Goodness of Fit Test</a></li>
+<li class="chapter" data-level="11.2.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-29"><i class="fa fa-check"></i><b>11.2.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#analysis-of-variance-anova"><i class="fa fa-check"></i><b>11.3</b> Analysis of Variance (ANOVA)</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#example-hypothesis-test-involving-several-means"><i class="fa fa-check"></i><b>11.3.1</b> Example: Hypothesis Test Involving Several Means</a></li>
+<li class="chapter" data-level="11.3.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-30"><i class="fa fa-check"></i><b>11.3.2</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/StatPREP/Stat_using_technology" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistics Using Technology</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="continuous-probability-distributions" class="section level1">
+<h1><span class="header-section-number">Chapter 6</span> Continuous Probability Distributions</h1>
+<p>Chapter 5 dealt with probability distributions arising from discrete random variables. Mostly that chapter focused on the binomial experiment. There are many other experiments from discrete random variables that exist but are not covered in this book.</p>
+<p>Chapter 6 deals with probability distributions that arise from continuous random variables. The focus of this chapter is a distribution known as the normal distribution, though realize that there are many other distributions that exist. A few others are examined in future chapters.</p>
+<p>Looking at the density plot of a quantitative variable, one can guess what the distribution of that variable is. As an example, consider the NHANES data frame. One variable to consider is Weight. The density plot of Weight is</p>
+
+<div class="figure"><span id="fig:NHANES6-density"></span>
+<img src="Statistics_using_technology_files/figure-html/NHANES6-density-1.png" alt="Density Plot of Weight of a Person" width="672" />
+<p class="caption">
+Figure 6.1: Density Plot of Weight of a Person
+</p>
+</div>
+<p>(Figure <a href="continuous-probability-distributions.html#fig:headcirc6-density">6.2</a>looks somewhat symmetric, and maybe bell shaped.</p>
+<p>Consider, the variable head circumference (HeadCirc) in the NHANES data frame. The density plot for this variable is</p>
+<p>(ref:headcirc6-density=cap) Density Plot of Head Circumference of a Person</p>
+<div class="figure"><span id="fig:headcirc6-density"></span>
+<img src="Statistics_using_technology_files/figure-html/headcirc6-density-1.png" alt="(ref:headcirc6-density=cap)" width="672" />
+<p class="caption">
+Figure 6.2: (ref:headcirc6-density=cap)
+</p>
+</div>
+<p>This (Figure <a href="#fig:headcirc60density"><strong>??</strong></a>) looks somewhat skewed left.</p>
+<p>Now consider the variable BMI from the NHANES data frame. The density plot is</p>
+
+<div class="figure"><span id="fig:NHANES6a-density"></span>
+<img src="Statistics_using_technology_files/figure-html/NHANES6a-density-1.png" alt="Density Plot of BMI of a Person" width="672" />
+<p class="caption">
+Figure 6.3: Density Plot of BMI of a Person
+</p>
+</div>
+<p>This density plot appears to be skewed left.</p>
+<p>Now consider the variable SmokeAge. Its density plot is (Figure <a href="continuous-probability-distributions.html#fig:NHANES6b-density">6.4</a>)</p>
+
+<div class="figure"><span id="fig:NHANES6b-density"></span>
+<img src="Statistics_using_technology_files/figure-html/NHANES6b-density-1.png" alt="Density Plot of Age when Person Started Smoking" width="672" />
+<p class="caption">
+Figure 6.4: Density Plot of Age when Person Started Smoking
+</p>
+</div>
+<p>This distribution appears to be bimodal.</p>
+<p>lastly, consider the variable Pulse. The density plot is (Figure <a href="continuous-probability-distributions.html#fig:NHANES6c-density">6.5</a>)</p>
+
+<div class="figure"><span id="fig:NHANES6c-density"></span>
+<img src="Statistics_using_technology_files/figure-html/NHANES6c-density-1.png" alt="Density Plot of Pulse Rate of a person" width="672" />
+<p class="caption">
+Figure 6.5: Density Plot of Pulse Rate of a person
+</p>
+</div>
+<p>This density plot appears to be symmetric and could almost be considered bell shaped.</p>
+<p>The reason that one considers the density plots to understand the distribution of the population, is that in some cases the distribution can be approximated with a known distribution that has certain properties. There are many known distribution. Some examples are the Uniform distribution, the Chi-Squared distribution, the Student’s T distribution, and the normal distribution. The normal distribution is one of the more common distributions to use as a model, and it will be explored in this chapter. But do realize that there are many other distributions that one can use.</p>
+<p>** Normal Distribution **</p>
+<p>Many populations have a distribution that is a symmetric, unimodal, and bell-shaped. For example: height, blood pressure, and cholesterol level. However, not every bell shaped curve is a normal curve. In a normal curve, there is a specific relationship between its “height” and its “width.”
+Normal curves can be tall and skinny or they can be short and fat. They are all symmetric, unimodal, and centered at <span class="math inline">\(\mu\)</span>, the population mean. (Figure <a href="continuous-probability-distributions.html#fig:normal-curvea">6.6</a>) and (Figure <a href="continuous-probability-distributions.html#fig:normal-curveb">6.7</a>) show two different normal curves drawn on the same scale. Both have <span class="math inline">\(\mu=2\)</span> but the one in (Figure <a href="continuous-probability-distributions.html#fig:normal-curvea">6.6</a>) has a standard deviation of 1 and the one in (Figure <a href="continuous-probability-distributions.html#fig:normal-curveb">6.7</a>) has a standard deviation of 4. Notice that the larger standard deviation makes the graph wider (more spread out) and shorter.</p>
+
+<div class="figure"><span id="fig:normal-curvea"></span>
+<img src="Statistics_using_technology_files/figure-html/normal-curvea-1.png" alt="Normal Distribution with \(\mu=2\), and \(\sigma=1\)" width="672" />
+<p class="caption">
+Figure 6.6: Normal Distribution with <span class="math inline">\(\mu=2\)</span>, and <span class="math inline">\(\sigma=1\)</span>
+</p>
+</div>
+
+<div class="figure"><span id="fig:normal-curveb"></span>
+<img src="Statistics_using_technology_files/figure-html/normal-curveb-1.png" alt="Normal Distribution with \(\mu = 2\), and \(\sigma = 4\)" width="672" />
+<p class="caption">
+Figure 6.7: Normal Distribution with <span class="math inline">\(\mu = 2\)</span>, and <span class="math inline">\(\sigma = 4\)</span>
+</p>
+</div>
+<p>Every normal curve has common features.</p>
+<ul>
+<li>The center, or the highest point, is at the population mean, <span class="math inline">\(\mu\)</span>.</li>
+<li>The transition points are the places where the curve changes from a “hill” to a “valley”. The distance from the mean to the transition point is one standard deviation.</li>
+<li>The area under the whole curve is exactly 1. Therefore, the area under the half below or above the mean is 0.5.</li>
+</ul>
+<p>Just as in a discrete probability distribution, the object is to find the probability of an event occurring. However, unlike in a discrete probability distribution where the event can be a single value, in a continuous probability distribution the event must be a range. You are interested in finding the probability of <em>x</em> occurring in the range between <em>a</em> and <em>b</em>, or <span class="math inline">\(P(a \le x \le b) = P(a&lt;x&lt;b)\)</span>. Calculus tells us this probability is the area under the curve in the interval from <em>a</em> to <em>b</em>.</p>
+<p><strong><br />
+</strong></p>
+<p>Before looking at the process for finding the probabilities under the normal curve, it is somewhat useful to look at the <strong>Empirical Rule</strong> that gives approximate values for these areas. The Empirical Rule is just an approximation and it will only be used in this section to give you an idea of what the size of the probabilities is for different shadings. A more precise method for finding probabilities for the normal curve will be demonstrated in the next section. Please do not use the empirical rule except for real rough estimates.</p>
+<p><strong>The Empirical Rule</strong> for any normal distribution:
+Approximately 68% of the data is within one standard deviation of the mean.
+Approximately 95% of the data is within two standard deviations of the mean.
+Approximately 99.7% of the data is within three standard deviations of the mean.</p>
+<p><strong><br />
+</strong></p>
+<p><strong>Image #6.1: Empirical Rule</strong></p>
+<div class="figure">
+<img src="Empirical_rule.png" alt="" />
+<p class="caption">Graph of Empirical Rule</p>
+</div>
+<p>Be careful, there is still some area left over in each end. Remember, the maximum a probability can be is 100%, so if you calculate you will see that for both ends together there is 0.3% of the curve. Because of
+symmetry, you can divide this equally between both ends and find that there is 0.15% in each tail beyond the 3rd standard deviations.</p>
+<p><strong><br />
+</strong></p>
+<div id="finding-probabilities-for-the-normal-distribution" class="section level2">
+<h2><span class="header-section-number">6.1</span> Finding Probabilities for the Normal Distribution</h2>
+<p>The Empirical Rule is just an approximation and only works for certain values. What if you want to find the probability for <em>x</em> values that are not integer multiples of the standard deviation? The probability is the area under the curve. To find areas under the curve, you need calculus. Before technology, you needed to convert every <em>x</em> value to a standardized number, called the <em>z</em>-score or <em>z</em>-value or simply just <em>z</em>. The <em>z</em>-score is a measure of how many standard deviations an <em>x</em> value is from the mean. To convert from a normally distributed <em>x</em> value to a <em>z</em>-score, you use the following formula.</p>
+<p><strong>z-score</strong>
+<span class="math inline">\(=\frac{x-\mu}{\sigma}\)</span></p>
+<p>where <span class="math inline">\(\mu\)</span> = mean of the population of the <em>x</em> value and <span class="math inline">\(\sigma\)</span> = standard deviation for the population of the <em>x</em> value</p>
+<p>The <em>z</em>-score is normally distributed, with a mean of 0 and a standard deviation of 1. It is known as the standard normal curve. The z-score is a measure of how many standard deviations a data value is from its mean. If the z-score is positive, the data value is above the mean. If the z-score is negative, the data value is below the mean. The farther the z-value is from 0, the farther the data value is from the mean.</p>
+<p>These days technology can find probabilities without converting to the <em>z</em>-score and looking the probabilities up in a table. There are many programs available that will calculate the probability for a normal curve. The command on R to find the area to the left ie <span class="math inline">\(P(x&lt;value)\)</span> is</p>
+<div class="sourceCode" id="cb245"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb245-1"><a href="continuous-probability-distributions.html#cb245-1"></a><span class="kw">pnorm</span>(value, mean, standard deviation, <span class="dt">lower.tail=</span><span class="ot">TRUE</span>)</span></code></pre></div>
+<p>The command on R to find the area to the right ie <span class="math inline">\(P(x&gt;value)\)</span> is</p>
+<div class="sourceCode" id="cb246"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb246-1"><a href="continuous-probability-distributions.html#cb246-1"></a><span class="kw">pnorm</span>(value, mean, standard deviation, <span class="dt">lower.tail=</span><span class="ot">FALSE</span>)</span></code></pre></div>
+<div id="example-general-normal-distribution" class="section level3">
+<h3><span class="header-section-number">6.1.1</span> Example: General Normal Distribution</h3>
+<p>The length of a human pregnancy is normally distributed with a mean of 272 days with a standard deviation of 9 days (Bhat &amp; Kushtagi, 2006).</p>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p><em>x</em> = length of a human pregnancy</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Find the probability of a pregnancy lasting more than 280 days.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>First translate the statement into a mathematical statement. <span class="math inline">\(P(x&gt;280)\)</span></p>
+<p>Now, draw a picture (Figure <a href="continuous-probability-distributions.html#fig:normal-curve61">6.8</a>).</p>
+
+<div class="figure"><span id="fig:normal-curve61"></span>
+<img src="Statistics_using_technology_files/figure-html/normal-curve61-1.png" alt="Normal Distribution for \(P(x&gt;280)\)" width="672" />
+<p class="caption">
+Figure 6.8: Normal Distribution for <span class="math inline">\(P(x&gt;280)\)</span>
+</p>
+</div>
+<p>The probability of a pregnancy lasting longer than 280 days is <span class="math inline">\(P(x&gt;280)=0.187\)</span>. The command in R Studio is</p>
+<div class="sourceCode" id="cb247"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb247-1"><a href="continuous-probability-distributions.html#cb247-1"></a><span class="kw">pnorm</span>(<span class="dv">280</span>, <span class="dv">272</span>, <span class="dv">9</span>, <span class="dt">lower.tail=</span><span class="ot">FALSE</span>)</span></code></pre></div>
+<pre><code>## [1] 0.1870314</code></pre>
+<p>Thus 18.7% of all pregnancies last more than 280 days. This is not unusual since the probability is greater than 5%.</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Find the probability of a pregnancy lasting less than 250 days.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>First translate the statement into a mathematical statement. <span class="math inline">\(P(x&lt;250)\)</span></p>
+<p>Now, draw a picture (Figure <a href="continuous-probability-distributions.html#fig:normal-curve62">6.9</a>).</p>
+
+<div class="figure"><span id="fig:normal-curve62"></span>
+<img src="Statistics_using_technology_files/figure-html/normal-curve62-1.png" alt="Normal Distribution for \(P(x&lt;250)\)" width="672" />
+<p class="caption">
+Figure 6.9: Normal Distribution for <span class="math inline">\(P(x&lt;250)\)</span>
+</p>
+</div>
+<p>The probability of a pregnancy lasting longer than 250 days is <span class="math inline">\(P(x&lt;250)=0.0073\)</span>. The command in R Studio is</p>
+<div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb249-1"><a href="continuous-probability-distributions.html#cb249-1"></a><span class="kw">pnorm</span>(<span class="dv">250</span>, <span class="dv">272</span>, <span class="dv">9</span>, <span class="dt">lower.tail=</span><span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] 0.007253771</code></pre>
+<p>Thus 0.73% of all pregnancies last less than 250 days. This is unusual since the probability is less than 5%.</p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Find the probability that a pregnancy lasts between 265 and 280 days.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>First translate the statement into a mathematical statement. <span class="math inline">\(P(265&lt;x&lt;280)\)</span></p>
+<p>Now draw a picture (Figure <a href="continuous-probability-distributions.html#fig:normal-curve63">6.10</a>).</p>
+
+<div class="figure"><span id="fig:normal-curve63"></span>
+<img src="Statistics_using_technology_files/figure-html/normal-curve63-1.png" alt="Normal Distribution for \(P(265&lt;x&lt;280)\)" width="672" />
+<p class="caption">
+Figure 6.10: Normal Distribution for <span class="math inline">\(P(265&lt;x&lt;280)\)</span>
+</p>
+</div>
+<p>The probability of a pregnancy lasting between 265 days and 280 days is <span class="math inline">\(P(265&lt;x&lt;280)=0.187\)</span>. To find the area between two values on the normal distribution, first, find the area to the left of the lower value, Graphically, this looks like (Figure <a href="continuous-probability-distributions.html#fig:normal-curve-preg">6.11</a>)</p>
+
+<div class="figure"><span id="fig:normal-curve-preg"></span>
+<img src="Statistics_using_technology_files/figure-html/normal-curve-preg-1.png" alt="Normal Distribution for \(P(x&lt;265)\)" width="672" />
+<p class="caption">
+Figure 6.11: Normal Distribution for <span class="math inline">\(P(x&lt;265)\)</span>
+</p>
+</div>
+<p>Now find the area less than 280. Graphically this looks like (Figure <a href="continuous-probability-distributions.html#fig:normal-curve-preg1">6.12</a>)</p>
+
+<div class="figure"><span id="fig:normal-curve-preg1"></span>
+<img src="Statistics_using_technology_files/figure-html/normal-curve-preg1-1.png" alt="Normal Distribution for \(P(x&lt;280)\)" width="672" />
+<p class="caption">
+Figure 6.12: Normal Distribution for <span class="math inline">\(P(x&lt;280)\)</span>
+</p>
+</div>
+<p>Looking at the three figures, if you take the area in (Figure <a href="continuous-probability-distributions.html#fig:normal-curve-preg1">6.12</a>) and subtract the area in (Figure <a href="continuous-probability-distributions.html#fig:normal-curve-preg">6.11</a>), you get the area in the (Figure <a href="continuous-probability-distributions.html#fig:normal-curve63">6.10</a>). In R Studio, the way to find the probability the probability of a pregnancy lasting between 265 days and 280 days, <span class="math inline">\(P(265&lt;x&lt;280)=0.595\)</span> use the following command</p>
+<div class="sourceCode" id="cb251"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb251-1"><a href="continuous-probability-distributions.html#cb251-1"></a><span class="kw">pnorm</span>(<span class="dv">280</span>, <span class="dv">272</span>, <span class="dv">9</span>, <span class="dt">lower.tail=</span><span class="ot">TRUE</span>)<span class="op">-</span><span class="kw">pnorm</span>(<span class="dv">265</span>, <span class="dv">272</span>, <span class="dv">9</span>, <span class="dt">lower.tail=</span><span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] 0.5946186</code></pre>
+<p>Thus 59.5% of all pregnancies last between 265 and 280 days.</p>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>Find the length of pregnancy that 10% of all pregnancies last less than.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>This problem is asking you to find an <em>x</em> value from a probability. You want to find the <em>x</em> value that has 10% of the length of pregnancies to the left of it. In this case, you are given the probability. In R, the command is</p>
+<div class="sourceCode" id="cb253"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb253-1"><a href="continuous-probability-distributions.html#cb253-1"></a><span class="kw">qnorm</span>(area, mean, standard deviation, <span class="dt">lower.tail=</span><span class="ot">TRUE</span> or <span class="ot">FALSE</span>)</span></code></pre></div>
+<p>For this example since you know the area in the lower tail, then use lower.tail=TRUE. So the command is</p>
+<div class="sourceCode" id="cb254"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb254-1"><a href="continuous-probability-distributions.html#cb254-1"></a><span class="kw">qnorm</span>(<span class="fl">0.1</span>, <span class="dv">272</span>, <span class="dv">9</span>, <span class="dt">lower.tail =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] 260.466</code></pre>
+<p>Thus 10% of all pregnancies last less than approximately 260 days.</p>
+<ol start="6" style="list-style-type: lower-alpha">
+<li>Suppose you meet a woman who says that she was pregnant for less than 250 days. Would this be unusual and what might you think?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>From part (c) you found the probability that a pregnancy lasts less than 250 days is 0.73%. Since this is less than 5%, it is very unusual. You would think that either the woman had a premature baby, or that she may be wrong about when she actually became pregnant.</p>
+</div>
+<div id="example-general-normal-distribution-1" class="section level3">
+<h3><span class="header-section-number">6.1.2</span> Example: General Normal Distribution</h3>
+<p>The mean mathematics SAT score in 2012 was 514 with a standard deviation of 117 ("Total group profile," 2012). Assume the mathematics SAT score is normally distributed.</p>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p><em>x</em> = mathematics SAT score</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Find the probability that a person has a mathematics SAT score
+over 700.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>First translate the statement into a mathematical statement. P(x&gt;700)</p>
+<p>Now, draw a picture (Figure <a href="continuous-probability-distributions.html#fig:normal-curve-SAT">6.13</a>).</p>
+
+<div class="figure"><span id="fig:normal-curve-SAT"></span>
+<img src="Statistics_using_technology_files/figure-html/normal-curve-SAT-1.png" alt="Normal Distribution for SAT Mathematics Score" width="672" />
+<p class="caption">
+Figure 6.13: Normal Distribution for SAT Mathematics Score
+</p>
+</div>
+<p>To find <span class="math inline">\(P(x&gt;700)=0.0559\)</span>, the command in R would be</p>
+<div class="sourceCode" id="cb256"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb256-1"><a href="continuous-probability-distributions.html#cb256-1"></a><span class="kw">pnorm</span>(<span class="dv">700</span>, <span class="dv">514</span>,<span class="dv">117</span>, <span class="dt">lower.tail =</span> <span class="ot">FALSE</span>)</span></code></pre></div>
+<pre><code>## [1] 0.05594631</code></pre>
+<p>There is a 5.6% chance that a person scored above a 700 on the mathematics SAT test. This is not unusual.</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Find the probability that a person has a mathematics SAT score of less than 400.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>First translate the statement into a mathematical statement. <span class="math inline">\(P(x&lt;400)\)</span></p>
+<p>Now, draw a picture (Figure <a href="continuous-probability-distributions.html#fig:normal-curve-SAT1">6.14</a>).</p>
+
+<div class="figure"><span id="fig:normal-curve-SAT1"></span>
+<img src="Statistics_using_technology_files/figure-html/normal-curve-SAT1-1.png" alt="Normal Distribution for Mathematics SAT Score" width="672" />
+<p class="caption">
+Figure 6.14: Normal Distribution for Mathematics SAT Score
+</p>
+</div>
+<p>To find <span class="math inline">\(P(x&lt;400)=0.165\)</span>, the command in R would be</p>
+<div class="sourceCode" id="cb258"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb258-1"><a href="continuous-probability-distributions.html#cb258-1"></a><span class="kw">pnorm</span>(<span class="dv">400</span>, <span class="dv">514</span>, <span class="dv">117</span>, <span class="dt">lower.tail =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] 0.1649392</code></pre>
+<p>So, there is a 16.5% chance that a person scores less than a 400 on the mathematics part of the SAT.</p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Find the probability that a person has a mathematics SAT score between a 500 and a 650.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>First translate the statement into a mathematical statement <span class="math inline">\(P(500&lt;x&lt;650)\)</span></p>
+<p>Now, draw a picture (Figure <a href="continuous-probability-distributions.html#fig:normal-curve-SAT2">6.15</a>).</p>
+
+<div class="figure"><span id="fig:normal-curve-SAT2"></span>
+<img src="Statistics_using_technology_files/figure-html/normal-curve-SAT2-1.png" alt="Normal Distribution for SAT Mathematics Score" width="672" />
+<p class="caption">
+Figure 6.15: Normal Distribution for SAT Mathematics Score
+</p>
+</div>
+<p>To find <span class="math inline">\(P(500&lt;x&lt;650)=0.425\)</span>, the command in R would be</p>
+<div class="sourceCode" id="cb260"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb260-1"><a href="continuous-probability-distributions.html#cb260-1"></a><span class="kw">pnorm</span>(<span class="dv">650</span>, <span class="dv">514</span>, <span class="dv">117</span>, <span class="dt">lower.tail =</span> <span class="ot">TRUE</span>)<span class="op">-</span><span class="kw">pnorm</span>(<span class="dv">500</span>, <span class="dv">514</span>, <span class="dv">117</span>, <span class="dt">lower.tail=</span><span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] 0.4250851</code></pre>
+<p>So, there is a 42.5% chance that a person has a mathematical SAT score between 500 and 650.</p>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>Find the mathematics SAT score that represents the top 1% of all scores.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>This problem is asking you to find an <em>x</em> value from a probability. You want to find the <em>x</em> value that has 1% of the mathematics SAT scores to the right of it. In this case you are using the upper tail of the curve.
+To find this x value on R Studio, use the command</p>
+<div class="sourceCode" id="cb262"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb262-1"><a href="continuous-probability-distributions.html#cb262-1"></a><span class="kw">qnorm</span>(<span class="fl">0.01</span>, <span class="dv">514</span>, <span class="dv">117</span>, <span class="dt">lower.tail=</span><span class="ot">FALSE</span>)</span></code></pre></div>
+<pre><code>## [1] 786.1827</code></pre>
+<p>So, 1% of all people who took the SAT scored over about 786 points on the mathematics SAT.</p>
+</div>
+<div id="homework-13" class="section level3">
+<h3><span class="header-section-number">6.1.3</span> Homework</h3>
+<ol style="list-style-type: decimal">
+<li>Find each of the probabilities, where <em>z</em> is a <em>z</em>-score from the standard normal distribution with mean of <span class="math inline">\(\mu=0\)</span> and standard deviation <span class="math inline">\(\sigma=1\)</span>. It helps to draw a picture for each problem.</li>
+</ol>
+<p>a.) <span class="math inline">\(P(z&lt;2.36)\)</span>
+b.) <span class="math inline">\(P(z&gt;0.67)\)</span>
+c.) <span class="math inline">\(P(0&lt;x&lt;2.11)\)</span>
+d.) <span class="math inline">\(P(-2.78&lt;z&lt;1.97)\)</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Find the <em>z</em>-score corresponding to the given area. Remember, <em>z</em> is distributed as the standard normal distribution with mean of <span class="math inline">\(\mu=0\)</span> and standard deviation <span class="math inline">\(\sigma=1\)</span>.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>The area to the left of <em>z</em> is 15%.</li>
+<li>The area to the right of <em>z</em> is 65%.</li>
+<li>The area to the left of <em>z</em> is 10%.</li>
+<li>The area to the right of <em>z</em> is 5%.</li>
+<li>The area between <span class="math inline">\(-z\)</span> and <em>z</em> is 95%. (Hint draw a picture and figure out the area to the left of <span class="math inline">\(-z\)</span>.)</li>
+<li>The area between <span class="math inline">\(-z\)</span> and <em>z</em> is 99%.</li>
+</ol>
+<ol start="3" style="list-style-type: decimal">
+<li>If a random variable that is normally distributed has a mean of 25 and a standard deviation of 3, convert the given value to a <em>z</em>-score.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><em>x</em> = 23</li>
+<li><em>x</em> = 33</li>
+<li><em>x</em> = 19</li>
+<li><em>x</em> = 45</li>
+</ol>
+<ol start="4" style="list-style-type: decimal">
+<li>According to the WHO MONICA Project the mean blood pressure for people in China is 128 mmHg with a standard deviation of 23 mmHg (Kuulasmaa, Hense &amp; Tolonen, 1998). Assume that blood pressure is normally distributed.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable.</li>
+<li>Find the probability that a person in China has blood pressure of 135 mmHg or more.</li>
+<li>Find the probability that a person in China has blood pressure of 141 mmHg or less.</li>
+<li>Find the probability that a person in China has blood pressure between 120 and 125 mmHg.</li>
+<li>Is it unusual for a person in China to have a blood pressure of 135 mmHg? Why or why not?</li>
+<li>What blood pressure do 90% of all people in China have less than?</li>
+</ol>
+<ol start="5" style="list-style-type: decimal">
+<li>The size of fish is very important to commercial fishing. A study conducted in 2012 found the length of Atlantic cod caught in nets in Karlskrona to have a mean of 49.9 cm and a standard deviation of 3.74 cm (Ovegard, Berndt &amp; Lunneryd, 2012). Assume the length of fish is normally distributed.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable.</li>
+<li>Find the probability that an Atlantic cod has a length less than 52 cm.</li>
+<li>Find the probability that an Atlantic cod has a length of more than 74 cm.</li>
+<li>Find the probability that an Atlantic cod has a length between 40.5 and 57.5 cm.</li>
+<li>If you found an Atlantic cod to have a length of more than 74 cm, what could you conclude?</li>
+<li>What length are 15% of all Atlantic cod longer than?</li>
+</ol>
+<ol start="6" style="list-style-type: decimal">
+<li>The mean cholesterol levels of women age 45-59 in Ghana, Nigeria, and Seychelles is 5.1 mmol/l and the standard deviation is 1.0 mmol/l (Lawes, Hoorn, Law &amp; Rodgers, 2004). Assume that cholesterol levels are normally distributed.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable.</li>
+<li>Find the probability that a woman age 45-59 in Ghana, Nigeria, or Seychelles has a cholesterol level above 6.2 mmol/l (considered a high level).</li>
+<li>Find the probability that a woman age 45-59 in Ghana, Nigeria, or Seychelles has a cholesterol level below 5.2 mmol/l (considered a normal level).</li>
+<li>Find the probability that a woman age 45-59 in Ghana, Nigeria, or Seychelles has a cholesterol level between 5.2 and 6.2 mmol/l (considered borderline high).</li>
+<li>If you found a woman age 45-59 in Ghana, Nigeria, or Seychelles having a cholesterol level above 6.2 mmol/l, what could you conclude?</li>
+<li>What value do 5% of all woman ages 45-59 in Ghana, Nigeria, or Seychelles have a cholesterol level less than?</li>
+</ol>
+<ol start="7" style="list-style-type: decimal">
+<li>In the United States, males between the ages of 40 and 49 eat on average 103.1 g of fat every day with a standard deviation of 4.32 g ("What we eat," 2012). Assume that the amount of fat a person eats is normally distributed.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable.</li>
+<li>Find the probability that a man age 40-49 in the U.S. eats more than 110 g of fat every day.</li>
+<li>Find the probability that a man age 40-49 in the U.S. eats less than 93 g of fat every day.</li>
+<li>Find the probability that a man age 40-49 in the U.S. eats less than 65 g of fat every day.</li>
+<li>If you found a man age 40-49 in the U.S. who says he eats less than 65 g of fat every day, would you believe him? Why or why not?</li>
+<li>What daily fat level do 5% of all men age 40-49 in the U.S. eat more than?</li>
+</ol>
+<ol start="8" style="list-style-type: decimal">
+<li>A dishwasher has a mean life of 12 years with an estimated standard deviation of 1.25 years ("Appliance life expectancy," 2013). Assume the life of a dishwasher is normally distributed.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable.</li>
+<li>Find the probability that a dishwasher will last more than 15 years.</li>
+<li>Find the probability that a dishwasher will last less than 6 years.</li>
+<li>Find the probability that a dishwasher will last between 8 and 10 years.</li>
+<li>If you found a dishwasher that lasted less than 6 years, would you think that you have a problem with the manufacturing process? Why or why not?</li>
+<li>A manufacturer of dishwashers only wants to replace free of charge 5% of all dishwashers. How long should the manufacturer make the warranty period?</li>
+</ol>
+<ol start="9" style="list-style-type: decimal">
+<li>The mean starting salary for nurses is $67,694 nationally ("Staff nurse -," 2013). The standard deviation is approximately $10,333. Assume that the starting salary is normally distributed.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable.</li>
+<li>Find the probability that a starting nurse will make more than $80,000.</li>
+<li>Find the probability that a starting nurse will make less than $60,000.</li>
+<li>Find the probability that a starting nurse will make between $55,000 and $72,000.</li>
+<li>If a nurse made less than $50,000, would you think the nurse was under paid? Why or why not?</li>
+<li>What salary do 30% of all nurses make more than?</li>
+</ol>
+<ol start="10" style="list-style-type: decimal">
+<li>The mean yearly rainfall in Sydney, Australia, is about 137 mm and the standard deviation is about 69 mm ("Annual maximums of, "2013). Assume rainfall is normally distributed.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable.</li>
+<li>Find the probability that the yearly rainfall is less than 100 mm.</li>
+<li>Find the probability that the yearly rainfall is more than 240 mm.</li>
+<li>Find the probability that the yearly rainfall is between 140 and 250 mm.</li>
+<li>If a year has a rainfall less than 100mm, does that mean it is an unusually dry year? Why or why not?</li>
+<li>What rainfall amount are 90% of all yearly rainfalls more than?</li>
+</ol>
+<p><strong><br />
+</strong></p>
+</div>
+</div>
+<div id="assessing-normality" class="section level2">
+<h2><span class="header-section-number">6.2</span> Assessing Normality</h2>
+<p>The distributions you have seen up to this point have been assumed to be normally distributed, but how do you determine if it is normally distributed. One way is to take a sample and look at the sample to determine if it appears normal. If the sample looks normal, then most likely the population is also. Here are some guidelines that are use to help make that determination.</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Density Plot:</strong> Make a density plot. For a normal distribution, the density plot should be roughly bell-shaped. For small samples, this is not very accurate, and another method is needed. A distribution may not look normally distributed from the density plot, but it still may be normally distributed.</p></li>
+<li><p><strong>Normal quantile plot (or normal probability plot):</strong> This plot is provided through statistical software on a computer. If the points lie close to a line, the data comes from a distribution that is approximately normally distributed. If the points do not lie close to a line or they show a pattern that is not a line, the data are likely to come from a distribution that is not normally distributed.</p></li>
+</ol>
+<p><strong>To create a density plot on R Studio:</strong></p>
+<p>Read the Data Frame into R Studio. The command for density is</p>
+<div class="sourceCode" id="cb264"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb264-1"><a href="continuous-probability-distributions.html#cb264-1"></a><span class="kw">gf_density</span>(<span class="op">~</span>variable, <span class="dt">data=</span>Data Frame)</span></code></pre></div>
+<p>See section 2.2 for more examples of this.</p>
+<p><strong>To create a normal quantile plot on R Studio:</strong></p>
+<p>Read the Data Frame into R Studio. The command for normal quantile plot is</p>
+<div class="sourceCode" id="cb265"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb265-1"><a href="continuous-probability-distributions.html#cb265-1"></a><span class="kw">gf_qqnorm</span>(<span class="op">~</span>variable, <span class="dt">data=</span>Data Frame)</span></code></pre></div>
+<p>Realize that your random variable may be normally distributed, even if the sample fails the two tests. However, if the density plot definitely doesn’t look symmetric and bell shaped, and the normal probability plot doesn’t look linear, then you can be fairly confident that the data set does not come from a population that is normally distributed.</p>
+<div id="example-is-it-normal" class="section level3">
+<h3><span class="header-section-number">6.2.1</span> Example: Is It Normal?</h3>
+<p>In Kiama, NSW, Australia, there is a blowhole. The data in table #6.2.1 are times in seconds between eruptions ("Kiama blowhole eruptions," 2013). Do the data come from a population that is normally distributed?</p>
+<p><strong>Table #6.2.1: Time (in Seconds) Between Kiama Blowhole Eruptions </strong></p>
+<div class="sourceCode" id="cb266"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb266-1"><a href="continuous-probability-distributions.html#cb266-1"></a>Eruption&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/Blowhole_eruptions.csv&quot;</span>)</span>
+<span id="cb266-2"><a href="continuous-probability-distributions.html#cb266-2"></a><span class="kw">head</span>(Eruption)</span></code></pre></div>
+<pre><code>##   Interval
+## 1       83
+## 2       51
+## 3       87
+## 4       60
+## 5       28
+## 6       95</code></pre>
+<p><strong>Code book for Data Frame Eruption</strong></p>
+<p><strong>Description</strong>
+The ocean swell produces spectacular eruptions of water through a hole in the cliff at Kiama, about 120km south of Sydney, known as the Blowhole. The times at which 65 successive eruptions occurred from 1340 hours on 12 July 1998 were observed using a digital watch.</p>
+<p><strong>Format</strong>
+This data frame contains the following columns:</p>
+<p>Interval: Waiting time between eruptions (seconds)</p>
+<p><strong>Source</strong>
+Kiama Blowhole Eruptions. (n.d.). Retrieved from <a href="http://www.statsci.org/data/oz/kiama.html" class="uri">http://www.statsci.org/data/oz/kiama.html</a></p>
+<p><strong>References</strong>
+The data was collected and contributed by Jim Irish, Faculty of Engineering, University of Technology, Sydney.</p>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p><em>x</em> = time in seconds between eruptions of Kiama Blowhole</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Draw a Density plot</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>The density plot produced is in (Figure <a href="continuous-probability-distributions.html#fig:blowhole-density">6.16</a>).</p>
+
+<div class="sourceCode" id="cb268"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb268-1"><a href="continuous-probability-distributions.html#cb268-1"></a><span class="kw">gf_density</span>(<span class="op">~</span>Interval, <span class="dt">data=</span>Eruption, <span class="dt">title=</span><span class="st">&quot;Eruption times for Kiama Blowhole&quot;</span>)</span></code></pre></div>
+<div class="figure"><span id="fig:blowhole-density"></span>
+<img src="Statistics_using_technology_files/figure-html/blowhole-density-1.png" alt="Density Plot for Kiama Blowhole" width="672" />
+<p class="caption">
+Figure 6.16: Density Plot for Kiama Blowhole
+</p>
+</div>
+<p>This looks skewed right and not symmetric.</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Draw the normal quantile plot.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>The normal quantile plot is in (Figure <a href="continuous-probability-distributions.html#fig:blowhole-qq">6.17</a>).</p>
+
+<div class="sourceCode" id="cb269"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb269-1"><a href="continuous-probability-distributions.html#cb269-1"></a><span class="kw">gf_qq</span>(<span class="op">~</span>Interval, <span class="dt">data=</span>Eruption, <span class="dt">title=</span><span class="st">&quot;Eruption times for Kiama Blowhole&quot;</span>)</span></code></pre></div>
+<div class="figure"><span id="fig:blowhole-qq"></span>
+<img src="Statistics_using_technology_files/figure-html/blowhole-qq-1.png" alt="Normal Probability Plot" width="672" />
+<p class="caption">
+Figure 6.17: Normal Probability Plot
+</p>
+</div>
+<p>(Figure <a href="continuous-probability-distributions.html#fig:blowhole-qq">6.17</a>) looks more like an exponential growth than linear.</p>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>Do the data come from a population that is normally distributed?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Considering the density plot is skewed right, and the normal probability plot does not look linear, then the conclusion is that this sample is not from a population that is normally distributed.</p>
+</div>
+<div id="example-is-it-normal-1" class="section level3">
+<h3><span class="header-section-number">6.2.2</span> Example: Is It Normal?</h3>
+<p>The US National Center for Health Statistics (NCHS) conducted a series of health and nutrition surveys called NHANES. One of the many variables in NHANES is pulse. Determine if pulse is a normally distributed variable.</p>
+<p><strong>Table #6.2.2: NHANES</strong></p>
+<pre><code>## # A tibble: 6 x 76
+##      ID SurveyYr Gender   Age AgeDecade AgeMonths Race1 Race3 Education
+##   &lt;int&gt; &lt;fct&gt;    &lt;fct&gt;  &lt;int&gt; &lt;fct&gt;         &lt;int&gt; &lt;fct&gt; &lt;fct&gt; &lt;fct&gt;    
+## 1 51624 2009_10  male      34 &quot; 30-39&quot;        409 White &lt;NA&gt;  High Sch…
+## 2 51624 2009_10  male      34 &quot; 30-39&quot;        409 White &lt;NA&gt;  High Sch…
+## 3 51624 2009_10  male      34 &quot; 30-39&quot;        409 White &lt;NA&gt;  High Sch…
+## 4 51625 2009_10  male       4 &quot; 0-9&quot;           49 Other &lt;NA&gt;  &lt;NA&gt;     
+## 5 51630 2009_10  female    49 &quot; 40-49&quot;        596 White &lt;NA&gt;  Some Col…
+## 6 51638 2009_10  male       9 &quot; 0-9&quot;          115 White &lt;NA&gt;  &lt;NA&gt;     
+## # … with 67 more variables: MaritalStatus &lt;fct&gt;, HHIncome &lt;fct&gt;,
+## #   HHIncomeMid &lt;int&gt;, Poverty &lt;dbl&gt;, HomeRooms &lt;int&gt;, HomeOwn &lt;fct&gt;,
+## #   Work &lt;fct&gt;, Weight &lt;dbl&gt;, Length &lt;dbl&gt;, HeadCirc &lt;dbl&gt;, Height &lt;dbl&gt;,
+## #   BMI &lt;dbl&gt;, BMICatUnder20yrs &lt;fct&gt;, BMI_WHO &lt;fct&gt;, Pulse &lt;int&gt;,
+## #   BPSysAve &lt;int&gt;, BPDiaAve &lt;int&gt;, BPSys1 &lt;int&gt;, BPDia1 &lt;int&gt;, BPSys2 &lt;int&gt;,
+## #   BPDia2 &lt;int&gt;, BPSys3 &lt;int&gt;, BPDia3 &lt;int&gt;, Testosterone &lt;dbl&gt;,
+## #   DirectChol &lt;dbl&gt;, TotChol &lt;dbl&gt;, UrineVol1 &lt;int&gt;, UrineFlow1 &lt;dbl&gt;,
+## #   UrineVol2 &lt;int&gt;, UrineFlow2 &lt;dbl&gt;, Diabetes &lt;fct&gt;, DiabetesAge &lt;int&gt;,
+## #   HealthGen &lt;fct&gt;, DaysPhysHlthBad &lt;int&gt;, DaysMentHlthBad &lt;int&gt;,
+## #   LittleInterest &lt;fct&gt;, Depressed &lt;fct&gt;, nPregnancies &lt;int&gt;, nBabies &lt;int&gt;,
+## #   Age1stBaby &lt;int&gt;, SleepHrsNight &lt;int&gt;, SleepTrouble &lt;fct&gt;,
+## #   PhysActive &lt;fct&gt;, PhysActiveDays &lt;int&gt;, TVHrsDay &lt;fct&gt;, CompHrsDay &lt;fct&gt;,
+## #   TVHrsDayChild &lt;int&gt;, CompHrsDayChild &lt;int&gt;, Alcohol12PlusYr &lt;fct&gt;,
+## #   AlcoholDay &lt;int&gt;, AlcoholYear &lt;int&gt;, SmokeNow &lt;fct&gt;, Smoke100 &lt;fct&gt;,
+## #   Smoke100n &lt;fct&gt;, SmokeAge &lt;int&gt;, Marijuana &lt;fct&gt;, AgeFirstMarij &lt;int&gt;,
+## #   RegularMarij &lt;fct&gt;, AgeRegMarij &lt;int&gt;, HardDrugs &lt;fct&gt;, SexEver &lt;fct&gt;,
+## #   SexAge &lt;int&gt;, SexNumPartnLife &lt;int&gt;, SexNumPartYear &lt;int&gt;, SameSex &lt;fct&gt;,
+## #   SexOrientation &lt;fct&gt;, PregnantNow &lt;fct&gt;</code></pre>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p><em>x</em> = pulse</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Draw a density plot</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>The density plot is in (Figure <a href="continuous-probability-distributions.html#fig:pulse-density">6.18</a>).</p>
+
+<div class="sourceCode" id="cb271"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb271-1"><a href="continuous-probability-distributions.html#cb271-1"></a><span class="kw">gf_density</span>(<span class="op">~</span>Pulse, <span class="dt">data=</span>NHANES, <span class="dt">title=</span><span class="st">&quot;Pulse Rate&quot;</span>)</span></code></pre></div>
+<div class="figure"><span id="fig:pulse-density"></span>
+<img src="Statistics_using_technology_files/figure-html/pulse-density-1.png" alt="Density Plot for Pulse" width="672" />
+<p class="caption">
+Figure 6.18: Density Plot for Pulse
+</p>
+</div>
+<p>This looks somewhat symmetric.</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Draw the normal quantile plot.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>The normal quantile plot is in (Figure <a href="continuous-probability-distributions.html#fig:pulse-qq">6.19</a>).</p>
+
+<div class="sourceCode" id="cb272"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb272-1"><a href="continuous-probability-distributions.html#cb272-1"></a><span class="kw">gf_qq</span>(<span class="op">~</span>Pulse, <span class="dt">data=</span>NHANES, <span class="dt">title=</span><span class="st">&quot;Pulse Rate&quot;</span>)</span></code></pre></div>
+<div class="figure"><span id="fig:pulse-qq"></span>
+<img src="Statistics_using_technology_files/figure-html/pulse-qq-1.png" alt="Normal Quantile Plot" width="672" />
+<p class="caption">
+Figure 6.19: Normal Quantile Plot
+</p>
+</div>
+<p>(Figure <a href="continuous-probability-distributions.html#fig:pulse-qq">6.19</a>) looks fairly linear.</p>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>Do the data come from a population that is normally distributed?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Considering the density plot is bell shaped and the normal probability plot looks linear. The conclusion is that this sample is from a population that is normally distributed.</p>
+</div>
+<div id="homework-14" class="section level3">
+<h3><span class="header-section-number">6.2.3</span> Homework</h3>
+<ol style="list-style-type: decimal">
+<li>Cholesterol data was collected on patients four days after having a heart attack. The data is in table #6.2.3. Assess if the data is from a population that is normally distributed.</li>
+</ol>
+<p><strong>Table #6.2.3: Cholesterol Data Collected Four Days After a Heart Attack</strong></p>
+<div class="sourceCode" id="cb273"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb273-1"><a href="continuous-probability-distributions.html#cb273-1"></a>Cholesterol&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/cholesterol.csv&quot;</span>)</span>
+<span id="cb273-2"><a href="continuous-probability-distributions.html#cb273-2"></a><span class="kw">head</span>(Cholesterol)</span></code></pre></div>
+<pre><code>##   patient day2 day4 day14
+## 1       1  270  218   156
+## 2       2  236  234    NA
+## 3       3  210  214   242
+## 4       4  142  116    NA
+## 5       5  280  200    NA
+## 6       6  272  276   256</code></pre>
+<p><strong>Code Book for Cholesterol</strong> See problem 3.1.1 in Section 3.1 homework.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>The size of fish is very important to commercial fishing. A study conducted in 2012 collected the lengths of Atlantic cod caught in nets in Karlskrona (Ovegard, Berndt &amp; Lunneryd, 2012). Data based on information from the study is in table #6.2.4. Determine if the data is from a population that is normally distributed.</li>
+</ol>
+<p><strong>Table #6.2.4: Atlantic Cod Lengths</strong></p>
+<div class="sourceCode" id="cb275"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb275-1"><a href="continuous-probability-distributions.html#cb275-1"></a>Cod&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/cod.csv&quot;</span>)</span>
+<span id="cb275-2"><a href="continuous-probability-distributions.html#cb275-2"></a><span class="kw">head</span>(Cod)</span></code></pre></div>
+<pre><code>##   length
+## 1     48
+## 2     50
+## 3     50
+## 4     55
+## 5     53
+## 6     50</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>The WHO MONICA Project collected blood pressure data for people in China (Kuulasmaa, Hense &amp; Tolonen, 1998). Data based on information from the study is in table #6.2.5. Determine if the data is from a population that is normally distributed.</li>
+</ol>
+<p><strong>Table #6.2.5: Blood Pressure Values for People in China</strong></p>
+<div class="sourceCode" id="cb277"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb277-1"><a href="continuous-probability-distributions.html#cb277-1"></a>BP&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/bp.csv&quot;</span>)</span>
+<span id="cb277-2"><a href="continuous-probability-distributions.html#cb277-2"></a><span class="kw">head</span>(BP)</span></code></pre></div>
+<pre><code>##   pressure
+## 1      114
+## 2      141
+## 3      154
+## 4      137
+## 5      131
+## 6      132</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Annual rainfalls for Sydney, Australia are given in table #6.2.6. ("Annual maximums of," 2013). Can you assume rainfall is normally distributed?</li>
+</ol>
+<p><strong>Table #6.2.6: Annual Rainfall in Sydney, Australia</strong></p>
+<div class="sourceCode" id="cb279"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb279-1"><a href="continuous-probability-distributions.html#cb279-1"></a>Annual&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/annual.csv&quot;</span>)</span>
+<span id="cb279-2"><a href="continuous-probability-distributions.html#cb279-2"></a><span class="kw">head</span>(Annual)</span></code></pre></div>
+<pre><code>##   amount
+## 1  146.8
+## 2  383.0
+## 3   90.9
+## 4  178.1
+## 5  267.5
+## 6   95.5</code></pre>
+<p><strong><br />
+</strong></p>
+</div>
+</div>
+<div id="sampling-distribution-and-the-central-limit-theorem" class="section level2">
+<h2><span class="header-section-number">6.3</span> Sampling Distribution and the Central Limit Theorem</h2>
+<p>You now have most of the skills to start statistical inference, but you need one more concept.</p>
+<p>First, it would be helpful to state what statistical inference is in more accurate terms.</p>
+<p><strong>Statistical Inference:</strong> to make accurate decisions about parameters from statistics</p>
+<p>When it says “accurate decision,” you want to be able to measure how accurate. You measure how accurate using probability. In both binomial and normal distributions, you needed to know that the random variable followed either distribution. You need to know how the statistic is distributed and then you can find probabilities. In other words, you need to know the shape of the sample mean or whatever statistic you want to make a decision about.</p>
+<p>How is the statistic distributed? This is answered with a sampling distribution.</p>
+<p><strong>Sampling Distribution:</strong> how a sample statistic is distributed when repeated trials of size <em>n</em> are taken.</p>
+<div id="example-sampling-distribution" class="section level3">
+<h3><span class="header-section-number">6.3.1</span> Example: Sampling Distribution</h3>
+<p>The NHANES data frame has the pulse rates for approximately 50,000 individuals. The random variable is <em>x</em> = pulse rate. The probability distribution of this random variable is presented in (Figure <a href="continuous-probability-distributions.html#fig:NHANES6h-density">6.20</a>. Although pulse rates from 50,000 individuals isn’t the entire population, the sample is most likely a good representation of the population. Thus, it is safe to assume the population is normally distributed. An estimate for the population mean is 73.6 pbm, and the population standard deviation estimate is 12.2 bpm.</p>
+
+<div class="figure"><span id="fig:NHANES6h-density"></span>
+<img src="Statistics_using_technology_files/figure-html/NHANES6h-density-1.png" alt="Distribution of Pulse Rate" width="672" />
+<p class="caption">
+Figure 6.20: Distribution of Pulse Rate
+</p>
+</div>
+<pre><code>##   mean_Pulse sd_Pulse
+## 1   73.55973 12.15542</code></pre>
+<p>Suppose you take a random sample of 10 pulse rates from those 50,000 individuals. A random sample of data from 10 individuals is:</p>
+<div class="sourceCode" id="cb282"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb282-1"><a href="continuous-probability-distributions.html#cb282-1"></a>NHANES<span class="op">%&gt;%</span></span>
+<span id="cb282-2"><a href="continuous-probability-distributions.html#cb282-2"></a><span class="st">  </span><span class="kw">sample_n</span>(<span class="dt">size=</span><span class="dv">10</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 10 x 76
+##       ID SurveyYr Gender   Age AgeDecade AgeMonths Race1 Race3 Education
+##    &lt;int&gt; &lt;fct&gt;    &lt;fct&gt;  &lt;int&gt; &lt;fct&gt;         &lt;int&gt; &lt;fct&gt; &lt;fct&gt; &lt;fct&gt;    
+##  1 60523 2009_10  female    17 &quot; 10-19&quot;        211 Mexi… &lt;NA&gt;  &lt;NA&gt;     
+##  2 65978 2011_12  male      57 &quot; 50-59&quot;         NA White White Some Col…
+##  3 60848 2009_10  male      80  &lt;NA&gt;            NA Other &lt;NA&gt;  College …
+##  4 58003 2009_10  female    32 &quot; 30-39&quot;        389 White &lt;NA&gt;  Some Col…
+##  5 68280 2011_12  female    15 &quot; 10-19&quot;         NA White White &lt;NA&gt;     
+##  6 68867 2011_12  male      12 &quot; 10-19&quot;         NA White White &lt;NA&gt;     
+##  7 54959 2009_10  female    40 &quot; 40-49&quot;        481 White &lt;NA&gt;  College …
+##  8 66053 2011_12  female    65 &quot; 60-69&quot;         NA White White Some Col…
+##  9 58029 2009_10  male      18 &quot; 10-19&quot;        222 Mexi… &lt;NA&gt;  &lt;NA&gt;     
+## 10 67755 2011_12  male      11 &quot; 10-19&quot;         NA White White &lt;NA&gt;     
+## # … with 67 more variables: MaritalStatus &lt;fct&gt;, HHIncome &lt;fct&gt;,
+## #   HHIncomeMid &lt;int&gt;, Poverty &lt;dbl&gt;, HomeRooms &lt;int&gt;, HomeOwn &lt;fct&gt;,
+## #   Work &lt;fct&gt;, Weight &lt;dbl&gt;, Length &lt;dbl&gt;, HeadCirc &lt;dbl&gt;, Height &lt;dbl&gt;,
+## #   BMI &lt;dbl&gt;, BMICatUnder20yrs &lt;fct&gt;, BMI_WHO &lt;fct&gt;, Pulse &lt;int&gt;,
+## #   BPSysAve &lt;int&gt;, BPDiaAve &lt;int&gt;, BPSys1 &lt;int&gt;, BPDia1 &lt;int&gt;, BPSys2 &lt;int&gt;,
+## #   BPDia2 &lt;int&gt;, BPSys3 &lt;int&gt;, BPDia3 &lt;int&gt;, Testosterone &lt;dbl&gt;,
+## #   DirectChol &lt;dbl&gt;, TotChol &lt;dbl&gt;, UrineVol1 &lt;int&gt;, UrineFlow1 &lt;dbl&gt;,
+## #   UrineVol2 &lt;int&gt;, UrineFlow2 &lt;dbl&gt;, Diabetes &lt;fct&gt;, DiabetesAge &lt;int&gt;,
+## #   HealthGen &lt;fct&gt;, DaysPhysHlthBad &lt;int&gt;, DaysMentHlthBad &lt;int&gt;,
+## #   LittleInterest &lt;fct&gt;, Depressed &lt;fct&gt;, nPregnancies &lt;int&gt;, nBabies &lt;int&gt;,
+## #   Age1stBaby &lt;int&gt;, SleepHrsNight &lt;int&gt;, SleepTrouble &lt;fct&gt;,
+## #   PhysActive &lt;fct&gt;, PhysActiveDays &lt;int&gt;, TVHrsDay &lt;fct&gt;, CompHrsDay &lt;fct&gt;,
+## #   TVHrsDayChild &lt;int&gt;, CompHrsDayChild &lt;int&gt;, Alcohol12PlusYr &lt;fct&gt;,
+## #   AlcoholDay &lt;int&gt;, AlcoholYear &lt;int&gt;, SmokeNow &lt;fct&gt;, Smoke100 &lt;fct&gt;,
+## #   Smoke100n &lt;fct&gt;, SmokeAge &lt;int&gt;, Marijuana &lt;fct&gt;, AgeFirstMarij &lt;int&gt;,
+## #   RegularMarij &lt;fct&gt;, AgeRegMarij &lt;int&gt;, HardDrugs &lt;fct&gt;, SexEver &lt;fct&gt;,
+## #   SexAge &lt;int&gt;, SexNumPartnLife &lt;int&gt;, SexNumPartYear &lt;int&gt;, SameSex &lt;fct&gt;,
+## #   SexOrientation &lt;fct&gt;, PregnantNow &lt;fct&gt;</code></pre>
+<p>It might be useful to find the mean pulse rate from a random sample of size 10.</p>
+<pre><code>##   mean_Pulse
+## 1   75.33333</code></pre>
+<p>Now suppose you took another random sample of size 10 and found the mean pulse rate for that sample. Repeat this process 100 times. At this point you would basically have a new sample of 100 mean pulse rates. You could assess how this sample is distributed by creating a density plot.</p>
+
+<div class="figure"><span id="fig:NHANES6e-density"></span>
+<img src="Statistics_using_technology_files/figure-html/NHANES6e-density-1.png" alt="Density Plot of Sample Means When n = 10" width="672" />
+<p class="caption">
+Figure 6.21: Density Plot of Sample Means When <em>n</em> = 10
+</p>
+</div>
+<pre><code>##   mean_means sd_means
+## 1   73.31415 4.325587</code></pre>
+<p>This distribution is a sampling distribution. That is all a sampling distribution is. It is a distribution created from statistics.</p>
+<p>Notice the distribution does look a great deal like the distribution of the original random variable. Notice the mean of the sample means <span class="math inline">\(\mu_{\bar{x}} = 73.8\)</span> bpm which is almost the same of as the mean of the population. The standard deviation of the sample means, <span class="math inline">\(\sigma_{\bar{x}}=4.35\)</span> pbm is about <span class="math inline">\(\frac{1}{3}\)</span> of the population standard deviation.</p>
+<p>What does this distribution look like if instead of repeating the experiment 10 times you repeat it 50 times instead?</p>
+<p>This density plot of the sampling distribution is displayed in (Figure <a href="continuous-probability-distributions.html#fig:NHANES6f-density">6.22</a>).</p>
+
+<div class="figure"><span id="fig:NHANES6f-density"></span>
+<img src="Statistics_using_technology_files/figure-html/NHANES6f-density-1.png" alt="Density Plot of Sample Means When n = 50" width="672" />
+<p class="caption">
+Figure 6.22: Density Plot of Sample Means When <em>n</em> = 50
+</p>
+</div>
+<pre><code>##   mean_means sd_means
+## 1   73.55827  1.86312</code></pre>
+<p>Notice this density plot of the sample mean looks approximately symmetrical and could almost be called normal. Notice, the mean of the sample means is 73.6 bpm which is approximately what the population mean is. The standard deviation of the sample means is 1.77 bpm which is around <span class="math inline">\(\frac{1}{7}\)</span> of the population standard deviation. What if you keep increasing <em>n</em>? What will the sampling distribution of the sample mean look like? In other words, what does the sampling distribution of <span class="math inline">\(\bar{x}\)</span> look like as <em>n</em> gets even larger?</p>
+<p>This depends on how the original distribution is distributed. In Example #6.3.1, the random variable was approximately normally distributed. When <em>n</em> was 10, the distribution of the mean looked approximately normal. What if the original distribution wasn’t normal? How big would <em>n</em> have to be? Consider a different variable in the NHANES data frame that isn’t normally distributed such as age when a participant started to smoke cigarettes (SmokeAge). The density plot for the large sample is in (Figure <a href="continuous-probability-distributions.html#fig:NHANES6g-density">6.23</a>). The mean for the large sample is 17.8 years and the standard deviation is 5.3 years, so <span class="math inline">\(\mu=17.8\)</span> dollars and <span class="math inline">\(\sigma=5.3\)</span> dollars approximately.</p>
+
+<div class="figure"><span id="fig:NHANES6g-density"></span>
+<img src="Statistics_using_technology_files/figure-html/NHANES6g-density-1.png" alt="Distribution of Age when Started to Smoke" width="672" />
+<p class="caption">
+Figure 6.23: Distribution of Age when Started to Smoke
+</p>
+</div>
+<pre><code>##   mean_SmokeAge sd_SmokeAge
+## 1      17.82662     5.32666</code></pre>
+<p>Now take 100 samples of size 50 individuals from the NHANES Data Frame. Then graph a density plot of SmokeAge. Notice the the sampling distribution of the sample means looks fairly normally distributed even though the original random variable was not normally distributed. The mean of the sample mean. <span class="math inline">\(\mu_{ \bar{x}}=\)</span> 17.8 years and the standard deviation of the sample mean, <span class="math inline">\(\sigma_{\bar{x}}=\)</span> 1.56 years. The mean of the sample mean is the same as the mean of the population, but the standard deviation of the sample mean is much less than the standard deviation of the original data.</p>
+<p><img src="Statistics_using_technology_files/figure-html/NHANES6-random-1.png" width="672" /></p>
+<pre><code>##   mean_means sd_means
+## 1   17.83403 1.654501</code></pre>
+<p>Once question is, why is the mean of the sample means the same as the mean of the population? Suppose you have a random variable that has a population mean, <span class="math inline">\(\mu\)</span>, and a population standard deviation, <span class="math inline">\(\sigma\)</span>. If a sample of size <em>n</em> is taken, then the sample mean, has a mean <span class="math inline">\(\mu_{ \bar{x}}=\mu\)</span> and standard deviation of <span class="math inline">\(\sigma_{ \bar{x}}=\frac{\sigma}{\sqrt{n}}\)</span> . The standard deviation of the sample mean is lower because by taking the mean you are averaging out the extreme values, which makes the distribution of the sample mean less spread out.</p>
+<p>You now know the center and the variability of <span class="math inline">\(\bar{x}\)</span>. You also want to know the shape of the distribution of <span class="math inline">\(\bar{x}\)</span>. You hope it is normal, since you know how to find probabilities using the normal curve. The following theorem tells you the requirement to have <span class="math inline">\(\bar{x}\)</span> be normally distributed.</p>
+<p><strong>Theorem #6.3.1: Central Limit Theorem.</strong></p>
+<p>Suppose a random variable is from any distribution. If a sample of size <em>n</em> is taken, then the sample mean, <span class="math inline">\(\bar{x}\)</span>, becomes normally distributed as <em>n</em> increases.</p>
+<p>What this says is that no matter what <em>x</em> looks like, <span class="math inline">\(\bar{x}\)</span> would look normal if <em>n</em> is large enough. Now, what size of <em>n</em> is large enough? That depends on how <em>x</em> is distributed in the first place. If the original random variable is normally distributed, then <em>n</em> just needs to be 2 or more data points. If the original random variable is somewhat mound shaped and symmetrical, then <em>n</em> needs to be greater than or equal to 30. Sometimes the sample size can be smaller, but this is a good general rule to use. The sample size may have to be much larger if the original random variable is really skewed one way or another.</p>
+<p>Now that you know when the sample mean will look like a normal distribution, then you can find the probability related to the sample mean. Remember that the mean of the sample mean is just the mean of the original data (<span class="math inline">\(\mu_{\bar{x}}=\mu\)</span>), but the standard deviation of the sample mean, <span class="math inline">\(\sigma_{\bar{x}}\)</span>, also known as the standard error of the mean, is actually <span class="math inline">\(\sigma_{\bar{x}}=\frac{\sigma}{\sqrt{n}}\)</span>. Make sure you use this in all calculations. If you are using the <em>z</em>-score, the formula when working with <span class="math inline">\(\bar{x}\)</span> is <span class="math inline">\(z=\frac{x-\mu_{\bar{x}}}{\sigma_{\bar{x}}}=\frac{x-\mu}{\frac{\sigma}{\sqrt{n}}}\)</span>.
+To use R Studio to calculate probabilities use
+<span class="math inline">\(P(\bar{x}&lt;a)= pnorm(a, \mu_{\bar{x}}, \sigma_{\bar{x}}, lower.tail=TRUE)\)</span>
+<span class="math inline">\(P(\bar{x}&gt;a)= pnorm(a, \mu_{\bar{x}}, \sigma_{\bar{x}}, lower.tail=FALSE)\)</span>.</p>
+</div>
+<div id="example-finding-probabilities-for-sample-means" class="section level3">
+<h3><span class="header-section-number">6.3.2</span> Example: Finding Probabilities for Sample Means</h3>
+<p>The birth weight of boy babies of European descent who were delivered at 40 weeks is normally distributed with a mean of 3687.6 g with a standard deviation of 410.5 g (Janssen, Thiessen, Klein, Whitfield, MacNab &amp; Cullis-Kuhl, 2007). Suppose there were nine European descent boy babies born on a given day and the mean birth weight is calculated.</p>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p><em>x</em> = birth weight of boy babies (Note: the random variable is something you measure, and it is not the mean birth weight. Mean weight is calculated.)</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>What is the mean of the sample mean?</li>
+</ol>
+<p><strong>Solution:</strong>
+<span class="math inline">\(\mu_{\bar{x}}=\mu=3687.4g\)</span></p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>What is the standard deviation of the sample mean?</li>
+</ol>
+<p><strong>Solution:</strong>
+<span class="math inline">\(\sigma_{\bar{x}}=\frac{\sigma}{\sqrt{n}}=\frac{410.5g}{\sqrt{9}}=136.8g\)</span></p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>What distribution is the sample mean distributed as?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Since the original random variable is distributed normally, then the sample mean is distributed normally.</p>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>Find the probability that the mean weight of the nine boy babies born was less than 3500.4 g.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>To find <span class="math inline">\(P(\bar{x}&lt;3500.4)=0.086\)</span>. use the R Studio command</p>
+<div class="sourceCode" id="cb289"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb289-1"><a href="continuous-probability-distributions.html#cb289-1"></a><span class="kw">pnorm</span>(<span class="fl">3500.4</span>,<span class="fl">3687.6</span>, <span class="fl">410.5</span><span class="op">/</span><span class="kw">sqrt</span>(<span class="dv">9</span>), <span class="dt">lower.tail =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] 0.08564231</code></pre>
+<p>There is an 8.6% chance that the mean birth weight of the nine boy babies born would be less than 3500.4 g. Since this is more than 5%, this is not unusual.</p>
+<ol start="6" style="list-style-type: lower-alpha">
+<li>Find the probability that the mean weight of the nine babies born was less than 3452.5 g.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>You are looking for the <span class="math inline">\(P(\bar{x}&lt;3452.5)\)</span>.</p>
+<p>To find in R Studio, <span class="math inline">\(P(\bar{x}&lt;3452.5)=0.043\)</span> use the command</p>
+<div class="sourceCode" id="cb291"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb291-1"><a href="continuous-probability-distributions.html#cb291-1"></a><span class="kw">pnorm</span>(<span class="fl">3452.5</span>, <span class="fl">3687.4</span>, <span class="fl">410.5</span><span class="op">/</span><span class="kw">sqrt</span>(<span class="dv">9</span>), <span class="dt">lower.tail =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] 0.04301819</code></pre>
+<p>There is a 4.3% chance that the mean birth weight of the nine boy babies born would be less than 3452.5 g. Since this is less than 5% this would be an unusual event. If it actually happened, then you may think there is something unusual about this sample. Maybe some of the nine babies were born as multiples, which brings the mean weight down, or some or all of the babies were not of European descent (in fact the mean weight of South Asian boy babies is 3452.5 g), or some were born before 40 weeks, or the babies were born at high altitudes.</p>
+</div>
+<div id="example-finding-probabilities-for-sample-means-1" class="section level3">
+<h3><span class="header-section-number">6.3.3</span> Example: Finding Probabilities for Sample Means</h3>
+<p>For Americans that smoke, the average age that they started smoking is 17.8 years, with a standard deviation of approximately 1.56 years from the NHANES data. This random variable is not normally distributed, though it is somewhat mound shaped.</p>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p><em>x</em> = age that smoking Americans started to smoke</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Suppose a sample of 35 smoking American’s is taken. Find the probability that the mean age that these 35 smoking Americans started to smoke is more than 21 years.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Even though the original random variable is not normally distributed, the sample size is over 30, by the central limit theorem the sample mean will be normally distributed. The mean of the sample mean is <span class="math inline">\(\mu_{\bar{x}}=17.8\)</span>. The standard deviation of the sample mean is <span class="math inline">\(\sigma_{\bar{x}}=\frac{\sigma}{\sqrt{n}}=\frac{1.56}{\sqrt{35}}\)</span>. You have all the information you need to use the normal command using R Studio. Without the central limit theorem, you couldn’t use the normal command, and you would not be able to answer this question.</p>
+<p>The probability that the mean age that 35 smoking Americans start to smoke is more than 21 years, is the mathematical statement <span class="math inline">\(P(\bar{x}&gt;21)\)</span></p>
+<p>To find <span class="math inline">\(P(\bar{x}&gt;21)= 3.42X10^{-34}\)</span> using R studio, use the command:</p>
+<div class="sourceCode" id="cb293"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb293-1"><a href="continuous-probability-distributions.html#cb293-1"></a><span class="kw">pnorm</span>(<span class="dv">21</span>, <span class="fl">17.8</span>, <span class="fl">1.56</span><span class="op">/</span><span class="kw">sqrt</span>(<span class="dv">35</span>), <span class="dt">lower.tail=</span><span class="ot">FALSE</span>)</span></code></pre></div>
+<pre><code>## [1] 3.422499e-34</code></pre>
+<p>The probability of a sample mean of 35 smoking Americans being more than 21 years when they smoked for the first time is very small. This is extremely unlikely to happen. If it does, it may make you wonder about the sample. Could the population mean have increased from the 17.8 years as was stated? Could the sample not have been random, and instead have been a group of smoking Americans who had started to smoke much later? These questions, and more, are ones that you would want to ask as a researcher</p>
+</div>
+<div id="homework-15" class="section level3">
+<h3><span class="header-section-number">6.3.4</span> Homework</h3>
+<ol style="list-style-type: decimal">
+<li>A random variable is not normally distributed, but it is mound shaped. It has a mean of 14 and a standard deviation of 3.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>If you take a sample of size 10, can you say what the shape of the sampling distribution for the sample mean is? Why?</li>
+<li>For a sample of size 10, state the mean of the sample mean and the standard deviation of the sample mean.</li>
+<li>If you take a sample of size 35, can you say what the shape of the distribution of the sample mean is? Why?</li>
+<li>For a sample of size 35, state the mean of the sample mean and the standard deviation of the sample mean.</li>
+</ol>
+<ol start="2" style="list-style-type: decimal">
+<li>A random variable is normally distributed. It has a mean of 245 and a standard deviation of 21.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>If you take a sample of size 10, can you say what the shape of the distribution for the sample mean is? Why?</li>
+<li>For a sample of size 10, state the mean of the sample mean and the standard deviation of the sample mean.</li>
+<li>For a sample of size 10, find the probability that the sample mean is more than 241.</li>
+<li>If you take a sample of size 35, can you say what the shape of the distribution of the sample mean is? Why?</li>
+<li>For a sample of size 35, state the mean of the sample mean and the standard deviation of the sample mean.</li>
+<li>For a sample of size 35, find the probability that the sample mean is more than 241.</li>
+<li>Compare your answers in part c and f. Why is one smaller than the other?</li>
+</ol>
+<ol start="3" style="list-style-type: decimal">
+<li>The mean starting salary for nurses is $67,694 nationally ("Staff nurse -," 2013). The standard deviation is approximately $10,333. The starting salary is not normally distributed but it is mound shaped. A sample of 42 starting salaries for nurses is taken.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable.</li>
+<li>What is the mean of the sample mean?</li>
+<li>What is the standard deviation of the sample mean?</li>
+<li>What is the shape of the sampling distribution of the sample mean? Why?</li>
+<li>Find the probability that the sample mean is more than $75,000.</li>
+<li>Find the probability that the sample mean is less than $60,000.</li>
+<li>If you did find a sample mean of more than $75,000 would you find that unusual? What could you conclude?</li>
+</ol>
+<ol start="4" style="list-style-type: decimal">
+<li>According to the WHO MONICA Project the mean blood pressure for people in China is 128 mmHg with a standard deviation of 23 mmHg (Kuulasmaa, Hense &amp; Tolonen, 1998). Blood pressure is normally distributed.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable.</li>
+<li>Suppose a sample of size 15 is taken. State the shape of the distribution of the sample mean.</li>
+<li>Suppose a sample of size 15 is taken. State the mean of the sample mean.</li>
+<li>Suppose a sample of size 15 is taken. State the standard deviation of the sample mean.</li>
+<li>Suppose a sample of size 15 is taken. Find the probability that the sample mean blood pressure is more than 135 mmHg.</li>
+<li>Would it be unusual to find a sample mean of 15 people in China of more than 135 mmHg? Why or why not?</li>
+<li>If you did find a sample mean for 15 people in China to be more than 135 mmHg, what might you conclude?</li>
+</ol>
+<ol start="5" style="list-style-type: decimal">
+<li>The size of fish is very important to commercial fishing. A study conducted in 2012 found the length of Atlantic cod caught in nets in Karlskrona to have a mean of 49.9 cm and a standard deviation of 3.74 cm (Ovegard, Berndt &amp; Lunneryd, 2012). The length of fish is normally distributed. A sample of 15 fish is taken.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable.</li>
+<li>Find the mean of the sample mean.</li>
+<li>Find the standard deviation of the sample mean</li>
+<li>What is the shape of the distribution of the sample mean? Why?</li>
+<li>Find the probability that the sample mean length of the Atlantic cod is less than 52 cm.</li>
+<li>Find the probability that the sample mean length of the Atlantic cod is more than 74 cm.</li>
+<li>If you found sample mean length for Atlantic cod to be more than 74 cm, what could you conclude?</li>
+</ol>
+<ol start="6" style="list-style-type: decimal">
+<li>The mean cholesterol levels of women age 45-59 in Ghana, Nigeria, and Seychelles is 5.1 mmol/l and the standard deviation is 1.0 mmol/l (Lawes, Hoorn, Law &amp; Rodgers, 2004). Assume that cholesterol levels are normally distributed.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable.</li>
+<li>Find the probability that a woman age 45-59 in Ghana has a cholesterol level above 6.2 mmol/l (considered a high level).</li>
+<li>Suppose doctors decide to test the woman’s cholesterol level again and average the two values. Find the probability that this woman’s mean cholesterol level for the two tests is above 6.2 mmol/l.</li>
+<li>Suppose doctors being very conservative decide to test the woman’s cholesterol level a third time and average the three values. Find the probability that this woman’s mean cholesterol level for the three tests is above 6.2 mmol/l.</li>
+<li>If the sample mean cholesterol level for this woman after three tests is above 6.2 mmol/l, what could you conclude?</li>
+</ol>
+<ol start="7" style="list-style-type: decimal">
+<li>In the United States, males between the ages of 40 and 49 eat on average 103.1 g of fat every day with a standard deviation of 4.32 g ("What we eat," 2012). The amount of fat a person eats is not normally distributed but it is relatively mound shaped.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable.</li>
+<li>Find the probability that a sample mean amount of daily fat intake for 35 men age 40-59 in the U.S. is more than 100 g.</li>
+<li>Find the probability that a sample mean amount of daily fat intake for 35 men age 40-59 in the U.S. is less than 93 g.</li>
+<li>If you found a sample mean amount of daily fat intake for 35 men age 40-59 in the U.S. less than 93 g, what would you conclude?</li>
+</ol>
+<ol start="8" style="list-style-type: decimal">
+<li>A dishwasher has a mean life of 12 years with an estimated standard deviation of 1.25 years ("Appliance life expectancy," 2013). The life of a dishwasher is normally distributed. Suppose you are a manufacturer and you take a sample of 10 dishwashers that you made.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable.</li>
+<li>Find the mean of the sample mean.</li>
+<li>Find the standard deviation of the sample mean.</li>
+<li>What is the shape of the sampling distribution of the sample mean? Why?</li>
+<li>Find the probability that the sample mean of the dishwashers is less than 6 years.</li>
+<li>If you found the sample mean life of the 10 dishwashers to be less than 6 years, would you think that you have a problem with the manufacturing process? Why or why not?</li>
+</ol>
+<p>Data Sources:</p>
+<p><em>Annual maximums of daily rainfall in Sydney</em>. (2013, September 25).
+Retrieved from <a href="http://www.statsci.org/data/oz/sydrain.html" class="uri">http://www.statsci.org/data/oz/sydrain.html</a></p>
+<p><em>Appliance life expectancy</em>. (2013, November 8). Retrieved from
+<a href="http://www.mrappliance.com/expert/life-guide/" class="uri">http://www.mrappliance.com/expert/life-guide/</a></p>
+<p>Bhat, R., &amp; Kushtagi, P. (2006). A re-look at the duration of human
+pregnancy. <em>Singapore Med J.</em>, <em>47</em>(12), 1044-8. Retrieved from
+<a href="http://www.ncbi.nlm.nih.gov/pubmed/17139400" class="uri">http://www.ncbi.nlm.nih.gov/pubmed/17139400</a></p>
+<p>College Board, SAT. (2012). <em>Total group profile report</em>. Retrieved from
+website:
+<a href="http://media.collegeboard.com/digitalServices/pdf/research/TotalGroup-2012.pdf" class="uri">http://media.collegeboard.com/digitalServices/pdf/research/TotalGroup-2012.pdf</a></p>
+<p>Janssen, P. A., Thiessen, P., Klein, M. C., Whitfield, M. F., MacNab, Y.
+C., &amp; Cullis-Kuhl, S. C. (2007). Standards for the measurement of birth
+weight, length and head circumference at term in neonates of european,
+chinese and south asian ancestry. <em>Open Medicine</em>, <em>1</em>(2), e74-e88.
+Retrieved from <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2802014/" class="uri">http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2802014/</a></p>
+<p><em>Kiama blowhole eruptions</em>. (2013, September 25). Retrieved from
+<a href="http://www.statsci.org/data/oz/kiama.html" class="uri">http://www.statsci.org/data/oz/kiama.html</a></p>
+<p>Kuulasmaa, K., Hense, H., &amp; Tolonen, H. World Health Organization (WHO),
+WHO Monica Project. (1998). <em>Quality assessment of data on blood
+pressure in the who monica project</em> (ISSN 2242-1246). Retrieved from WHO
+MONICA Project e-publications website:
+<a href="http://www.thl.fi/publications/monica/bp/bpqa.htm" class="uri">http://www.thl.fi/publications/monica/bp/bpqa.htm</a></p>
+<p>Lawes, C., Hoorn, S., Law, M., &amp; Rodgers, A. (2004). High cholesterol.
+In M. Ezzati, A. Lopez, A. Rodgers &amp; C. Murray (Eds.), <em>Comparative
+Quantification of Health Risks</em> (1 ed., Vol. 1, pp. 391-496). Retrieved
+from
+<a href="http://www.who.int/publications/cra/chapters/volume1/0391-0496.pdf" class="uri">http://www.who.int/publications/cra/chapters/volume1/0391-0496.pdf</a></p>
+<p>Ovegard, M., Berndt, K., &amp; Lunneryd, S. (2012). Condition indices of
+Atlantic cod (gadus morhua) biased by capturing method. <em>ICES Journal of
+Marine Science</em>, doi: 10.1093/icesjms/fss145</p>
+<p><em>Staff nurse - RN salary</em>. (2013, November 08). Retrieved from
+<a href="http://www1.salary.com/Staff-Nurse-RN-salary.html" class="uri">http://www1.salary.com/Staff-Nurse-RN-salary.html</a></p>
+<p>US Department of Agriculture, Agricultural Research Service. (2012).
+<em>What we eat in America</em>. Retrieved from website:
+<a href="http://www.ars.usda.gov/Services/docs.htm?docid=18349" class="uri">http://www.ars.usda.gov/Services/docs.htm?docid=18349</a></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="discrete-probability-distributions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="one-sample-inference.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["Statistics_using_technology.pdf", "Statistics_using_technology.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

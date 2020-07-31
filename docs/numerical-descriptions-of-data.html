@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Numerical Descriptions of Data | Statistics Using Technology</title>
+  <meta name="description" content="An introductory statistics textbook." />
+  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Numerical Descriptions of Data | Statistics Using Technology" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="An introductory statistics textbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Numerical Descriptions of Data | Statistics Using Technology" />
+  
+  <meta name="twitter:description" content="An introductory statistics textbook." />
+  
+
+<meta name="author" content="Kathryn Kozak" />
+
+
+<meta name="date" content="2020-07-30" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="graphical-descriptions-of-data.html"/>
+<link rel="next" href="probability.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Statistics Using Technology</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i><b>0.1</b> Acknowledgments:</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#new-to-the-third-edition"><i class="fa fa-check"></i><b>0.2</b> New to the Third Edition:</a></li>
+<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#packages-needed-for-r-studio"><i class="fa fa-check"></i><b>0.3</b> Packages needed for R Studio:</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="statistical-basics.html"><a href="statistical-basics.html"><i class="fa fa-check"></i><b>1</b> Statistical Basics</a><ul>
+<li class="chapter" data-level="1.1" data-path="statistical-basics.html"><a href="statistical-basics.html#what-is-statistics"><i class="fa fa-check"></i><b>1.1</b> What is Statistics?</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="statistical-basics.html"><a href="statistical-basics.html#example-stating-definitions-for-qualitative-variable"><i class="fa fa-check"></i><b>1.1.1</b> Example: Stating Definitions for Qualitative Variable**</a></li>
+<li class="chapter" data-level="1.1.2" data-path="statistical-basics.html"><a href="statistical-basics.html#example-stating-definitions-for-qualitative-variable-1"><i class="fa fa-check"></i><b>1.1.2</b> Example: Stating Definitions for Qualitative Variable</a></li>
+<li class="chapter" data-level="1.1.3" data-path="statistical-basics.html"><a href="statistical-basics.html#example-stating-definitions-for-quantitative-variable"><i class="fa fa-check"></i><b>1.1.3</b> Example: Stating Definitions for Quantitative Variable</a></li>
+<li class="chapter" data-level="1.1.4" data-path="statistical-basics.html"><a href="statistical-basics.html#example-stating-definitions-for-quantitative-variable-1"><i class="fa fa-check"></i><b>1.1.4</b> Example: Stating Definitions for Quantitative Variable</a></li>
+<li class="chapter" data-level="1.1.5" data-path="statistical-basics.html"><a href="statistical-basics.html#example-discrete-or-continuous"><i class="fa fa-check"></i><b>1.1.5</b> Example: Discrete or Continuous</a></li>
+<li class="chapter" data-level="1.1.6" data-path="statistical-basics.html"><a href="statistical-basics.html#example-measurement-scale"><i class="fa fa-check"></i><b>1.1.6</b> Example: Measurement Scale</a></li>
+<li class="chapter" data-level="1.1.7" data-path="statistical-basics.html"><a href="statistical-basics.html#homework-section-1.1"><i class="fa fa-check"></i><b>1.1.7</b> Homework Section 1.1</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="statistical-basics.html"><a href="statistical-basics.html#sampling-methods"><i class="fa fa-check"></i><b>1.2</b> Sampling Methods</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="statistical-basics.html"><a href="statistical-basics.html#example-choosing-a-simple-random-sample"><i class="fa fa-check"></i><b>1.2.1</b> Example: Choosing a Simple Random Sample</a></li>
+<li class="chapter" data-level="1.2.2" data-path="statistical-basics.html"><a href="statistical-basics.html#example-how-not-to-choose-a-simple-random-sample"><i class="fa fa-check"></i><b>1.2.2</b> Example: How Not to Choose a Simple Random Sample</a></li>
+<li class="chapter" data-level="1.2.3" data-path="statistical-basics.html"><a href="statistical-basics.html#example-how-to-choose-a-simple-random-sample-using-r"><i class="fa fa-check"></i><b>1.2.3</b> Example: How to Choose a Simple Random Sample using R</a></li>
+<li class="chapter" data-level="1.2.4" data-path="statistical-basics.html"><a href="statistical-basics.html#example-sampling-type"><i class="fa fa-check"></i><b>1.2.4</b> Example: Sampling type</a></li>
+<li class="chapter" data-level="1.2.5" data-path="statistical-basics.html"><a href="statistical-basics.html#homework-section-1.2"><i class="fa fa-check"></i><b>1.2.5</b> Homework Section 1.2</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="statistical-basics.html"><a href="statistical-basics.html#experimental-design"><i class="fa fa-check"></i><b>1.3</b> Experimental Design</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="statistical-basics.html"><a href="statistical-basics.html#example-observational-study-or-experiment"><i class="fa fa-check"></i><b>1.3.1</b> Example: Observational Study or Experiment</a></li>
+<li class="chapter" data-level="1.3.2" data-path="statistical-basics.html"><a href="statistical-basics.html#homework-section-1.3"><i class="fa fa-check"></i><b>1.3.2</b> Homework Section 1.3</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="statistical-basics.html"><a href="statistical-basics.html#how-not-to-do-statistics"><i class="fa fa-check"></i><b>1.4</b> How Not to Do Statistics</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="statistical-basics.html"><a href="statistical-basics.html#example-bias-in-a-study"><i class="fa fa-check"></i><b>1.4.1</b> Example: Bias in a Study**</a></li>
+<li class="chapter" data-level="1.4.2" data-path="statistical-basics.html"><a href="statistical-basics.html#example-cause-and-effect"><i class="fa fa-check"></i><b>1.4.2</b> Example: Cause and Effect</a></li>
+<li class="chapter" data-level="1.4.3" data-path="statistical-basics.html"><a href="statistical-basics.html#example-generalizations"><i class="fa fa-check"></i><b>1.4.3</b> Example: Generalizations</a></li>
+<li class="chapter" data-level="1.4.4" data-path="statistical-basics.html"><a href="statistical-basics.html#homework-section-1.4"><i class="fa fa-check"></i><b>1.4.4</b> Homework Section 1.4</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html"><i class="fa fa-check"></i><b>2</b> Graphical Descriptions of Data</a><ul>
+<li class="chapter" data-level="2.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#qualitative-data"><i class="fa fa-check"></i><b>2.1</b> Qualitative Data</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-drawing-a-bar-chart"><i class="fa fa-check"></i><b>2.1.1</b> Example: Drawing a Bar Chart**</a></li>
+<li class="chapter" data-level="2.1.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework"><i class="fa fa-check"></i><b>2.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#quantitative-data"><i class="fa fa-check"></i><b>2.2</b> Quantitative Data</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-drawing-a-histogram-and-density-plot"><i class="fa fa-check"></i><b>2.2.1</b> Example: Drawing a Histogram and Density plot</a></li>
+<li class="chapter" data-level="2.2.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-drawing-a-histogram-and-density-plot-1"><i class="fa fa-check"></i><b>2.2.2</b> Example: Drawing a Histogram and Density plot</a></li>
+<li class="chapter" data-level="2.2.3" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework-1"><i class="fa fa-check"></i><b>2.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#other-graphical-representations-of-data"><i class="fa fa-check"></i><b>2.3</b> Other Graphical Representations of Data</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-scatter-plot"><i class="fa fa-check"></i><b>2.3.1</b> Example: Scatter Plot**</a></li>
+<li class="chapter" data-level="2.3.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-time-series-plot"><i class="fa fa-check"></i><b>2.3.2</b> Example: Time-Series Plot**</a></li>
+<li class="chapter" data-level="2.3.3" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework-2"><i class="fa fa-check"></i><b>2.3.3</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html"><i class="fa fa-check"></i><b>3</b> Numerical Descriptions of Data</a><ul>
+<li class="chapter" data-level="3.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#measures-of-center"><i class="fa fa-check"></i><b>3.1</b> Measures of Center</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-finding-the-mean-and-median-using-r"><i class="fa fa-check"></i><b>3.1.1</b> Example: Finding the Mean and Median using R</a></li>
+<li class="chapter" data-level="3.1.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-finding-mean-and-median-with-filtering"><i class="fa fa-check"></i><b>3.1.2</b> Example: Finding Mean and Median with filtering</a></li>
+<li class="chapter" data-level="3.1.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-affect-of-extreme-values-on-mean-and-median"><i class="fa fa-check"></i><b>3.1.3</b> Example: Affect of Extreme Values on Mean and Median**</a></li>
+<li class="chapter" data-level="3.1.4" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-weighted-average"><i class="fa fa-check"></i><b>3.1.4</b> Example: Weighted Average</a></li>
+<li class="chapter" data-level="3.1.5" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-weighted-average-1"><i class="fa fa-check"></i><b>3.1.5</b> Example: Weighted Average</a></li>
+<li class="chapter" data-level="3.1.6" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-3"><i class="fa fa-check"></i><b>3.1.6</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#measures-of-spread"><i class="fa fa-check"></i><b>3.2</b> Measures of Spread</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-range"><i class="fa fa-check"></i><b>3.2.1</b> Example: Range</a></li>
+<li class="chapter" data-level="3.2.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-finding-the-standard-deviation"><i class="fa fa-check"></i><b>3.2.2</b> Example: Finding the Standard Deviation</a></li>
+<li class="chapter" data-level="3.2.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-the-gneral-rule"><i class="fa fa-check"></i><b>3.2.3</b> Example: the gneral rule</a></li>
+<li class="chapter" data-level="3.2.4" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-determining-if-a-value-is-unusual"><i class="fa fa-check"></i><b>3.2.4</b> Example: Determining If a Value Is Unusual</a></li>
+<li class="chapter" data-level="3.2.5" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-4"><i class="fa fa-check"></i><b>3.2.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#ranking"><i class="fa fa-check"></i><b>3.3</b> Ranking</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-interpreting-percentile"><i class="fa fa-check"></i><b>3.3.1</b> Example: Interpreting Percentile</a></li>
+<li class="chapter" data-level="3.3.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-percentile-versus-score"><i class="fa fa-check"></i><b>3.3.2</b> Example: Percentile Versus Score</a></li>
+<li class="chapter" data-level="3.3.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-five-number-summary-and-boxplot"><i class="fa fa-check"></i><b>3.3.3</b> Example: Five-number Summary and Boxplot</a></li>
+<li class="chapter" data-level="3.3.4" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-separating-based-on-a-factor"><i class="fa fa-check"></i><b>3.3.4</b> Example: Separating based on a factor</a></li>
+<li class="chapter" data-level="3.3.5" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-putting-it-all-together"><i class="fa fa-check"></i><b>3.3.5</b> Example: Putting it all together</a></li>
+<li class="chapter" data-level="3.3.6" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-5"><i class="fa fa-check"></i><b>3.3.6</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>4</b> Probability</a><ul>
+<li class="chapter" data-level="4.1" data-path="probability.html"><a href="probability.html#empirical-probability"><i class="fa fa-check"></i><b>4.1</b> Empirical Probability</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="probability.html"><a href="probability.html#example-statistics-class-survey"><i class="fa fa-check"></i><b>4.1.1</b> Example: Statistics class survey</a></li>
+<li class="chapter" data-level="4.1.2" data-path="probability.html"><a href="probability.html#homework-6"><i class="fa fa-check"></i><b>4.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="probability.html"><a href="probability.html#theoretical-probability"><i class="fa fa-check"></i><b>4.2</b> Theoretical Probability</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="probability.html"><a href="probability.html#example-equally-likely-outcomes"><i class="fa fa-check"></i><b>4.2.1</b> Example: Equally Likely Outcomes</a></li>
+<li class="chapter" data-level="4.2.2" data-path="probability.html"><a href="probability.html#example-calculating-theoretical-probabilities"><i class="fa fa-check"></i><b>4.2.2</b> Example: Calculating Theoretical Probabilities</a></li>
+<li class="chapter" data-level="4.2.3" data-path="probability.html"><a href="probability.html#example-calculating-theoretical-probabilities-1"><i class="fa fa-check"></i><b>4.2.3</b> Example: Calculating Theoretical Probabilities</a></li>
+<li class="chapter" data-level="4.2.4" data-path="probability.html"><a href="probability.html#example-calculating-theoretical-probabilities-2"><i class="fa fa-check"></i><b>4.2.4</b> Example: Calculating Theoretical Probabilities</a></li>
+<li class="chapter" data-level="4.2.5" data-path="probability.html"><a href="probability.html#example-complementary-events"><i class="fa fa-check"></i><b>4.2.5</b> Example: Complementary Events</a></li>
+<li class="chapter" data-level="4.2.6" data-path="probability.html"><a href="probability.html#example-using-the-complement-to-find-probabilities"><i class="fa fa-check"></i><b>4.2.6</b> Example: Using the Complement to Find Probabilities</a></li>
+<li class="chapter" data-level="4.2.7" data-path="probability.html"><a href="probability.html#example-using-addition-rules"><i class="fa fa-check"></i><b>4.2.7</b> Example: Using Addition Rules</a></li>
+<li class="chapter" data-level="4.2.8" data-path="probability.html"><a href="probability.html#example-odds-against-and-payoff-odds"><i class="fa fa-check"></i><b>4.2.8</b> Example: Odds Against and Payoff Odds</a></li>
+<li class="chapter" data-level="4.2.9" data-path="probability.html"><a href="probability.html#homework-7"><i class="fa fa-check"></i><b>4.2.9</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="probability.html"><a href="probability.html#conditional-probability"><i class="fa fa-check"></i><b>4.3</b> Conditional Probability</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="probability.html"><a href="probability.html#example-conditional-probabilities"><i class="fa fa-check"></i><b>4.3.1</b> Example: Conditional Probabilities</a></li>
+<li class="chapter" data-level="4.3.2" data-path="probability.html"><a href="probability.html#example-independent-events"><i class="fa fa-check"></i><b>4.3.2</b> Example: Independent Events</a></li>
+<li class="chapter" data-level="4.3.3" data-path="probability.html"><a href="probability.html#example-multiplication-rule"><i class="fa fa-check"></i><b>4.3.3</b> Example: Multiplication Rule</a></li>
+<li class="chapter" data-level="4.3.4" data-path="probability.html"><a href="probability.html#example-application-problem"><i class="fa fa-check"></i><b>4.3.4</b> Example: Application Problem</a></li>
+<li class="chapter" data-level="4.3.5" data-path="probability.html"><a href="probability.html#homework-8"><i class="fa fa-check"></i><b>4.3.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="probability.html"><a href="probability.html#counting-techniques"><i class="fa fa-check"></i><b>4.4</b> Counting Techniques</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="probability.html"><a href="probability.html#example-multiplication-rule-in-counting"><i class="fa fa-check"></i><b>4.4.1</b> Example: Multiplication Rule in Counting</a></li>
+<li class="chapter" data-level="4.4.2" data-path="probability.html"><a href="probability.html#example-multiplication-rule-in-counting-1"><i class="fa fa-check"></i><b>4.4.2</b> Example: Multiplication Rule in Counting</a></li>
+<li class="chapter" data-level="4.4.3" data-path="probability.html"><a href="probability.html#homework-9"><i class="fa fa-check"></i><b>4.4.3</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html"><i class="fa fa-check"></i><b>5</b> Discrete Probability Distributions</a><ul>
+<li class="chapter" data-level="5.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#basics-of-probability-distributions"><i class="fa fa-check"></i><b>5.1</b> Basics of Probability Distributions</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-probability-distribution"><i class="fa fa-check"></i><b>5.1.1</b> Example: Probability Distribution</a></li>
+<li class="chapter" data-level="5.1.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-calculating-the-expected-value"><i class="fa fa-check"></i><b>5.1.2</b> Example: Calculating the Expected Value</a></li>
+<li class="chapter" data-level="5.1.3" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-is-the-event-unusual"><i class="fa fa-check"></i><b>5.1.3</b> Example: Is the Event Unusual</a></li>
+<li class="chapter" data-level="5.1.4" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-10"><i class="fa fa-check"></i><b>5.1.4</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#binomial-probability-distribution"><i class="fa fa-check"></i><b>5.2</b> Binomial Probability Distribution</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-calculating-binomial-probabilities"><i class="fa fa-check"></i><b>5.2.1</b> Example: Calculating Binomial Probabilities</a></li>
+<li class="chapter" data-level="5.2.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-calculating-binomial-probabilities-1"><i class="fa fa-check"></i><b>5.2.2</b> Example: Calculating Binomial Probabilities</a></li>
+<li class="chapter" data-level="5.2.3" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-11"><i class="fa fa-check"></i><b>5.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#mean-and-standard-deviation-of-binomial-distribution"><i class="fa fa-check"></i><b>5.3</b> Mean and Standard Deviation of Binomial Distribution</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-finding-the-probability-distribution-mean-variance-and-standard-deviation-of-a-binomial-distribution"><i class="fa fa-check"></i><b>5.3.1</b> Example: Finding the Probability Distribution, Mean, Variance and Standard Deviation of a Binomial Distribution</a></li>
+<li class="chapter" data-level="5.3.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-12"><i class="fa fa-check"></i><b>5.3.2</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html"><i class="fa fa-check"></i><b>6</b> Continuous Probability Distributions</a><ul>
+<li class="chapter" data-level="6.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#finding-probabilities-for-the-normal-distribution"><i class="fa fa-check"></i><b>6.1</b> Finding Probabilities for the Normal Distribution</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-general-normal-distribution"><i class="fa fa-check"></i><b>6.1.1</b> Example: General Normal Distribution</a></li>
+<li class="chapter" data-level="6.1.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-general-normal-distribution-1"><i class="fa fa-check"></i><b>6.1.2</b> Example: General Normal Distribution</a></li>
+<li class="chapter" data-level="6.1.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-13"><i class="fa fa-check"></i><b>6.1.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#assessing-normality"><i class="fa fa-check"></i><b>6.2</b> Assessing Normality</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-is-it-normal"><i class="fa fa-check"></i><b>6.2.1</b> Example: Is It Normal?</a></li>
+<li class="chapter" data-level="6.2.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-is-it-normal-1"><i class="fa fa-check"></i><b>6.2.2</b> Example: Is It Normal?</a></li>
+<li class="chapter" data-level="6.2.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-14"><i class="fa fa-check"></i><b>6.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#sampling-distribution-and-the-central-limit-theorem"><i class="fa fa-check"></i><b>6.3</b> Sampling Distribution and the Central Limit Theorem</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-sampling-distribution"><i class="fa fa-check"></i><b>6.3.1</b> Example: Sampling Distribution</a></li>
+<li class="chapter" data-level="6.3.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-finding-probabilities-for-sample-means"><i class="fa fa-check"></i><b>6.3.2</b> Example: Finding Probabilities for Sample Means</a></li>
+<li class="chapter" data-level="6.3.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-finding-probabilities-for-sample-means-1"><i class="fa fa-check"></i><b>6.3.3</b> Example: Finding Probabilities for Sample Means</a></li>
+<li class="chapter" data-level="6.3.4" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-15"><i class="fa fa-check"></i><b>6.3.4</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="one-sample-inference.html"><a href="one-sample-inference.html"><i class="fa fa-check"></i><b>7</b> One-Sample Inference</a><ul>
+<li class="chapter" data-level="7.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#basics-of-hypothesis-testing"><i class="fa fa-check"></i><b>7.1</b> Basics of Hypothesis Testing</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-basics-of-hypothesis-testing"><i class="fa fa-check"></i><b>7.1.1</b> Example: Basics of Hypothesis Testing</a></li>
+<li class="chapter" data-level="7.1.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-battery-example-revisited."><i class="fa fa-check"></i><b>7.1.2</b> Example: Battery Example Revisited.</a></li>
+<li class="chapter" data-level="7.1.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-conclusions-in-hypothesis-tests"><i class="fa fa-check"></i><b>7.1.3</b> Example: Conclusions in Hypothesis Tests</a></li>
+<li class="chapter" data-level="7.1.4" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-stating-hypotheses"><i class="fa fa-check"></i><b>7.1.4</b> Example: Stating Hypotheses</a></li>
+<li class="chapter" data-level="7.1.5" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-stating-type-i-and-ii-errors-and-picking-level-of-significance"><i class="fa fa-check"></i><b>7.1.5</b> Example: Stating Type I and II Errors and Picking Level of Significance</a></li>
+<li class="chapter" data-level="7.1.6" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-16"><i class="fa fa-check"></i><b>7.1.6</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#one-sample-proportion-test"><i class="fa fa-check"></i><b>7.2</b> One-Sample Proportion Test</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-hypothesis-test-for-one-proportion"><i class="fa fa-check"></i><b>7.2.1</b> Example: Hypothesis Test for One Proportion</a></li>
+<li class="chapter" data-level="7.2.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-hypothesis-test-for-one-proportion-1"><i class="fa fa-check"></i><b>7.2.2</b> Example: Hypothesis Test for One Proportion</a></li>
+<li class="chapter" data-level="7.2.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-17"><i class="fa fa-check"></i><b>7.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#one-sample-test-for-the-mean"><i class="fa fa-check"></i><b>7.3</b> One-Sample Test for the Mean</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-resampling"><i class="fa fa-check"></i><b>7.3.1</b> Example: Resampling</a></li>
+<li class="chapter" data-level="7.3.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-test-of-the-mean-using-one-sample-t-test"><i class="fa fa-check"></i><b>7.3.2</b> Example: Test of the Mean Using One Sample T-test</a></li>
+<li class="chapter" data-level="7.3.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-test-of-the-mean-using-one-sample-t-test-1"><i class="fa fa-check"></i><b>7.3.3</b> Example: Test of the Mean Using One Sample T-test</a></li>
+<li class="chapter" data-level="7.3.4" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-18"><i class="fa fa-check"></i><b>7.3.4</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="estimation.html"><a href="estimation.html"><i class="fa fa-check"></i><b>8</b> Estimation</a><ul>
+<li class="chapter" data-level="8.1" data-path="estimation.html"><a href="estimation.html#basics-of-confidence-intervals"><i class="fa fa-check"></i><b>8.1</b> Basics of Confidence Intervals</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="estimation.html"><a href="estimation.html#example-stating-the-statistical-and-real-world-interpretations-for-a-confidence-interval"><i class="fa fa-check"></i><b>8.1.1</b> Example: Stating the Statistical and Real World Interpretations for a Confidence Interval</a></li>
+<li class="chapter" data-level="8.1.2" data-path="estimation.html"><a href="estimation.html#homework-19"><i class="fa fa-check"></i><b>8.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="estimation.html"><a href="estimation.html#one-sample-interval-for-the-proportion"><i class="fa fa-check"></i><b>8.2</b> One-Sample Interval for the Proportion</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="estimation.html"><a href="estimation.html#example-confidence-interval-for-the-population-proportion"><i class="fa fa-check"></i><b>8.2.1</b> Example: Confidence Interval for the Population Proportion</a></li>
+<li class="chapter" data-level="8.2.2" data-path="estimation.html"><a href="estimation.html#example-confidence-interval-for-the-population-proportion-1"><i class="fa fa-check"></i><b>8.2.2</b> Example: Confidence Interval for the Population Proportion</a></li>
+<li class="chapter" data-level="8.2.3" data-path="estimation.html"><a href="estimation.html#homework-20"><i class="fa fa-check"></i><b>8.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="estimation.html"><a href="estimation.html#one-sample-interval-for-the-mean"><i class="fa fa-check"></i><b>8.3</b> One-Sample Interval for the Mean</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="estimation.html"><a href="estimation.html#example-confidence-interval-for-the-population-mean"><i class="fa fa-check"></i><b>8.3.1</b> Example: Confidence Interval for the Population Mean</a></li>
+<li class="chapter" data-level="8.3.2" data-path="estimation.html"><a href="estimation.html#example-confidence-interval-for-the-population-mean-1"><i class="fa fa-check"></i><b>8.3.2</b> Example: Confidence Interval for the Population Mean</a></li>
+<li class="chapter" data-level="8.3.3" data-path="estimation.html"><a href="estimation.html#homework-21"><i class="fa fa-check"></i><b>8.3.3</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="two-sample-inference.html"><a href="two-sample-inference.html"><i class="fa fa-check"></i><b>9</b> Two-Sample Inference</a><ul>
+<li class="chapter" data-level="9.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#two-proportions"><i class="fa fa-check"></i><b>9.1</b> Two Proportions</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-two-population-proportions"><i class="fa fa-check"></i><b>9.1.1</b> Example: Hypothesis Test for Two Population Proportions</a></li>
+<li class="chapter" data-level="9.1.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-confidence-interval-for-two-population-proportions"><i class="fa fa-check"></i><b>9.1.2</b> Example: Confidence Interval for Two Population Proportions</a></li>
+<li class="chapter" data-level="9.1.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-22"><i class="fa fa-check"></i><b>9.1.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#paired-samples-for-two-means"><i class="fa fa-check"></i><b>9.2</b> Paired Samples for Two Means</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-independent-or-dependent-samples"><i class="fa fa-check"></i><b>9.2.1</b> Example: Independent or Dependent Samples</a></li>
+<li class="chapter" data-level="9.2.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-paired-samples"><i class="fa fa-check"></i><b>9.2.2</b> Example: Hypothesis Test for Paired Samples</a></li>
+<li class="chapter" data-level="9.2.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-paired-samples-1"><i class="fa fa-check"></i><b>9.2.3</b> Example: Hypothesis Test for Paired Samples</a></li>
+<li class="chapter" data-level="9.2.4" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-confidence-interval-for-paired-samples"><i class="fa fa-check"></i><b>9.2.4</b> Example: Confidence Interval for Paired Samples</a></li>
+<li class="chapter" data-level="9.2.5" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-23"><i class="fa fa-check"></i><b>9.2.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#independent-samples-for-two-means"><i class="fa fa-check"></i><b>9.3</b> Independent Samples for Two Means</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-two-means"><i class="fa fa-check"></i><b>9.3.1</b> Example: Hypothesis Test for Two Means</a></li>
+<li class="chapter" data-level="9.3.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-confidence-interval-in-two-samples"><i class="fa fa-check"></i><b>9.3.2</b> Example: Confidence Interval in Two Samples</a></li>
+<li class="chapter" data-level="9.3.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-two-means-1"><i class="fa fa-check"></i><b>9.3.3</b> Example: Hypothesis Test for Two Means</a></li>
+<li class="chapter" data-level="9.3.4" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-confidence-interval-for-two-independent-samples"><i class="fa fa-check"></i><b>9.3.4</b> Example: Confidence Interval for Two Independent Samples</a></li>
+<li class="chapter" data-level="9.3.5" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-24"><i class="fa fa-check"></i><b>9.3.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="two-sample-inference.html"><a href="two-sample-inference.html#which-analysis-should-you-conduct"><i class="fa fa-check"></i><b>9.4</b> Which Analysis Should You Conduct?</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html"><i class="fa fa-check"></i><b>10</b> Regression and Correlation</a><ul>
+<li class="chapter" data-level="10.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#regression"><i class="fa fa-check"></i><b>10.1</b> Regression</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-determining-if-there-is-a-relationship"><i class="fa fa-check"></i><b>10.1.1</b> Example: Determining If There Is a Relationship</a></li>
+<li class="chapter" data-level="10.1.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-25"><i class="fa fa-check"></i><b>10.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#correlation"><i class="fa fa-check"></i><b>10.2</b> Correlation</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-find-the-coefficient-of-determinatin-r2"><i class="fa fa-check"></i><b>10.2.1</b> Example: Find the coefficient of determinatin <span class="math inline">\(R^2\)</span></a></li>
+<li class="chapter" data-level="10.2.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-calculating-the-linear-correlation-coefficient-r"><i class="fa fa-check"></i><b>10.2.2</b> Example: Calculating the Linear Correlation Coefficient, <em>r</em></a></li>
+<li class="chapter" data-level="10.2.3" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-correlation-versus-causation"><i class="fa fa-check"></i><b>10.2.3</b> Example: Correlation Versus Causation</a></li>
+<li class="chapter" data-level="10.2.4" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-26"><i class="fa fa-check"></i><b>10.2.4</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#inference-for-regression-and-correlation"><i class="fa fa-check"></i><b>10.3</b> Inference for Regression and Correlation</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-finding-the-standard-error-of-the-estimate"><i class="fa fa-check"></i><b>10.3.1</b> Example: Finding the Standard Error of the Estimate</a></li>
+<li class="chapter" data-level="10.3.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-testing-the-claim-of-a-linear-correlation"><i class="fa fa-check"></i><b>10.3.2</b> Example: Testing the Claim of a Linear Correlation</a></li>
+<li class="chapter" data-level="10.3.3" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-27"><i class="fa fa-check"></i><b>10.3.3</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html"><i class="fa fa-check"></i><b>11</b> Chi-Square and ANOVA Tests</a><ul>
+<li class="chapter" data-level="11.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#chi-square-test-for-independence"><i class="fa fa-check"></i><b>11.1</b> Chi-Square Test for Independence</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#example-hypothesis-test-with-chi-square-test"><i class="fa fa-check"></i><b>11.1.1</b> Example: Hypothesis Test with Chi-Square Test</a></li>
+<li class="chapter" data-level="11.1.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-28"><i class="fa fa-check"></i><b>11.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#chi-square-goodness-of-fit"><i class="fa fa-check"></i><b>11.2</b> Chi-Square Goodness of Fit</a><ul>
+<li class="chapter" data-level="11.2.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#example-goodness-of-fit-test"><i class="fa fa-check"></i><b>11.2.1</b> Example: Goodness of Fit Test</a></li>
+<li class="chapter" data-level="11.2.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-29"><i class="fa fa-check"></i><b>11.2.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#analysis-of-variance-anova"><i class="fa fa-check"></i><b>11.3</b> Analysis of Variance (ANOVA)</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#example-hypothesis-test-involving-several-means"><i class="fa fa-check"></i><b>11.3.1</b> Example: Hypothesis Test Involving Several Means</a></li>
+<li class="chapter" data-level="11.3.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-30"><i class="fa fa-check"></i><b>11.3.2</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/StatPREP/Stat_using_technology" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistics Using Technology</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="numerical-descriptions-of-data" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Numerical Descriptions of Data</h1>
+<p>Chapter 1 discussed what a population, sample, parameter, and statistic are, and how to take different types of samples. Chapter 2 discussed ways to graphically display data. There was also a discussion of important characteristics: center, variations, distribution, outliers, and changing characteristics of the data over time. Distributions and outliers can be answered using graphical means. Finding the center and variation can be done using numerical methods that will be discussed in this chapter. Both graphical and numerical methods are part of a branch of statistics known as <strong>descriptive statistics</strong>. Later descriptive statistics will be used to make decisions and/or estimate population parameters using methods that are part of the branch called <strong>inferential statistics</strong>.</p>
+<div id="measures-of-center" class="section level2">
+<h2><span class="header-section-number">3.1</span> Measures of Center</h2>
+<p>This section focuses on measures of central tendency. Many times you are asking what to expect on average. Such as when you pick a major, you would probably ask how much you expect to earn in that field. If you are thinking of relocating to a new town, you might ask how much you can expect to pay for housing. If you are planting vegetables in the spring, you might want to know how long it will be until you can harvest. These questions, and many more, can be answered by knowing the center of the data set. There are three measures of the “center” of the data. They are the mode, median, and mean. Any of the values can be referred to as the “average.”</p>
+<p>The <strong>mode</strong> is the data value that occurs the most frequently in the data. To find it, you count how often each data value occurs, and then determine which data value occurs most often. The mode is not the most useful measure of center. This is because, a data set can have more than one mode. If there is a tie between two values for the most number of times then both values are the mode and the data is called bimodal (two modes). If every data point occurs the same number of times, there is no mode. If there are more than two numbers that appear the most times, then usually there is no mode.</p>
+<p>The <strong>median</strong> is the data value in the middle of a sorted list of data. To find it, you put the data in order, and then determine which data value is in the middle of the data set.</p>
+<p>The <strong>mean</strong> is the arithmetic average of the numbers. This is the center that most people call the average, though all three – mean, median, and mode – really are averages.</p>
+<p>There are no symbols for the mode and the median, but the mean is used a great deal, and statisticians gave it a symbol. There are actually two symbols, one for the population parameter and one for the sample statistic. In most cases you cannot find the population parameter, so you use the sample statistic to estimate the population parameter.</p>
+<p><strong>Population Mean:</strong></p>
+<p><span class="math inline">\(\mu=\frac{\sum{x}}{N}\)</span>, pronounced mu</p>
+<p><em>N</em> is the size of the population.</p>
+<p><em>x</em> represents a data value.</p>
+<p><span class="math inline">\(\sum{x}\)</span> means to add up all of the data values.</p>
+<p><strong>Sample Mean</strong>:</p>
+<p><span class="math inline">\(\bar{x}=\frac{\sum{x}}{n}\)</span>, pronounced x bar.</p>
+<p><em>n</em> is the size of the sample.</p>
+<p><em>x</em> represents a data value.</p>
+<p><span class="math inline">\(\sum{x}\)</span> means to add up all of the data values.</p>
+<p>The value for <span class="math inline">\(\bar{x}\)</span> is used to estimate <span class="math inline">\(\mu\)</span> since <span class="math inline">\(\mu\)</span> can’t be calculated in most situations.</p>
+<div id="example-finding-the-mean-and-median-using-r" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Example: Finding the Mean and Median using R</h3>
+<p>Suppose a vet wants to find the average weight of cats. The weights (in kg) of cats are in table #3.1.1.</p>
+<p>Table #3.1.1: Cats’ Weights</p>
+<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="numerical-descriptions-of-data.html#cb82-1"></a><span class="kw">head</span>(cats) <span class="co">#This command shows the variable names and the first few unit of observation rows</span></span></code></pre></div>
+<pre><code>##   Sex Bwt Hwt
+## 1   F 2.0 7.0
+## 2   F 2.0 7.4
+## 3   F 2.0 9.5
+## 4   F 2.1 7.2
+## 5   F 2.1 7.3
+## 6   F 2.1 7.6</code></pre>
+<p>Find the mean and median of the weight of a cat.</p>
+<p><strong>Solution:</strong></p>
+<p>Before starting any mathematics problem, it is always a good idea to define the unknown in the problem. In statistics, you want to define the variable. The symbol for the variable is <em>x</em>.</p>
+<p>The variable is <em>x</em> = weight of a cat</p>
+<p>Mean:
+To find with R Studio, perform the command:</p>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="numerical-descriptions-of-data.html#cb84-1"></a><span class="kw">df_stats</span>(<span class="op">~</span>Bwt, cats, mean)</span></code></pre></div>
+<pre><code>##   mean_Bwt
+## 1 2.723611</code></pre>
+<p>The mean weight is 2.72 kg</p>
+<p>Median:
+To find with R Studio, perform the command:</p>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="numerical-descriptions-of-data.html#cb86-1"></a><span class="kw">df_stats</span>(<span class="op">~</span>Bwt, cats, median)</span></code></pre></div>
+<pre><code>##   median_Bwt
+## 1        2.7</code></pre>
+<p>The median weight is 2.7 kg also. It appears the average weight is 2.7 kg of all cats.</p>
+</div>
+<div id="example-finding-mean-and-median-with-filtering" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> Example: Finding Mean and Median with filtering</h3>
+<p>Looking at the data frame for cats weights table(#3.1.1), you see that there are several variables You may want to know what the other variables are. A * Code Book * describes the data set, explains what the variables are including the units, and the source of the data frame. To review the code book for a data frame, complete the following command.</p>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="numerical-descriptions-of-data.html#cb88-1"></a>??cats</span></code></pre></div>
+<p>Then click on MASS::cats.</p>
+<p>The output looks like:</p>
+<p><strong>Image #3.1.1: Code book for cats data frame</strong></p>
+<div class="figure">
+<img src="code_book_cats.jpg" alt="" />
+<p class="caption">Code book for cats data</p>
+</div>
+<p>Suppose you want to know if male cats weight more than female cats. Looking at the variables, you notice that there is a variable for the sex of the cat. You can look at the weights of males and females separately. This looks like:</p>
+<p><strong>Solution:</strong>
+To find the mean and median, separated by sex, use this command in R Studio:</p>
+<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="numerical-descriptions-of-data.html#cb89-1"></a><span class="kw">df_stats</span>(Bwt<span class="op">~</span>Sex, <span class="dt">data=</span>cats, mean, median)</span></code></pre></div>
+<pre><code>##   Sex mean_Bwt median_Bwt
+## 1   F 2.359574        2.3
+## 2   M 2.900000        2.9</code></pre>
+<p>Notice that the female cats’ mean weigh 2.4 kg and the male cats’ mean weigh 2.9 kg The median weight of female cats is 2.3 kg and for males is is 2.9 kg So it does appear that males cats weight a bit more than the female cats.</p>
+<p>There are many different summary statistics that can be found. An example is the minimum and maximum value. In this example, you will see how to find the min and max values and then filter them out of a data set to see what effect they have on the mean and median.</p>
+</div>
+<div id="example-affect-of-extreme-values-on-mean-and-median" class="section level3">
+<h3><span class="header-section-number">3.1.3</span> Example: Affect of Extreme Values on Mean and Median**</h3>
+<p>Find the minimum and maximum values of cats weights.</p>
+<p><strong>Solution</strong>
+The command in R Studio for finding the minimum and maximum is very similar to how to find the mean and median, In fact all summary statistics start with</p>
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="numerical-descriptions-of-data.html#cb91-1"></a><span class="kw">df_stats</span>(<span class="op">~</span>variable, <span class="dt">data=</span>Data Frame, desired statistics)</span></code></pre></div>
+<p>Here is the command in R Studio for the minimum and maximum of cat’s body weight.</p>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="numerical-descriptions-of-data.html#cb92-1"></a><span class="kw">df_stats</span>(<span class="op">~</span>Bwt, <span class="dt">data=</span>cats, min, max)</span></code></pre></div>
+<pre><code>##   min_Bwt max_Bwt
+## 1       2     3.9</code></pre>
+<p>The minimum weight of a cat in this data frame is 2 kg and the maximum weight of a cat is 3.9 kg.</p>
+<p>Now create two new data sets. One data set will exclude the maximum value. You can call it anything you want, but it would make sense to call it something like nomax. The command to create the new data set is:</p>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="numerical-descriptions-of-data.html#cb94-1"></a>nomax&lt;-<span class="kw">filter</span>(cats, Bwt<span class="op">&lt;</span><span class="fl">3.9</span>)</span></code></pre></div>
+<p>Then create a data set that excludes the minimum value; call it nomin:</p>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="numerical-descriptions-of-data.html#cb95-1"></a>nomin&lt;-<span class="kw">filter</span>(cats, Bwt<span class="op">&gt;</span><span class="dv">2</span>)</span></code></pre></div>
+<p>The &lt;- is the way to indicate to R what the data set nomin is equivalent to what follows the symbol. Notice that it doesn’t look like anything happened, but new data sets were created in the background. Now you can find the mean and median of each new data set:</p>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="numerical-descriptions-of-data.html#cb96-1"></a><span class="kw">df_stats</span>(<span class="op">~</span>Bwt, <span class="dt">data=</span>nomax, mean, median)</span></code></pre></div>
+<pre><code>##   mean_Bwt median_Bwt
+## 1 2.707042        2.7</code></pre>
+<p>The mean without the maximum value is 2.70 kg, and the median is 2.7 kg.</p>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="numerical-descriptions-of-data.html#cb98-1"></a><span class="kw">df_stats</span>(<span class="op">~</span>Bwt, <span class="dt">data=</span>nomin, mean, median)</span></code></pre></div>
+<pre><code>##   mean_Bwt median_Bwt
+## 1  2.74964        2.7</code></pre>
+<p>The mean without the minimum value is 2.75 kg, and the median is 2.7 kg.</p>
+<p>From Example 3.1.1, the mean of the data set with all the values is 2.72 kg where the median is 2.7 kg. Notice that when the maximum value was excluded from the data set, the mean decreased a little but the median didn’t change, and when the minimum value was excluded from the data set, the mean increased a little but the median didn’t change. The mean is much higher than the median. Why is this? This is because the mean is affected by extreme values, while the median is not. We say the median is a much more resistant measure of center because it isn’t affected by extreme values as much.</p>
+<p>An outlier is a data value that is very different from the rest of the data. It can be really high or really low. Extreme values may be an outlier if the extreme value is far enough from the center. If there are extreme values in the data, the median is a better measure of the center than the mean. If there are no extreme values, the mean and the median will be similar so most people use the mean. The mean is not a resistant measure because it is affected by extreme values. The median is a resistant measure because it not affected by extreme values.</p>
+<p>As a consumer you need to be aware that people choose the measure of center that best supports their claim. When you read an article in the newspaper and it talks about the “average” it usually means the mean but sometimes it refers to the median. Some articles will use the word “median” instead of “average” to be more specific. If you need to make an important decision and the information says “average”, it would be wise to ask if the “average” is the mean or the median before you decide.</p>
+<p>As an example, suppose that a company wants to use the mean salary as the average salary for the company. This is because the high salaries of the administrators will pull the mean higher. The company can say that the employees are paid well because the average is high. However, the employees want to use the median since it discounts the extreme values of the administration and will give a lower value of the average. This will make the salaries seem lower and that a raise is in order.</p>
+<p>Why use the mean instead of the median? The reason is because when multiple samples are taken from the same population, the sample means tend to be more consistent than other measures of the center.</p>
+<p>To understand how the different measures of center related to skewed or symmetric distributions, see Graph #3.1.2. As you can see sometimes the mean is smaller than the median, sometimes the mean is larger than the median, and sometimes they are the same values.</p>
+<p><strong>Graph #3.1.2: Mean, Median, Mode as Related to a Distribution</strong>
+<img src="centers_distribution.png" alt="Graphs of symmetric, skewed right and skewed left" /></p>
+<p>One last type of average is a weighted average. <strong>Weighted averages</strong> are used quite often in different situations. Some teachers use them in calculating a student’s grade in the course, or a grade on a project. Some employers use them in employee evaluations. The idea is that some activities are more
+important than others. As an example, a full time teacher at a community college may be evaluated on their service to the college, their service to the community, whether their paperwork is turned in on time, and their teaching. However, teaching is much more important than whether their paperwork is turned in on time. When the evaluation is completed, more weight needs to be given to the teaching and less to the paperwork. This is a weighted average.</p>
+<p><strong>Weighted Average</strong>
+<span class="math inline">\(\text{weighted average}=\frac{\sum{x*w}}{\sum{w}}\)</span></p>
+<p>where <em>w</em> is the weight of the data value, <em>x</em>.</p>
+</div>
+<div id="example-weighted-average" class="section level3">
+<h3><span class="header-section-number">3.1.4</span> Example: Weighted Average</h3>
+<p>In your biology class, your final grade is based on several things: a lab score, scores on two major tests, and your score on the final exam. There are 100 points available for each score. The lab score is worth 15% of the course, the two exams are worth 25% of the course each, and the final exam is worth 35% of the course. Suppose you earned scores of 95 on the labs, 83 and 76 on the two exams, and 84 on the final exam. Compute your weighted average for the course.</p>
+<p><strong>Solution:</strong></p>
+<p>Variable: <em>x</em> = score</p>
+<p>A weighted average can be found using technology. The commands for finding the weighted mean using R Studio is as follows:</p>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="numerical-descriptions-of-data.html#cb100-1"></a> x&lt;-<span class="kw">c</span>(type <span class="cf">in</span> the scores with commas <span class="cf">in</span> between)</span>
+<span id="cb100-2"><a href="numerical-descriptions-of-data.html#cb100-2"></a></span>
+<span id="cb100-3"><a href="numerical-descriptions-of-data.html#cb100-3"></a> w&lt;-<span class="kw">c</span>(type <span class="cf">in</span> the weights as decimals with commas <span class="cf">in</span> between</span>
+<span id="cb100-4"><a href="numerical-descriptions-of-data.html#cb100-4"></a></span>
+<span id="cb100-5"><a href="numerical-descriptions-of-data.html#cb100-5"></a> <span class="kw">weighted.mean</span>(x,w)</span></code></pre></div>
+<p>The <em>x</em> and <em>w</em> represent the variables, &lt;- means make the variables equivalent to what follows, the c( means combine all the values in the () as one combined variable.</p>
+<p>For this example, the commands would be</p>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="numerical-descriptions-of-data.html#cb101-1"></a>x&lt;-<span class="kw">c</span>(<span class="dv">95</span>, <span class="dv">83</span>, <span class="dv">76</span>, <span class="dv">84</span>)</span>
+<span id="cb101-2"><a href="numerical-descriptions-of-data.html#cb101-2"></a>w&lt;-<span class="kw">c</span>(.<span class="dv">15</span>, <span class="fl">.25</span>, <span class="fl">.25</span>, <span class="fl">.35</span>)</span>
+<span id="cb101-3"><a href="numerical-descriptions-of-data.html#cb101-3"></a><span class="kw">weighted.mean</span>(x,w)</span></code></pre></div>
+<pre><code>## [1] 83.4</code></pre>
+<p>Your weighted mean in the biology class is 83.4%. Using the traditional grading scale, you have a B in the class.</p>
+</div>
+<div id="example-weighted-average-1" class="section level3">
+<h3><span class="header-section-number">3.1.5</span> Example: Weighted Average</h3>
+<p>The faculty evaluation process at John Jingle University rates a faculty member on the following activities: teaching, publishing, committee service, community service, and submitting paperwork in a timely manner. The process involves reviewing student evaluations, peer evaluations, and supervisor evaluation for each teacher and awarding him/her a score on a scale from 1 to 10 (with 10 being the best). The weights for each activity are 20 for teaching, 18 for publishing, 6 for committee service, 4 for community service, and 2 for paperwork.</p>
+<ol style="list-style-type: lower-alpha">
+<li>One faculty member had the following ratings: 8 for teaching, 9 for publishing, 2 for committee work, 1 for community service, and 8 for paperwork. Compute the weighted average of the evaluation.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Variable: <em>x</em> = rating, <em>w</em> = weight</p>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="numerical-descriptions-of-data.html#cb103-1"></a>x&lt;-<span class="kw">c</span>(<span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">8</span>)</span>
+<span id="cb103-2"><a href="numerical-descriptions-of-data.html#cb103-2"></a>w&lt;-<span class="kw">c</span>(<span class="dv">20</span>, <span class="dv">18</span>, <span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">2</span>)</span>
+<span id="cb103-3"><a href="numerical-descriptions-of-data.html#cb103-3"></a><span class="kw">weighted.mean</span>(x,w)</span></code></pre></div>
+<pre><code>## [1] 7.08</code></pre>
+<p>The weighted average is 7.08.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Another faculty member had ratings of 6 for teaching, 8 for publishing, 9 for committee work, 10 for community service, and 10 for paperwork. Compute the weighted average of the evaluation.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="numerical-descriptions-of-data.html#cb105-1"></a>x&lt;-<span class="kw">c</span>(<span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">10</span>)</span>
+<span id="cb105-2"><a href="numerical-descriptions-of-data.html#cb105-2"></a>w&lt;-<span class="kw">c</span>(<span class="dv">20</span>, <span class="dv">18</span>, <span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">2</span>)</span>
+<span id="cb105-3"><a href="numerical-descriptions-of-data.html#cb105-3"></a><span class="kw">weighted.mean</span>(x,w)</span></code></pre></div>
+<pre><code>## [1] 7.56</code></pre>
+<p>The weighted average for this employee is 7.56.</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Which faculty member had the higher average evaluation?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>The second faculty member has a higher average evaluation.</p>
+<p>The last thing to mention is which average is used on which type of data.</p>
+<p>Mode can be found on nominal, ordinal, interval, and ratio data, since the mode is just the data value that occurs most often. You are just counting the data values.</p>
+<p>Median can be found on ordinal, interval, and ratio data, since you need to put the data in order. As long as there is order to the data you can find the median.</p>
+<p>Mean can be found on interval and ratio data, since you must have numbers to add together.</p>
+</div>
+<div id="homework-3" class="section level3">
+<h3><span class="header-section-number">3.1.6</span> Homework</h3>
+<p>** Use Technology on all problems. State the variable on all problems.**</p>
+<ol style="list-style-type: decimal">
+<li>Cholesterol levels were collected from patients certain days after they had a heart attack and are in table #3.1.2. Find the mean and median for cholesterol levels 2 days after the heart attack.</li>
+</ol>
+<p>table #3.1.2</p>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="numerical-descriptions-of-data.html#cb107-1"></a>Cholesterol&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/cholesterol.csv&quot;</span>)</span>
+<span id="cb107-2"><a href="numerical-descriptions-of-data.html#cb107-2"></a><span class="kw">head</span>(Cholesterol)</span></code></pre></div>
+<pre><code>##   patient day2 day4 day14
+## 1       1  270  218   156
+## 2       2  236  234    NA
+## 3       3  210  214   242
+## 4       4  142  116    NA
+## 5       5  280  200    NA
+## 6       6  272  276   256</code></pre>
+<p><strong>Code book for Data Frame Cholesterol</strong></p>
+<p><strong>Description</strong>
+Cholesterol levels were collected from patients certain days after they had a heart attack</p>
+<p>This data frame contains the following columns:</p>
+<p>Patient: Patient number</p>
+<p>day2: Cholesterol level of patient 2 days after heart attack. (mg/dL)</p>
+<p>day4: Cholesterol level of patient 4 days after heart attack. (mg/dL)</p>
+<p>day14: Cholesterol level of patient 14 days after heart attack. (mg/dL)</p>
+<p><strong>Source</strong>
+Ryan, B. F., Joiner, B. L., &amp; Ryan, Jr, T. A. (1985). Cholesterol levels after heart attack.Retrieved from <a href="http://www.statsci.org/data/general/cholest.html" class="uri">http://www.statsci.org/data/general/cholest.html</a></p>
+<p><strong>References</strong>
+Ryan, Joiner &amp; Ryan, Jr, 1985</p>
+<ol start="2" style="list-style-type: decimal">
+<li>The lengths (in kilometers) of rivers on the South Island of New Zealand and what body of water they flow into are listed in table #3.1.2 (Lee, 1994). Find the mean and median length of rivers that flow into the Pacific Ocean and the mean and median length of rivers that flow into the Tasman Sea.</li>
+</ol>
+<p>** Table #3.1.2: Lengths of Rivers (km) in New Zealand**</p>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="numerical-descriptions-of-data.html#cb109-1"></a>Length&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/length.csv&quot;</span>)</span>
+<span id="cb109-2"><a href="numerical-descriptions-of-data.html#cb109-2"></a><span class="kw">head</span>(Length)</span></code></pre></div>
+<pre><code>##      river length flowsto
+## 1 Clarence    209 Pacific
+## 2   Conway     48 Pacific
+## 3    Waiau    169 Pacific
+## 4  Hurunui    138 Pacific
+## 5  Waipara     64 Pacific
+## 6   Ashley     97 Pacific</code></pre>
+<p><strong>Code book for data frame Length</strong></p>
+<p><strong>Description</strong></p>
+<p>Rivers in New Zealand, the lengths of river and what body of water the river flows into</p>
+<p>This data frame contains the following columns:</p>
+<p>River: Name of the river</p>
+<p>length: how long the river is in kilometers</p>
+<p>flowsto: what body of water the river flows into Pacific Ocean is Pacific and the Tasman Sea is Tasman</p>
+<p><strong>Source</strong>
+Lee, A. (1994). Data analysis: An introduction based on r. Auckland. Retrieved from
+<a href="http://www.statsci.org/data/oz/nzrivers.html" class="uri">http://www.statsci.org/data/oz/nzrivers.html</a></p>
+<p><strong>References</strong>
+Lee, A. (1994). Data analysis: An introduction based on r. Auckland.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Print-O-Matic printing company’s employees have salaries that are contained in table #3.1.3.</li>
+</ol>
+<p><strong>Table #3.1.3: Salaries of Print-O-Matic Printing Company Employees</strong></p>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="numerical-descriptions-of-data.html#cb111-1"></a>Pay&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/pay.csv&quot;</span>)</span>
+<span id="cb111-2"><a href="numerical-descriptions-of-data.html#cb111-2"></a><span class="kw">head</span>(Pay)</span></code></pre></div>
+<pre><code>##      employee salary
+## 1         CEO 272500
+## 2      Driver  58456
+## 3        CD74 100702
+## 4        CD65  57380
+## 5 Embellisher  73877
+## 6      Folder  65270</code></pre>
+<p><strong>Code book for data frame Pay</strong></p>
+<p><strong>Description</strong></p>
+<p>Salaries of Print-O-Matic printing company’s employees</p>
+<p>This data frame contains the following columns:</p>
+<p>employee:employees position in the company</p>
+<p>salary: salary of that employee (Australian dollars (AUD))</p>
+<p><strong>Source</strong>
+John Matic provided the data from a company he worked with. The company’s name is fictitious, but the data is from an actual company.</p>
+<p><strong>References</strong>
+John Matic (2013)</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Find the mean and median.</p></li>
+<li><p>Find the mean and median with the CEO’s salary removed.</p></li>
+<li><p>What happened to the mean and median when the CEO’s salary was removed? Why?</p></li>
+<li><p>If you were the CEO, who is answering concerns from the union that employees are underpaid, which average (mean or median) using the complete data set of the complete data set would you prefer? Why?</p></li>
+<li><p>If you were a platen worker, who believes that the employees need a raise, which average (mean or median) using the complete data set would you prefer? Why?</p></li>
+</ol>
+<ol start="4" style="list-style-type: decimal">
+<li>Print-O-Matic printing company spends specific amounts on fixed costs every month. The costs of those fixed costs are in table #3.1.4.</li>
+</ol>
+<p><strong>Table #3.1.4: Fixed Costs for Print-O-Matic Printing Company</strong></p>
+<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="numerical-descriptions-of-data.html#cb113-1"></a>Cost&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/cost.csv&quot;</span>)</span>
+<span id="cb113-2"><a href="numerical-descriptions-of-data.html#cb113-2"></a><span class="kw">head</span>(Cost)</span></code></pre></div>
+<pre><code>##              charges cost
+## 1       Bank charges  482
+## 2           Cleaning 2208
+## 3 Computer expensive 2471
+## 4     Lease payments 2656
+## 5            Postage 2117
+## 6           Uniforms 2600</code></pre>
+<p><strong>Code book for data frame Cost</strong></p>
+<p><strong>Description</strong>
+fixed monthly charges for Print-0-Matic printing company</p>
+<p>This data frame contains the following columns:</p>
+<p>charges: Categories of monthly fixed charges</p>
+<p>cost: fixed month costs (AUD)</p>
+<p><strong>Source</strong>
+John Matic provided the data from a company he worked with. The company’s name is fictitious, but the data is from an actual company.</p>
+<p><strong>References</strong>
+John Matic (2013)</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Find the mean and median.</p></li>
+<li><p>Find the mean and median with the bank charges removed.</p></li>
+<li><p>What happened to the mean and median when the bank charges was removed? Why?</p></li>
+<li><p>If it is your job to oversee the fixed costs, which average (mean or median) using the complete data set would you prefer to use when submitting a report to administration to show that costs are low? Why?</p></li>
+<li><p>If it is your job to find places in the budget to reduce costs, which average (mean or median) using the complete data set would you prefer to use when submitting a report to administration to show that fixed costs need to be reduced? Why?</p></li>
+</ol>
+<ol start="5" style="list-style-type: decimal">
+<li>Looking at graph #3.1.1, state if the graph is skewed left, skewed right, or symmetric and then state which is larger, the mean or the median?</li>
+</ol>
+<p><strong>Graph #3.1.1: Skewed or Symmetric Graph</strong>
+<img src="graph_3_1_1.png" alt="Graphs of symmetric, skewed right and skewed left" /></p>
+<ol start="6" style="list-style-type: decimal">
+<li>Looking at graph #3.1.2, state if the graph is skewed left, skewed right, or symmetric and then state which is larger, the mean or the median?</li>
+</ol>
+<p><strong>Graph #3.1.2: Skewed or Symmetric Graph</strong>
+<img src="graph_3_1_2.png" alt="Graphs of symmetric, skewed right and skewed left" /></p>
+<ol start="7" style="list-style-type: decimal">
+<li><p>An employee at Coconino Community College (CCC) is evaluated based on goal setting and accomplishments toward the goals, job effectiveness, competencies, and CCC core values. Suppose for a specific employee, goal 1 has a weight of 30%, goal 2 has a weight of 20%, job effectiveness has a weight of 25%, competency 1 has a weight of 4%, competency 2 has a weight of 3%, competency 3 has a weight of 3%, competency 4 has a weight of 3%, competency 5 has a weight of 2%, and core values has a weight of 10%. Suppose the employee has scores of 3.0 for goal 1, 3.0 for goal 2, 2.0 for job effectiveness, 3.0 for competency 1, 2.0 for competency 2, 2.0 for competency 3, 3.0 for competency 4, 4.0 for competency 5, and 3.0 for core values. Find the weighted average score for this employee. If an employee has a score less than 2.5, they must have a Performance Enhancement Plan written. Does this employee need a plan?</p></li>
+<li><p>An employee at Coconino Community College (CCC) is evaluated based on goal setting and accomplishments toward goals, job effectiveness, competencies, CCC core values. Suppose for a specific employee, goal 1 has a weight of 20%, goal 2 has a weight of 20%, goal 3 has a weight of 10%, job effectiveness has a weight of 25%, competency 1 has a weight of 4%, competency 2 has a weight of 3%, competency 3 has a weight of 3%, competency 4 has a weight of 5%, and core values has a weight of 10%. Suppose the employee has scores of 2.0 for goal 1, 2.0 for goal 2, 4.0 for goal 3, 3.0 for job effectiveness, 2.0 for competency 1, 3.0 for competency 2, 2.0 for competency 3, 3.0 for competency 4, and 4.0 for core values. Find the weighted average score for this employee. If an employee that has a score less than 2.5, they must have a Performance Enhancement Plan written. Does this employee need a plan?</p></li>
+<li><p>A statistics class has the following activities and weights for determining a grade in the course: test 1 worth 15% of the grade, test 2 worth 15% of the grade, test 3 worth 15% of the grade, homework worth 10% of the grade, semester project worth 20% of the grade, and the final exam worth 25% of the grade. If a student receives an 85 on test 1, a 76 on test 2, an 83 on test 3, a 74 on the homework, a 65 on the project, and a 79 on the final, what grade did the student earn in the course?</p></li>
+<li><p>A statistics class has the following activities and weights for determining a grade in the course: test 1 worth 15% of the grade, test 2 worth 15% of the grade, test 3 worth 15% of the grade, homework worth 10% of the grade, semester project worth 20% of the grade, and the final exam worth 25% of the grade. If a student receives a 92 on test 1, an 85 on test 2, a 95 on test 3, a 92 on the homework, a 55 on the project, and an 83 on the final, what grade did the student earn in the course?</p></li>
+</ol>
+<p><strong><br />
+</strong></p>
+</div>
+</div>
+<div id="measures-of-spread" class="section level2">
+<h2><span class="header-section-number">3.2</span> Measures of Spread</h2>
+<p>Variability is an important idea in statistics. If you were to measure the height of everyone in your classroom, every observation gives you a different value. That means not every student has the same height. Thus there is variability in people’s heights. If you were to take a sample of the income level of people in a town, every sample gives you different information. There is variability between samples too. Variability describes how the data are spread out. If the data are very close to each other, then there is low variability. If the data are very spread out, then there is high variability. How do you measure variability? It would be good to have a number that measures it. This section will describe some of the different measures of variability, also known as variation.</p>
+<p>In example #3.1.1, the average weight of a cat was calculated to be 2.72 kg. How much does this tell you about the weight of all cats? Can you tell if most of the weights were close to 2.72 kg or were the weights really spread out? The highest weight and the lowest weight are known, but is there more that you can tell? All you know is that the center of the weights is 2.72 kg.</p>
+<p>You need more information.</p>
+<p>The <strong>range</strong> of a set of data is the difference between the highest and the lowest data values (or maximum and minimum values). The <strong>interval</strong> is the lowest and highest values. The range is one value while the interval is two.</p>
+<div id="example-range" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> Example: Range</h3>
+<p>From example #3.1.2, the maximum is 3.9 kg and the minimum is 2 kg. So the range is <span class="math inline">\(3.9-2=1.9 kg\)</span>. But what does that tell you? You don’t know if the weights are really spread out, or if they are close together.</p>
+<p>Unfortunately, range doesn’t really provide a very accurate picture of the variability. A better way to describe how the data is spread out is needed. Instead of looking at the distance the highest value is from the lowest how about looking at the distance each value is from the mean. This distance is called the <strong>deviation</strong>. You might want to find the average of the deviation. Though the calculation for finding the average deviation is not very straight forward, you end up with a value called the <strong>variance</strong>. The symbol for the population variance is <span class="math inline">\(\sigma^2\)</span>, and it is the average squared distance from the mean. Statisticians like the variance, but many other people who work with statistics use a descriptive statistics which is the square root of the variance. This gives you the average distance from the mean. This is called the standard deviation, and is denoted with the letter <span class="math inline">\(\sigma\)</span>.</p>
+<p>The standard deviation is the average (mean) distance from a data point to the mean. It can be thought of as how much a typical data point differs from the mean.</p>
+<p>The <strong>sample variance</strong> formula:
+<span class="math inline">\(s^2=\frac{\sum\left(x-\bar{x}\right)^2}{n-1}\)</span>, where <span class="math inline">\(\bar{x}\)</span> is the sample mean, <em>n</em> is the sample size, and <span class="math inline">\(\sum{}\)</span> means to find the sum of the values.The <span class="math inline">\(n-1\)</span> on the bottom has to do with a concept called degrees of freedom. Basically, it makes the sample variance a better approximation of the population variance.</p>
+<p>The <strong>sample standard deviation</strong> formula:
+<span class="math inline">\(s=\sqrt{ \frac{\sum\left(x-\bar{x}\right)^2}{n-1}}\)</span>.</p>
+<p>The <strong>population variance</strong> formula:
+<span class="math inline">\(\sigma^2 = \frac{\sum\left(x-\mu \right)^2}{N}\)</span>, where <span class="math inline">\(\sigma\)</span> is the Greek letter sigma and <span class="math inline">\(\sigma^2\)</span> represents the population variance, <span class="math inline">\(\mu\)</span> is the population mean, and <em>N</em> is the size of the population.</p>
+<p>The <strong>population standard deviation</strong> formula:
+<span class="math inline">\(\sigma =\sqrt{ \frac{\sum\left(x-\mu \right)^2}{N}}\)</span></p>
+<p>Both the sample variance and sample standard deviation can be found using technology. If using R Studio, you would use</p>
+<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="numerical-descriptions-of-data.html#cb115-1"></a><span class="kw">df_stats</span>(<span class="op">~</span>variable, <span class="dt">data=</span>data frame, var, sd)</span></code></pre></div>
+<p>The next example will demonstrate this command.</p>
+</div>
+<div id="example-finding-the-standard-deviation" class="section level3">
+<h3><span class="header-section-number">3.2.2</span> Example: Finding the Standard Deviation</h3>
+<p>For the data frame <em>Cats</em> from example #3.2.1, find the variance and standard derivation for weight of cats. Then find the variance and standard deviation separated by sex of the cat.</p>
+<p><strong>Solution:</strong>
+The variance and standard deviation for all cats is found by performing the command:</p>
+<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="numerical-descriptions-of-data.html#cb116-1"></a><span class="kw">df_stats</span>(<span class="op">~</span>Bwt, <span class="dt">data=</span>cats, var, sd)</span></code></pre></div>
+<pre><code>##     var_Bwt    sd_Bwt
+## 1 0.2355225 0.4853066</code></pre>
+<p>The variance for all cats is 0.24 <span class="math inline">\(kg^2\)</span> and the standard deviation is 0.49 kg.</p>
+<p>To find out the mean, variance, and standard deviation for each sex of the cats, use the command:</p>
+<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="numerical-descriptions-of-data.html#cb118-1"></a><span class="kw">df_stats</span>(Bwt<span class="op">~</span>Sex, <span class="dt">data=</span>cats, mean, var, sd)</span></code></pre></div>
+<pre><code>##   Sex mean_Bwt    var_Bwt    sd_Bwt
+## 1   F 2.359574 0.07506938 0.2739879
+## 2   M 2.900000 0.21854167 0.4674844</code></pre>
+<p>You can see that the mean weight of females cats is 2.36 kg, the variance is 0.075 <span class="math inline">\(kg^2\)</span>, and the standard deviation is 0.27 kg. For males cats, the mean is 2.9 kg, the variance is 0.22 <span class="math inline">\(kg^2\)</span>, and the standard deviation is 0.47 kg. This means that female cats weigh less than males and since the variance and standard deviations are much less for female cats than males cats, female cats’ weights are more consistent than male cats.</p>
+<p>In general a “small” variance and standard deviation means the data is close together (more consistent) and a “large” variance and standard deviation means the data is spread out (less consistent). Sometimes you want consistent data and sometimes you don’t. As an example if you are making bolts, you want the
+lengths to be very consistent so you want a small standard deviation. If you are administering a test to see who can be a pilot, you want a large standard deviation so you can tell who are the good pilots and who are the not so good pilots.</p>
+<p>What do “small” and “large” standard deviation mean? To a bicyclist whose average speed is 20 mph, <em>s</em> = 20 mph is huge. To an airplane whose average speed is 500 mph, <em>s</em> = 20 mph is nothing. The “size” of the variation depends on the size of the numbers in the problem and the mean. Another situation where you can determine whether a standard deviation is small or large is when you are comparing two different samples such as in example #3.2.2. A sample with a smaller standard deviation is more consistent than a sample with a larger standard deviation.</p>
+<p>Many other books and authors stress that there is a computational formula for calculating the standard deviation. However, this formula doesn’t give you an idea of what standard deviation is and what you are doing. It is only good for doing the calculations quickly. It goes back to the days when standard deviations were calculated by hand, and the person needed a quick way to calculate the standard deviation. It is an archaic formula that this author is trying to eradicate. It is not necessary anymore, computers will do the calculations for you with as much meaning as this formula gives. It is suggested that you never use it. If you want to understand what the standard deviation is doing, then you should use the definition formula. If you want an answer quickly, use a computer.</p>
+<p><strong>Use of Standard Deviation</strong></p>
+<p>One of the uses of the standard deviation is to describe how a population is distributed. This describes where much of the data is for most distributions. A general rule is that about 95% of the data is within 2 standard deviations of the mean. This is not perfect, but is works for many distributions. There are rules like the empirical rule and Chebyshev’s theorem that give you more detailed percentages, but 95% in 2 standard deviations is a very good approximation.</p>
+</div>
+<div id="example-the-gneral-rule" class="section level3">
+<h3><span class="header-section-number">3.2.3</span> Example: the gneral rule</h3>
+<p>The U.S. Weather Service has provided the information in table #3.2.1 about the total monthly/annual number of reported tornadoes in Oklahoma for the years 1950 to 2018. (US Department of Commerce &amp; Noaa, 2016)</p>
+<p><strong>Table #3.2.1: Monthyl/Annual Number of tornadoes in Oklahoma</strong></p>
+<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="numerical-descriptions-of-data.html#cb120-1"></a>Tornado&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/Tornado_OK.csv&quot;</span>)</span>
+<span id="cb120-2"><a href="numerical-descriptions-of-data.html#cb120-2"></a><span class="kw">head</span>(Tornado)</span></code></pre></div>
+<pre><code>##   Year Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec Annual
+## 1 1950   0   1   1   5  12   1   0   0   2   1   0   0     23
+## 2 1951   0   2   0  11  11  11   4   2   1   1   0   0     43
+## 3 1952   0   0   0   7   5   5   4   1   0   0   0   0     22
+## 4 1953   0   4   7   9   8  13   4   2   0   0   5   2     54
+## 5 1954   0   0   7  13  19   4   4   2   3   1   0   0     53
+## 6 1955   1   1   0  15  32  22   4   2   0   0   0   0     77</code></pre>
+<p><strong>Code book for data frame Pulse</strong></p>
+<p><strong>Description</strong>
+The U.S. Weather Service has collected data on the monthly and annual number of tornadoes in Oklahoma.</p>
+<p>This data frame contains the following columns:</p>
+<p>Year: Year from 1950-2018</p>
+<p>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec: Tornado numbers in each moth of the year</p>
+<p>Annual: Total number of tornadoes for each year</p>
+<p><strong>Source</strong>
+US Department of Commerce, &amp; Noaa. (2016, November 15). 1950 Oklahoma Tornadoes. Retrieved from <a href="https://www.weather.gov/oun/tornadodata-ok-1950" class="uri">https://www.weather.gov/oun/tornadodata-ok-1950</a></p>
+<p><strong>References</strong>
+The data was supplied by The U.S. Weather Service</p>
+<p>Find the general interval that contains about 95% of the data.</p>
+<p><strong>Solution:</strong></p>
+<p>Variable: <em>x</em> = number of annual tornadoes in Oklahoma</p>
+<p>Find the mean and standard deviation:</p>
+<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="numerical-descriptions-of-data.html#cb122-1"></a><span class="kw">df_stats</span>(<span class="op">~</span>Annual, <span class="dt">data=</span>Tornado, mean, sd)</span></code></pre></div>
+<pre><code>##   mean_Annual sd_Annual
+## 1    56.02899  27.56061</code></pre>
+<p>The mean is <span class="math inline">\(\mu=56\)</span> tornadoes and the standard deviation is <span class="math inline">\(\sigma=27.6\)</span> tornadoes. The interval will be <span class="math inline">\(\mu\pm2*\sigma=56\pm2*27.6=(0.8,111.2)\)</span></p>
+<p>About 95% of the years have between 0.8 or 1 and 111 tornadoes in Oklahoma.</p>
+<p>The general rule says that about 95% of the data is within two standard deviations of the mean. That percentage is fairly high. There isn’t much data outside two standard deviations. A rule that can be
+followed is that if a data value is within two standard deviations, then that value is a common data value. If the data value is outside two standard deviations of the mean, either above or below, then the number is uncommon. It could even be called unusual. An easy calculation that you can do to figure it out is to find the difference between the data point and the mean, and then divide that answer by the standard
+deviation. As a formula this would be</p>
+<p><span class="math inline">\(z=\frac{x-\mu}{\sigma}\)</span></p>
+<p>If you don’t know the population mean, <span class="math inline">\(\mu\)</span>, and the population standard deviation, <span class="math inline">\(\sigma\)</span>, then use the sample mean, <span class="math inline">\(\bar{x}\)</span>, and the sample standard deviation, <em>s</em>, to estimate the population parameter values. Realize that using the sample standard deviation may not actually be very accurate.</p>
+</div>
+<div id="example-determining-if-a-value-is-unusual" class="section level3">
+<h3><span class="header-section-number">3.2.4</span> Example: Determining If a Value Is Unusual</h3>
+<ol style="list-style-type: lower-alpha">
+<li>In 1974, there were 45 tornadoes in Oklahoma. Is this value unusual? Why or why not?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Variable: <em>x</em> = number of tornadoes in Oklahoma</p>
+<p>To answer this question, first find how many standard deviations 45 is from the mean. From example #3.2.3, we know <span class="math inline">\(\mu=56\)</span> and <span class="math inline">\(\sigma=27.6\)</span>. For <em>x</em>=45, <span class="math inline">\(z=\frac{45-56}{27.6}=-0.399\)</span></p>
+<p>Since this value is between -2 and 2, then it is not unusual to have 45 tornadoes in a year in Oklahoma. The z value is negative, so that means that 45 is less than the mean number of tornadoes.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>In 1999, there were 145 tornadoes in the Oklahoma. Is this value unusual? Why or why not?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Variable: <em>x</em> = number of tornadoes in Oklahoma</p>
+<p>For this question the <em>x</em> = 145, <span class="math inline">\(z=\frac{145-56}{27.6}=3.22\)</span></p>
+<p>Since this value is more than 2, then it is unusual to have only 145 tornadoes in a year in Oklahoma.</p>
+</div>
+<div id="homework-4" class="section level3">
+<h3><span class="header-section-number">3.2.5</span> Homework</h3>
+<p><strong>Use Technology on all problems. State the variable on all problems.</strong></p>
+<ol style="list-style-type: decimal">
+<li>Cholesterol levels were collected from patients certain days after they had a heart attack and are in table #3.2.2. Find the mean, median, range, variance, and standard deviation for cholesterol levels 2 days after the heart attack.</li>
+</ol>
+<p><strong>table #3.3.2: Cholesterol Levels of Patients After Heart Attack</strong></p>
+<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="numerical-descriptions-of-data.html#cb124-1"></a>Cholesterol&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/cholesterol.csv&quot;</span>)</span>
+<span id="cb124-2"><a href="numerical-descriptions-of-data.html#cb124-2"></a><span class="kw">head</span>(Cholesterol)</span></code></pre></div>
+<pre><code>##   patient day2 day4 day14
+## 1       1  270  218   156
+## 2       2  236  234    NA
+## 3       3  210  214   242
+## 4       4  142  116    NA
+## 5       5  280  200    NA
+## 6       6  272  276   256</code></pre>
+<p><strong>Code book for Data Frame Cholesterol</strong> See problem 3.1.1 in Section 3.1 homework.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>The lengths (in kilometers) of rivers on the South Island of New Zealand and what body of water they flow into are listed in table #3.1.2 (Lee, 1994). Find the mean, median, range, variance, and standard deviation of the length of rivers that flow into the Pacific Ocean and the mean, median, range, variance, and standard deviation of the length of rivers that flow into the Tasman Sea. Compare and contrast the length of rivers that flow to the Pacific Ocean versus the ones that flow into the Tasman Sea using both measures of spread and measures of variability.</li>
+</ol>
+<p><strong>Table #3.3.3: Lengths of Rivers (km) Flowing to Pacific Ocean</strong></p>
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="numerical-descriptions-of-data.html#cb126-1"></a>Length&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/length.csv&quot;</span>)</span>
+<span id="cb126-2"><a href="numerical-descriptions-of-data.html#cb126-2"></a><span class="kw">head</span>(Length)</span></code></pre></div>
+<pre><code>##      river length flowsto
+## 1 Clarence    209 Pacific
+## 2   Conway     48 Pacific
+## 3    Waiau    169 Pacific
+## 4  Hurunui    138 Pacific
+## 5  Waipara     64 Pacific
+## 6   Ashley     97 Pacific</code></pre>
+<p><strong>Code book for data frame Length</strong> See problem 3.1.2 in Section 3.1 homework.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Print-O-Matic printing company’s employees have salaries that are contained in table #3.2.4. Find the mean, median, range, variance, and standard deviation for the salaries of all employees.</li>
+</ol>
+<p><strong>Table #3.2.4: Salaries of Print-O-Matic Printing Company Employees</strong></p>
+<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="numerical-descriptions-of-data.html#cb128-1"></a>Pay&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/pay.csv&quot;</span>)</span>
+<span id="cb128-2"><a href="numerical-descriptions-of-data.html#cb128-2"></a><span class="kw">head</span>(Pay)</span></code></pre></div>
+<pre><code>##      employee salary
+## 1         CEO 272500
+## 2      Driver  58456
+## 3        CD74 100702
+## 4        CD65  57380
+## 5 Embellisher  73877
+## 6      Folder  65270</code></pre>
+<p><strong>Code book for data frame Pay</strong> See problem 3.1.3 in Section 3.1 homework.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Print-O-Matic printing company spends specific amounts on fixed costs every month. The costs of those fixed costs are in table #3.2.5. Find the mean, median, range, variance, and standard deviation for the fixed costs.</li>
+</ol>
+<p><strong>Table #3.2.5: Fixed Costs for the Print-O-Matic Printing Company</strong></p>
+<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="numerical-descriptions-of-data.html#cb130-1"></a>Cost&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/cost.csv&quot;</span>)</span>
+<span id="cb130-2"><a href="numerical-descriptions-of-data.html#cb130-2"></a><span class="kw">head</span>(Cost)</span></code></pre></div>
+<pre><code>##              charges cost
+## 1       Bank charges  482
+## 2           Cleaning 2208
+## 3 Computer expensive 2471
+## 4     Lease payments 2656
+## 5            Postage 2117
+## 6           Uniforms 2600</code></pre>
+<p><strong>Code book for Data frame Cost</strong> See problem 3.1.4 in Section 3.1 homework.</p>
+<ol start="5" style="list-style-type: decimal">
+<li>The data frame Pulse (Table 3.2.6) contains various variables about a person including their pulse rates before the subject exercised and after the subject ran in place for one minute.</li>
+</ol>
+<p><strong>Table #3.2.6: Pulse Rates of people Before and After Exercise</strong></p>
+<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="numerical-descriptions-of-data.html#cb132-1"></a>Pulse&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/pulse.csv&quot;</span>)</span>
+<span id="cb132-2"><a href="numerical-descriptions-of-data.html#cb132-2"></a><span class="kw">head</span>(Pulse)</span></code></pre></div>
+<pre><code>##   height weight age gender smokes alcohol exercise ran pulse_before pulse_after
+## 1    170     68  22   male    yes     yes moderate sat           70          71
+## 2    182     75  26   male    yes     yes moderate sat           80          76
+## 3    180     85  19   male    yes     yes moderate ran           68         125
+## 4    182     85  20   male    yes     yes      low sat           70          68
+## 5    167     70  22   male    yes     yes      low sat           92          84
+## 6    178     86  21   male    yes     yes      low sat           76          80
+##   year
+## 1   93
+## 2   93
+## 3   95
+## 4   95
+## 5   96
+## 6   98</code></pre>
+<p><strong>Code book for data frame Pulse</strong></p>
+<p><strong>Description</strong>
+Students in an introductory statistics class (MS212 taught by Professor John Eccleston and Dr Richard Wilson at The University of Queensland) participated in a simple experiment. The students took their own pulse rate. They were then asked to flip a coin. If the coin came up heads, they were to run in place for one minute. Otherwise they sat for one minute. Then everyone took their pulse again. The pulse rates and other physiological and lifestyle data are given in the data.</p>
+<p>Five class groups between 1993 and 1998 participated in the experiment. The lecturer, Richard Wilson, was concerned that some students would choose the less strenuous option of sitting rather than running even if their coin came up heads, In the years 1995-1998 a different method of random assignment was used. In these years, data forms were handed out to the class before the experiment. The forms were pre-assigned to either running or non-running and there were an equal number of each. In 1995 and 1998 not all of the forms were returned so the numbers running and sitting was still not entirely controlled.</p>
+<p>This data frame contains the following columns:</p>
+<p>height: height of subject in cm</p>
+<p>weight: weight of subject in kg</p>
+<p>age: age of subject in years</p>
+<p>gender: sex of subject, male, female</p>
+<p>Smokes: whether a subject regularly smokes, yes means does smoke, no means does not smoke</p>
+<p>alcohol: whether a subject regularly drinks alcohol, yes means the person does, no means the person does not</p>
+<p>exercise: whether a subject exercises, low, moderate, high</p>
+<p>ran: whether a subject ran one minute between pulse measurements (ran) or sat between pulse measurement (sat)</p>
+<p>pulse_before: the pulse rate before a subject either ran or sat (bpm)</p>
+<p>pulse_after: the pulse rate after a subject either ran or sat (bpm)</p>
+<p>year: what year the data was collected (93-98)</p>
+<p><strong>Source</strong>
+Pulse rates before and after exercise. (2013, September 25). Retrieved from
+<a href="http://www.statsci.org/data/oz/ms212.html" class="uri">http://www.statsci.org/data/oz/ms212.html</a></p>
+<p><strong>References</strong>
+The data was supplied by Dr Richard J. Wilson, Department of Mathematics, University of Queensland.</p>
+<p>Create a data frame that contains only males, who drink alcohol, but do not smoke. Then compare the pulse before and the pulse after using the mean and standard deviation. Discuss whether pulse before or pulse after has a higher mean and larger spread. To create a new data frame with just males, who drink alcohol, but do not smoke, use the following command, where the new name is Males:</p>
+<div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb134-1"><a href="numerical-descriptions-of-data.html#cb134-1"></a>Males&lt;-</span>
+<span id="cb134-2"><a href="numerical-descriptions-of-data.html#cb134-2"></a>Pulse<span class="op">%&gt;%</span></span>
+<span id="cb134-3"><a href="numerical-descriptions-of-data.html#cb134-3"></a><span class="st">  </span><span class="kw">filter</span>(gender<span class="op">==</span><span class="st">&quot;male&quot;</span>, smokes <span class="op">==</span><span class="st"> &quot;no&quot;</span>, alcohol <span class="op">==</span><span class="st"> &quot;yes&quot;</span>)</span></code></pre></div>
+<ol start="6" style="list-style-type: decimal">
+<li><p>The data frame Pulse (Table 3.2.6) contains various variables about a person including their pulse rates before the subject exercised and after after the subject ran in place for one minute. Create a data frame that contains females, who do not smoke but do drink alcohol. Compare the pulse rate before and after exercise using the mean and standard deviation. Discuss whether pulse before or pulse after has a higher mean and larger spread.</p></li>
+<li><p>To determine if Reiki is an effective method for treating pain, a pilot study was carried out where a certified second-degree Reiki therapist provided treatment on volunteers. Pain was measured using a visual analogue scale (VAS) and a likert scale immediately before and after the Reiki treatment (Olson &amp; Hanson, 1997) and the data is in table #3.2.7.</p></li>
+</ol>
+<p><strong>Table #3.2.7: Pain Measurements Before and After Reiki Treatment</strong></p>
+<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="numerical-descriptions-of-data.html#cb135-1"></a>Reiki&lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/reki.csv&quot;</span>)</span>
+<span id="cb135-2"><a href="numerical-descriptions-of-data.html#cb135-2"></a><span class="kw">head</span>(Reiki)</span></code></pre></div>
+<pre><code>##   vas.before vas.after likert_before likert_after
+## 1          6         3             2            1
+## 2          2         1             2            1
+## 3          2         0             3            0
+## 4          9         1             3            1
+## 5          3         0             2            0
+## 6          3         2             2            2</code></pre>
+<p><strong>Code book for data frame Reiki</strong></p>
+<p><strong>Description</strong>
+The purpose of this study was to explore the usefulness of Reiki as an adjuvant to opioid therapy in the management of pain. Since no studies in this area could be found, a pilot study was carried out involving 20 volunteers experiencing pain at 55 sites for a variety of reasons, including cancer. All Reiki treatments were provided by a certified second-degree Reiki therapist. Pain was measured using both a visual analogue scale (VAS) and a Likert scale immediately before and after the Reiki treatment. Both instruments showed a highly significant (p &lt; 0.0001) reduction in pain following the Reiki treatment.</p>
+<p>This data frame contains the following columns:</p>
+<p>vas.before: pain measured using a visual analogue scale (VAS) before Reiki treatment</p>
+<p>vas.after: pain measured using a visual analogue scale (VAS) after Reiki treatment</p>
+<p>likert_before: pain measured using a likert before Reiki treatment</p>
+<p>likert_after: pain measured using a likert after Reiki treatment</p>
+<p><strong>Source</strong>
+Olson, K., &amp; Hanson, J. (1997). Using reiki to manage pain: a preliminary report. Cancer Prev Control, 1(2), 108-13. Retrieved from <a href="http://www.ncbi.nlm.nih.gov/pubmed/9765732" class="uri">http://www.ncbi.nlm.nih.gov/pubmed/9765732</a></p>
+<p><strong>References</strong>
+Using Reiki to manage pain: a preliminary report. Olson K1, Hanson J., Cancer Prev Control 1997, Jun; 1(2): 108-13.</p>
+<p>Since the data was collected both before and after the treatment for all of the units of observations, you want to look at the effect size of the treatment. You want to find the difference between before and after for the pain scale. First you must create a new data frame that adds a column for the difference in before and after. This data is known as paired data. To create the new column in a new data frame called Newreiki use the following commands</p>
+<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="numerical-descriptions-of-data.html#cb137-1"></a>Newreiki&lt;-Reiki<span class="op">%&gt;%</span></span>
+<span id="cb137-2"><a href="numerical-descriptions-of-data.html#cb137-2"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">vas.diff=</span>vas.before<span class="op">-</span>vas.after)</span>
+<span id="cb137-3"><a href="numerical-descriptions-of-data.html#cb137-3"></a><span class="kw">head</span>(Newreiki)</span></code></pre></div>
+<pre><code>##   vas.before vas.after likert_before likert_after vas.diff
+## 1          6         3             2            1        3
+## 2          2         1             2            1        1
+## 3          2         0             3            0        2
+## 4          9         1             3            1        8
+## 5          3         0             2            0        3
+## 6          3         2             2            2        1</code></pre>
+<p>Now find the mean and standard deviation of the vas.diff variable in Newreiki. Perform similar commands to create the likert.diff variable. Then find the mean and standard deviation for likert.diff, and compare and contrast the vas and likert methods for describing pain.</p>
+<p>8.Yearly rainfall amounts (in millimeters) in Sydney, Australia, are in table #3.2.8
+(Annual maximums of, 2013).
+a. Calculate the mean and standard deviation.
+b. Suppose Sydney, Australia received 300 mm of rainfall in a year. Would this be unusual?</p>
+<p>** Table #3.2.8: Yewarly rainfall amounts in Sydney, Australia**</p>
+<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="numerical-descriptions-of-data.html#cb139-1"></a>Rainfall&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/rainfall.csv&quot;</span>)</span>
+<span id="cb139-2"><a href="numerical-descriptions-of-data.html#cb139-2"></a><span class="kw">head</span>(Rainfall)</span></code></pre></div>
+<pre><code>##   amount
+## 1  146.8
+## 2  383.0
+## 3   90.9
+## 4  178.1
+## 5  267.5
+## 6   95.5</code></pre>
+<p><strong>Code book for data frame Rainfall</strong></p>
+<p><strong>Description</strong>
+Daily rainfall (in millimeters) was recorded over a 47-year period in Turramurra, Sydney, Australia. For each year, the wettest day was identified (that having the greatest rainfall). The data show the rainfall recorded for the 47 annual maxima.</p>
+<p>This data frame contains the following columns:</p>
+<p>amount: daily rainfall (mm)</p>
+<p><strong>Source</strong>
+Annual maximums of daily rainfall in Sydney. (2013, September 25). Retrieved from
+<a href="http://www.statsci.org/data/oz/sydrain.html" class="uri">http://www.statsci.org/data/oz/sydrain.html</a></p>
+<p><strong>References</strong>
+Rayner J.C.W. and Best D.J. (1989) Smooth tests of goodness of fit. Oxford: Oxford University Press.
+Hand D.J., Daly F., Lunn A.D., McConway K.J., Ostrowski E. (1994). A Handbook of Small Data Sets. London: Chapman &amp; Hall. Data set 157.
+Thanks to Jim Irish of the University of Technology, Sydney, for assistance in identifying the correct units for this data.</p>
+<p><strong><br />
+</strong></p>
+</div>
+</div>
+<div id="ranking" class="section level2">
+<h2><span class="header-section-number">3.3</span> Ranking</h2>
+<p>Along with the center and the variability, another useful numerical measure is the ranking of a number. A <strong>percentile</strong> is a measure of ranking. It represents a location measurement of a data value to the
+rest of the values. Many standardized tests give the results as a percentile. Doctors also use percentiles to track a child’s growth.</p>
+<p>The <strong>kth percentile</strong> is the data value that has k% of the data at or below that value.</p>
+<div id="example-interpreting-percentile" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> Example: Interpreting Percentile</h3>
+<ol style="list-style-type: lower-alpha">
+<li>What does a score of the 90<sup>th</sup> percentile mean?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>This means that 90% of the scores were at or below this score. (A person did the same as or better than 90% of the test takers.)</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>What does a score of the 70<sup>th</sup> percentile mean?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>This means that 70% of the scores were at or below this score.</p>
+</div>
+<div id="example-percentile-versus-score" class="section level3">
+<h3><span class="header-section-number">3.3.2</span> Example: Percentile Versus Score</h3>
+<p>If the test was out of 100 points and you scored at the 80<sup>th</sup> percentile, what was your score on the test?</p>
+<p><strong>Solution:</strong></p>
+<p>You don’t know! All you know is that you scored the same as or better than 80% of the people who took the test. If all the scores were really low, you could have still failed the test. On the other hand, if many of the scores were high you could have gotten a 95% or more.</p>
+<p>There are special percentiles called <strong>quartiles</strong>. Quartiles are numbers that divide the data into fourths. One fourth (or a quarter) of the data falls between consecutive quartiles.</p>
+<p><strong>To find the quartiles:</strong></p>
+<p>The command in R Studio is</p>
+<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="numerical-descriptions-of-data.html#cb141-1"></a><span class="kw">df_stats</span>(<span class="op">~</span>variable, <span class="dt">data=</span>data frame, summary)</span></code></pre></div>
+<p>If you record the quartiles together with the maximum and minimum you have five numbers. This is known as the five-number summary. The five-number summary consists of the minimum, the first quartile (<em>Q1</em>),
+the median, the third quartile (<em>Q3</em>), and the maximum (in that order).</p>
+<p>The interquartile range, <em>IQR</em>, is the difference between the first and third quartiles, <em>Q1</em> and <em>Q3</em>. Half of the data (50%) falls in the interquartile range. If the <em>IQR</em> is “large” the data is spread out and if the <em>IQR</em> is “small” the data is closer together.</p>
+<p>Interquartile Range (<em>IQR</em>)</p>
+<p>Determining probable outliers from IQR: <strong>fences</strong></p>
+<p>A value that is less than <span class="math inline">\(Q1-1.5*IQR\)</span> (this value is often referred to as a <strong>low</strong> <strong>fence</strong>) is considered an outlier.</p>
+<p>Similarly, a value that is more than <span class="math inline">\(Q3+1.5*IQR\)</span> (the <strong>high</strong> <strong>fence</strong>) is considered an outlier.</p>
+<p>A boxplot (or box-and-whisker plot) is a graphical display of the five-number summary. It can be drawn vertically or horizontally. The basic format is a box from <em>Q1</em> to <em>Q3</em>, a vertical line across the box for the median and horizontal lines as whiskers extending out each end to the minimum and maximum. The minimum and maximum can be represented with dots. Don’t forget to label the tick marks on the number line and give the graph a title.</p>
+<p>An alternate form of a Boxplot, known as a modified box plot, only extends the left line to the smallest value greater than the <em>low fence</em>, and extends the left line to the largest value less than
+the <em>high fence</em>, and displays markers (dots, circles or asterisks) for each outlier.</p>
+<p>If the data are <em>symmetrical</em>, then the box plot will be visibly symmetrical. If the data distribution has a left skew or a right skew, the line on that side of the box plot will be visibly long. If the plot is symmetrical, and the four quartiles are all about the same length, then the data are likely a near <em>uniform</em> distribution. If a box plot is symmetrical, and both outside lines are noticeably longer than the Q1 to median and median to Q3 distance, the distribution is then probably <em>bell-shaped.</em></p>
+</div>
+<div id="example-five-number-summary-and-boxplot" class="section level3">
+<h3><span class="header-section-number">3.3.3</span> Example: Five-number Summary and Boxplot</h3>
+<p>Find the five-number summary, the interquartile range (<em>IQR</em>), and draw a box-and-whiskers plot for the weight of cats.</p>
+<div class="sourceCode" id="cb142"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb142-1"><a href="numerical-descriptions-of-data.html#cb142-1"></a><span class="kw">head</span>(cats)</span></code></pre></div>
+<pre><code>##   Sex Bwt Hwt
+## 1   F 2.0 7.0
+## 2   F 2.0 7.4
+## 3   F 2.0 9.5
+## 4   F 2.1 7.2
+## 5   F 2.1 7.3
+## 6   F 2.1 7.6</code></pre>
+<p><strong>Solution:</strong></p>
+<p>Variable: <em>x</em> = weight of cats
+To compute the five-number summary on R Studio, use the command:</p>
+<div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb144-1"><a href="numerical-descriptions-of-data.html#cb144-1"></a><span class="kw">df_stats</span>(<span class="op">~</span>Bwt, <span class="dt">data=</span>cats, summary)</span></code></pre></div>
+<pre><code>##   Min. 1st Qu. Median     Mean 3rd Qu. Max.
+## 1    2     2.3    2.7 2.723611   3.025  3.9</code></pre>
+<p>Not R Studo also calculates the mea as part of the summary command, but the five-number summary is jus the five numbers:</p>
+<p>Minimum: 2 kg
+<em>Q1</em>: 2.3 kg
+Median: 2.7 kg
+<em>Q3</em>: 3.025 kg
+Maximum: 3.9 kg</p>
+<p>To find the interquartile range, <em>IQR</em>, find <span class="math inline">\(Q3-Q1\)</span>, so <span class="math inline">\(IQR=3.025-2.3=0.725 kg\)</span></p>
+<p>To create a boxplot use the command</p>
+<div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb146-1"><a href="numerical-descriptions-of-data.html#cb146-1"></a><span class="kw">gf_boxplot</span>(<span class="op">~</span>variable, <span class="dt">data=</span>data frame)</span></code></pre></div>
+<p>This is a modified boxplot which shows the outliers in the data.</p>
+
+<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="numerical-descriptions-of-data.html#cb147-1"></a><span class="kw">gf_boxplot</span>(<span class="op">~</span>Bwt, <span class="dt">data=</span>cats, <span class="dt">title=</span><span class="st">&quot;Weight of Cats&quot;</span>)</span></code></pre></div>
+<div class="figure"><span id="fig:cats1-data-box"></span>
+<img src="Statistics_using_technology_files/figure-html/cats1-data-box-1.png" alt="Box Plot of Weights of Cats" width="672" />
+<p class="caption">
+Figure 3.1: Box Plot of Weights of Cats
+</p>
+</div>
+<p>There are no outliers since there are no dots outside of the fences.</p>
+</div>
+<div id="example-separating-based-on-a-factor" class="section level3">
+<h3><span class="header-section-number">3.3.4</span> Example: Separating based on a factor</h3>
+<p>Find the five-number summary of the weights of cats separated by the sex of the cat. Then create a box plot of the weights of cats for each sex of the cat.</p>
+<p><strong>Solution:</strong></p>
+<p>Variable: <em>x_1</em> = weight of female cat</p>
+<p>Variable: <em>x_2</em> = weight of male cat</p>
+<p>To find the five-number summary separated based on gender use the following command:</p>
+<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="numerical-descriptions-of-data.html#cb148-1"></a><span class="kw">df_stats</span>(<span class="op">~</span>Bwt<span class="op">|</span>Sex, <span class="dt">data=</span>cats, summary)</span></code></pre></div>
+<pre><code>##   Sex Min. 1st Qu. Median     Mean 3rd Qu. Max.
+## 1   F    2    2.15    2.3 2.359574     2.5  3.0
+## 2   M    2    2.50    2.9 2.900000     3.2  3.9</code></pre>
+<p>The five-number summary for female cats is (in kg)</p>
+<p>Minimum: 2
+Q1: 2.15
+Median: 2.3
+Q3: 2.5
+Maximum: 3.0</p>
+<p>The five-number summary for male cats is (in kg)</p>
+<p>Minimum: 2
+Q1: 2.50
+Median: 2.9
+Q3: 3.2
+Maximum: 3.9</p>
+
+<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="numerical-descriptions-of-data.html#cb150-1"></a><span class="kw">gf_boxplot</span>(<span class="op">~</span>Bwt<span class="op">|</span>Sex, <span class="dt">data=</span>cats, <span class="dt">title=</span><span class="st">&quot;Weights of Cats&quot;</span>)</span></code></pre></div>
+<div class="figure"><span id="fig:cats2-data-box"></span>
+<img src="Statistics_using_technology_files/figure-html/cats2-data-box-1.png" alt="Box Plot of Cats Weights Separated by Sex" width="672" />
+<p class="caption">
+Figure 3.2: Box Plot of Cats Weights Separated by Sex
+</p>
+</div>
+<p>Notice that the weights of female cats has a median less than male cats, and in fact it can be seen that the Q1 to Q3 of the female cats is less than the Q1 to Q3 of the male cats.</p>
+</div>
+<div id="example-putting-it-all-together" class="section level3">
+<h3><span class="header-section-number">3.3.5</span> Example: Putting it all together</h3>
+<p>The time (in 1/50 seconds) between successive pulses along a nerve fiber (“Time between nerve,” 2013) are given in table #3.3.1.</p>
+<p><strong>Table #3.3.1: Successive pulses along a nerve fiber</strong></p>
+<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="numerical-descriptions-of-data.html#cb151-1"></a>Nerve&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/Nerve_pulse.csv&quot;</span>)</span>
+<span id="cb151-2"><a href="numerical-descriptions-of-data.html#cb151-2"></a><span class="kw">head</span>(Nerve)</span></code></pre></div>
+<pre><code>##   time
+## 1 10.5
+## 2  1.5
+## 3  2.5
+## 4  5.5
+## 5 29.5
+## 6  3.0</code></pre>
+<p><strong>Code book for data frame Nerve</strong></p>
+<p><strong>Description</strong>
+The data gives the time between 800 successive pulses along a nerve fiber. There are 799 observations rounded to the nearest half in units of 1/50 second.</p>
+<p>This data frame contains the following columns:</p>
+<p>time: time between successive Pulses along a nerve fiber, 1/50 second.</p>
+<p><strong>Source</strong>
+<em>Time between nerve pulses</em>. (2019, July 3). Retrieved from
+&lt;<a href="http://www.statsci.org/data/general/nerve.html" class="uri">http://www.statsci.org/data/general/nerve.html</a></p>
+<p><strong>References</strong>
+Fatt, P., and Katz, B. (1952). Spontaneous subthreshold activity at motor nerve endings. Journal of Physiology 117, 109-128.</p>
+<p>Cox, D. R., and Lewis, P. A. W. (1966). The Statistical Analysis of Series of Events. Methuen, London.</p>
+<p>Jorgensen, B. (1982). The Generalized Inverse-Gaussian Distribution. Springer-Verlag.</p>
+<p><strong>Solution:</strong></p>
+<p>First, it might be useful to look at a visualization of the data, so create a density plot</p>
+
+<div class="sourceCode" id="cb153"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb153-1"><a href="numerical-descriptions-of-data.html#cb153-1"></a><span class="kw">gf_density</span>(<span class="op">~</span>time, <span class="dt">data=</span>Nerve)</span></code></pre></div>
+<div class="figure"><span id="fig:density-data-density"></span>
+<img src="Statistics_using_technology_files/figure-html/density-data-density-1.png" alt="Density Plot of Health Expenditure" width="672" />
+<p class="caption">
+Figure 3.3: Density Plot of Health Expenditure
+</p>
+</div>
+<p>From the graph (Figure <a href="numerical-descriptions-of-data.html#fig:density-data-density">3.3</a>), the data appears to be skewed right. Most of the time between successive nerve pulses appear to be around 5 or 10 1/50 second, but there are some times that are 60 1/50 second.</p>
+<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="numerical-descriptions-of-data.html#cb154-1"></a><span class="kw">df_stats</span>(<span class="op">~</span>time, <span class="dt">data=</span>Nerve, mean, median, sd, summary)</span></code></pre></div>
+<pre><code>##   mean_time median_time  sd_time Min. 1st Qu. Median     Mean 3rd Qu. Max.
+## 1  10.95119         7.5 10.45956  0.5     3.5    7.5 10.95119      15   69</code></pre>
+<p>Numerical descriptions might also be useful. Using technology, the mean is 11 1/50 second,the median is 7.5 1/50 second, the standard deviation is 10.5 1/50 second, and the five-number summary is minimum = 3.5, Q1 = 3.5, median = 7.5, Q3 = 15, and maximum = 69 1/50 second.</p>
+<p>To visualize the five-number summary, create a box plot.</p>
+
+<p>Since there are many dots outside the upper fence the data has many outliers. From all of this information, one could say that nerve pulses between successive pulses is around 11 1/50 second, with a spread of 19.5 1/50 second. Most of the values are round 11 1/50 second, but they are not very consistent. The density plot and boxplot show that there is a great deal of spread of the data and it is skewed to the right. This means mostly the speed is around 11 1/50 second, but there is a great deal of variability in the values.</p>
+</div>
+<div id="homework-5" class="section level3">
+<h3><span class="header-section-number">3.3.6</span> Homework</h3>
+<p><strong>Use Technology on all problems. State the variable on all problems.</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Suppose you take a standardized test and you are in the 10<sup>th</sup> percentile. What does this percentile mean? Can you say that you failed the test? Explain.</p></li>
+<li><p>Suppose your child takes a standardized test in mathematics and scores in the 96<sup>th</sup> percentile. What does this percentile mean? Can you say your child passed the test? Explain.</p></li>
+<li><p>Suppose your child is in the 83<sup>rd</sup> percentile in height and 24<sup>th</sup> percentile in weight. Describe what this tells you about your child’s stature.</p></li>
+<li><p>Suppose your work evaluates the employees and places them on a percentile ranking. If your evaluation is in the 65<sup>th</sup> percentile, do you think you are working hard enough? Explain.</p></li>
+<li><p>Cholesterol levels were collected from patients certain days after they had a heart attack and are in table #3.3.2.</p></li>
+</ol>
+<p><strong>table #3.3.2: Cholesterol Levels of Patients After Heart Attack</strong></p>
+<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="numerical-descriptions-of-data.html#cb156-1"></a>Cholesterol&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/cholesterol.csv&quot;</span>)</span>
+<span id="cb156-2"><a href="numerical-descriptions-of-data.html#cb156-2"></a><span class="kw">head</span>(Cholesterol)</span></code></pre></div>
+<pre><code>##   patient day2 day4 day14
+## 1       1  270  218   156
+## 2       2  236  234    NA
+## 3       3  210  214   242
+## 4       4  142  116    NA
+## 5       5  280  200    NA
+## 6       6  272  276   256</code></pre>
+<p><strong>Code book for Data Frame Cholesterol</strong> See problem 3.1.1 in Section 3.1 homework.</p>
+<p>Find the five-number summary and interquartile range (IQR) for the cholesterol level on day 2, and draw a boxplot</p>
+<ol start="6" style="list-style-type: decimal">
+<li>The lengths (in kilometers) of rivers on the South Island of New Zealand and what body of water they flow into are listed in table #3.3.3 (Lee, 1994).</li>
+</ol>
+<p><strong>Table #3.3.3: Lengths of Rivers (km) Flowing to Pacific Ocean</strong></p>
+<div class="sourceCode" id="cb158"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb158-1"><a href="numerical-descriptions-of-data.html#cb158-1"></a>Length&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/length.csv&quot;</span>)</span>
+<span id="cb158-2"><a href="numerical-descriptions-of-data.html#cb158-2"></a><span class="kw">head</span>(Length)</span></code></pre></div>
+<pre><code>##      river length flowsto
+## 1 Clarence    209 Pacific
+## 2   Conway     48 Pacific
+## 3    Waiau    169 Pacific
+## 4  Hurunui    138 Pacific
+## 5  Waipara     64 Pacific
+## 6   Ashley     97 Pacific</code></pre>
+<p><strong>Code book for data frame Length</strong> See problem 3.1.2 in Section 3.1 homework.</p>
+<p>Find the five-number summary and interquartile range (IQR) for the lengths of rivers that go to the Pacific Ocean and ones that go to the Tasman Sea, and draw a boxplot of both.</p>
+<ol start="7" style="list-style-type: decimal">
+<li>Print-O-Matic printing company’s employees have salaries that are contained in table #3.3.4. Find the five number summary and draw a boxplot for the salaries of all employees.</li>
+</ol>
+<p><strong>Table #3.3.4: Salaries of Print-O-Matic Printing Company Employees</strong></p>
+<div class="sourceCode" id="cb160"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb160-1"><a href="numerical-descriptions-of-data.html#cb160-1"></a>Pay&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/pay.csv&quot;</span>)</span>
+<span id="cb160-2"><a href="numerical-descriptions-of-data.html#cb160-2"></a><span class="kw">head</span>(Pay)</span></code></pre></div>
+<pre><code>##      employee salary
+## 1         CEO 272500
+## 2      Driver  58456
+## 3        CD74 100702
+## 4        CD65  57380
+## 5 Embellisher  73877
+## 6      Folder  65270</code></pre>
+<p><strong>Code book for data frame Pay</strong> See problem 3.1.3 in Section 3.1 homework.</p>
+<ol start="8" style="list-style-type: decimal">
+<li>The data frame Pulse (Table 3.3.5) contains various variables about a person including their pulse rates before the subject exercised and after after the subject ran in place for one minute.</li>
+</ol>
+<p><strong>Table #3.3.5: Pulse Rates of Males Before and After Exercise</strong></p>
+<div class="sourceCode" id="cb162"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb162-1"><a href="numerical-descriptions-of-data.html#cb162-1"></a>Pulse&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/pulse.csv&quot;</span>)</span>
+<span id="cb162-2"><a href="numerical-descriptions-of-data.html#cb162-2"></a><span class="kw">head</span>(Pulse)</span></code></pre></div>
+<pre><code>##   height weight age gender smokes alcohol exercise ran pulse_before pulse_after
+## 1    170     68  22   male    yes     yes moderate sat           70          71
+## 2    182     75  26   male    yes     yes moderate sat           80          76
+## 3    180     85  19   male    yes     yes moderate ran           68         125
+## 4    182     85  20   male    yes     yes      low sat           70          68
+## 5    167     70  22   male    yes     yes      low sat           92          84
+## 6    178     86  21   male    yes     yes      low sat           76          80
+##   year
+## 1   93
+## 2   93
+## 3   95
+## 4   95
+## 5   96
+## 6   98</code></pre>
+<p><strong>Code book for data frame Pulse</strong> See Problem 3.2.5 in Section 3.2 Homework</p>
+<p>Create a data frame that contains only people who drink alcohol, but do not smoke. Then find the five number summary and draw a boxplot for both males and females separately.</p>
+<ol start="9" style="list-style-type: decimal">
+<li>To determine if Reiki is an effective method for treating pain, a pilot study was carried out where a certified second-degree Reiki therapist provided treatment on volunteers. Pain was measured using a visual analogue scale (VAS) and a likert scale immediately before and after the Reiki treatment (Olson &amp; Hanson, 1997) and the data is in table #3.3.6.</li>
+</ol>
+<p><strong>Table #3.2.7: Pain Measurements Before and After Reiki Treatment</strong></p>
+<div class="sourceCode" id="cb164"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb164-1"><a href="numerical-descriptions-of-data.html#cb164-1"></a>Reiki&lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://krkozak.github.io/MAT160/reki.csv&quot;</span>)</span>
+<span id="cb164-2"><a href="numerical-descriptions-of-data.html#cb164-2"></a><span class="kw">head</span>(Reiki)</span></code></pre></div>
+<pre><code>##   vas.before vas.after likert_before likert_after
+## 1          6         3             2            1
+## 2          2         1             2            1
+## 3          2         0             3            0
+## 4          9         1             3            1
+## 5          3         0             2            0
+## 6          3         2             2            2</code></pre>
+<p><strong>Code book for data frame Reiki</strong> see problem 3.2.7 in Section 3.2 Homework</p>
+<p>Find the five number summary for both the before and after VAS scores and draw boxplots of before and after VAS scores. To draw two boxplots at the same time, after the command to create the first box plot type %&gt;% before pressing enter. Then type the command for the second boxplot after the + symbol. Then press enter. You may want to graph each boxplot as a different color. To do this, the command would be</p>
+<div class="sourceCode" id="cb166"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb166-1"><a href="numerical-descriptions-of-data.html#cb166-1"></a><span class="kw">gf_boxplot</span>(<span class="op">~</span>variable, <span class="dt">data=</span>data frame, <span class="dt">color=</span><span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<p>You can pick any color you want. Just replace the word red with the color you want to use.
+Now compare and contrast the before and after VAS scores.</p>
+<p><strong><br />
+</strong></p>
+<p>Data Sources:</p>
+<p><em>Annual maximums of daily rainfall in Sydney</em>. (2013, September 25).
+Retrieved from <a href="http://www.statsci.org/data/oz/sydrain.html" class="uri">http://www.statsci.org/data/oz/sydrain.html</a></p>
+<p>Lee, A. (1994). <em>Data analysis: An introduction based on r. Auckland</em>.
+Retrieved from <a href="http://www.statsci.org/data/oz/nzrivers.html" class="uri">http://www.statsci.org/data/oz/nzrivers.html</a></p>
+<p><em>Life expectancy in southeast Asia</em>. (2013, September 23). Retrieved
+from <a href="http://apps.who.int/gho/data/node.main.688" class="uri">http://apps.who.int/gho/data/node.main.688</a></p>
+<p>Olson, K., &amp; Hanson, J. (1997). Using reiki to manage pain: a
+preliminary report. <em>Cancer Prev Control</em>, <em>1</em>(2), 108-13. Retrieved
+from <a href="http://www.ncbi.nlm.nih.gov/pubmed/9765732" class="uri">http://www.ncbi.nlm.nih.gov/pubmed/9765732</a></p>
+<p><em>Pulse rates before and after exercise</em>. (2013, September 25). Retrieved
+from <a href="http://www.statsci.org/data/oz/ms212.html" class="uri">http://www.statsci.org/data/oz/ms212.html</a></p>
+<p>Ryan, B. F., Joiner, B. L., &amp; Ryan, Jr, T. A. (1985). <em>Cholesterol
+levels after heart attack</em>. Retrieved from
+<a href="http://www.statsci.org/data/general/cholest.html" class="uri">http://www.statsci.org/data/general/cholest.html</a></p>
+<p><em>Time between nerve pulses</em>. (2019, July 3). Retrieved from
+<a href="http://www.statsci.org/data/general/nerve.html" class="uri">http://www.statsci.org/data/general/nerve.html</a></p>
+<p><em>Time of passages of play in rugby</em>. (2013, September 25). Retrieved
+from <a href="http://www.statsci.org/data/oz/rugby.html" class="uri">http://www.statsci.org/data/oz/rugby.html</a></p>
+<p>US Department of Commerce, &amp; Noaa. (2016, November 15). 1950 Oklahoma Tornadoes. Retrieved from <a href="https://www.weather.gov/oun/tornadodata-ok-1950" class="uri">https://www.weather.gov/oun/tornadodata-ok-1950</a></p>
+<p><em>UV radiation: Burden of disease by country</em>. (2013, September 4).
+Retrieved from <a href="http://apps.who.int/gho/data/node.main.165?lang=en" class="uri">http://apps.who.int/gho/data/node.main.165?lang=en</a></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="graphical-descriptions-of-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="probability.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["Statistics_using_technology.pdf", "Statistics_using_technology.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

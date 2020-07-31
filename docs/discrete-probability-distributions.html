@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 Discrete Probability Distributions | Statistics Using Technology</title>
+  <meta name="description" content="An introductory statistics textbook." />
+  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 Discrete Probability Distributions | Statistics Using Technology" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="An introductory statistics textbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 Discrete Probability Distributions | Statistics Using Technology" />
+  
+  <meta name="twitter:description" content="An introductory statistics textbook." />
+  
+
+<meta name="author" content="Kathryn Kozak" />
+
+
+<meta name="date" content="2020-07-30" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="probability.html"/>
+<link rel="next" href="continuous-probability-distributions.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Statistics Using Technology</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i><b>0.1</b> Acknowledgments:</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#new-to-the-third-edition"><i class="fa fa-check"></i><b>0.2</b> New to the Third Edition:</a></li>
+<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#packages-needed-for-r-studio"><i class="fa fa-check"></i><b>0.3</b> Packages needed for R Studio:</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="statistical-basics.html"><a href="statistical-basics.html"><i class="fa fa-check"></i><b>1</b> Statistical Basics</a><ul>
+<li class="chapter" data-level="1.1" data-path="statistical-basics.html"><a href="statistical-basics.html#what-is-statistics"><i class="fa fa-check"></i><b>1.1</b> What is Statistics?</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="statistical-basics.html"><a href="statistical-basics.html#example-stating-definitions-for-qualitative-variable"><i class="fa fa-check"></i><b>1.1.1</b> Example: Stating Definitions for Qualitative Variable**</a></li>
+<li class="chapter" data-level="1.1.2" data-path="statistical-basics.html"><a href="statistical-basics.html#example-stating-definitions-for-qualitative-variable-1"><i class="fa fa-check"></i><b>1.1.2</b> Example: Stating Definitions for Qualitative Variable</a></li>
+<li class="chapter" data-level="1.1.3" data-path="statistical-basics.html"><a href="statistical-basics.html#example-stating-definitions-for-quantitative-variable"><i class="fa fa-check"></i><b>1.1.3</b> Example: Stating Definitions for Quantitative Variable</a></li>
+<li class="chapter" data-level="1.1.4" data-path="statistical-basics.html"><a href="statistical-basics.html#example-stating-definitions-for-quantitative-variable-1"><i class="fa fa-check"></i><b>1.1.4</b> Example: Stating Definitions for Quantitative Variable</a></li>
+<li class="chapter" data-level="1.1.5" data-path="statistical-basics.html"><a href="statistical-basics.html#example-discrete-or-continuous"><i class="fa fa-check"></i><b>1.1.5</b> Example: Discrete or Continuous</a></li>
+<li class="chapter" data-level="1.1.6" data-path="statistical-basics.html"><a href="statistical-basics.html#example-measurement-scale"><i class="fa fa-check"></i><b>1.1.6</b> Example: Measurement Scale</a></li>
+<li class="chapter" data-level="1.1.7" data-path="statistical-basics.html"><a href="statistical-basics.html#homework-section-1.1"><i class="fa fa-check"></i><b>1.1.7</b> Homework Section 1.1</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="statistical-basics.html"><a href="statistical-basics.html#sampling-methods"><i class="fa fa-check"></i><b>1.2</b> Sampling Methods</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="statistical-basics.html"><a href="statistical-basics.html#example-choosing-a-simple-random-sample"><i class="fa fa-check"></i><b>1.2.1</b> Example: Choosing a Simple Random Sample</a></li>
+<li class="chapter" data-level="1.2.2" data-path="statistical-basics.html"><a href="statistical-basics.html#example-how-not-to-choose-a-simple-random-sample"><i class="fa fa-check"></i><b>1.2.2</b> Example: How Not to Choose a Simple Random Sample</a></li>
+<li class="chapter" data-level="1.2.3" data-path="statistical-basics.html"><a href="statistical-basics.html#example-how-to-choose-a-simple-random-sample-using-r"><i class="fa fa-check"></i><b>1.2.3</b> Example: How to Choose a Simple Random Sample using R</a></li>
+<li class="chapter" data-level="1.2.4" data-path="statistical-basics.html"><a href="statistical-basics.html#example-sampling-type"><i class="fa fa-check"></i><b>1.2.4</b> Example: Sampling type</a></li>
+<li class="chapter" data-level="1.2.5" data-path="statistical-basics.html"><a href="statistical-basics.html#homework-section-1.2"><i class="fa fa-check"></i><b>1.2.5</b> Homework Section 1.2</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="statistical-basics.html"><a href="statistical-basics.html#experimental-design"><i class="fa fa-check"></i><b>1.3</b> Experimental Design</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="statistical-basics.html"><a href="statistical-basics.html#example-observational-study-or-experiment"><i class="fa fa-check"></i><b>1.3.1</b> Example: Observational Study or Experiment</a></li>
+<li class="chapter" data-level="1.3.2" data-path="statistical-basics.html"><a href="statistical-basics.html#homework-section-1.3"><i class="fa fa-check"></i><b>1.3.2</b> Homework Section 1.3</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="statistical-basics.html"><a href="statistical-basics.html#how-not-to-do-statistics"><i class="fa fa-check"></i><b>1.4</b> How Not to Do Statistics</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="statistical-basics.html"><a href="statistical-basics.html#example-bias-in-a-study"><i class="fa fa-check"></i><b>1.4.1</b> Example: Bias in a Study**</a></li>
+<li class="chapter" data-level="1.4.2" data-path="statistical-basics.html"><a href="statistical-basics.html#example-cause-and-effect"><i class="fa fa-check"></i><b>1.4.2</b> Example: Cause and Effect</a></li>
+<li class="chapter" data-level="1.4.3" data-path="statistical-basics.html"><a href="statistical-basics.html#example-generalizations"><i class="fa fa-check"></i><b>1.4.3</b> Example: Generalizations</a></li>
+<li class="chapter" data-level="1.4.4" data-path="statistical-basics.html"><a href="statistical-basics.html#homework-section-1.4"><i class="fa fa-check"></i><b>1.4.4</b> Homework Section 1.4</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html"><i class="fa fa-check"></i><b>2</b> Graphical Descriptions of Data</a><ul>
+<li class="chapter" data-level="2.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#qualitative-data"><i class="fa fa-check"></i><b>2.1</b> Qualitative Data</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-drawing-a-bar-chart"><i class="fa fa-check"></i><b>2.1.1</b> Example: Drawing a Bar Chart**</a></li>
+<li class="chapter" data-level="2.1.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework"><i class="fa fa-check"></i><b>2.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#quantitative-data"><i class="fa fa-check"></i><b>2.2</b> Quantitative Data</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-drawing-a-histogram-and-density-plot"><i class="fa fa-check"></i><b>2.2.1</b> Example: Drawing a Histogram and Density plot</a></li>
+<li class="chapter" data-level="2.2.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-drawing-a-histogram-and-density-plot-1"><i class="fa fa-check"></i><b>2.2.2</b> Example: Drawing a Histogram and Density plot</a></li>
+<li class="chapter" data-level="2.2.3" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework-1"><i class="fa fa-check"></i><b>2.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#other-graphical-representations-of-data"><i class="fa fa-check"></i><b>2.3</b> Other Graphical Representations of Data</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-scatter-plot"><i class="fa fa-check"></i><b>2.3.1</b> Example: Scatter Plot**</a></li>
+<li class="chapter" data-level="2.3.2" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#example-time-series-plot"><i class="fa fa-check"></i><b>2.3.2</b> Example: Time-Series Plot**</a></li>
+<li class="chapter" data-level="2.3.3" data-path="graphical-descriptions-of-data.html"><a href="graphical-descriptions-of-data.html#homework-2"><i class="fa fa-check"></i><b>2.3.3</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html"><i class="fa fa-check"></i><b>3</b> Numerical Descriptions of Data</a><ul>
+<li class="chapter" data-level="3.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#measures-of-center"><i class="fa fa-check"></i><b>3.1</b> Measures of Center</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-finding-the-mean-and-median-using-r"><i class="fa fa-check"></i><b>3.1.1</b> Example: Finding the Mean and Median using R</a></li>
+<li class="chapter" data-level="3.1.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-finding-mean-and-median-with-filtering"><i class="fa fa-check"></i><b>3.1.2</b> Example: Finding Mean and Median with filtering</a></li>
+<li class="chapter" data-level="3.1.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-affect-of-extreme-values-on-mean-and-median"><i class="fa fa-check"></i><b>3.1.3</b> Example: Affect of Extreme Values on Mean and Median**</a></li>
+<li class="chapter" data-level="3.1.4" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-weighted-average"><i class="fa fa-check"></i><b>3.1.4</b> Example: Weighted Average</a></li>
+<li class="chapter" data-level="3.1.5" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-weighted-average-1"><i class="fa fa-check"></i><b>3.1.5</b> Example: Weighted Average</a></li>
+<li class="chapter" data-level="3.1.6" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-3"><i class="fa fa-check"></i><b>3.1.6</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#measures-of-spread"><i class="fa fa-check"></i><b>3.2</b> Measures of Spread</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-range"><i class="fa fa-check"></i><b>3.2.1</b> Example: Range</a></li>
+<li class="chapter" data-level="3.2.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-finding-the-standard-deviation"><i class="fa fa-check"></i><b>3.2.2</b> Example: Finding the Standard Deviation</a></li>
+<li class="chapter" data-level="3.2.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-the-gneral-rule"><i class="fa fa-check"></i><b>3.2.3</b> Example: the gneral rule</a></li>
+<li class="chapter" data-level="3.2.4" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-determining-if-a-value-is-unusual"><i class="fa fa-check"></i><b>3.2.4</b> Example: Determining If a Value Is Unusual</a></li>
+<li class="chapter" data-level="3.2.5" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-4"><i class="fa fa-check"></i><b>3.2.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#ranking"><i class="fa fa-check"></i><b>3.3</b> Ranking</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-interpreting-percentile"><i class="fa fa-check"></i><b>3.3.1</b> Example: Interpreting Percentile</a></li>
+<li class="chapter" data-level="3.3.2" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-percentile-versus-score"><i class="fa fa-check"></i><b>3.3.2</b> Example: Percentile Versus Score</a></li>
+<li class="chapter" data-level="3.3.3" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-five-number-summary-and-boxplot"><i class="fa fa-check"></i><b>3.3.3</b> Example: Five-number Summary and Boxplot</a></li>
+<li class="chapter" data-level="3.3.4" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-separating-based-on-a-factor"><i class="fa fa-check"></i><b>3.3.4</b> Example: Separating based on a factor</a></li>
+<li class="chapter" data-level="3.3.5" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#example-putting-it-all-together"><i class="fa fa-check"></i><b>3.3.5</b> Example: Putting it all together</a></li>
+<li class="chapter" data-level="3.3.6" data-path="numerical-descriptions-of-data.html"><a href="numerical-descriptions-of-data.html#homework-5"><i class="fa fa-check"></i><b>3.3.6</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>4</b> Probability</a><ul>
+<li class="chapter" data-level="4.1" data-path="probability.html"><a href="probability.html#empirical-probability"><i class="fa fa-check"></i><b>4.1</b> Empirical Probability</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="probability.html"><a href="probability.html#example-statistics-class-survey"><i class="fa fa-check"></i><b>4.1.1</b> Example: Statistics class survey</a></li>
+<li class="chapter" data-level="4.1.2" data-path="probability.html"><a href="probability.html#homework-6"><i class="fa fa-check"></i><b>4.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="probability.html"><a href="probability.html#theoretical-probability"><i class="fa fa-check"></i><b>4.2</b> Theoretical Probability</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="probability.html"><a href="probability.html#example-equally-likely-outcomes"><i class="fa fa-check"></i><b>4.2.1</b> Example: Equally Likely Outcomes</a></li>
+<li class="chapter" data-level="4.2.2" data-path="probability.html"><a href="probability.html#example-calculating-theoretical-probabilities"><i class="fa fa-check"></i><b>4.2.2</b> Example: Calculating Theoretical Probabilities</a></li>
+<li class="chapter" data-level="4.2.3" data-path="probability.html"><a href="probability.html#example-calculating-theoretical-probabilities-1"><i class="fa fa-check"></i><b>4.2.3</b> Example: Calculating Theoretical Probabilities</a></li>
+<li class="chapter" data-level="4.2.4" data-path="probability.html"><a href="probability.html#example-calculating-theoretical-probabilities-2"><i class="fa fa-check"></i><b>4.2.4</b> Example: Calculating Theoretical Probabilities</a></li>
+<li class="chapter" data-level="4.2.5" data-path="probability.html"><a href="probability.html#example-complementary-events"><i class="fa fa-check"></i><b>4.2.5</b> Example: Complementary Events</a></li>
+<li class="chapter" data-level="4.2.6" data-path="probability.html"><a href="probability.html#example-using-the-complement-to-find-probabilities"><i class="fa fa-check"></i><b>4.2.6</b> Example: Using the Complement to Find Probabilities</a></li>
+<li class="chapter" data-level="4.2.7" data-path="probability.html"><a href="probability.html#example-using-addition-rules"><i class="fa fa-check"></i><b>4.2.7</b> Example: Using Addition Rules</a></li>
+<li class="chapter" data-level="4.2.8" data-path="probability.html"><a href="probability.html#example-odds-against-and-payoff-odds"><i class="fa fa-check"></i><b>4.2.8</b> Example: Odds Against and Payoff Odds</a></li>
+<li class="chapter" data-level="4.2.9" data-path="probability.html"><a href="probability.html#homework-7"><i class="fa fa-check"></i><b>4.2.9</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="probability.html"><a href="probability.html#conditional-probability"><i class="fa fa-check"></i><b>4.3</b> Conditional Probability</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="probability.html"><a href="probability.html#example-conditional-probabilities"><i class="fa fa-check"></i><b>4.3.1</b> Example: Conditional Probabilities</a></li>
+<li class="chapter" data-level="4.3.2" data-path="probability.html"><a href="probability.html#example-independent-events"><i class="fa fa-check"></i><b>4.3.2</b> Example: Independent Events</a></li>
+<li class="chapter" data-level="4.3.3" data-path="probability.html"><a href="probability.html#example-multiplication-rule"><i class="fa fa-check"></i><b>4.3.3</b> Example: Multiplication Rule</a></li>
+<li class="chapter" data-level="4.3.4" data-path="probability.html"><a href="probability.html#example-application-problem"><i class="fa fa-check"></i><b>4.3.4</b> Example: Application Problem</a></li>
+<li class="chapter" data-level="4.3.5" data-path="probability.html"><a href="probability.html#homework-8"><i class="fa fa-check"></i><b>4.3.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="probability.html"><a href="probability.html#counting-techniques"><i class="fa fa-check"></i><b>4.4</b> Counting Techniques</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="probability.html"><a href="probability.html#example-multiplication-rule-in-counting"><i class="fa fa-check"></i><b>4.4.1</b> Example: Multiplication Rule in Counting</a></li>
+<li class="chapter" data-level="4.4.2" data-path="probability.html"><a href="probability.html#example-multiplication-rule-in-counting-1"><i class="fa fa-check"></i><b>4.4.2</b> Example: Multiplication Rule in Counting</a></li>
+<li class="chapter" data-level="4.4.3" data-path="probability.html"><a href="probability.html#homework-9"><i class="fa fa-check"></i><b>4.4.3</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html"><i class="fa fa-check"></i><b>5</b> Discrete Probability Distributions</a><ul>
+<li class="chapter" data-level="5.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#basics-of-probability-distributions"><i class="fa fa-check"></i><b>5.1</b> Basics of Probability Distributions</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-probability-distribution"><i class="fa fa-check"></i><b>5.1.1</b> Example: Probability Distribution</a></li>
+<li class="chapter" data-level="5.1.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-calculating-the-expected-value"><i class="fa fa-check"></i><b>5.1.2</b> Example: Calculating the Expected Value</a></li>
+<li class="chapter" data-level="5.1.3" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-is-the-event-unusual"><i class="fa fa-check"></i><b>5.1.3</b> Example: Is the Event Unusual</a></li>
+<li class="chapter" data-level="5.1.4" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-10"><i class="fa fa-check"></i><b>5.1.4</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#binomial-probability-distribution"><i class="fa fa-check"></i><b>5.2</b> Binomial Probability Distribution</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-calculating-binomial-probabilities"><i class="fa fa-check"></i><b>5.2.1</b> Example: Calculating Binomial Probabilities</a></li>
+<li class="chapter" data-level="5.2.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-calculating-binomial-probabilities-1"><i class="fa fa-check"></i><b>5.2.2</b> Example: Calculating Binomial Probabilities</a></li>
+<li class="chapter" data-level="5.2.3" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-11"><i class="fa fa-check"></i><b>5.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#mean-and-standard-deviation-of-binomial-distribution"><i class="fa fa-check"></i><b>5.3</b> Mean and Standard Deviation of Binomial Distribution</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#example-finding-the-probability-distribution-mean-variance-and-standard-deviation-of-a-binomial-distribution"><i class="fa fa-check"></i><b>5.3.1</b> Example: Finding the Probability Distribution, Mean, Variance and Standard Deviation of a Binomial Distribution</a></li>
+<li class="chapter" data-level="5.3.2" data-path="discrete-probability-distributions.html"><a href="discrete-probability-distributions.html#homework-12"><i class="fa fa-check"></i><b>5.3.2</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html"><i class="fa fa-check"></i><b>6</b> Continuous Probability Distributions</a><ul>
+<li class="chapter" data-level="6.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#finding-probabilities-for-the-normal-distribution"><i class="fa fa-check"></i><b>6.1</b> Finding Probabilities for the Normal Distribution</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-general-normal-distribution"><i class="fa fa-check"></i><b>6.1.1</b> Example: General Normal Distribution</a></li>
+<li class="chapter" data-level="6.1.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-general-normal-distribution-1"><i class="fa fa-check"></i><b>6.1.2</b> Example: General Normal Distribution</a></li>
+<li class="chapter" data-level="6.1.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-13"><i class="fa fa-check"></i><b>6.1.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#assessing-normality"><i class="fa fa-check"></i><b>6.2</b> Assessing Normality</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-is-it-normal"><i class="fa fa-check"></i><b>6.2.1</b> Example: Is It Normal?</a></li>
+<li class="chapter" data-level="6.2.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-is-it-normal-1"><i class="fa fa-check"></i><b>6.2.2</b> Example: Is It Normal?</a></li>
+<li class="chapter" data-level="6.2.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-14"><i class="fa fa-check"></i><b>6.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#sampling-distribution-and-the-central-limit-theorem"><i class="fa fa-check"></i><b>6.3</b> Sampling Distribution and the Central Limit Theorem</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-sampling-distribution"><i class="fa fa-check"></i><b>6.3.1</b> Example: Sampling Distribution</a></li>
+<li class="chapter" data-level="6.3.2" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-finding-probabilities-for-sample-means"><i class="fa fa-check"></i><b>6.3.2</b> Example: Finding Probabilities for Sample Means</a></li>
+<li class="chapter" data-level="6.3.3" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#example-finding-probabilities-for-sample-means-1"><i class="fa fa-check"></i><b>6.3.3</b> Example: Finding Probabilities for Sample Means</a></li>
+<li class="chapter" data-level="6.3.4" data-path="continuous-probability-distributions.html"><a href="continuous-probability-distributions.html#homework-15"><i class="fa fa-check"></i><b>6.3.4</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="one-sample-inference.html"><a href="one-sample-inference.html"><i class="fa fa-check"></i><b>7</b> One-Sample Inference</a><ul>
+<li class="chapter" data-level="7.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#basics-of-hypothesis-testing"><i class="fa fa-check"></i><b>7.1</b> Basics of Hypothesis Testing</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-basics-of-hypothesis-testing"><i class="fa fa-check"></i><b>7.1.1</b> Example: Basics of Hypothesis Testing</a></li>
+<li class="chapter" data-level="7.1.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-battery-example-revisited."><i class="fa fa-check"></i><b>7.1.2</b> Example: Battery Example Revisited.</a></li>
+<li class="chapter" data-level="7.1.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-conclusions-in-hypothesis-tests"><i class="fa fa-check"></i><b>7.1.3</b> Example: Conclusions in Hypothesis Tests</a></li>
+<li class="chapter" data-level="7.1.4" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-stating-hypotheses"><i class="fa fa-check"></i><b>7.1.4</b> Example: Stating Hypotheses</a></li>
+<li class="chapter" data-level="7.1.5" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-stating-type-i-and-ii-errors-and-picking-level-of-significance"><i class="fa fa-check"></i><b>7.1.5</b> Example: Stating Type I and II Errors and Picking Level of Significance</a></li>
+<li class="chapter" data-level="7.1.6" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-16"><i class="fa fa-check"></i><b>7.1.6</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#one-sample-proportion-test"><i class="fa fa-check"></i><b>7.2</b> One-Sample Proportion Test</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-hypothesis-test-for-one-proportion"><i class="fa fa-check"></i><b>7.2.1</b> Example: Hypothesis Test for One Proportion</a></li>
+<li class="chapter" data-level="7.2.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-hypothesis-test-for-one-proportion-1"><i class="fa fa-check"></i><b>7.2.2</b> Example: Hypothesis Test for One Proportion</a></li>
+<li class="chapter" data-level="7.2.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-17"><i class="fa fa-check"></i><b>7.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#one-sample-test-for-the-mean"><i class="fa fa-check"></i><b>7.3</b> One-Sample Test for the Mean</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-resampling"><i class="fa fa-check"></i><b>7.3.1</b> Example: Resampling</a></li>
+<li class="chapter" data-level="7.3.2" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-test-of-the-mean-using-one-sample-t-test"><i class="fa fa-check"></i><b>7.3.2</b> Example: Test of the Mean Using One Sample T-test</a></li>
+<li class="chapter" data-level="7.3.3" data-path="one-sample-inference.html"><a href="one-sample-inference.html#example-test-of-the-mean-using-one-sample-t-test-1"><i class="fa fa-check"></i><b>7.3.3</b> Example: Test of the Mean Using One Sample T-test</a></li>
+<li class="chapter" data-level="7.3.4" data-path="one-sample-inference.html"><a href="one-sample-inference.html#homework-18"><i class="fa fa-check"></i><b>7.3.4</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="estimation.html"><a href="estimation.html"><i class="fa fa-check"></i><b>8</b> Estimation</a><ul>
+<li class="chapter" data-level="8.1" data-path="estimation.html"><a href="estimation.html#basics-of-confidence-intervals"><i class="fa fa-check"></i><b>8.1</b> Basics of Confidence Intervals</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="estimation.html"><a href="estimation.html#example-stating-the-statistical-and-real-world-interpretations-for-a-confidence-interval"><i class="fa fa-check"></i><b>8.1.1</b> Example: Stating the Statistical and Real World Interpretations for a Confidence Interval</a></li>
+<li class="chapter" data-level="8.1.2" data-path="estimation.html"><a href="estimation.html#homework-19"><i class="fa fa-check"></i><b>8.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="estimation.html"><a href="estimation.html#one-sample-interval-for-the-proportion"><i class="fa fa-check"></i><b>8.2</b> One-Sample Interval for the Proportion</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="estimation.html"><a href="estimation.html#example-confidence-interval-for-the-population-proportion"><i class="fa fa-check"></i><b>8.2.1</b> Example: Confidence Interval for the Population Proportion</a></li>
+<li class="chapter" data-level="8.2.2" data-path="estimation.html"><a href="estimation.html#example-confidence-interval-for-the-population-proportion-1"><i class="fa fa-check"></i><b>8.2.2</b> Example: Confidence Interval for the Population Proportion</a></li>
+<li class="chapter" data-level="8.2.3" data-path="estimation.html"><a href="estimation.html#homework-20"><i class="fa fa-check"></i><b>8.2.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="estimation.html"><a href="estimation.html#one-sample-interval-for-the-mean"><i class="fa fa-check"></i><b>8.3</b> One-Sample Interval for the Mean</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="estimation.html"><a href="estimation.html#example-confidence-interval-for-the-population-mean"><i class="fa fa-check"></i><b>8.3.1</b> Example: Confidence Interval for the Population Mean</a></li>
+<li class="chapter" data-level="8.3.2" data-path="estimation.html"><a href="estimation.html#example-confidence-interval-for-the-population-mean-1"><i class="fa fa-check"></i><b>8.3.2</b> Example: Confidence Interval for the Population Mean</a></li>
+<li class="chapter" data-level="8.3.3" data-path="estimation.html"><a href="estimation.html#homework-21"><i class="fa fa-check"></i><b>8.3.3</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="two-sample-inference.html"><a href="two-sample-inference.html"><i class="fa fa-check"></i><b>9</b> Two-Sample Inference</a><ul>
+<li class="chapter" data-level="9.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#two-proportions"><i class="fa fa-check"></i><b>9.1</b> Two Proportions</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-two-population-proportions"><i class="fa fa-check"></i><b>9.1.1</b> Example: Hypothesis Test for Two Population Proportions</a></li>
+<li class="chapter" data-level="9.1.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-confidence-interval-for-two-population-proportions"><i class="fa fa-check"></i><b>9.1.2</b> Example: Confidence Interval for Two Population Proportions</a></li>
+<li class="chapter" data-level="9.1.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-22"><i class="fa fa-check"></i><b>9.1.3</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#paired-samples-for-two-means"><i class="fa fa-check"></i><b>9.2</b> Paired Samples for Two Means</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-independent-or-dependent-samples"><i class="fa fa-check"></i><b>9.2.1</b> Example: Independent or Dependent Samples</a></li>
+<li class="chapter" data-level="9.2.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-paired-samples"><i class="fa fa-check"></i><b>9.2.2</b> Example: Hypothesis Test for Paired Samples</a></li>
+<li class="chapter" data-level="9.2.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-paired-samples-1"><i class="fa fa-check"></i><b>9.2.3</b> Example: Hypothesis Test for Paired Samples</a></li>
+<li class="chapter" data-level="9.2.4" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-confidence-interval-for-paired-samples"><i class="fa fa-check"></i><b>9.2.4</b> Example: Confidence Interval for Paired Samples</a></li>
+<li class="chapter" data-level="9.2.5" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-23"><i class="fa fa-check"></i><b>9.2.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#independent-samples-for-two-means"><i class="fa fa-check"></i><b>9.3</b> Independent Samples for Two Means</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-two-means"><i class="fa fa-check"></i><b>9.3.1</b> Example: Hypothesis Test for Two Means</a></li>
+<li class="chapter" data-level="9.3.2" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-confidence-interval-in-two-samples"><i class="fa fa-check"></i><b>9.3.2</b> Example: Confidence Interval in Two Samples</a></li>
+<li class="chapter" data-level="9.3.3" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-hypothesis-test-for-two-means-1"><i class="fa fa-check"></i><b>9.3.3</b> Example: Hypothesis Test for Two Means</a></li>
+<li class="chapter" data-level="9.3.4" data-path="two-sample-inference.html"><a href="two-sample-inference.html#example-confidence-interval-for-two-independent-samples"><i class="fa fa-check"></i><b>9.3.4</b> Example: Confidence Interval for Two Independent Samples</a></li>
+<li class="chapter" data-level="9.3.5" data-path="two-sample-inference.html"><a href="two-sample-inference.html#homework-24"><i class="fa fa-check"></i><b>9.3.5</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="two-sample-inference.html"><a href="two-sample-inference.html#which-analysis-should-you-conduct"><i class="fa fa-check"></i><b>9.4</b> Which Analysis Should You Conduct?</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html"><i class="fa fa-check"></i><b>10</b> Regression and Correlation</a><ul>
+<li class="chapter" data-level="10.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#regression"><i class="fa fa-check"></i><b>10.1</b> Regression</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-determining-if-there-is-a-relationship"><i class="fa fa-check"></i><b>10.1.1</b> Example: Determining If There Is a Relationship</a></li>
+<li class="chapter" data-level="10.1.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-25"><i class="fa fa-check"></i><b>10.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#correlation"><i class="fa fa-check"></i><b>10.2</b> Correlation</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-find-the-coefficient-of-determinatin-r2"><i class="fa fa-check"></i><b>10.2.1</b> Example: Find the coefficient of determinatin <span class="math inline">\(R^2\)</span></a></li>
+<li class="chapter" data-level="10.2.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-calculating-the-linear-correlation-coefficient-r"><i class="fa fa-check"></i><b>10.2.2</b> Example: Calculating the Linear Correlation Coefficient, <em>r</em></a></li>
+<li class="chapter" data-level="10.2.3" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-correlation-versus-causation"><i class="fa fa-check"></i><b>10.2.3</b> Example: Correlation Versus Causation</a></li>
+<li class="chapter" data-level="10.2.4" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-26"><i class="fa fa-check"></i><b>10.2.4</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#inference-for-regression-and-correlation"><i class="fa fa-check"></i><b>10.3</b> Inference for Regression and Correlation</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-finding-the-standard-error-of-the-estimate"><i class="fa fa-check"></i><b>10.3.1</b> Example: Finding the Standard Error of the Estimate</a></li>
+<li class="chapter" data-level="10.3.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#example-testing-the-claim-of-a-linear-correlation"><i class="fa fa-check"></i><b>10.3.2</b> Example: Testing the Claim of a Linear Correlation</a></li>
+<li class="chapter" data-level="10.3.3" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#homework-27"><i class="fa fa-check"></i><b>10.3.3</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html"><i class="fa fa-check"></i><b>11</b> Chi-Square and ANOVA Tests</a><ul>
+<li class="chapter" data-level="11.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#chi-square-test-for-independence"><i class="fa fa-check"></i><b>11.1</b> Chi-Square Test for Independence</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#example-hypothesis-test-with-chi-square-test"><i class="fa fa-check"></i><b>11.1.1</b> Example: Hypothesis Test with Chi-Square Test</a></li>
+<li class="chapter" data-level="11.1.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-28"><i class="fa fa-check"></i><b>11.1.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#chi-square-goodness-of-fit"><i class="fa fa-check"></i><b>11.2</b> Chi-Square Goodness of Fit</a><ul>
+<li class="chapter" data-level="11.2.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#example-goodness-of-fit-test"><i class="fa fa-check"></i><b>11.2.1</b> Example: Goodness of Fit Test</a></li>
+<li class="chapter" data-level="11.2.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-29"><i class="fa fa-check"></i><b>11.2.2</b> Homework</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#analysis-of-variance-anova"><i class="fa fa-check"></i><b>11.3</b> Analysis of Variance (ANOVA)</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#example-hypothesis-test-involving-several-means"><i class="fa fa-check"></i><b>11.3.1</b> Example: Hypothesis Test Involving Several Means</a></li>
+<li class="chapter" data-level="11.3.2" data-path="chi-square-and-anova-tests.html"><a href="chi-square-and-anova-tests.html#homework-30"><i class="fa fa-check"></i><b>11.3.2</b> Homework</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/StatPREP/Stat_using_technology" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistics Using Technology</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="discrete-probability-distributions" class="section level1">
+<h1><span class="header-section-number">Chapter 5</span> Discrete Probability Distributions</h1>
+<p>When computing probabilities, the sample space, which comtains all the outcomes of the experiment, is listed. If the probabilities for all of the outcomes are also listed then these two together are called a probability distribution. With a probability distribution, the shape can be determined, the mean and standard deviation can be calculated, and the probability of events can be found. How to find all of these concepts depends on what type of quantitative variables are being considered. Remember there are different types of quantitative variables, called discrete or continuous. What is the difference between discrete and continuous data? <strong>Discrete</strong> data can only take on particular values in a range. <strong>Continuous</strong> data can take on any value in a range. Discrete data usually arises from counting while continuous data usually arises from measuring.</p>
+<p>If you have a variable, and can find a probability associated with that variable, it is called a <strong>random variable</strong>. In many cases the random variable is what you are measuring, but when it comes to discrete random variables, it is usually what you are counting. So for the example of how tall is a plant given a new fertilizer, the random variable is the height of the plant given a new fertilizer. For the example of how many fleas are on prairie dogs in a colony, the random variable is the number of fleas on a prairie dog in a colony.</p>
+<p><strong>Examples of each:</strong></p>
+<p>How tall is a plant given a new fertilizer? Continuous. This is something you measure.</p>
+<p>How many fleas are on prairie dogs in a colony? Discrete. This is something you count.</p>
+<p>Now suppose you put all the values of the random variable together with the probability that the random variable would occur. You could then have a distribution like before, but now it is called a probability distribution since it involves probabilities. A <strong>probability distribution</strong> is an assignment of probabilities to the values of the random variable.</p>
+<p>With the idea of a probability distribution, the next thing is to look at the basics of a probabiity distribution.</p>
+<p><em><br />
+</em></p>
+<div id="basics-of-probability-distributions" class="section level2">
+<h2><span class="header-section-number">5.1</span> Basics of Probability Distributions</h2>
+<p>As a reminder, a variable or what will be called the random variable from now on, is represented by the letter <em>x</em> and it represents a quantitative (numerical) variable that is measured or observed in an experiment.</p>
+<p>As with probabilities, probability distributions, have the properties, <span class="math inline">\(0 \le P(outcome)\le1\)</span> and <span class="math inline">\(\sum{P(outcomes)}=1\)</span></p>
+<div id="example-probability-distribution" class="section level3">
+<h3><span class="header-section-number">5.1.1</span> Example: Probability Distribution</h3>
+<p>The 2010 U.S. Census found the chance of a household being a certain size. The data is in table #5.1.1 ("Households by age," 2013). Note, the category 7 is really 7 or more people in the household. Draw the probability distribution and find the mean, variance, and standard deviation.</p>
+<p><strong>Table #5.1.1: Household Size from U.S. Census of 2010</strong></p>
+<pre><code>##   size  prob
+## 1    1 0.267
+## 2    2 0.336
+## 3    3 0.158
+## 4    4 0.137
+## 5    5 0.063
+## 6    6 0.024
+## 7    7 0.015</code></pre>
+<p><strong>Solution:</strong></p>
+<p>In this case, the random variable is <em>x</em> = size of household. This is a discrete random variable, since you are counting the number of people in a household.</p>
+<p>It is a probability distribution since you have the <em>x</em> value and the probabilities that go with it, all of the probabilities are between zero and one, and the sum of all of the probabilities is one.</p>
+<p>You can give a probability distribution in table form (as in table #5.1.1) or as a graph. The graph looks like a histogram. To graph the histogram, use the following commands and process in R Studio.</p>
+<p><strong>Graph #5.1.1: Histogram of Household Size from U.S. Census of 2010</strong></p>
+<p>First you need to load a few packages using the following commands. These packages are “arm” and “Weighted.Desc.Stat”. If these packages have not been installed, the need to be installed before you can load them using library. Once you have installed them, they will always be avaialble in /R Studio to be loaded. To load a package, use the command</p>
+<div class="sourceCode" id="cb189"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb189-1"><a href="discrete-probability-distributions.html#cb189-1"></a><span class="kw">library</span>(<span class="st">&quot;name of package&quot;</span>) </span></code></pre></div>
+<p>In this case the packages you need are arm and Weighted.Desc.Stat.</p>
+<pre><code>## Loading required package: lme4</code></pre>
+<pre><code>## 
+## Attaching package: &#39;lme4&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:mosaic&#39;:
+## 
+##     factorize</code></pre>
+<pre><code>## 
+## arm (Version 1.10-1, built: 2018-4-12)</code></pre>
+<pre><code>## Working directory is /Users/kaplan/KaplanFiles/KateKozak/KozakStats</code></pre>
+<pre><code>## 
+## Attaching package: &#39;arm&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:mosaic&#39;:
+## 
+##     logit, rescale</code></pre>
+<p>To draw the probability distribution, use the following command. First you need to create variables for x and the probability (p) in R Studio. Then you can draw the distribtuion.</p>
+
+<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="discrete-probability-distributions.html#cb197-1"></a>x&lt;-<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>,<span class="dv">7</span>)</span>
+<span id="cb197-2"><a href="discrete-probability-distributions.html#cb197-2"></a>p&lt;-<span class="kw">c</span>(.<span class="dv">267</span>, <span class="fl">.336</span>, <span class="fl">.158</span>, <span class="fl">.137</span>, <span class="fl">0.063</span>, <span class="fl">0.024</span>, <span class="fl">0.015</span>)</span>
+<span id="cb197-3"><a href="discrete-probability-distributions.html#cb197-3"></a><span class="kw">discrete.histogram</span>(x,p, <span class="dt">bar.width =</span> <span class="dv">1</span>, <span class="dt">main=</span><span class="st">&quot;size of family&quot;</span>)</span></code></pre></div>
+<div class="figure"><span id="fig:discrete-histogram"></span>
+<img src="Statistics_using_technology_files/figure-html/discrete-histogram-1.png" alt="Histogram of Size of Family" width="672" />
+<p class="caption">
+Figure 5.1: Histogram of Size of Family
+</p>
+</div>
+<p>This command is different than the commands used in the past, but is needed for discrete probability distributions. So putting a title on the graph uses the command main=“title you want” instead of title= as before.</p>
+<p>Notice this graph (Figure <a href="discrete-probability-distributions.html#fig:discrete-histogram">5.1</a>) is skewed right, which means that most families have around 2 people in them and larger families become more and more rare.</p>
+<p>To find the mean, variance, and standard deviation using R Studio, make sure that the package Weighted.Desc.Stat is loaded, then use the following commands.</p>
+<div class="sourceCode" id="cb198"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb198-1"><a href="discrete-probability-distributions.html#cb198-1"></a><span class="kw">w.mean</span>(x,p)</span></code></pre></div>
+<pre><code>## [1] 2.525</code></pre>
+<div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb200-1"><a href="discrete-probability-distributions.html#cb200-1"></a><span class="kw">w.var</span>(x,p)</span></code></pre></div>
+<pre><code>## [1] 2.023375</code></pre>
+<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="discrete-probability-distributions.html#cb202-1"></a><span class="kw">w.sd</span>(x,p)</span></code></pre></div>
+<pre><code>## [1] 1.422454</code></pre>
+<p>The mean is 2.525 people, the variance is 2.02 <span class="math inline">\(people^2\)</span>, and the standard deviation is 1.42 people.</p>
+<p>When calculating the mean and standard deviation of a probability distribution, you can consider the population distribution the population even though it was most likely created from a large sample. Since a probability distribution is basically a population, the mean and standard deviation that are calculated are actually the population parameters and not the sample statistics. The notation used is the same as the notation for population mean, <span class="math inline">\(\mu\)</span>, and population standard deviation, <span class="math inline">\(\sigma\)</span>, that was used in chapter 3. Note: the mean can also be thought of as the <strong>expected value</strong>. It is the value you expect to get if the trials were repeated infinite number of times. The mean or expected value does not need to be a whole number, even if the possible values of <em>x</em> are whole numbers. This means one can find what value they can expect to get in the long run for gambling or insurance including extended warranties using the mean of a probability distribution. First one needs to figure out the probability distribution, and then follow the process in example 5.1.1.</p>
+</div>
+<div id="example-calculating-the-expected-value" class="section level3">
+<h3><span class="header-section-number">5.1.2</span> Example: Calculating the Expected Value</h3>
+<p>In the Arizona lottery game called Pick 3, a player pays $1 and then picks a three-digit number. If those three numbers are picked in that specific order the person wins $500. What is the expected value in this game?</p>
+<p><strong>Solution:</strong></p>
+<p>To find the expected value, you need to first create the probability distribution. In this case, the random variable <em>x</em> = winnings. If you pick the right numbers in the right order, then you win $500, but you paid $1 to play, so you actually win $499. If you didn’t pick the right numbers, you lose the $1, the <em>x</em> value is <span class="math inline">\(-1\)</span>. You also need the probability of winning and losing. Since you are picking a three-digit number, and for each digit there are 10 numbers you can pick with each independent of the others, you can use the multiplication rule. To win, you have to pick the right numbers in the right order. The first digit, you pick 1 number out of 10, the second digit you pick 1 number out of 10, and the third digit you pick 1 number out of 10. The probability of picking the right number in the right order is <span class="math inline">\(\frac{1}{1000}\)</span>. The probability of losing (not winning) would be <span class="math inline">\(1-\frac{1}{1000}=\frac{999}{1000}\)</span>. Putting this information into a table will help to organize the information and find the expected value.</p>
+<p><strong>Table #5.1.2: Probability Distribution of lottery</strong></p>
+<pre><code>## Warning in read.table(file = file, header = header, sep = sep, quote = quote, :
+## incomplete final line found by readTableHeader on &#39;https://krkozak.github.io/
+## MAT160/table_5_1_2.csv&#39;</code></pre>
+<pre><code>##   outcome amount  prob
+## 1     win    499 0.001
+## 2    lose     -1 0.999</code></pre>
+<p>Now to find the expected value, it is the same as finding the mean.</p>
+<div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb206-1"><a href="discrete-probability-distributions.html#cb206-1"></a>x&lt;-<span class="kw">c</span>(<span class="dv">499</span>, <span class="dv">-1</span>)</span>
+<span id="cb206-2"><a href="discrete-probability-distributions.html#cb206-2"></a>p&lt;-<span class="kw">c</span>(<span class="fl">0.001</span>, <span class="fl">0.999</span>)</span>
+<span id="cb206-3"><a href="discrete-probability-distributions.html#cb206-3"></a><span class="kw">w.mean</span>(x,p)</span></code></pre></div>
+<pre><code>## [1] -0.5</code></pre>
+<p>The expected value (or mean) is -0.5. That is -$0.50. Since it is negative, that means you lose $0.50 every time you play the Pick 3. It seems you would be better off putting the $1 every week into a savings account then playing the Pick 3 lottery.</p>
+<p><em><br />
+</em></p>
+<p>The reason probability is studied in statistics is to help in making decisions in inferential statistics. To understand how that is done the concept of a rare event is needed.</p>
+<p><strong>Rare Event Rule for Inferential Statistics</strong></p>
+<p>If, under a given assumption, the probability of a particular observed event is extremely small, then you can conclude that the assumption is probably not correct.</p>
+<p>An example of this is suppose you roll an assumed fair die 1000 times and get a six 600 times, when you should have only rolled a six around 160 times, then you should believe that your assumption about it being a fair die is untrue.</p>
+<p><strong>Determining if an event is unusual</strong></p>
+<p>If you are looking at a value of x for a discrete variable, and the P(the variable has a value of x or more) &lt; 0.05, then you can consider the x an unusually high value. Another way to think of this is if the probability of getting such a high value is less than 0.05, then the event of getting the value x is unusual.</p>
+<p>Similarly, if the P(the variable has a value of x or less) &lt; 0.05, then you can consider this an unusually low value. Another way to think of this is if the probability of getting a value as small as x is less than 0.05, then the event x is considered unusual.</p>
+<p>Why is it “x or more” or “x or less” instead of just “x” when you are determining if an event is unusual? Consider this example: you and your friend go out to lunch every day. Instead of Going Dutch (each paying for their own lunch), you decide to flip a coin, and the loser pays for both. Your friend seems to be winning more often than you’d expect, so you want to determine if this is unusual before you decide to change how you pay for lunch (or accuse your friend of cheating). The process for how to calculate these probabilities will be presented in the next section on the binomial distribution. If your friend won 6 out of 10 lunches, the probability of that happening turns out to be about 20.5%, not unusual. The probability of winning 6 or more is about 37.7%. But what happens if your friend won 501 out of 1,000 lunches? That doesn’t seem so unlikely! The probability of winning 501 or more lunches is about 47.8%, and that is consistent with your hunch that this isn’t so unusual. But the probability of winning exactly 501 lunches is much less, only about 2.5%. That is why the probability of getting exactly that value is not the right question to ask: you should ask the probability of getting that value or more (or that value or less on the other side).</p>
+<p>The value 0.05 will be explained later, and it is not the only value you can use.</p>
+</div>
+<div id="example-is-the-event-unusual" class="section level3">
+<h3><span class="header-section-number">5.1.3</span> Example: Is the Event Unusual</h3>
+<p>The 2010 U.S. Census found the chance of a household being a certain size. The data is in the table ("Households by age," 2013).</p>
+<p>The 2010 U.S. Census found the chance of a household being a certain size. The data is in table #5.1.1 ("Households by age," 2013). Note, the category 7 is really 7 or more people in the household.</p>
+<p><strong>Table #5.1.3: Household Size from U.S. Census of 2010</strong></p>
+<pre><code>##   size  prob
+## 1    1 0.267
+## 2    2 0.336
+## 3    3 0.158
+## 4    4 0.137
+## 5    5 0.063
+## 6    6 0.024
+## 7    7 0.015</code></pre>
+<p><strong>Solution:</strong></p>
+<p>State random variable:</p>
+<p><em>x</em> = number of people in a household</p>
+<ol style="list-style-type: lower-alpha">
+<li>Is it unusual for a household to have six people in the family?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>To determine this, you need to look at probabilities. However, you cannot just look at the probability of six people. You need to look at the probability of <em>x</em> being six or less people or the probability of <em>x</em> being six or more people. The <span class="math inline">\(P(x \le 6)=P(1)+P(2)+P(3)+P(4)+P(5)+P(6)\)</span>
+<span class="math inline">\(=0.267+0.336+0.158+0.137+0.063+0.024=0.985\)</span></p>
+<p>Since this probability is more than 5%, then six is not an unusually low value.</p>
+<p>The <span class="math inline">\(P(x \ge 6)=P(6)+P(7)=0.024+0.015=0.039\)</span></p>
+<p>Since this probability is less than 5%, then six is an unusually high value. It is unusual for a household to have six people in the family.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>If you did come upon many families that had six people in the family, what would you think?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Since it is unusual for a family to have six people in it, then you may think that either the size of families is increasing from what it was or that you are in a location where families are larger than in other locations.</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Is it unusual for a household to have four people in the family?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>To determine this, you need to look at probabilities. Again, look at the probability of <em>x</em> being four or less or the probability of <em>x</em> being four or more. The <span class="math inline">\(P(x \le 4)=P(0)+P(1)+P(2)+P(3)+P(4)\)</span>
+<span class="math inline">\(=0.267+0.336+0.158+0.137=0.898\)</span>
+Since this probability is more than 5%, four is not an unusually low value.</p>
+<p>The <span class="math inline">\(P(\ge4)=P(4)+P(5)+P(5)+P(7)\)</span>
+<span class="math inline">\(=0.137+0.063+0.024+0.015=0.239\)</span>
+Since this probability is more than 5%, four is not an unusually low value. Thus, four is not an unusual size of a family.</p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>If you did come upon a family that has four people in it, what would you think?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Since it is not unusual for a family to have four members, then you would not think anything is amiss.</p>
+</div>
+<div id="homework-10" class="section level3">
+<h3><span class="header-section-number">5.1.4</span> Homework</h3>
+<ol style="list-style-type: decimal">
+<li>Eyeglassomatic manufactures eyeglasses for different retailers. The number of days it takes to fix defects in an eyeglass and the probability that it will take that number of days are in the table.</li>
+</ol>
+<p><strong>Table #5.1.4: Number of Days to Fix Defects</strong></p>
+<pre><code>##    days  prob
+## 1     1 0.249
+## 2     2 0.108
+## 3     3 0.091
+## 4     4 0.123
+## 5     5 0.133
+## 6     6 0.114
+## 7     7 0.070
+## 8     8 0.046
+## 9     9 0.019
+## 10   10 0.013
+## 11   11 0.010
+## 12   12 0.008
+## 13   13 0.006
+## 14   14 0.004
+## 15   15 0.002
+## 16   16 0.002
+## 17   17 0.001
+## 18   18 0.001</code></pre>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable.</li>
+<li>Draw a histogram of the number of days to fix defects</li>
+<li>Find the mean number of days to fix defects.</li>
+<li>Find the variance for the number of days to fix defects.</li>
+<li>Find the standard deviation for the number of days to fix defects.</li>
+<li>Find probability that a lens will take at least 16 days to make a fix the defect.</li>
+<li>Is it unusual for a lens to take 16 days to fix a defect?</li>
+<li>If it does take 16 days for eyeglasses to be repaired, what would you think?</li>
+</ol>
+<ol start="2" style="list-style-type: decimal">
+<li>Suppose you have an experiment where you flip a coin three times. You then count the number of heads.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable.</li>
+<li>Write the probability distribution for the number of heads.</li>
+<li>Draw a histogram for the number of heads.</li>
+<li>Find the mean number of heads.</li>
+<li>Find the variance for the number of heads.</li>
+<li>Find the standard deviation for the number of heads.</li>
+<li>Find the probability of having two or more number of heads.</li>
+<li>Is it unusual for to flip two heads?</li>
+</ol>
+<ol start="3" style="list-style-type: decimal">
+<li><p>The Ohio lottery has a game called Pick 4 where a player pays $1 and picks a four-digit number. If the four numbers come up in the order you picked, then you win $2,500. What is your expected value?</p></li>
+<li><p>An LG Dishwasher, which costs $800, has a 20% chance of needing to be replaced in the first 2 years of purchase. A two-year extended warrantee costs $112.10 on a dishwasher. What is the expected value of the extended warranty assuming it is replaced in the first 2 years?</p></li>
+</ol>
+<p><strong><br />
+</strong></p>
+</div>
+</div>
+<div id="binomial-probability-distribution" class="section level2">
+<h2><span class="header-section-number">5.2</span> Binomial Probability Distribution</h2>
+<p>Section 5.1 introduced the concept of a probability distribution. The focus of the section was on discrete probability distributions. To find the probabiity distribution for a situation, you usually needed to actually conduct the experiment and collect data. Then you can calculate the experimental probabilities. Normally you cannot calculate the theoretical probabilities. However, there are certain types of experiment that allow you to calculate the theoretical probability. One of those types is called a <strong>Binomial Experiment</strong>.</p>
+<p>Properties of a <strong>binomial experiment</strong> (or Bernoulli trial):</p>
+<p>1) Fixed number of trials, <em>n</em>, which means that the experiment is repeated a specific number of times.</p>
+<p>2) The <em>n</em> trials are independent, which means that what happens on one trial does not influence the outcomes of other trials.</p>
+<p>3) There are only two outcomes, which are called a success and a failure.</p>
+<p>) The probability of a success doesn’t change from trial to trial, where <em>p</em> = probability of success and <em>q</em> = <span class="math inline">\(1-p\)</span> = probability of failure.</p>
+<p>If you know you have a binomial experiment, then you can calculate binomial probabilities. This is important because binomial probabilities come up often in real life. Examples of binomial experiments are:</p>
+<p>Toss a fair coin ten times, and find the probability of getting two heads.</p>
+<p>Question twenty people in class, and look for the probability of more than half being women?</p>
+<p>Shoot five arrows at a target, and find the probability of hitting it five times?</p>
+<p><strong><br />
+</strong></p>
+<p><em>Formula for the probabilities for a Binomial experiment</em></p>
+<p>First, the random variable in a binomial experiment is <em>x</em> = number of successes.</p>
+<p>Be careful, a success is not always a good thing. Sometimes a success is something that is bad, like finding a defect. A success just means you observed the outcome you wanted to see happen.</p>
+<p>Binomial Formula for the probability of <em>r</em> successes in <em>n</em> trials is <span class="math inline">\(P(X=r)=_nC_r*p^r*q^{n-r}\)</span></p>
+<p>where <span class="math inline">\(_nC_r\)</span> is the number of combinations of <em>n</em> things taking <em>r</em> at a time. It
+is read “<em>n</em> choose <em>r</em>”.</p>
+<p>When solving problems, make sure you define your random variable and state what <em>n</em>, <em>p</em>, and <em>r</em> are. Without doing this, the problems are a great deal harder.</p>
+<p>The command to find a binomial probability in R Studio is</p>
+<p><span class="math inline">\(P(X=r)=\)</span></p>
+<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="discrete-probability-distributions.html#cb210-1"></a><span class="kw">dbinom</span>(r, n, p)</span></code></pre></div>
+<p><span class="math inline">\(P(x \le r)=\)</span></p>
+<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="discrete-probability-distributions.html#cb211-1"></a><span class="kw">pbinom</span>(r, n, p, <span class="dt">lower.tail=</span><span class="ot">TRUE</span>)</span></code></pre></div>
+<p><span class="math inline">\(P(x \ge r)=\)</span></p>
+<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="discrete-probability-distributions.html#cb212-1"></a><span class="kw">pbinom</span>(r<span class="dv">-1</span>, n, p, <span class="dt">lower.tail=</span><span class="ot">FALSE</span>)</span></code></pre></div>
+<div id="example-calculating-binomial-probabilities" class="section level3">
+<h3><span class="header-section-number">5.2.1</span> Example: Calculating Binomial Probabilities</h3>
+<p>When looking at a person’s eye color, it turns out that 1% of people in the world has green eyes ("What percentage of," 2013). Consider a group of 20 people.</p>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>X = number of people with green eyes</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Argue that this is a binomial experiment</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>There are 20 people, and each person is a trial, so there are a fixed number of trials. In this case, <em>n</em> = 20.</p></li>
+<li><p>If you assume that each person in the group is chosen at random the eye color of one person doesn’t affect the eye color of the next person, thus the trials are independent.</p></li>
+<li><p>Either a person has green eyes or they do not have green eyes, so there are only two outcomes. In this case, the success is a person has green eyes.</p></li>
+<li><p>The probability of a person having green eyes is 0.01. This is the same for every trial since each person has the same chance of having green eyes.</p></li>
+</ol>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Find the probability that none of the 20 people have green eyes.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>If none have green eyes, then r=0. Probability that none have green eyes is <span class="math inline">\(P(X=0)=0.818\)</span>, using the command:</p>
+<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="discrete-probability-distributions.html#cb213-1"></a><span class="kw">dbinom</span>(<span class="dv">0</span>,<span class="dv">20</span>,<span class="fl">0.01</span>)</span></code></pre></div>
+<pre><code>## [1] 0.8179069</code></pre>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Find the probability that nine have green eyes.</li>
+</ol>
+<p><strong>Solution:</strong>
+If nine have green eyes, then r=9. Probability that 9 have green eyes is <span class="math inline">\(P(X=9)=1.50X10^{-13}\)</span>. Notice that R gives the answer as 1.50391e-13. This is the way many computer programs write a number in scientific notation. It isn’t possible for a computer to write it as <span class="math inline">\(1.50381X10^{-13}\)</span>, but it is possible for humans to write it correctly. So make sure the answer is written in the correct scientific notation.</p>
+<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="discrete-probability-distributions.html#cb215-1"></a><span class="kw">dbinom</span>(<span class="dv">9</span>,<span class="dv">20</span>,<span class="fl">0.01</span>)</span></code></pre></div>
+<pre><code>## [1] 1.50381e-13</code></pre>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>Find the probability that at most three have green eyes.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>At most three means that three is the highest value you will have. Find the probability of <em>x</em> is less than or equal to three. Since this is less than, then the lower tail of the probability distribution is being used, so <span class="math inline">\(P(X \le 3)=0.99996\)</span> using the command in R Studio of</p>
+<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb217-1"><a href="discrete-probability-distributions.html#cb217-1"></a><span class="kw">pbinom</span>(<span class="dv">3</span>,<span class="dv">20</span>,<span class="fl">0.01</span>, <span class="dt">lower.tail=</span><span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] 0.9999574</code></pre>
+<p>The reason the answer is written to more decimal palces is because when it is rounded to three decimal places the rounding makes the answer 1. But 1 means that the event will happen, when in reality there is a slight chance that it won’t happen. It is best to write the answer to more decimal places or it can be written as &gt;0.999 to represent that the number is very close to 1, but isn’t 1.</p>
+<ol start="6" style="list-style-type: lower-alpha">
+<li>Find the probability that at most two have green eyes.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>At most 2 means 2 or less. So find the probability that there are less than or equal to 2. <span class="math inline">\(P(X \le 2)=0.999\)</span>, and again, this is the lower tail of the probabilty distribution, so use lower.tail=TRUE in the R command:</p>
+<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="discrete-probability-distributions.html#cb219-1"></a><span class="kw">pbinom</span>(<span class="dv">2</span>,<span class="dv">20</span>,<span class="fl">0.01</span>, <span class="dt">lower.tail=</span><span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] 0.9989964</code></pre>
+<ol start="7" style="list-style-type: lower-alpha">
+<li>Find the probability that at least four have green eyes.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>At least four means four or more. Find the probability of x being greater than or equal to four. Since it is greater than or equal to, this is the right tail of the probability distribution. However, if you just use lower.tail=FALSE, then the 4 is not included in R calculations. You want all numbers from 4 on up, so you need to use <span class="math inline">\(r=4-1=3\)</span> in the R command. This will include 4 in the calculation. <span class="math inline">\(P(X \ge 4)=4.26X10^{-5}\)</span></p>
+<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="discrete-probability-distributions.html#cb221-1"></a><span class="kw">pbinom</span>(<span class="dv">4-1</span>,<span class="dv">20</span>,<span class="fl">0.01</span>, <span class="dt">lower.tail=</span><span class="ot">FALSE</span>)</span></code></pre></div>
+<pre><code>## [1] 4.262093e-05</code></pre>
+<ol start="8" style="list-style-type: lower-alpha">
+<li>In Europe, four people out of twenty have green eyes. Is this unusual? What does that tell you?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Since the probability of finding four or more people with green eyes is much less than 0.05, it is unusual to find four people out of twenty with green eyes. That should make you wonder if the proportion of people in Europe with green eyes is more than the 1% for the general population. If this is true, then you may want to ask why Europeans have a higher proportion of green-eyed people. That of course could lead to more questions.</p>
+</div>
+<div id="example-calculating-binomial-probabilities-1" class="section level3">
+<h3><span class="header-section-number">5.2.2</span> Example: Calculating Binomial Probabilities</h3>
+<p>According to the Center for Disease Control (CDC), about 1 in 88 children in the U.S. have been diagnosed with autism ("CDC-data and statistics,," 2013). Suppose you consider a group of 10 children.</p>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p><em>x</em> = number of children with autism.</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Argue that this is a binomial experiment</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>There are 10 children, and each child is a trial, so there are a fixed number of trials. In this case, <em>n</em> = 10.</p></li>
+<li><p>If you assume that each child in the group is chosen at random, then whether a child has autism does not affect the chance that the next child has autism. Thus the trials are independent.</p></li>
+<li><p>Either a child has autism or they do not have autism, so there are two outcomes. In this case, the success is a child has autism.</p></li>
+<li><p>The probability of a child having autism is <span class="math inline">\(\frac{1}{88}\)</span>. This is the same for every trial since each child has the same chance of having autism.</p></li>
+</ol>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Find the probability that none have autism.</li>
+</ol>
+<p><strong>Solution:</strong>
+<span class="math inline">\(P(X=0)=0.892\)</span></p>
+<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="discrete-probability-distributions.html#cb223-1"></a><span class="kw">dbinom</span>(<span class="dv">0</span>,<span class="dv">10</span>, <span class="dv">1</span><span class="op">/</span><span class="dv">88</span>)</span></code></pre></div>
+<pre><code>## [1] 0.892002</code></pre>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Find the probability that seven have autism.</li>
+</ol>
+<p><strong>Solution:</strong>
+<span class="math inline">\(P(X=7)=2.84X10^{-12}\)</span></p>
+<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="discrete-probability-distributions.html#cb225-1"></a><span class="kw">dbinom</span>(<span class="dv">7</span>,<span class="dv">10</span>, <span class="dv">1</span><span class="op">/</span><span class="dv">88</span>)</span></code></pre></div>
+<pre><code>## [1] 2.837346e-12</code></pre>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>Find the probability that at least five have autism.</li>
+</ol>
+<p><strong>Solution:</strong>
+<span class="math inline">\(P(X \ge 5)=4.553X10^{-8}\)</span>. Again, this is the upper tail of the probability distribution, so use lower=tail=FALSE and <span class="math inline">\(r=5-1=4\)</span> to make sure that R calculates for 5 and on up.</p>
+<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="discrete-probability-distributions.html#cb227-1"></a><span class="kw">pbinom</span>(<span class="dv">5-1</span>, <span class="dv">10</span>, <span class="dv">1</span><span class="op">/</span><span class="dv">88</span>, <span class="dt">lower.tail=</span><span class="ot">FALSE</span>)</span></code></pre></div>
+<pre><code>## [1] 4.553416e-08</code></pre>
+<ol start="6" style="list-style-type: lower-alpha">
+<li>Find the probability that at most two have autism.</li>
+</ol>
+<p><strong>Solution:</strong>
+<span class="math inline">\(P(X \le 2)=0.9998\)</span>. This is using the lower tail of the probability distribution.</p>
+<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb229-1"><a href="discrete-probability-distributions.html#cb229-1"></a><span class="kw">pbinom</span>(<span class="dv">2</span>, <span class="dv">10</span>, <span class="dv">1</span><span class="op">/</span><span class="dv">88</span>, <span class="dt">lower.tail=</span><span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] 0.9998341</code></pre>
+<ol start="7" style="list-style-type: lower-alpha">
+<li>Suppose five children out of ten have autism. Is this unusual? What does that tell you?</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Since the probability of five or more children in a group of ten having autism is much less than 5%, it is unusual to happen. If this does happen, then one may think that the proportion of children diagnosed with autism is actually more than 1/88.</p>
+</div>
+<div id="homework-11" class="section level3">
+<h3><span class="header-section-number">5.2.3</span> Homework</h3>
+<ol style="list-style-type: decimal">
+<li>Approximately 10% of all people are left-handed ("11 little-known facts," 2013). Consider a grouping of fifteen people.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable.</li>
+<li>Argue that this is a binomial experiment</li>
+<li>Find the probability that none are left-handed.</li>
+<li>Find the probability that seven are left-handed.</li>
+<li>Find the probability that at least two are left-handed.</li>
+<li>Find the probability that at most three are left-handed.</li>
+<li>Find the probability that at least seven are left-handed.</li>
+<li>Seven of the last 15 U.S. Presidents were left-handed. Is this
+unusual? What does that tell you?</li>
+</ol>
+<ol start="2" style="list-style-type: decimal">
+<li>According to an article in the American Heart Association’s publication <em>Circulation</em>, 24% of patients who had been hospitalized for an acute myocardial infarction did not fill their cardiac medication by the seventh day of being discharged (Ho, Bryson &amp; Rumsfeld, 2009). Suppose there are twelve people who have been hospitalized for an acute myocardial infarction.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable.</li>
+<li>Argue that this is a binomial experiment</li>
+<li>Find the probability that all filled their cardiac medication.</li>
+<li>Find the probability that seven did not fill their cardiac medication.</li>
+<li>Find the probability that none filled their cardiac medication.</li>
+<li>Find the probability that at most two did not fill their cardiac medication.</li>
+<li>Find the probability that at least three did not fill their cardiac medication.</li>
+<li>Find the probability that at least ten did not fill their cardiac medication.</li>
+<li>Suppose of the next twelve patients discharged, ten did not fill their cardiac medication, would this be unusual? What does this tell you?</li>
+</ol>
+<ol start="3" style="list-style-type: decimal">
+<li>Eyeglassomatic manufactures eyeglasses for different retailers. In March 2010, they tested to see how many defective lenses they made, and there were 16.9% defective lenses due to scratches. Suppose Eyeglassomatic examined twenty eyeglasses.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable.</li>
+<li>Argue that this is a binomial experiment</li>
+<li>Find the probability that none are scratched.</li>
+<li>Find the probability that all are scratched.</li>
+<li>Find the probability that at least three are scratched.</li>
+<li>Find the probability that at most five are scratched.</li>
+<li>Find the probability that at least ten are scratched.</li>
+<li>Is it unusual for ten lenses to be scratched? If it turns out that ten lenses out of twenty are scratched, what might that tell you about the manufacturing process?</li>
+</ol>
+<ol start="4" style="list-style-type: decimal">
+<li>The proportion of brown M&amp;M’s in a milk chocolate packet is approximately 14% (Madison, 2013). Suppose a package of M&amp;M’s typically contains 52 M&amp;M’s.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable.</li>
+<li>Argue that this is a binomial experiment</li>
+<li>Find the probability that six M&amp;M’s are brown.</li>
+<li>Find the probability that twenty-five M&amp;M’s are brown.</li>
+<li>Find the probability that all of the M&amp;M’s are brown.</li>
+<li>Would it be unusual for a package to have only brown M&amp;M’s? If this were to happen, what would you think is the reason?</li>
+</ol>
+<p><strong><br />
+</strong></p>
+</div>
+</div>
+<div id="mean-and-standard-deviation-of-binomial-distribution" class="section level2">
+<h2><span class="header-section-number">5.3</span> Mean and Standard Deviation of Binomial Distribution</h2>
+<p>If you list all possible values of <em>x</em> in a Binomial distribution, you get the <strong>Binomial Probability Distribution</strong>. You can draw a histogram of the probability distribution and find the mean (expected value), variance, and standard deviation of it. To have R Studio calculate the binomial values and save them to a variable, use the command</p>
+<div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb231-1"><a href="discrete-probability-distributions.html#cb231-1"></a>x\&lt;-<span class="kw">c</span>(<span class="dv">0</span><span class="op">:</span>n)</span></code></pre></div>
+<p>and then</p>
+<div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb232-1"><a href="discrete-probability-distributions.html#cb232-1"></a>p\&lt;-<span class="kw">dbinom</span>(<span class="dv">0</span><span class="op">:</span>n, n, p)</span></code></pre></div>
+<div id="example-finding-the-probability-distribution-mean-variance-and-standard-deviation-of-a-binomial-distribution" class="section level3">
+<h3><span class="header-section-number">5.3.1</span> Example: Finding the Probability Distribution, Mean, Variance and Standard Deviation of a Binomial Distribution</h3>
+<p>When looking at a person’s eye color, it turns out that 1% of people in the world has green eyes ("What percentage of," 2013). Consider a group of 20 people.</p>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>x = number of people who have green eyes</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Write the probability distribution.</li>
+</ol>
+<p><strong>Solution:</strong>
+In this case you need to write each value of <em>x</em> and its corresponding probability. It is easiest to do this by using the R Command:</p>
+<div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb233-1"><a href="discrete-probability-distributions.html#cb233-1"></a>x&lt;-<span class="kw">c</span>(<span class="dv">0</span><span class="op">:</span><span class="dv">20</span>)</span>
+<span id="cb233-2"><a href="discrete-probability-distributions.html#cb233-2"></a>p&lt;-<span class="kw">dbinom</span>(<span class="dv">0</span><span class="op">:</span><span class="dv">20</span>,<span class="dv">20</span>, <span class="fl">0.01</span>)</span></code></pre></div>
+<p>It looks like nothing happened, but R save the values as variables. To see what is in each of those values, type</p>
+<div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb234-1"><a href="discrete-probability-distributions.html#cb234-1"></a>x</span></code></pre></div>
+<pre><code>##  [1]  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20</code></pre>
+<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="discrete-probability-distributions.html#cb236-1"></a>p</span></code></pre></div>
+<pre><code>##  [1] 8.179069e-01 1.652337e-01 1.585576e-02 9.609552e-04 4.125313e-05
+##  [6] 1.333434e-06 3.367259e-08 6.802543e-10 1.116579e-11 1.503810e-13
+## [11] 1.670900e-15 1.534344e-17 1.162381e-19 7.225371e-22 3.649177e-24
+## [16] 1.474415e-26 4.654088e-29 1.106141e-31 1.862190e-34 1.980000e-37
+## [21] 1.000000e-40</code></pre>
+<p>These can now be typed into a table in a word processing program if desired.</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Draw a histogram.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>On R, this is like what was done in Section 5.1. Makes sure that the packages “arm” and “Weighted.Desc.Stat” are loaded. Then perform the command:</p>
+
+<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb238-1"><a href="discrete-probability-distributions.html#cb238-1"></a><span class="kw">discrete.histogram</span>(x,p, <span class="dt">bar.width =</span> <span class="dv">1</span>, <span class="dt">main=</span><span class="st">&quot;Number of People with Green Eyes&quot;</span>)</span></code></pre></div>
+<div class="figure"><span id="fig:green-eyes-histogram"></span>
+<img src="Statistics_using_technology_files/figure-html/green-eyes-histogram-1.png" alt="Histogram of Number of People with Green Eyes" width="672" />
+<p class="caption">
+Figure 5.2: Histogram of Number of People with Green Eyes
+</p>
+</div>
+<p>Notice this graph (Figure <a href="discrete-probability-distributions.html#fig:green-eyes-histogram">5.2</a>) is skewed right.</p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Find the mean, variance, and standard deviation.</li>
+</ol>
+<p><strong>Solution:</strong></p>
+<p>Using R Studio command such as those in Section 5.1:</p>
+<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb239-1"><a href="discrete-probability-distributions.html#cb239-1"></a><span class="kw">w.mean</span>(x,p)</span></code></pre></div>
+<pre><code>## [1] 0.2</code></pre>
+<div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb241-1"><a href="discrete-probability-distributions.html#cb241-1"></a><span class="kw">w.var</span>(x,p)</span></code></pre></div>
+<pre><code>## [1] 0.198</code></pre>
+<div class="sourceCode" id="cb243"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb243-1"><a href="discrete-probability-distributions.html#cb243-1"></a><span class="kw">w.sd</span>(x,p)</span></code></pre></div>
+<pre><code>## [1] 0.4449719</code></pre>
+<p>You expect on average that out of 20 people, less than 1 person would have green eyes, with are variance of 0.198 <span class="math inline">\(people^2\)</span> and a standard deviation of 0.44 people.</p>
+</div>
+<div id="homework-12" class="section level3">
+<h3><span class="header-section-number">5.3.2</span> Homework</h3>
+<ol style="list-style-type: decimal">
+<li>Suppose a random variable, <em>x</em>, arises from a binomial experiment. Suppose <em>n</em> = 6, and <em>p</em> = 0.13.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Write the probability distribution.</li>
+<li>Draw a histogram.</li>
+<li>Describe the shape of the histogram.</li>
+<li>Find the mean.</li>
+<li>Find the variance.</li>
+<li>Find the standard deviation.</li>
+</ol>
+<ol start="2" style="list-style-type: decimal">
+<li>Suppose a random variable, <em>x</em>, arises from a binomial experiment. Suppose <em>n</em> = 10, and <em>p</em> = 0.81.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Write the probability distribution.</li>
+<li>Draw a histogram.</li>
+<li>Describe the shape of the histogram.</li>
+<li>Find the mean.</li>
+<li>Find the variance.</li>
+<li>Find the standard deviation.</li>
+</ol>
+<ol start="3" style="list-style-type: decimal">
+<li>Suppose a random variable, <em>x</em>, arises from a binomial experiment. Suppose <em>n</em> = 7, and <em>p</em> = 0.50.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Write the probability distribution.</li>
+<li>Draw a histogram.</li>
+<li>Describe the shape of the histogram.</li>
+<li>Find the mean.</li>
+<li>Find the variance.</li>
+<li>Find the standard deviation.</li>
+</ol>
+<ol start="4" style="list-style-type: decimal">
+<li>Approximately 10% of all people are left-handed. Consider a grouping of fifteen people.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable.</li>
+<li>Write the probability distribution.</li>
+<li>Draw a histogram.</li>
+<li>Describe the shape of the histogram.</li>
+<li>Find the mean.</li>
+<li>Find the variance.</li>
+<li>Find the standard deviation.</li>
+</ol>
+<ol start="5" style="list-style-type: decimal">
+<li>According to an article in the American Heart Association’s publication <em>Circulation</em>, 24% of patients who had been hospitalized for an acute myocardial infarction did not fill their cardiac medication by the seventh day of being discharged (Ho, Bryson &amp; Rumsfeld, 2009). Suppose there are twelve people who have been hospitalized for an acute myocardial infarction.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable.</li>
+<li>Write the probability distribution.</li>
+<li>Draw a histogram.</li>
+<li>Describe the shape of the histogram.</li>
+<li>Find the mean.</li>
+<li>Find the variance.</li>
+<li>Find the standard deviation.</li>
+</ol>
+<ol start="6" style="list-style-type: decimal">
+<li>Eyeglassomatic manufactures eyeglasses for different retailers. In March 2010, they tested to see how many defective lenses they made, and there were 16.9% defective lenses due to scratches. Suppose Eyeglassomatic examined twenty eyeglasses.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable.</li>
+<li>Write the probability distribution.</li>
+<li>Draw a histogram.</li>
+<li>Describe the shape of the histogram.</li>
+<li>Find the mean.</li>
+<li>Find the variance.</li>
+<li>Find the standard deviation.</li>
+</ol>
+<ol start="7" style="list-style-type: decimal">
+<li>The proportion of brown M&amp;M’s in a milk chocolate packet is approximately 14% (Madison, 2013). Suppose a package of M&amp;M’s typically contains 52 M&amp;M’s.</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>State the random variable.</li>
+<li>Find the mean.</li>
+<li>Find the variance.</li>
+<li>Find the standard deviation.</li>
+</ol>
+<p>Data Sources:</p>
+<p><em>11 little-known facts about left-handers</em>. (2013, October 21).
+Retrieved from
+<a href="http://www.huffingtonpost.com/2012/10/29/left-handed-facts-lefties_n_2005864.html" class="uri">http://www.huffingtonpost.com/2012/10/29/left-handed-facts-lefties_n_2005864.html</a></p>
+<p><em>CDC-data and statistics, autism spectrum disorders - ncbdd</em>. (2013,
+October 21). Retrieved from <a href="http://www.cdc.gov/ncbddd/autism/data.html" class="uri">http://www.cdc.gov/ncbddd/autism/data.html</a></p>
+<p>Ho, P. M., Bryson, C. L., &amp; Rumsfeld, J. S. (2009). Medication
+adherence. <em>Circulation</em>, <em>119</em>(23), 3028-3035. Retrieved from
+<a href="http://circ.ahajournals.org/content/119/23/3028" class="uri">http://circ.ahajournals.org/content/119/23/3028</a></p>
+<p><em>Households by age of householder and size of household: 1990 to 2010</em>.
+(2013, October 19). Retrieved from
+<a href="http://www.census.gov/compendia/statab/2012/tables/12s0062.pdf" class="uri">http://www.census.gov/compendia/statab/2012/tables/12s0062.pdf</a></p>
+<p>Madison, J. (2013, October 15). <em>M&amp;M’s color distribution analysis</em>.
+Retrieved from
+<a href="http://joshmadison.com/2007/12/02/mms-color-distribution-analysis/" class="uri">http://joshmadison.com/2007/12/02/mms-color-distribution-analysis/</a></p>
+<p><em>What percentage of people have green eyes?</em>. (2013, October 21).
+Retrieved from
+<a href="http://www.ask.com/question/what-percentage-of-people-have-green-eyes" class="uri">http://www.ask.com/question/what-percentage-of-people-have-green-eyes</a></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="probability.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="continuous-probability-distributions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["Statistics_using_technology.pdf", "Statistics_using_technology.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
